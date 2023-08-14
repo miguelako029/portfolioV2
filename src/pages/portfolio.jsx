@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import { useColorMode } from "../assets/scripts/DarkModeContext"; // Update the path
+import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 
 const Portfolio = () => {
@@ -23,7 +23,7 @@ const Portfolio = () => {
         transition: "background-color 0.7s ease",
       }}
     >
-      <div className="pageSection" id="Portfolio">
+      <div className="pageSection" id="portfolio">
         <div className="heroContainer">
           <div className="labelContainer">
             <h1>Portfolio</h1>

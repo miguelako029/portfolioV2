@@ -12,7 +12,7 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { Link } from "react-scroll";
 import Container from "@mui/material/Container";
 
-import { useColorMode } from "../assets/scripts/DarkModeContext"; // Import the useColorMode hook
+import { useColorMode } from "../assets/script/DarkModeContext"; // Import the useColorMode hook
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -38,7 +38,7 @@ export default function HideAppBar(props) {
   const linkStyles = {
     textDecoration: "none",
     color: mode === "dark" ? "#ffffff" : "#000000",
-    fontWeight: 600,
+    fontWeight: 100,
     padding: "10px",
     transition: "background-color 0.3s ease",
     "&:hover": {
@@ -88,7 +88,7 @@ export default function HideAppBar(props) {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-40}
                 duration={500}
                 className="menu-item"
                 href="/about"

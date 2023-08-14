@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { useColorMode } from "../assets/scripts/DarkModeContext"; // Update the path
+import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 
 const Hero = () => {
@@ -20,6 +20,7 @@ const Hero = () => {
         textAlign: "center",
         flexDirection: "column",
         transition: "background-color 0.7s ease",
+        marginTop: "-0px",
       }}
     >
       <div className="hero">

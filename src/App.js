@@ -6,7 +6,7 @@ import Experience from "./pages/experience";
 import Portfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { ColorModeProvider } from "./assets/scripts/DarkModeContext"; // Update the path
+import { ColorModeProvider } from "./assets/script/DarkModeContext"; // Update the path
 
 function App() {
   const theme = createTheme({

@@ -1,5 +1,5 @@
 .pageSection {
-  height: 90vh;
+  height: 100vh;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
@@ -13,4 +13,47 @@ body {
   font-family: "Work Sans", sans-serif;
   line-height: 1;
   font-weight: 400;
+}
+
+.about-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  /* Set a maximum width to maintain readability */
+  margin: 0 auto;
+  width: 100%;
+
+  .profileImage {
+    padding: 20px;
+  }
+
+  .aboutDescription {
+    padding-top: 110px;
+    font-weight: 100;
+    text-align: left;
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    .btnGroup {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+      grid-gap: 1rem;
+      /* max-width: 600px; */
+      margin-top: 100px;
+
+      .button {
+        padding: 10px 20px;
+        text-align: center;
+        /* background-color: #1872d300;
+        color: rgb(0, 0, 0); */
+        border: 1px solid;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #999999;
+      }
+    }
+  }
 }
