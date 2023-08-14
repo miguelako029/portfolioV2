@@ -1,5 +1,10 @@
 .pageSection {
-  height: 100vh;
+  height: 80vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
