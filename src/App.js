@@ -1,22 +1,29 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
+import NavBar from "./components/NavBar";
 import Hero from "./pages/hero";
 import About from "./pages/about";
 import Experience from "./pages/experience";
 import Portfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
-import NavBar from "./components/NavBar";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ColorModeProvider } from "./assets/scripts/DarkModeContext"; // Update the path
 
 function App() {
+  const theme = createTheme({
+    // Your theme configuration
+  });
+
   return (
-    <div className="main-bg">
-      <NavBar />
-      <Hero />
-      <About />
-      <Experience />
-      <Portfolio />
-      <Contact />
-    </div>
+    <ColorModeProvider>
+      <ThemeProvider theme={theme}>
+        <NavBar />
+        <Hero />
+        <About />
+        <Experience />
+        <Portfolio />
+        <Contact />
+      </ThemeProvider>
+    </ColorModeProvider>
   );
 }
 
