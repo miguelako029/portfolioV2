@@ -2,16 +2,16 @@
 
 import React, { useState } from "react";
 
-const Hero = () => {
+const Experience = () => {
   return (
-    <div className="pageSection" id="hero">
+    <div className="pageSection" id="experience">
       <div className="heroContainer">
         <div className="labelContainer">
-          <h1>Hero</h1>
+          <h1>Experience</h1>
         </div>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default Experience;

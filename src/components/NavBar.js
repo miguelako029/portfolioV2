@@ -14,17 +14,25 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
+
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
+import { Link } from "react-scroll";
+
+import Content from "../App";
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
 function HideOnScroll(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   });
@@ -38,14 +46,72 @@ function HideOnScroll(props) {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
+function MyApp() {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        bgcolor: "background.default",
+        color: "text.primary",
+        borderRadius: 1,
+        p: 3,
+      }}
+    >
+      {/* {theme.palette.mode} mode */}
+      <IconButton
+        sx={{ ml: 1 }}
+        onClick={colorMode.toggleColorMode}
+        color="inherit"
+      >
+        {theme.palette.mode === "dark" ? (
+          <Brightness7Icon />
+        ) : (
+          <Brightness4Icon />
+        )}
+      </IconButton>
+    </Box>
+  );
+}
+
 export default function HideAppBar(props) {
+  const [mode, setMode] = React.useState("light");
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+
+  const linkStyles = {
+    textDecoration: "none",
+    color: mode === "dark" ? "#ffffff" : "#000000", // Set text color based on mode
+    fontWeight: 400,
+    padding: "10px",
+    transition: "background-color 0.3s ease",
+    "&:hover": {
+      backgroundColor: "#f5f5f5",
+    },
+  };
+
   const pages = ["Products", "Pricing", "Blog"];
   const settings = ["Profile", "Account", "Dashboard", "Logout"];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -65,143 +131,89 @@ export default function HideAppBar(props) {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <HideOnScroll {...props}>
-        <AppBar>
-          <Toolbar>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              LOGO
-            </Typography>
+      <ThemeProvider theme={theme}>
+        <ColorModeContext.Provider value={colorMode}>
+          <HideOnScroll {...props}>
+            <AppBar sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
+              <Toolbar
+                sx={{ background: mode === "dark" ? "#121212" : "#FFF" }}
+              >
+                <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+                  <Link // Use Link component as the root of the Button
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="menu-item"
+                    href="/hero"
+                    style={linkStyles}
+                  >
+                    Home
+                  </Link>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              LOGO
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
+                  <Link
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="menu-item"
+                    href="/about"
+                    style={linkStyles}
+                  >
+                    About
+                  </Link>
 
-            {/* <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"git 
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box> */}
-          </Toolbar>
-        </AppBar>
-      </HideOnScroll>
+                  <Link
+                    to="experience"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="menu-item"
+                    href="/experience"
+                    style={linkStyles}
+                  >
+                    Experience
+                  </Link>
+                  <Link
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="menu-item"
+                    href="/portfolio"
+                    style={linkStyles}
+                  >
+                    Works
+                  </Link>
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="menu-item"
+                    href="/contact"
+                    style={linkStyles}
+                  >
+                    Contact
+                  </Link>
+                </Box>
+                <MyApp />
+              </Toolbar>
+            </AppBar>
+          </HideOnScroll>
+        </ColorModeContext.Provider>
+      </ThemeProvider>
       <Toolbar />
-      <Container>
-        <Box sx={{ my: 2 }}>
-          {[...new Array(12)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-            )
-            .join("\n")}
-        </Box>
-      </Container>
+      <Container></Container>
     </React.Fragment>
   );
 }
