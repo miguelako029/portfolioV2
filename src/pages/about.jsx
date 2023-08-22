@@ -11,23 +11,14 @@ import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import CloseIcon from "@mui/icons-material/Close";
 
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-// import $ from "jquery";
+
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-// import about from "../assets/images/about.jpg";
-// import skills from "../assets/images/skills.jpg";
-// import trainings from "../assets/images/trainings.jpg";
-// import certificates from "../assets/images/certificates.jpg";
-import { colors } from "@mui/material";
-import { lineHeight } from "@mui/system";
-// import aboutMeI from "../assets/images/aboutMeIcon.png";
-// import skillsI from "../assets/images/skillsIcon.png";
-// import trainingI from "../assets/images/trainingsIcon.png";
-// import certI from "../assets/images/certIcon.png";
 
 import image1 from "../assets/images/364148860_7042763322419713_3717389514963905346_n.png";
 
@@ -77,6 +68,24 @@ Fade.propTypes = {
 };
 
 const About = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Only trigger once when it enters the viewport
+  });
+
+  // Define the animation properties
+  const fadeInUp = useSpring({
+    from: {
+      opacity: 0,
+      transform: "translateY(50px)",
+    },
+    to: {
+      opacity: inView ? 1 : 0, // Animate opacity when in view
+      transform: inView ? "translateY(0)" : "translateY(30px)", // Animate translateY when in view
+    },
+    config: {
+      duration: 1000,
+    },
+  });
   const { mode, backgroundColor, fontColor } = useColorMode();
 
   const [open1, setOpen1] = useState(false);
@@ -157,72 +166,90 @@ const About = () => {
           <div className="labelContainer">
             <div class="about-grid-container">
               <div class="profileImage">
-                <img src={image1} width="55%" alt="Image 1" />
+                <div ref={ref}>
+                  <animated.div style={fadeInUp}>
+                    <img src={image1} width="55%" alt="Image 1" />
+                  </animated.div>
+                </div>
               </div>
 
               <div class="aboutDescription">
-                <h1>Know Me</h1>
-                <p>
-                  {" "}
-                  Experienced Frontend Developer with a demonstrated history of
-                  working in the information technology and services industry.
-                  Skilled in Redmine, PHP, JavaScript, CMS, Microsoft
-                  SharePoint, RPA(UiPath) and Project Management.
-                </p>
-                <div
-                  className="btnGroup"
-                  sx={{
-                    background: backgroundColor,
-                    color: fontColor,
-                    transition: "background-color 0.7s ease",
-                  }}
-                >
-                  <Button
-                    className="button"
-                    sx={{
-                      background: backgroundColor,
-                      color: fontColor,
-                      transition: "background-color 0.7s ease",
-                    }}
-                    onClick={handleOpen1}
-                  >
-                    Read More
-                  </Button>
-                  <Button
-                    className="button"
-                    sx={{
-                      background: backgroundColor,
-                      color: fontColor,
-                      transition: "background-color 0.7s ease",
-                    }}
-                    onClick={handleOpen2}
-                  >
-                    My Skills
-                  </Button>
-                  <Button
-                    className="button"
-                    sx={{
-                      background: backgroundColor,
-                      color: fontColor,
-                      transition: "background-color 0.7s ease",
-                    }}
-                    onClick={handleOpen3}
-                  >
-                    Completed Trainings
-                  </Button>
-                  <Button
-                    className="button"
-                    sx={{
-                      background: backgroundColor,
-                      color: fontColor,
-                      transition: "background-color 0.7s ease",
-                    }}
-                    onClick={handleOpen4}
-                  >
-                    My Certificates
-                  </Button>
+                <div ref={ref}>
+                  <animated.div style={fadeInUp}>
+                    <h1>FadeInUpOnScroll Example</h1>
+                    <p>
+                      This content fades in and moves up when scrolled into
+                      view.
+                    </p>
+                  </animated.div>
+                </div>
+
+                <div ref={ref}>
+                  <animated.div style={fadeInUp}>
+                    <p>
+                      {" "}
+                      Experienced Frontend Developer with a demonstrated history
+                      of working in the information technology and services
+                      industry. Skilled in Redmine, PHP, JavaScript, CMS,
+                      Microsoft SharePoint, RPA(UiPath) and Project Management.
+                    </p>
+                    <div
+                      className="btnGroup"
+                      sx={{
+                        background: backgroundColor,
+                        color: fontColor,
+                        transition: "background-color 0.7s ease",
+                      }}
+                    >
+                      <Button
+                        className="button"
+                        sx={{
+                          background: backgroundColor,
+                          color: fontColor,
+                          transition: "background-color 0.7s ease",
+                        }}
+                        onClick={handleOpen1}
+                      >
+                        Read More
+                      </Button>
+                      <Button
+                        className="button"
+                        sx={{
+                          background: backgroundColor,
+                          color: fontColor,
+                          transition: "background-color 0.7s ease",
+                        }}
+                        onClick={handleOpen2}
+                      >
+                        My Skills
+                      </Button>
+                      <Button
+                        className="button"
+                        sx={{
+                          background: backgroundColor,
+                          color: fontColor,
+                          transition: "background-color 0.7s ease",
+                        }}
+                        onClick={handleOpen3}
+                      >
+                        Completed Trainings
+                      </Button>
+                      <Button
+                        className="button"
+                        sx={{
+                          background: backgroundColor,
+                          color: fontColor,
+                          transition: "background-color 0.7s ease",
+                        }}
+                        onClick={handleOpen4}
+                      >
+                        My Certificates
+                      </Button>
+                    </div>
+                  </animated.div>
                 </div>
               </div>
+
               <Modal
                 open={open1}
                 onClose={handleClose1}
