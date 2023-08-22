@@ -170,3 +170,78 @@ li {
     font-size: 0.7vw;
   }
 }
+
+.layout {
+  width: 80vw;
+
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.cardBox {
+  flex-grow: 1;
+
+  .card {
+    height: auto;
+    position: relative;
+    /* width: 300px; */
+    border: 1px solid #383838;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    margin: 15px;
+    padding: 40px;
+    background-color: #fff;
+  }
+
+  /* Circled Number */
+  .circled-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff00;
+    color: #080808;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+  }
+
+  /* Years at the Right Upper Corner */
+  .years {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+  }
+
+  /* Image */
+
+  .card-image {
+    height: 100px;
+    width: 300px;
+    object-fit: cover;
+    display: flex;
+    margin: 10px auto;
+  }
+
+  /* "Learn More" Button */
+  .read-more {
+    position: absolute;
+    margin-top: 300px;
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+    border: 1px solid;
+
+    display: flex;
+  }
+  .read-more:hover {
+    background-color: #999999;
+  }
+}
