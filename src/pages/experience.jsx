@@ -42,7 +42,7 @@ const Experience = () => {
                 sx={{ background: backgroundColor, color: fontColor }}
               >
                 <div class="circled-number">1</div>
-                <div class="years">2022 - 2023</div>
+                <div class="years">2017 - 2018</div>
                 <img class="card-image" src={Racami} alt="Card Image" />
                 <Button
                   className="read-more"
@@ -60,7 +60,7 @@ const Experience = () => {
             <div class="cardBox">
               <div class="card">
                 <div class="circled-number">2</div>
-                <div class="years">2022 - 2023</div>
+                <div class="years">2018 - 2019</div>
                 <img class="card-image" src={Strategist} alt="Card Image" />
                 <Button
                   className="read-more"
@@ -78,7 +78,7 @@ const Experience = () => {
             <div class="cardBox">
               <div class="card">
                 <div class="circled-number">3</div>
-                <div class="years">2022 - 2023</div>
+                <div class="years">2019 - Present</div>
                 <img class="card-image" src={Indra} alt="Card Image" />
                 <Button
                   className="read-more"

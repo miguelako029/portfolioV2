@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap");
 
 body {
   font-family: "Work Sans", sans-serif;
@@ -8,7 +10,7 @@ h1 {
   font-size: 50pt;
   font-family: "Work Sans", sans-serif;
   line-height: 1;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .pageSection {
@@ -21,10 +23,26 @@ h1 {
 }
 
 .hero h1 {
-  font-size: 70pt;
+  font-size: 60pt;
   font-family: "Work Sans", sans-serif;
-  line-height: 1;
-  font-weight: 400;
+  line-height: 0.5;
+  font-weight: bold;
+}
+
+.hero .btnContainer {
+  .button {
+    padding: 10px 20px;
+    text-align: center;
+    /* background-color: #1872d300;
+    color: rgb(0, 0, 0); */
+    border: px solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #999999;
+  }
 }
 
 .about-grid-container {
@@ -180,7 +198,7 @@ li {
       height: auto;
       position: relative;
       /* width: 300px; */
-      border: 1px solid;
+      border: 1.5px solid;
       /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
       margin: 15px;
       padding: 40px;
@@ -194,13 +212,13 @@ li {
       width: 40px;
       height: 40px;
 
-      border: 1px solid;
+      border: 1.5px solid;
       border-radius: 50%;
       text-align: center;
       line-height: 40px;
       font-size: 15px;
       font-family: "Work Sans", sans-serif;
-      font-weight: bold;
+      font-weight: 400;
     }
 
     /* Years at the Right Upper Corner */
@@ -209,7 +227,7 @@ li {
       top: 10px;
       right: 10px;
       font-family: "Work Sans", sans-serif;
-      font-weight: bold;
+      font-weight: 400;
     }
 
     /* Image */
@@ -229,7 +247,7 @@ li {
       bottom: 10px;
       right: 10px;
       text-decoration: none;
-      border: 1px solid;
+      border: 1.5px solid;
 
       display: flex;
     }
