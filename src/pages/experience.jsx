@@ -13,6 +13,7 @@ import { BorderColor } from "@mui/icons-material";
 
 const Experience = () => {
   const { mode, backgroundColor, fontColor, BorderColor } = useColorMode();
+
   return (
     <Box
       className="pageSection"
@@ -36,7 +37,10 @@ const Experience = () => {
           </div>
           <section class="layout">
             <div class="cardBox">
-              <div class="card">
+              <div
+                class="card"
+                sx={{ background: backgroundColor, color: fontColor }}
+              >
                 <div class="circled-number">1</div>
                 <div class="years">2022 - 2023</div>
                 <img class="card-image" src={Racami} alt="Card Image" />

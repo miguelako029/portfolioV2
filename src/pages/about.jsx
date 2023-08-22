@@ -176,11 +176,7 @@ const About = () => {
               <div class="aboutDescription">
                 <div ref={ref}>
                   <animated.div style={fadeInUp}>
-                    <h1>FadeInUpOnScroll Example</h1>
-                    <p>
-                      This content fades in and moves up when scrolled into
-                      view.
-                    </p>
+                    <h1>Know me more!</h1>
                   </animated.div>
                 </div>
 
