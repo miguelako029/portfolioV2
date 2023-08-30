@@ -1,18 +1,74 @@
 // import React from "react";
 
 import React, { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Modal, Typography } from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 import Button from "@mui/material/Button";
 import Racami from "../assets/images/racami.png";
+import RacamiV2 from "../assets/images/racami500.png";
+
 import Strategist from "../assets/images/strategist.png";
+import StrategistV2 from "../assets/images/strategist500.png";
+
 import Indra from "../assets/images/indra.png";
+import IndraV2 from "../assets/images/indra500.png";
+
+import CloseIcon from "@mui/icons-material/Close";
 
 import { BorderColor } from "@mui/icons-material";
 
 const Experience = () => {
-  const { mode, backgroundColor, fontColor, BorderColor } = useColorMode();
+  const {
+    mode,
+    backgroundColor,
+    fontColor,
+    BorderColor,
+    backgroundColorModal,
+  } = useColorMode();
+
+  const [openRacami, setOpenRacamiModal] = useState(false);
+  const [openStrategist, setOpenStrategistModal] = useState(false);
+  const [openIndra, setOpenIndraModal] = useState(false);
+
+  const handleOpenRacami = () => {
+    setOpenRacamiModal(true);
+  };
+
+  const handleCloseRacamiModal = () => {
+    setOpenRacamiModal(false);
+  };
+
+  const handleOpenStrategist = () => {
+    setOpenStrategistModal(true);
+  };
+
+  const handleCloseStrategistModal = () => {
+    setOpenStrategistModal(false);
+  };
+
+  const handleOpenIndra = () => {
+    setOpenIndraModal(true);
+  };
+
+  const handleCloseIndraModal = () => {
+    setOpenIndraModal(false);
+  };
+
+  const style = {
+    padding: "10px",
+    overflow: "auto",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "75%",
+    height: "auto",
+    borderRadius: "15px",
+    backgroundColor: mode === "dark" ? "#000" : "#FFF",
+    color: mode === "dark" ? "#000" : "#333",
+    willChange: "backdrop-filter",
+  };
 
   return (
     <Box
@@ -52,6 +108,7 @@ const Experience = () => {
                     border: BorderColor,
                     transition: "background-color 0.7s ease",
                   }}
+                  onClick={handleOpenRacami}
                 >
                   Read More
                 </Button>
@@ -70,6 +127,7 @@ const Experience = () => {
                     border: BorderColor,
                     transition: "background-color 0.7s ease",
                   }}
+                  onClick={handleOpenStrategist}
                 >
                   Read More
                 </Button>
@@ -88,6 +146,7 @@ const Experience = () => {
                     border: BorderColor,
                     transition: "background-color 0.7s ease",
                   }}
+                  onClick={handleOpenIndra}
                 >
                   Read More
                 </Button>
@@ -95,6 +154,160 @@ const Experience = () => {
             </div>
           </section>
         </div>
+        <Modal
+          open={openRacami}
+          onClose={handleCloseRacamiModal}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          {/* <Fade in={open1}> */}
+          <Box sx={style} id="aboutModal">
+            <Button
+              onClick={handleCloseRacamiModal}
+              sx={{ position: "absolute", top: 10, right: 1 }}
+            >
+              <CloseIcon />
+            </Button>
+
+            <div
+              class="modal-container"
+              sx={{ backgroundColor: backgroundColorModal }}
+            >
+              <div class="modal-content">
+                {/* <div class="modal-left"> */}
+                <img src={RacamiV2} className="modal-image" />
+                {/* </div> */}
+
+                <div class="modal-right">
+                  <div class="modal-title" sx={{ color: fontColor }}>
+                    Modal Title
+                  </div>
+                  <div class="modal-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </div>
+                  <div class="modal-classification">
+                    <ul class="ul-bullet">
+                      <li>Classification 1</li>
+                      <li>Classification 2</li>
+                      <li>Classification 3</li>
+                    </ul>
+                  </div>
+                  <div class="modal-icons">
+                    <span class="modal-icon">Icon 1</span>
+                    <span class="modal-icon">Icon 2</span>
+                    <span class="modal-icon">Icon 3</span>
+                    <span class="modal-icon">Icon 4</span>
+                    <span class="modal-icon">Icon 5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Box>
+          {/* </Fade> */}
+        </Modal>
+        <Modal
+          open={openStrategist}
+          onClose={handleCloseStrategistModal}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          {/* <Fade in={open1}> */}
+          <Box sx={style} id="aboutModal">
+            <Button
+              onClick={handleCloseStrategistModal}
+              sx={{ position: "absolute", top: 10, right: 1 }}
+            >
+              <CloseIcon />
+            </Button>
+
+            <div
+              class="modal-container"
+              sx={{ backgroundColor: backgroundColorModal }}
+            >
+              <div class="modal-content">
+                {/* <div class="modal-left"> */}
+                <img src={StrategistV2} className="modal-image" />
+                {/* </div> */}
+
+                <div class="modal-right">
+                  <div class="modal-title" sx={{ color: fontColor }}>
+                    Modal Title
+                  </div>
+                  <div class="modal-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </div>
+                  <div class="modal-classification">
+                    <ul class="ul-bullet">
+                      <li>Classification 1</li>
+                      <li>Classification 2</li>
+                      <li>Classification 3</li>
+                    </ul>
+                  </div>
+                  <div class="modal-icons">
+                    <span class="modal-icon">Icon 1</span>
+                    <span class="modal-icon">Icon 2</span>
+                    <span class="modal-icon">Icon 3</span>
+                    <span class="modal-icon">Icon 4</span>
+                    <span class="modal-icon">Icon 5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Box>
+          {/* </Fade> */}
+        </Modal>
+
+        <Modal
+          open={openIndra}
+          onClose={handleCloseIndraModal}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          {/* <Fade in={open1}> */}
+          <Box sx={style} id="aboutModal">
+            <Button
+              onClick={handleCloseIndraModal}
+              sx={{ position: "absolute", top: 10, right: 1 }}
+            >
+              <CloseIcon />
+            </Button>
+
+            <div
+              class="modal-container"
+              sx={{ backgroundColor: backgroundColorModal }}
+            >
+              <div class="modal-content">
+                {/* <div class="modal-left"> */}
+                <img src={IndraV2} className="modal-image" />
+                {/* </div> */}
+
+                <div class="modal-right">
+                  <div class="modal-title" sx={{ color: fontColor }}>
+                    Modal Title
+                  </div>
+                  <div class="modal-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </div>
+                  <div class="modal-classification">
+                    <ul class="ul-bullet">
+                      <li>Classification 1</li>
+                      <li>Classification 2</li>
+                      <li>Classification 3</li>
+                    </ul>
+                  </div>
+                  <div class="modal-icons">
+                    <span class="modal-icon">Icon 1</span>
+                    <span class="modal-icon">Icon 2</span>
+                    <span class="modal-icon">Icon 3</span>
+                    <span class="modal-icon">Icon 4</span>
+                    <span class="modal-icon">Icon 5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Box>
+          {/* </Fade> */}
+        </Modal>
       </div>
     </Box>
   );

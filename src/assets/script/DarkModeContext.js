@@ -16,12 +16,14 @@ export const ColorModeProvider = ({ children }) => {
   const backgroundColor = mode === "dark" ? "#000" : "#FFF";
   const fontColor = mode === "dark" ? "#FFF" : "#000";
   const fontHero = mode === "dark" ? "#e6e6e6" : "#242323";
+  const backgroundColorModal = mode === "dark" ? "#FFF" : "#000";
 
   const contextValue = useMemo(
     () => ({
       mode,
       toggleColorMode,
       backgroundColor,
+      backgroundColorModal,
       fontColor,
       fontHero,
     }),

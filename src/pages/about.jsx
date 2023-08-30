@@ -267,10 +267,10 @@ const About = () => {
                     >
                       <div className="time-line">
                         <ul class="my-list">
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"name" </span>
                             <span className="semicolons">: </span>
@@ -279,28 +279,28 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"age" </span>
                             <span className="semicolons">: </span>
                             <span className="number">25</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"birthDate" </span>
                             <span className="semicolons">: </span>
                             <span className="dataValue">"09-29-1997"</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"city" </span>
                             <span className="semicolons">: </span>
                             <span className="dataValue">"San Juan City"</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"contactNo" </span>
                             <span className="semicolons">: </span>
@@ -309,7 +309,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"emailAddress" </span>
                             <span className="semicolons">: </span>
@@ -318,14 +318,14 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"education" </span>
                             <span className="semicolons">: </span>
 
                             <span className="innerBracket">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">"school" </span>
                             <span className="semicolons">: </span>
@@ -335,14 +335,14 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">"degree" </span>
                             <span className="semicolons">: </span>
                             <span className="dataValue">"Bachelor's"</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">"major" </span>
                             <span className="semicolons">: </span>
@@ -350,12 +350,12 @@ const About = () => {
                               "Information Technology"
                             </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
 
                             <span className="innerBracket">&#125;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#125;</span>
                           </li>
                         </ul>
@@ -386,20 +386,20 @@ const About = () => {
                     >
                       <div className="time-line">
                         <ul class="my-list">
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"skills" </span>
                             <span className="semicolons">: </span>
                             <span className="innerBracket">&#91;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
@@ -408,7 +408,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -425,20 +425,20 @@ const About = () => {
                             <span className="dataValue">"PHP"</span>
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* web development*/}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
                             <span className="dataValue">"Web Development"</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -477,20 +477,20 @@ const About = () => {
                             <span className="dataValue">"Bootstrap"</span>
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* Design */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
                             <span className="dataValue">"Design"</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -507,13 +507,13 @@ const About = () => {
                             <span className="dataValue">"Dreamweaver"</span>
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* Data Analysis */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
@@ -522,7 +522,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -537,20 +537,20 @@ const About = () => {
                             <span className="dataValue">"MySQL"</span>
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* Servers */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
                             <span className="dataValue">"Servers"</span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -562,13 +562,13 @@ const About = () => {
                             <span className="dataValue">"WHM"</span>
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* Robotics Process Automation */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
@@ -577,7 +577,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -586,13 +586,13 @@ const About = () => {
 
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* Microsoft Suites */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"category" </span>
                             <span className="semicolons">: </span>
@@ -601,7 +601,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"list" </span>
                             <span className="semicolons">: </span>
@@ -613,15 +613,15 @@ const About = () => {
                             <span className="dataValue">"PowerBI"</span>
                             <span className="bracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="innerBracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#125;</span>
                           </li>
                         </ul>
@@ -652,20 +652,20 @@ const About = () => {
                     >
                       <div className="time-line">
                         <ul class="my-list">
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"trainings" </span>
                             <span className="semicolons">: </span>
                             <span className="innerBracket">&#91;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -674,7 +674,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"location" </span>
                             <span className="semicolons">: </span>
@@ -683,18 +683,18 @@ const About = () => {
                               "11th Floor, Rockwell Business Center, Pasig City"
                             </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* mobile android */}
 
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -703,7 +703,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"location" </span>
                             <span className="semicolons">: </span>
@@ -712,18 +712,18 @@ const About = () => {
                               "11th Floor, Rockwell Business Center, Pasig City"
                             </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
 
                           {/* powerBi*/}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -732,7 +732,7 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"location" </span>
                             <span className="semicolons">: </span>
@@ -742,17 +742,17 @@ const About = () => {
                               Pasig City"
                             </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* drupal */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -761,24 +761,24 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"location" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"Online - Udemy"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* SNow */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -787,24 +787,24 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"location" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"Online - Udemy"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* sharepoint */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -813,23 +813,23 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"location" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"Online - Udemy"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                           </li>
 
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="innerBracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#125;</span>
                           </li>
                         </ul>
@@ -860,20 +860,20 @@ const About = () => {
                     >
                       <div className="time-line">
                         <ul class="my-list">
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="variable">"certificates" </span>
                             <span className="semicolons">: </span>
                             <span className="innerBracket">&#91;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -882,14 +882,14 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"date" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"2021-03-23"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">
                               "certificationBody"{" "}
@@ -897,17 +897,17 @@ const About = () => {
                             <span className="semicolons">: </span>
                             <span className="dataValue">"CertiProf"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* cybersec */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -916,14 +916,14 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"date" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"2021-03-23"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">
                               "certificationBody"{" "}
@@ -932,17 +932,17 @@ const About = () => {
 
                             <span className="dataValue">"CertiProf"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* PMF */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -951,14 +951,14 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"date" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"2021-09-19"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">
                               "certificationBody"{" "}
@@ -967,17 +967,17 @@ const About = () => {
 
                             <span className="dataValue">"MSTCONNECT"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
                           {/* google tect-supp */}
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#123;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"title" </span>
                             <span className="semicolons">: </span>
@@ -986,14 +986,14 @@ const About = () => {
                             </span>
                             <span className="commas">, </span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">"date" </span>
                             <span className="semicolons">: </span>
 
                             <span className="dataValue">"2022-11-08"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">........</span>
                             <span className="variable">
                               "certificationBody"{" "}
@@ -1002,17 +1002,17 @@ const About = () => {
 
                             <span className="dataValue">"Coursera"</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="dot">....</span>
                             <span className="variable">&#125;</span>
                             <span className="commas">, </span>
                           </li>
 
-                          <li>
+                          <li class="line-number">
                             <span className="dot">..</span>
                             <span className="innerBracket">&#93;</span>
                           </li>
-                          <li>
+                          <li class="line-number">
                             <span className="bracket">&#125;</span>
                           </li>
                         </ul>
