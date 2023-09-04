@@ -301,20 +301,23 @@ h1 {
 
 /* Right Side */
 .modal-right {
-  /* width: 60%; */
+  max-width: 60%;
   /* padding: 20px; */
   justify-content: center;
   align-items: center;
   padding: 50px;
   margin-left: 20px;
   /* margin-top: -100px; */
+  .position1 {
+    font-size: 11pt;
+  }
 }
 
 /* Title */
 .modal-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* Description */
@@ -342,6 +345,7 @@ h1 {
   color: #333;
   margin: 0 5px;
   cursor: pointer;
+  /* color: rgba(233, 233, 233, 0.75) */
 }
 
 ul .ui-bullet {

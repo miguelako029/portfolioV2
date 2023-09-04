@@ -16,8 +16,6 @@ import IndraV2 from "../assets/images/indra500.png";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-import { BorderColor } from "@mui/icons-material";
-
 const Experience = () => {
   const {
     mode,
@@ -25,6 +23,7 @@ const Experience = () => {
     fontColor,
     BorderColor,
     backgroundColorModal,
+    fontModal,
   } = useColorMode();
 
   const [openRacami, setOpenRacamiModal] = useState(false);
@@ -65,9 +64,13 @@ const Experience = () => {
     width: "75%",
     height: "auto",
     borderRadius: "15px",
-    backgroundColor: mode === "dark" ? "#000" : "#FFF",
-    color: mode === "dark" ? "#000" : "#333",
+    backgroundColor:
+      mode === "dark" ? "rgba(34, 37, 42, 0.75)" : "rgba(233, 233, 233, 0.75)",
+    color: mode === "dark" ? "#FFF" : "#333",
     willChange: "backdrop-filter",
+
+    backdropFilter: "blur(16px) saturate(180%)",
+    WebkitBackdropFilter: "blur(16px) saturate(180%)",
   };
 
   return (
@@ -179,25 +182,29 @@ const Experience = () => {
                 {/* </div> */}
 
                 <div class="modal-right">
-                  <div class="modal-title" sx={{ color: fontColor }}>
-                    Modal Title
-                  </div>
-                  <div class="modal-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <div class="modal-title" sx={{ color: fontModal }}>
+                    RACAMI LCC (TAGUIG CITY, NCR) <br />
+                    <span class="position1">
+                      SOFTWARE QUALITY ASSURANCE ANALYST{" "}
+                    </span>
                   </div>
                   <div class="modal-classification">
                     <ul class="ul-bullet">
-                      <li>Classification 1</li>
-                      <li>Classification 2</li>
-                      <li>Classification 3</li>
+                      <li>
+                        Assisting senior analysts with test planning and design.
+                      </li>
+                      <li>
+                        Test execution, with recording and analysis of results.
+                      </li>
+                      <li>
+                        Completing various types of tests and departmental
+                        documentation in accordance with company and team
+                        policy.
+                      </li>
                     </ul>
                   </div>
                   <div class="modal-icons">
                     <span class="modal-icon">Icon 1</span>
-                    <span class="modal-icon">Icon 2</span>
-                    <span class="modal-icon">Icon 3</span>
-                    <span class="modal-icon">Icon 4</span>
-                    <span class="modal-icon">Icon 5</span>
                   </div>
                 </div>
               </div>
@@ -230,11 +237,11 @@ const Experience = () => {
                 {/* </div> */}
 
                 <div class="modal-right">
-                  <div class="modal-title" sx={{ color: fontColor }}>
-                    Modal Title
-                  </div>
-                  <div class="modal-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <div class="modal-title" sx={{ color: fontModal }}>
+                    RACAMI LCC (TAGUIG CITY, NCR) <br />
+                    <span class="position1">
+                      SOFTWARE QUALITY ASSURANCE ANALYST{" "}
+                    </span>
                   </div>
                   <div class="modal-classification">
                     <ul class="ul-bullet">
@@ -282,11 +289,11 @@ const Experience = () => {
                 {/* </div> */}
 
                 <div class="modal-right">
-                  <div class="modal-title" sx={{ color: fontColor }}>
-                    Modal Title
-                  </div>
-                  <div class="modal-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <div class="modal-title" sx={{ color: fontModal }}>
+                    RACAMI LCC (TAGUIG CITY, NCR) <br />
+                    <span class="position1">
+                      SOFTWARE QUALITY ASSURANCE ANALYST{" "}
+                    </span>
                   </div>
                   <div class="modal-classification">
                     <ul class="ul-bullet">

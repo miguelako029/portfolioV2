@@ -17,6 +17,7 @@ export const ColorModeProvider = ({ children }) => {
   const fontColor = mode === "dark" ? "#FFF" : "#000";
   const fontHero = mode === "dark" ? "#e6e6e6" : "#242323";
   const backgroundColorModal = mode === "dark" ? "#FFF" : "#000";
+  const fontModal = mode === "dark" ? "#0780e2" : "#0780e2";
 
   const contextValue = useMemo(
     () => ({
@@ -26,6 +27,7 @@ export const ColorModeProvider = ({ children }) => {
       backgroundColorModal,
       fontColor,
       fontHero,
+      fontModal,
     }),
     [mode]
   );
