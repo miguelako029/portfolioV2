@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import { Box } from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
+import ImageGallery from "../components/imageGallery";
+import image from "../assets/images/logo192.png";
 
 const Portfolio = () => {
   const { mode, backgroundColor, fontColor } = useColorMode();
+
   return (
     <Box
       className="pageSection"
@@ -21,6 +24,7 @@ const Portfolio = () => {
         textAlign: "center",
         flexDirection: "column",
         transition: "background-color 0.7s ease",
+        // width: "80vw",
       }}
     >
       <div className="pageSection" id="portfolio">
@@ -28,6 +32,7 @@ const Portfolio = () => {
           <div className="labelContainer">
             <h1>Portfolio</h1>
           </div>
+          <ImageGallery />
         </div>
       </div>
     </Box>
