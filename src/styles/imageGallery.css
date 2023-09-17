@@ -24,3 +24,52 @@
 .splide__arrow {
   display: none;
 }
+
+/* Define the fixed width and hide overflow for the splide container */
+.splide {
+  width: calc((100% / 5) * 5); /* Adjust the width based on the perPage value */
+  overflow: hidden;
+}
+
+/* Set the fixed width for each slide */
+.splide__slide {
+  width: calc(100% / 5); /* Adjust the width based on the perPage value */
+  flex: 0 0 calc(96% / 5); /* Adjust the flex property */
+}
+
+/* Hide the extra slides beyond the specified perPage */
+.splide__slide:nth-child(n + 3) {
+  /* display: none; */
+}
+
+/* Add media queries to adjust perPage value for different screen sizes */
+@media screen and (max-width: 768px) {
+  .splide {
+    width: calc((100% / 3) * 3);
+  }
+  .splide__slide {
+    width: calc(100% / 3);
+    flex: 0 0 calc(100% / 3);
+  }
+  .splide__slide:nth-child(n + 2) {
+    /* display: none; */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .splide {
+    width: calc((100% / 1) * 1);
+  }
+  .splide__slide {
+    width: calc(100% / 1);
+    flex: 0 0 calc(100% / 1);
+  }
+  .splide__slide:nth-child(n + 2) {
+    /* display: none; */
+  }
+}
+
+.imgSplide {
+  border: 1.5px solid;
+  padding: 10px;
+}
