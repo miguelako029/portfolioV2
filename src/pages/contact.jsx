@@ -1,7 +1,7 @@
 // import React from "react";
 
 import React, { useState } from "react";
-import { Box } from "@mui/material";
+import { Container, Typography, TextField, Button, Box } from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 
@@ -26,7 +26,33 @@ const Contact = () => {
       <div className="pageSection" id="contact">
         <div className="heroContainer">
           <div className="labelContainer">
-            <h1>Contact</h1>
+            <Container
+              maxWidth="md"
+              style={{ textAlign: "center", marginTop: "50px" }}
+            >
+              <Typography variant="h3" gutterBottom>
+                Let's get connected
+              </Typography>
+              <form noValidate autoComplete="off">
+                <TextField
+                  id="email"
+                  label="Email"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  required
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  type="submit"
+                  style={{ marginTop: "10px" }}
+                >
+                  Submit
+                </Button>
+              </form>
+            </Container>
           </div>
         </div>
       </div>

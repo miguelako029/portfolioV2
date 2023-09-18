@@ -3,18 +3,21 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Button } from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
-
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import "../styles/imageGallery.css";
 
 // Import your images
-import image1 from "../assets/images/ateMars.jpg";
-import image2 from "../assets/images/batterDelish.jpg";
-import image3 from "../assets/images/ateMars.jpg";
-import image4 from "../assets/images/ateMars.jpg";
-import image5 from "../assets/images/ateMars.jpg";
-import image6 from "../assets/images/ateMars.jpg";
+import image1 from "../assets/images/harana.jpg";
+import image2 from "../assets/images/campAllen.jpg";
+import image3 from "../assets/images/vital1.jpg";
+import image4 from "../assets/images/hotJobs.jpg";
+import image5 from "../assets/images/batterDelish.jpg";
+import image6 from "../assets/images/soEggcited.jpg";
+import image7 from "../assets/images/ateMars.jpg";
+import image8 from "../assets/images/jersey.jpg";
+import image9 from "../assets/images/deck.jpg";
 
 const images = [
   {
@@ -25,46 +28,29 @@ const images = [
   },
   {
     url: image2,
-    category: "logo",
+    category: "web",
     link: "https://web.archive.org/web/20190627224039/http://campallen.ph/",
     text: "CAMPALLEN",
   },
   {
-    url: image2,
-    category: "logo",
+    url: image3,
+    category: "web",
     link: "https://vital1.com.ph/",
     text: "VITAL 1 PURIFIED WATER",
   },
   {
-    url: image2,
-    category: "logo",
+    url: image4,
+    category: "web",
     link: "https://web.archive.org/web/20190316135414/https://www.hotjobsphilippines.com/jobs",
     text: "HOTJOBS PHILIPPINES",
   },
-  // {
-  //   url: image2,
-  //   category: "logo",
-  //   link: "https://web.archive.org/web/20190627224039/http://campallen.ph/",
-  //   text: "CAMPALLEN",
-  // },
-  // {
-  //   url: image2,
-  //   category: "logo",
-  //   link: "https://vital1.com.ph/",
-  //   text: "VITAL 1 PURIFIED WATER",
-  // },
-  // {
-  //   url: image2,
-  //   category: "logo",
-  //   link: "https://web.archive.org/web/20190316135414/https://www.hotjobsphilippines.com/jobs",
-  //   text: "HOTJOBS PHILIPPINES",
-  // },
-  { url: image1, category: "web", text: "BATTER DELISH" },
-  { url: image1, category: "web", text: "SO EGGCITED" },
-  { url: image1, category: "web", text: "ATE MARS DISWASHING LIQUID" },
-  { url: image1, category: "web", text: "JERSEY DESIGN" },
-  { url: image1, category: "web", text: "JERSEY DESIGN" },
-  { url: image1, category: "web", text: "JERSEY DESIGN" },
+
+  { url: image5, category: "logo", text: "BATTER DELISH" },
+  { url: image6, category: "logo", text: "SO EGGCITED" },
+  { url: image7, category: "logo", text: "ATE MARS DISWASHING LIQUID" },
+  { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
+  { url: image9, category: "photoshop", text: "DECKS" },
+  // { url: image1, category: "web", text: "JERSEY DESIGN" },
 ];
 
 // const images = [image1, image2, image3, image4, image5, image6];
@@ -92,17 +78,26 @@ const ImageGallery = () => {
   const splideOptions = {
     type: "slide",
     perPage: perPage, // Use the dynamic perPage value
-    focus: "left",
+    focus: "right",
     gap: "12px",
     pagination: false,
   };
 
   const handleScroll = (direction) => {
     if (splideRef.current) {
-      if (direction === "left") {
-        splideRef.current.splide.go("-1");
-      } else {
-        splideRef.current.splide.go("+1");
+      const splide = splideRef.current.splide;
+      const currentPosition = splide.index;
+
+      if (direction === "left" && currentPosition > 0) {
+        splide.go("-1");
+      } else if (direction === "right" && currentPosition < splide.length - 5) {
+        splide.go("+1");
+      } else if (
+        direction === "right" &&
+        currentPosition === splide.length - 5
+      ) {
+        // Display a message when the last image is reached
+        console.log("Last image reached!");
       }
     }
   };
@@ -186,6 +181,12 @@ const ImageGallery = () => {
                   width={"90%"}
                   className="imgSplide"
                 />
+                <a target="_blank" href={image.link} className="overlay">
+                  <div className="overlayContent">
+                    <div className="text">{image.text}</div>
+                    <OpenInNewIcon sx={{ fontSize: 70 }} />
+                  </div>
+                </a>
               </SplideSlide>
             ))}
           </Splide>
