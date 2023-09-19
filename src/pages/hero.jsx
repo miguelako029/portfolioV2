@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
 import { useColorMode } from "../assets/script/DarkModeContext";
 import "../styles/style.css";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
   const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
@@ -28,6 +30,25 @@ const Hero = () => {
     // Add other dark mode specific styles here
   };
 
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Only trigger once when it enters the viewport
+  });
+
+  // Define the animation properties
+  const fadeInUp = useSpring({
+    from: {
+      opacity: 0,
+      transform: "translateY(50px)",
+    },
+    to: {
+      opacity: inView ? 1 : 0, // Animate opacity when in view
+      transform: inView ? "translateY(0)" : "translateY(30px)", // Animate translateY when in view
+    },
+    config: {
+      duration: 1000,
+    },
+  });
+
   return (
     <Box
       className="pageSection"
@@ -35,7 +56,7 @@ const Hero = () => {
       sx={{
         background: backgroundColor,
         color: fontHero,
-        minHeight: "80vh",
+        minHeight: "75vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -45,50 +66,56 @@ const Hero = () => {
         marginTop: "-0px",
       }}
     >
-      <div className="hero">
-        <h1>MIGUEL LORENZO</h1>
-        <h1>MILANEZ</h1>
-        <p>Software Engineer - Web Developer - Front-End Developer</p>
-        <div className="btnContainer">
-          <Button
-            style={{
-              ...buttonStyle,
-              ...(mode === "dark" ? darkModeButtonStyle : {}),
-            }}
-          >
-            <Link
-              to="contact"
-              className="btnStyle"
-              smooth={true}
-              offset={200}
-              duration={1000}
-            >
-              <span>Let's Connect</span>
-            </Link>
-          </Button>
+      <div ref={ref}>
+        <animated.div style={fadeInUp}>
+          <div className="hero">
+            <h1 className="firstName">MIGUEL LORENZO</h1>
+            <h1>MILANEZ</h1>
+            <p className="hero-desc">
+              Software Engineer - Web Developer - Front-End Developer
+            </p>
+            <div className="btnContainer">
+              <Button
+                style={{
+                  ...buttonStyle,
+                  ...(mode === "dark" ? darkModeButtonStyle : {}),
+                }}
+              >
+                <Link
+                  to="contact"
+                  className="btnStyle"
+                  smooth={true}
+                  offset={200}
+                  duration={1000}
+                >
+                  <span>Let's Connect</span>
+                </Link>
+              </Button>
 
-          <Button
-            style={{
-              ...buttonStyle,
-              ...(mode === "dark" ? darkModeButtonStyle : {}),
-            }}
-          >
-            <Link
-              className="btnStyle"
-              smooth={true}
-              offset={200}
-              duration={1000}
-              onClick={() => {
-                window.open(
-                  "https://drive.google.com/file/d/1JBd50x5L0Zb5J21iHemOoU0qqCnaELn6/view?usp=sharing",
-                  "_blank"
-                );
-              }}
-            >
-              <span>My Resume</span>
-            </Link>
-          </Button>
-        </div>
+              <Button
+                style={{
+                  ...buttonStyle,
+                  ...(mode === "dark" ? darkModeButtonStyle : {}),
+                }}
+              >
+                <Link
+                  className="btnStyle"
+                  smooth={true}
+                  offset={200}
+                  duration={1000}
+                  onClick={() => {
+                    window.open(
+                      "https://drive.google.com/file/d/1JBd50x5L0Zb5J21iHemOoU0qqCnaELn6/view?usp=sharing",
+                      "_blank"
+                    );
+                  }}
+                >
+                  <span>My Resume</span>
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </animated.div>
       </div>
     </Box>
   );

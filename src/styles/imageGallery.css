@@ -56,7 +56,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 390px) {
   .splide {
     width: calc((100% / 1) * 1);
   }

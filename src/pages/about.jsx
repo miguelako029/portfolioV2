@@ -183,7 +183,6 @@ const About = () => {
                 <div ref={ref}>
                   <animated.div style={fadeInUp}>
                     <p>
-                      {" "}
                       Experienced Frontend Developer with a demonstrated history
                       of working in the information technology and services
                       industry. Skilled in Redmine, PHP, JavaScript, CMS,
@@ -364,7 +363,9 @@ const About = () => {
                   </Box>
                 </Fade>
               </Modal>
-
+              {open2 && (
+                <div className="modal-overlay" onClick={handleClose2}></div>
+              )}
               <Modal
                 open={open2}
                 onClose={handleClose2}

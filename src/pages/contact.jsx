@@ -102,49 +102,39 @@ const Contact = () => {
                     href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
                     target="blank"
                   >
-                    <Facebook
-                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
-                    />
+                    <Facebook id="contactIcon" sx={{ color: fontColor }} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
                     target="blank"
                   >
-                    <Twitter
-                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
-                    />
+                    <Twitter id="contactIcon" sx={{ color: fontColor }} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
                     target="blank"
                   >
-                    <Instagram
-                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
-                    />
+                    <Instagram id="contactIcon" sx={{ color: fontColor }} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
                     target="blank"
                   >
-                    <LinkedIn
-                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
-                    />
+                    <LinkedIn id="contactIcon" sx={{ color: fontColor }} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
                     target="blank"
                   >
-                    <GitHub
-                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
-                    />
+                    <GitHub id="contactIcon" sx={{ color: fontColor }} />
                   </a>
                   <Tooltip title="miguellmilanez@gmail.com" placement="top">
-                    <Email
-                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
-                    />
+                    <Email id="contactIcon" sx={{ color: fontColor }} />
                   </Tooltip>
                 </div>
               </form>
+
+              <p>&copy; 2023 Miguel Lorenzo Milanez. All rights reserved.</p>
             </Container>
           </div>
         </div>

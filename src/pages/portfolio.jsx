@@ -13,12 +13,12 @@ const Portfolio = () => {
   return (
     <Box
       className="pageSection"
-      id="hero"
+      id="portfolio"
       sx={{
         background: backgroundColor,
         color: fontColor,
         minHeight: "80vh",
-        paddingTop: "400px",
+        paddingTop: "150px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -29,9 +29,9 @@ const Portfolio = () => {
       }}
     >
       <div className="pageSection" id="portfolio">
-        <div className="heroContainer">
+        <div className="portfolioContainer">
           <div className="labelContainer">
-            <h1>Portfolio</h1>
+            <h1 className="port-h1">Portfolio</h1>
           </div>
           <ImageGallery />
         </div>
