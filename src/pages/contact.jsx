@@ -1,12 +1,49 @@
-// import React from "react";
-
 import React, { useState } from "react";
-import { Container, Typography, TextField, Button, Box } from "@mui/material";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Box,
+  Tooltip,
+} from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  LinkedIn,
+  GitHub,
+  Email,
+  Send,
+} from "@mui/icons-material";
+
 const Contact = () => {
-  const { mode, backgroundColor, fontColor } = useColorMode();
+  const { mode, backgroundColor, fontColor, BorderColor } = useColorMode();
+
+  // Define a CSS object for TextField based on the mode
+  const textFieldStyle = {
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        // borderColor: BorderColor,
+      },
+    },
+    "& .MuiOutlinedInput-input": {
+      color: fontColor,
+      background: mode === "dark" ? "#333" : "#fff", // Change background color based on mode
+    },
+    "& .MuiInputLabel-root": {
+      color: fontColor,
+    },
+    "&:hover": {
+      "& .MuiOutlinedInput-input": {
+        borderColor: mode === "light" ? "#fff" : "fff", // Change border color on hover
+      },
+    },
+  };
+
   return (
     <Box
       className="pageSection"
@@ -14,7 +51,8 @@ const Contact = () => {
       sx={{
         background: backgroundColor,
         color: fontColor,
-        minHeight: "80vh",
+        minHeight: "100vh",
+        paddingTop: "150px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -34,23 +72,78 @@ const Contact = () => {
                 Let's get connected
               </Typography>
               <form noValidate autoComplete="off">
+                {/* Apply the style to TextField */}
                 <TextField
                   id="email"
                   label="Email"
                   variant="outlined"
                   fullWidth
                   margin="normal"
-                  required
+                  sx={textFieldStyle}
                 />
                 <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
+                  sx={{
+                    background: backgroundColor,
+                    color: fontColor,
+                    border: "1px solid",
+                    transition: "background-color 0.7s ease",
+                  }}
+                  className="send"
                   type="submit"
                   style={{ marginTop: "10px" }}
                 >
-                  Submit
+                  Send
+                  <Send sx={{ fontSize: 20, margin: "0px 0px 0px 10px" }} />
                 </Button>
+                <div style={{ paddingTop: "200px" }}>
+                  {/* Social media icons */}
+
+                  <a
+                    href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                    target="blank"
+                  >
+                    <Facebook
+                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                    target="blank"
+                  >
+                    <Twitter
+                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                    target="blank"
+                  >
+                    <Instagram
+                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                    target="blank"
+                  >
+                    <LinkedIn
+                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                    target="blank"
+                  >
+                    <GitHub
+                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
+                    />
+                  </a>
+                  <Tooltip title="miguellmilanez@gmail.com" placement="top">
+                    <Email
+                      sx={{ fontSize: 40, margin: "0 10px", color: fontColor }}
+                    />
+                  </Tooltip>
+                </div>
               </form>
             </Container>
           </div>

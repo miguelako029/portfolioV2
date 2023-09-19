@@ -35,7 +35,7 @@ h1 {
     text-align: center;
     /* background-color: #1872d300;
     color: rgb(0, 0, 0); */
-    border: px solid;
+    border: 1px solid;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -276,6 +276,9 @@ h1 {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 /* Left Side - Image Placeholder */
@@ -292,7 +295,20 @@ h1 {
   align-items: center;
   align-content: center;
   text-align: center;
-  max-width: 40%;
+  /* max-width: 40%; */
+
+  /* height: auto; */
+  /* margin-bottom: 100px; */
+  /* margin-left: 40px; */
+}
+
+.modal-strategist {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  max-width: 100%;
+  height: 100%;
 
   /* height: auto; */
   /* margin-bottom: 100px; */
@@ -335,19 +351,38 @@ h1 {
 /* Icon Container */
 .modal-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
+  margin-top: 10px;
 }
 
 /* Icon Styling (Adjust as needed) */
 .modal-icon {
   font-size: 24px;
-  color: #333;
-  margin: 0 5px;
+
+  margin: 0 10px;
   cursor: pointer;
   /* color: rgba(233, 233, 233, 0.75) */
 }
 
 ul .ui-bullet {
   list-style-type: circle;
+}
+
+.send {
+  padding: 10px 20px;
+  text-align: center;
+  /* background-color: #1872d300;
+  color: rgb(0, 0, 0); */
+  border: 1px solid;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.send:hover {
+  background-color: #999999;
+}
+
+.iconList {
+  font-size: 30pt;
 }

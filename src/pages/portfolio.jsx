@@ -18,6 +18,7 @@ const Portfolio = () => {
         background: backgroundColor,
         color: fontColor,
         minHeight: "80vh",
+        paddingTop: "400px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
