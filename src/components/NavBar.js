@@ -36,7 +36,8 @@ HideOnScroll.propTypes = {
 };
 
 export default function HideAppBar(props) {
-  const { mode, toggleColorMode, fontColor, backgroundColor } = useColorMode();
+  const { mode, toggleColorMode, fontColor, backgroundColorMenu } =
+    useColorMode();
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -147,13 +148,9 @@ export default function HideAppBar(props) {
               <IconButton onClick={handleDrawerOpen} color="inherit">
                 <MenuIcon />
               </IconButton>
-
-              <IconButton onClick={toggleColorMode} color="inherit">
-                {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-              </IconButton>
             </Box>
 
-            {/* <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <IconButton onClick={toggleColorMode} color="inherit">
                 {mode === "dark" ? (
                   <Brightness7Icon style={{ color: "white" }} />
@@ -161,7 +158,7 @@ export default function HideAppBar(props) {
                   <Brightness4Icon style={{ color: "black" }} />
                 )}
               </IconButton>
-            </Box> */}
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
@@ -174,8 +171,8 @@ export default function HideAppBar(props) {
         onClose={handleDrawerClose}
         PaperProps={{
           sx: {
-            width: "250px",
-            backgroundColor: backgroundColor,
+            width: "300px",
+            backgroundColor: backgroundColorMenu,
           },
         }}
       >
@@ -187,8 +184,15 @@ export default function HideAppBar(props) {
         >
           <CloseIcon />
         </IconButton>
-        <List>
-          <ListItem sx={{ textAlign: "center" }}>
+        <List
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            height: "100%",
+          }}
+        >
+          <ListItem sx={{ justifyContent: "center" }}>
             <Link
               to="hero"
               spy={true}
@@ -198,11 +202,12 @@ export default function HideAppBar(props) {
               className="menu-item"
               href="/hero"
               style={linkStyles}
+              onClick={handleDrawerClose}
             >
               Home
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem sx={{ justifyContent: "center" }}>
             <Link
               to="about"
               spy={true}
@@ -212,11 +217,12 @@ export default function HideAppBar(props) {
               className="menu-item"
               href="/about"
               style={linkStyles}
+              onClick={handleDrawerClose}
             >
               About
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem sx={{ justifyContent: "center" }}>
             <Link
               to="experience"
               spy={true}
@@ -226,11 +232,12 @@ export default function HideAppBar(props) {
               className="menu-item"
               href="/experience"
               style={linkStyles}
+              onClick={handleDrawerClose}
             >
               Experience
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem sx={{ justifyContent: "center" }}>
             <Link
               to="portfolio"
               spy={true}
@@ -240,11 +247,12 @@ export default function HideAppBar(props) {
               className="menu-item"
               href="/portfolio"
               style={linkStyles}
+              onClick={handleDrawerClose}
             >
               Works
             </Link>
           </ListItem>
-          <ListItem>
+          <ListItem sx={{ justifyContent: "center" }}>
             <Link
               to="contact"
               spy={true}
@@ -254,9 +262,46 @@ export default function HideAppBar(props) {
               className="menu-item"
               href="/contact"
               style={linkStyles}
+              onClick={handleDrawerClose}
             >
               Contact
             </Link>
+          </ListItem>
+          <List
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              height: "100%",
+            }}
+          ></List>
+
+          <ListItem
+            sx={{
+              alignSelf: "flex-end",
+              marginBottom: "10px", // Add margin to separate it from the bottom edge
+            }}
+          >
+            <IconButton
+              onClick={toggleColorMode}
+              sx={{ marginLeft: "auto", color: fontColor, fontSize: 10 }}
+            >
+              {mode === "dark" ? (
+                <>
+                  <Brightness7Icon />
+                  <span style={{ marginLeft: "5px", color: fontColor }}>
+                    Dark Mode: On
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Brightness4Icon />
+                  <span style={{ marginLeft: "5px", color: fontColor }}>
+                    Dark Mode: Off
+                  </span>
+                </>
+              )}
+            </IconButton>
           </ListItem>
         </List>
       </Drawer>
