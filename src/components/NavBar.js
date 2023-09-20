@@ -95,7 +95,7 @@ export default function HideAppBar(props) {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-300}
+                offset={-100}
                 duration={500}
                 className="menu-item"
                 href="/about"
@@ -212,7 +212,7 @@ export default function HideAppBar(props) {
               to="about"
               spy={true}
               smooth={true}
-              offset={-300}
+              offset={-100}
               duration={500}
               className="menu-item"
               href="/about"
@@ -227,7 +227,7 @@ export default function HideAppBar(props) {
               to="experience"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={30}
               duration={500}
               className="menu-item"
               href="/experience"
@@ -242,7 +242,7 @@ export default function HideAppBar(props) {
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={20}
               duration={500}
               className="menu-item"
               href="/portfolio"
@@ -257,7 +257,7 @@ export default function HideAppBar(props) {
               to="contact"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={100}
               duration={500}
               className="menu-item"
               href="/contact"

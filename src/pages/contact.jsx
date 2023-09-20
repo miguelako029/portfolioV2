@@ -69,7 +69,7 @@ const Contact = () => {
   return (
     <Box
       className="pageSection"
-      id="hero"
+      id="contact"
       sx={{
         background: backgroundColor,
         color: fontColor,
@@ -152,13 +152,12 @@ const Contact = () => {
                       <Tooltip title="miguellmilanez@gmail.com" placement="top">
                         <Email id="contactIcon" sx={{ color: fontColor }} />
                       </Tooltip>
+                      <p className="copyright">
+                        &copy; {new Date().getFullYear()} Miguel Milanez. All
+                        rights reserved.
+                      </p>
                     </div>
                   </form>
-
-                  <p>
-                    &copy; {new Date().getFullYear()} Miguel Milanez. All rights
-                    reserved.
-                  </p>
                 </animated.div>
               </div>
             </Container>

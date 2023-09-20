@@ -151,12 +151,12 @@ const About = () => {
   return (
     <Box
       className="pageSection"
-      id="hero"
+      id="about"
       sx={{
         background: backgroundColor,
         color: fontColor,
         minHeight: "80vh",
-        display: "flex",
+        // display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
