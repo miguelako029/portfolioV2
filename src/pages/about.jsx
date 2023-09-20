@@ -103,10 +103,12 @@ const About = () => {
 
   const handleOpen2 = () => {
     setOpen2(true);
+    document.body.classList.add("modal-overlay-hidden");
   };
 
   const handleClose2 = () => {
     setOpen2(false);
+    document.body.classList.remove("modal-overlay-hidden");
   };
   const handleOpen3 = () => {
     setOpen3(true);
@@ -143,17 +145,18 @@ const About = () => {
     borderRadius: "15px",
     backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
     willChange: "backdrop-filter",
+    // overflow: "hidden",
   };
 
   return (
     <Box
       className="pageSection"
-      id="hero"
+      id="about"
       sx={{
         background: backgroundColor,
         color: fontColor,
         minHeight: "80vh",
-        display: "flex",
+        // display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
@@ -363,9 +366,7 @@ const About = () => {
                   </Box>
                 </Fade>
               </Modal>
-              {open2 && (
-                <div className="modal-overlay" onClick={handleClose2}></div>
-              )}
+
               <Modal
                 open={open2}
                 onClose={handleClose2}

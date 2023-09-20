@@ -51,7 +51,7 @@ function App() {
         <ScrollToTop
           smooth
           to="Home"
-          style={{ zIndex: "100", bottom: 50, right: 10 }}
+          style={{ zIndex: "100", bottom: 60, right: 10 }}
         />
       </ThemeProvider>
     </ColorModeProvider>

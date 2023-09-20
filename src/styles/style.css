@@ -94,7 +94,7 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     grid-gap: 1rem;
     /* max-width: 600px; */
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .button {
@@ -113,20 +113,6 @@ h1 {
 }
 
 /* MODAL */
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  z-index: 1000; /* Ensure the overlay is above other elements */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
-}
 
 #aboutModal::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -310,27 +296,24 @@ h1 {
 }
 
 .modal-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 50%; /* 30% for .profileImage, 70% for .aboutDescription */
+  grid-gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* position: fixed; */
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+
   z-index: 1;
-  /* flex-wrap: wrap; */
 }
 
 /* Modal Content */
 
-.modal-container {
-  display: grid;
-  grid-template-columns: 30% 50%; /* 30% for .profileImage, 70% for .aboutDescription */
-  grid-gap: 1rem;
-  /* Set a maximum width to maintain readability */
-}
+/* .modal-container {
+} */
 
 .modal-right {
   font-weight: 100;
@@ -412,7 +395,7 @@ ul .ui-bullet {
 
 #contactIcon {
   font-size: 40px;
-  margin: 0 10px;
+  margin: 0 5px;
   padding-bottom: 10px;
 }
 
@@ -422,23 +405,35 @@ ul .ui-bullet {
   padding-bottom: 100px;
 }
 
+.modal-overlay-hidden {
+  overflow: hidden;
+}
+
 /* Extra Small Devices (Phones) */
 @media only screen and (max-width: 600px) {
   /* Add your CSS rules for extra small devices (portrait) here */
 
+  .pageSection {
+    height: 100vh;
+    /* scroll-snap-align: start;
+    scroll-snap-stop: always; */
+    display: block;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
   #experience {
-    padding-bottom: 100px;
-    padding-top: 300px;
+    /* padding-bottom: 200px; */
+    padding-top: 100px;
     height: 70%;
   }
 
   .portfolioContainer {
-    padding-top: 300px;
-    padding-bottom: 100px;
+    padding-top: 10px;
   }
 
   #hero {
-    height: 80%;
+    height: 100;
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -479,7 +474,6 @@ ul .ui-bullet {
     margin-top: -65px;
     margin-left: 40px;
     margin-right: 40px;
-    width: 80%;
   }
 
   .aboutDescription h1 {
@@ -613,6 +607,7 @@ ul .ui-bullet {
     padding-left: 50px;
     margin-right: 40px;
     width: 85%;
+    height: auto;
   }
 
   .modal-right {
@@ -622,7 +617,7 @@ ul .ui-bullet {
     text-align: justify;
     justify-content: center;
     align-content: center;
-    margin-right: 0; /* Remove right margin on small screens */
+    padding: 0px;
   }
 
   .modal-image {
@@ -775,14 +770,16 @@ ul .ui-bullet {
     }
   }
   #contactIcon {
-    font-size: 30px;
-    margin: 0px 10px;
-    padding-bottom: 10px;
+    font-size: 20px;
+    margin: 0px 5px;
+    padding-bottom: 0px;
+  }
+  .copyright {
+    padding-bottom: 20px;
   }
 
-  .contactContainer {
+  #contact {
     height: 100%;
-    padding-top: 350px;
   }
 }
 

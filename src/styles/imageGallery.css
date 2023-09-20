@@ -64,7 +64,7 @@
     width: calc(100% / 1);
     flex: 0 0 calc(100% / 1);
   }
-  .splide__slide:nth-child(n + 2) {
+  .splide__slide:nth-child(n + 1) {
     /* display: none; */
   }
 }
