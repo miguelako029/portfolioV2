@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 import ImageGallery from "../components/imageGallery";
-import image from "../assets/images/logo192.png";
+// import image from "../assets/images/logo192.png";
 
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
