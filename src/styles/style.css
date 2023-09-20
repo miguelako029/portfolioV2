@@ -114,20 +114,6 @@ h1 {
 
 /* MODAL */
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  z-index: 1000; /* Ensure the overlay is above other elements */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
-}
-
 #aboutModal::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -310,27 +296,24 @@ h1 {
 }
 
 .modal-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 50%; /* 30% for .profileImage, 70% for .aboutDescription */
+  grid-gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* position: fixed; */
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+
   z-index: 1;
-  /* flex-wrap: wrap; */
 }
 
 /* Modal Content */
 
-.modal-container {
-  display: grid;
-  grid-template-columns: 30% 50%; /* 30% for .profileImage, 70% for .aboutDescription */
-  grid-gap: 1rem;
-  /* Set a maximum width to maintain readability */
-}
+/* .modal-container {
+} */
 
 .modal-right {
   font-weight: 100;
@@ -422,8 +405,12 @@ ul .ui-bullet {
   padding-bottom: 100px;
 }
 
+.modal-overlay-hidden {
+  overflow: hidden;
+}
+
 /* Extra Small Devices (Phones) */
-@media (max-width: 414px) {
+@media only screen and (max-width: 600px) {
   /* Add your CSS rules for extra small devices (portrait) here */
 
   #experience {
@@ -613,6 +600,7 @@ ul .ui-bullet {
     padding-left: 50px;
     margin-right: 40px;
     width: 85%;
+    height: auto;
   }
 
   .modal-right {
@@ -622,7 +610,7 @@ ul .ui-bullet {
     text-align: justify;
     justify-content: center;
     align-content: center;
-    margin-right: 0; /* Remove right margin on small screens */
+    padding: 0px;
   }
 
   .modal-image {
