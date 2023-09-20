@@ -48,7 +48,11 @@ function App() {
         <Experience />
         <Portfolio />
         <Contact />
-        {/* <ScrollToTop smooth to="Home" style={{ zIndex: "100" }} /> */}
+        <ScrollToTop
+          smooth
+          to="Home"
+          style={{ zIndex: "100", bottom: 50, right: 10 }}
+        />
       </ThemeProvider>
     </ColorModeProvider>
   );
