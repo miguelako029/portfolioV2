@@ -156,8 +156,8 @@ const Contact = () => {
                   </form>
 
                   <p>
-                    &copy; {new Date().getFullYear()} Miguel Lorenzo Milanez.
-                    All rights reserved.
+                    &copy; {new Date().getFullYear()} Miguel Milanez. All rights
+                    reserved.
                   </p>
                 </animated.div>
               </div>

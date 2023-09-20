@@ -184,7 +184,7 @@ const ImageGallery = () => {
                 <a target="_blank" href={image.link} className="overlay">
                   <div className="overlayContent">
                     <div className="text">{image.text}</div>
-                    <OpenInNewIcon sx={{ fontSize: 70 }} />
+                    <OpenInNewIcon sx={{ fontSize: 40 }} />
                   </div>
                 </a>
               </SplideSlide>
