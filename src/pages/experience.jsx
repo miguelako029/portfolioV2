@@ -230,7 +230,7 @@ const Experience = () => {
                   sx={{ backgroundColor: backgroundColorModal }}
                 >
                   <div>
-                    <img src={Racami} className="modal-image" />
+                    <img src={RacamiV2} className="modal-image" />
                   </div>
                   <div class="modal-right">
                     <div class="modal-title" sx={{ color: fontModal }}>
@@ -397,79 +397,75 @@ const Experience = () => {
                     <div className="modal-title" sx={{ color: fontModal }}>
                       INDRA PHILIPPINES, INC. - MERALCO (PASIG CITY, NCR) <br />
                       <span className="position1">
-                        JUNIOR SYSTEM ENGINEER (2019 - 2022)
+                        Junior System Engineer (2019 - 2022)
                       </span>
                       <br />{" "}
                       <span className="position1">
-                        SYSTEM ENGINEER (Present)
+                        System Engineer (Present)
                       </span>
                     </div>
                     <div className="modal-classification">
                       <ul className="ul-bullet">
-                        <li>Support BAU tasks with defined MOP.</li>
                         <li>
-                          Interact with users to gather requirements for the
-                          MERALCO website.
+                          Supporting day-to-day operations, following
+                          established procedures.
                         </li>
                         <li>
-                          Provide support for incident resolution with defined
-                          MOP.
+                          Gathering user requirements for the MERALCO website.
                         </li>
-                        <li>Support deployments with defined MOP.</li>
-                        <li>Recommend and optimize operational tasks.</li>
-                        <li>Provide 24/7 on-call ERT support.</li>
-                        <li>Conduct investigations and analysis.</li>
                         <li>
-                          Resolve technical incidents, including bug fixes.
+                          Assisting in resolving incidents and deployments using
+                          predefined processes.
                         </li>
-                        <li>Offer technical and functional consulting.</li>
                         <li>
-                          Develop automated flows for Meralco maintenance
+                          Providing suggestions and enhancements for operational
+                          tasks.
+                        </li>
+                        <li>24/7 on-call ERT support.</li>
+                        <li>
+                          Conducting investigations, analyses, and addressing
+                          technical issues.
+                        </li>
+                        <li>Delivering technical and functional guidance.</li>
+                        <li>
+                          Developing automated workflows for maintenance
                           schedules.
                         </li>
                         <li>
-                          Identify and communicate risks and critical points to
-                          the manager.
+                          Identifying and communicating risks and critical
+                          points to the manager.
                         </li>
-                        <li>Adhere strictly to production procedures.</li>
+                        <li>Strictly adhering to production protocols.</li>
                         <li>
-                          Design less complex modules autonomously and
-                          contribute to complex ones.
+                          Independently designing and constructing modules.
                         </li>
+                        <li>Supporting less experienced team members.</li>
+                        <li>Providing user training.</li>
                         <li>
-                          Construct modules and support less experienced team
-                          members.
-                        </li>
-                        <li>Provide user training.</li>
-                        <li>
-                          Participate in reviewing functional requirements.
+                          Participating in reviewing functional requirements.
                         </li>
                         <li>
-                          Seek opinions or decisions from the manager when
+                          Seeking input or decisions from the manager when
                           necessary.
                         </li>
-                        <li>Meet established deadlines for tasks.</li>
-                        <li>Expand technical and technological knowledge.</li>
-                        <li>Be familiar with the working environment.</li>
+                        {/* <li>Meeting established deadlines for tasks.</li>
                         <li>
-                          Pursue opportunities to deepen technological knowledge
+                          Expanding technical and technological knowledge
                           proactively.
+                        </li> */}
+                        {/* <li>Becoming familiar with the work environment.</li> */}
+                        <li>
+                          Identifying and proposing improvements to work
+                          methods.
                         </li>
                         <li>
-                          Show a proactive attitude for continual work
-                          improvement.
-                        </li>
-                        <li>
-                          Identify and propose improvements to work methods.
-                        </li>
-                        <li>
-                          Maintain rigor in work, including data and
+                          Maintaining rigor in work, including data and
                           documentation.
                         </li>
-                        <li>
-                          Demonstrate an interest in understanding work
+                        {/* <li>
+                          Demonstrating an interest in understanding work
                           processes and expected outcomes.
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                     <span className="position1">Technology used:</span>

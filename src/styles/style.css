@@ -50,7 +50,7 @@ h1 {
 }
 
 .hero .hero-desc {
-  font-size: 1pt;
+  font-size: 15pt;
   margin-top: 50px;
   margin-bottom: 20px;
 }
@@ -335,7 +335,7 @@ h1 {
 .modal-right {
   font-weight: 100;
   text-align: left;
-
+  padding: 80px;
   justify-content: center;
   align-content: center;
   /* margin-right: 70px; */
@@ -349,6 +349,12 @@ h1 {
 .modal-title {
   font-size: 26px;
   font-weight: bold;
+  margin-bottom: 8px;
+  margin-left: -20px;
+}
+.position1 {
+  font-size: 15pt;
+  font-weight: 400; /* To make the position text bold */
   margin-bottom: 8px;
 }
 
@@ -383,6 +389,7 @@ h1 {
 
 ul .ui-bullet {
   list-style-type: circle;
+  padding-left: 120px;
 }
 
 .send {

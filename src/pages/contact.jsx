@@ -123,19 +123,19 @@ const Contact = () => {
                       {/* Social media icons */}
 
                       <a
-                        href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                        href="https://www.facebook.com/miguel.milanez.9/"
                         target="blank"
                       >
                         <Facebook id="contactIcon" sx={{ color: fontColor }} />
                       </a>
                       <a
-                        href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                        href="https://twitter.com/MiguellMilanez"
                         target="blank"
                       >
                         <Twitter id="contactIcon" sx={{ color: fontColor }} />
                       </a>
                       <a
-                        href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
+                        href="https://www.instagram.com/mmmiggyyy/"
                         target="blank"
                       >
                         <Instagram id="contactIcon" sx={{ color: fontColor }} />
@@ -146,10 +146,7 @@ const Contact = () => {
                       >
                         <LinkedIn id="contactIcon" sx={{ color: fontColor }} />
                       </a>
-                      <a
-                        href="https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/"
-                        target="blank"
-                      >
+                      <a href="https://github.com/miguelako029#" target="blank">
                         <GitHub id="contactIcon" sx={{ color: fontColor }} />
                       </a>
                       <Tooltip title="miguellmilanez@gmail.com" placement="top">
