@@ -92,12 +92,12 @@ const Contact = () => {
             >
               <div ref={ref}>
                 <animated.div style={fadeInUp}>
-                  <Typography variant="h3" gutterBottom>
+                  <Typography variant="h1" gutterBottom>
                     Let's get connected
                   </Typography>
                   <form noValidate autoComplete="off">
                     {/* Apply the style to TextField */}
-                    <TextField
+                    {/* <TextField
                       id="email"
                       label="Email"
                       variant="outlined"
@@ -118,8 +118,8 @@ const Contact = () => {
                     >
                       Send
                       <Send sx={{ fontSize: 20, margin: "0px 0px 0px 10px" }} />
-                    </Button>
-                    <div style={{ paddingTop: "200px" }}>
+                    </Button> */}
+                    <div style={{ paddingTop: "20px" }}>
                       {/* Social media icons */}
 
                       <a

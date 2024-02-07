@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
@@ -20,7 +21,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
-import image1 from "../assets/images/364148860_7042763322419713_3717389514963905346_n.png";
+import image1 from "../assets/images/MePhoto.png";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -171,7 +172,7 @@ const About = () => {
               <div class="profileImage">
                 <div ref={ref}>
                   <animated.div style={fadeInUp}>
-                    <img src={image1} width="55%" alt="Image 1" />
+                    <img src={image1} width="60%" alt="Image 1" />
                   </animated.div>
                 </div>
               </div>
@@ -179,7 +180,7 @@ const About = () => {
               <div class="aboutDescription">
                 <div ref={ref}>
                   <animated.div style={fadeInUp}>
-                    <h1>Know me more!</h1>
+                    <h1>Miguel Lorenzo Milañez</h1>
                   </animated.div>
                 </div>
 
@@ -208,9 +209,9 @@ const About = () => {
                         }}
                         onClick={handleOpen1}
                       >
-                        Read More
+                        Read More <ArrowRightAltIcon />
                       </Button>
-                      <Button
+                      {/* <Button
                         className="button"
                         sx={{
                           background: backgroundColor,
@@ -242,7 +243,7 @@ const About = () => {
                         onClick={handleOpen4}
                       >
                         My Certificates
-                      </Button>
+                      </Button> */}
                     </div>
                   </animated.div>
                 </div>
@@ -1032,3 +1033,99 @@ const About = () => {
 };
 
 export default About;
+
+// Personal Information:
+// - Name: Miguel Lorenzo T. Milañez
+// - Age: 25
+// - Birth Date: 09-29-1997
+// - City: San Juan City
+
+// Contact Information:
+// - Contact No: 09989397900/09190601544
+// - Email Address: miguellmilanez@gmail.com
+
+// Education Information:
+// - School: Polytechnic University of the Philippines - San Juan City
+// - Degree: Bachelor's
+// - Major: Information Technology
+
+// Skills:
+//   - Category: Programming Languages
+//     List:
+//       - Java
+//       - C++
+//       - C#
+//       - PHP
+
+//   - Category: Web Development
+//     List:
+//       - HTML
+//       - CSS
+//       - JavaScript
+//       - jQuery
+//       - AJAX
+//       - React
+//       - WordPress
+//       - Drupal
+//       - Vue
+//       - Bootstrap
+
+//   - Category: Design
+//     List:
+//       - Adobe Photoshop
+//       - Adobe Illustrator
+//       - Dreamweaver
+
+//   - Category: Data Analysis/Data Management
+//     List:
+//       - SQL
+//       - Excel
+//       - MySQL
+
+//   - Category: Servers
+//     List:
+//       - AWS
+//       - WHM
+
+//   - Category: Robotics Process Automation
+//     List:
+//       - UIPath
+
+//   - Category: Microsoft Suites
+//     List:
+//       - SharePoint
+//       - PowerBI
+
+// Training: BASIC ANGULAR TRAINING (24 HOURS)
+// Location: 11th Floor, Rockwell Business Center, Pasig City
+
+// Training: MOBILE ANDROID APP (16 HOURS)
+// Location: 11th Floor, Rockwell Business Center, Pasig City
+
+// Training: POWERBI TRAINING
+// Location: 4th Floor, Lopez Building, Meralco, Ortigas, Pasig City
+
+// Training: FULL INTRODUCTION DRUPAL 8
+// Location: Online - Udemy
+
+// Training: COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE
+// Location: Online - Udemy
+
+// Training: SHAREPOINT 2013 COMPLETE TRAINING
+// Location: Online - Udemy
+
+// Certificate: SCRUM FOUNDATION PROFESSIONAL CERTIFICATE
+// Date: 2021-03-23
+// Certification Body: CertiProf
+
+// Certificate: CYBER SECURITY FOUNDATION - CSFPC**
+// Date: 2021-03-23
+// Certification Body: CertiProf
+
+// Certificate: PROJECT MANAGEMENT FUNDAMENTALS
+// Date: 2021-09-19
+// Certification Body: MSTCONNECT
+
+// Certificate: GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS
+// Date: 2022-11-08
+// Certification Body: Coursera

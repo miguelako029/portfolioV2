@@ -56,7 +56,7 @@ const Hero = () => {
       sx={{
         background: backgroundColor,
         color: fontHero,
-        minHeight: "75vh",
+        minHeight: "80vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -69,8 +69,8 @@ const Hero = () => {
       <div ref={ref}>
         <animated.div style={fadeInUp}>
           <div className="hero">
-            <h1 className="firstName">MIGUEL LORENZO</h1>
-            <h1>MILANEZ</h1>
+            <h1 className="firstName">Hey! I'm Miguel! </h1>
+            {/* <h1>MILANEZ</h1> */}
             <p className="hero-desc">
               Software Engineer - Web Developer - Front-End Developer
             </p>
@@ -88,7 +88,7 @@ const Hero = () => {
                   offset={200}
                   duration={1000}
                 >
-                  <span>Let's Connect</span>
+                  <span className="btnText">Let's Connect</span>
                 </Link>
               </Button>
 
@@ -110,7 +110,7 @@ const Hero = () => {
                     );
                   }}
                 >
-                  <span>My Resume</span>
+                  <span className="btnText">My Resume</span>
                 </Link>
               </Button>
             </div>
