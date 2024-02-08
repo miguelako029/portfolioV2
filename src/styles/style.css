@@ -232,8 +232,15 @@ h1 {
   padding-bottom: 100px;
 }
 
+.exp-h1 {
+  font-size: 70pt;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
 .layout {
-  width: 90vw;
+  width: 80vw;
 
   display: flex;
   gap: 5px;
@@ -525,7 +532,7 @@ ul .ui-bullet {
   }
 
   .exp-h1 {
-    font-size: 30pt;
+    font-size: 150pt;
   }
 
   .port-h1 {
