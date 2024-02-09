@@ -145,7 +145,7 @@ const Experience = () => {
           <div className="pageSection">
             <div className="expContainer">
               <div className="labelContainer">
-                <h1 className="exp-h1">Experience</h1>
+                <h1 className="exp-h1">I worked with them!</h1>
               </div>
               <section class="layout">
                 <div class="cardBox">
