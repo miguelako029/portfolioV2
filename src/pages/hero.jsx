@@ -51,12 +51,12 @@ const Hero = () => {
 
   return (
     <Box
-      className="pageSection"
+      className="heroSection"
       id="hero"
       sx={{
         background: backgroundColor,
         color: fontHero,
-        minHeight: "80vh",
+        // minHeight: "80vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -69,7 +69,9 @@ const Hero = () => {
       <div ref={ref}>
         <animated.div style={fadeInUp}>
           <div className="hero">
-            <h1 className="firstName">Hey! I'm Miguel! </h1>
+            <h1 className="firstName">
+              Hey! I'm <span>Miguel!</span>
+            </h1>
             {/* <h1>MILANEZ</h1> */}
             <p className="hero-desc">
               Software Engineer - Web Developer - Front-End Developer

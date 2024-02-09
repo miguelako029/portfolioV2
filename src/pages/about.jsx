@@ -268,6 +268,191 @@ const About = () => {
                       variant="h6"
                       component="h2"
                     >
+                      <div>
+                        <h2>Personal Information:</h2>
+                        <ul>
+                          <li>Name: Miguel Lorenzo T. Milañez</li>
+                          <li>Age: 25</li>
+                          <li>Birth Date: 09-29-1997</li>
+                          <li>City: San Juan City</li>
+                        </ul>
+                        <h2>Contact Information:</h2>
+                        <ul>
+                          <li>Contact No: 09989397900/09190601544</li>
+                          <li>Email Address: miguellmilanez@gmail.com</li>
+                        </ul>
+
+                        <h2>Education Information:</h2>
+                        <ul>
+                          <li>
+                            School: Polytechnic University of the Philippines -
+                            San Juan City
+                          </li>
+                          <li>Degree: Bachelor's</li>
+                          <li>Major: Information Technology</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h2>Skills:</h2>
+                        <ul>
+                          <li>
+                            Category: Programming Languages
+                            <ul>
+                              <li>Java</li>
+                              <li>C++</li>
+                              <li>C#</li>
+                              <li>PHP</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Category: Web Development
+                            <ul>
+                              <li>HTML</li>
+                              <li>CSS</li>
+                              <li>JavaScript</li>
+                              <li>jQuery</li>
+                              <li>AJAX</li>
+                              <li>React</li>
+                              <li>WordPress</li>
+                              <li>Drupal</li>
+                              <li>Vue</li>
+                              <li>Bootstrap</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Category: Design
+                            <ul>
+                              <li>Adobe Photoshop</li>
+                              <li>Adobe Illustrator</li>
+                              <li>Dreamweaver</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Category: Data Analysis/Data Management
+                            <ul>
+                              <li>SQL</li>
+                              <li>Excel</li>
+                              <li>MySQL</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Category: Servers
+                            <ul>
+                              <li>AWS</li>
+                              <li>WHM</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Category: Robotics Process Automation
+                            <ul>
+                              <li>UIPath</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Category: Microsoft Suites
+                            <ul>
+                              <li>SharePoint</li>
+                              <li>PowerBI</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h2>Training:</h2>
+                        <ul>
+                          <li>
+                            BASIC ANGULAR TRAINING (24 HOURS)
+                            <br />
+                            Location: 11th Floor, Rockwell Business Center,
+                            Pasig City
+                          </li>
+                          <li>
+                            MOBILE ANDROID APP (16 HOURS)
+                            <br />
+                            Location: 11th Floor, Rockwell Business Center,
+                            Pasig City
+                          </li>
+                          <li>
+                            POWERBI TRAINING
+                            <br />
+                            Location: 4th Floor, Lopez Building, Meralco,
+                            Ortigas, Pasig City
+                          </li>
+                          <li>
+                            FULL INTRODUCTION DRUPAL 8<br />
+                            Location: Online - Udemy
+                          </li>
+                          <li>
+                            COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE
+                            <br />
+                            Location: Online - Udemy
+                          </li>
+                          <li>
+                            SHAREPOINT 2013 COMPLETE TRAINING
+                            <br />
+                            Location: Online - Udemy
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2>Certificates:</h2>
+                        <ul>
+                          <li>
+                            SCRUM FOUNDATION PROFESSIONAL CERTIFICATE
+                            <br />
+                            Date: 2021-03-23
+                            <br />
+                            Certification Body: CertiProf
+                          </li>
+                          <li>
+                            CYBER SECURITY FOUNDATION - CSFPC**
+                            <br />
+                            Date: 2021-03-23
+                            <br />
+                            Certification Body: CertiProf
+                          </li>
+                          <li>
+                            PROJECT MANAGEMENT FUNDAMENTALS
+                            <br />
+                            Date: 2021-09-19
+                            <br />
+                            Certification Body: MSTCONNECT
+                          </li>
+                          <li>
+                            GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS
+                            <br />
+                            Date: 2022-11-08
+                            <br />
+                            Certification Body: Coursera
+                          </li>
+                        </ul>
+                      </div>
+                    </Typography>
+                  </Box>
+                </Fade>
+              </Modal>
+
+              {/* <Modal
+                open={open1}
+                onClose={handleClose1}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Fade in={open1}>
+                  <Box sx={style} id="aboutModal">
+                    <Button
+                      onClick={handleClose1}
+                      sx={{ position: "absolute", top: 10, right: 1 }}
+                    >
+                      <CloseIcon />
+                    </Button>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                    >
                       <div className="time-line">
                         <ul class="my-list">
                           <li class="line-number">
@@ -366,664 +551,7 @@ const About = () => {
                     </Typography>
                   </Box>
                 </Fade>
-              </Modal>
-
-              <Modal
-                open={open2}
-                onClose={handleClose2}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
-                <Fade in={open2}>
-                  <Box sx={style} id="aboutModal">
-                    <Button
-                      onClick={handleClose2}
-                      sx={{ position: "absolute", top: 10, right: 1 }}
-                    >
-                      <CloseIcon />
-                    </Button>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
-                      <div className="time-line">
-                        <ul class="my-list">
-                          <li class="line-number">
-                            <span className="bracket">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"skills" </span>
-                            <span className="semicolons">: </span>
-                            <span className="innerBracket">&#91;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Programming Languages"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-                            <span className="dataValue">
-                              "Java"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "C++"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "C#"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">"PHP"</span>
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* web development*/}
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"Web Development"</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-                            <span className="dataValue">
-                              "HTML"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "CSS"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "JavaScript"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "jQuery"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "AJAX"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "React"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "WordPress"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "Drupal"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "Vue"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "Bootstrap"<span className="commas">, </span>
-                            </span>
-
-                            <span className="dataValue">"Bootstrap"</span>
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* Design */}
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"Design"</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-                            <span className="dataValue">
-                              "Adobe Photoshop"
-                              <span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "Adobe Illustrator"
-                              <span className="commas">, </span>
-                            </span>
-
-                            <span className="dataValue">"Dreamweaver"</span>
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* Data Analysis */}
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Data Analysis/Data Management"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-
-                            <span className="dataValue">
-                              "SQL"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">
-                              "Excel"<span className="commas">, </span>
-                            </span>
-                            <span className="dataValue">"MySQL"</span>
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* Servers */}
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"Servers"</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-                            <span className="dataValue">
-                              "AWS"<span className="commas">, </span>
-                            </span>
-
-                            <span className="dataValue">"WHM"</span>
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* Robotics Process Automation */}
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Robotics Process Automation"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-                            <span className="dataValue">"UIPath"</span>
-
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* Microsoft Suites */}
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"category" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Microsoft Suites"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"list" </span>
-                            <span className="semicolons">: </span>
-                            <span className="bracket">&#91;</span>
-                            <span className="dataValue">
-                              "SharePoint"<span className="commas">, </span>
-                            </span>
-
-                            <span className="dataValue">"PowerBI"</span>
-                            <span className="bracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="innerBracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="bracket">&#125;</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </Typography>
-                  </Box>
-                </Fade>
-              </Modal>
-
-              <Modal
-                open={open3}
-                onClose={handleClose3}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
-                <Fade in={open3}>
-                  <Box sx={style} id="aboutModal">
-                    <Button
-                      onClick={handleClose3}
-                      sx={{ position: "absolute", top: 0, right: 0 }}
-                    >
-                      <CloseIcon />
-                    </Button>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
-                      <div className="time-line">
-                        <ul class="my-list">
-                          <li class="line-number">
-                            <span className="bracket">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"trainings" </span>
-                            <span className="semicolons">: </span>
-                            <span className="innerBracket">&#91;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "BASIC ANGULAR TRAINING (24 HOURS)"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"location" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">
-                              "11th Floor, Rockwell Business Center, Pasig City"
-                            </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* mobile android */}
-
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "MOBILE ANDROID APP (16 HOURS)"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"location" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">
-                              "11th Floor, Rockwell Business Center, Pasig City"
-                            </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-
-                          {/* powerBi*/}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "POWERBI TRAINING"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"location" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">
-                              "4th Floor, Lopez Building, Meralco, Ortigas,
-                              Pasig City"
-                            </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* drupal */}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "FULL INTRODUCTION DRUPAL 8"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"location" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"Online - Udemy"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* SNow */}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"location" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"Online - Udemy"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* sharepoint */}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "SHAREPOINT 2013 COMPLETE TRAINING"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"location" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"Online - Udemy"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                          </li>
-
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="innerBracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="bracket">&#125;</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </Typography>
-                  </Box>
-                </Fade>
-              </Modal>
-
-              <Modal
-                open={open4}
-                onClose={handleClose4}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
-                <Fade in={open4}>
-                  <Box sx={style} id="aboutModal">
-                    <Button
-                      onClick={handleClose4}
-                      sx={{ position: "absolute", top: 0, right: 0 }}
-                    >
-                      <CloseIcon />
-                    </Button>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
-                      <div className="time-line">
-                        <ul class="my-list">
-                          <li class="line-number">
-                            <span className="bracket">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"certificates" </span>
-                            <span className="semicolons">: </span>
-                            <span className="innerBracket">&#91;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"date" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"2021-03-23"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">
-                              "certificationBody"{" "}
-                            </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"CertiProf"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* cybersec */}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "CYBER SECURITY FOUNDATION - CSFPC**"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"date" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"2021-03-23"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">
-                              "certificationBody"{" "}
-                            </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"CertiProf"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* PMF */}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "PROJECT MANAGEMENT FUNDAMENTALS"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"date" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"2021-09-19"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">
-                              "certificationBody"{" "}
-                            </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"MSTCONNECT"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-                          {/* google tect-supp */}
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"title" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">"date" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"2022-11-08"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">........</span>
-                            <span className="variable">
-                              "certificationBody"{" "}
-                            </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="dataValue">"Coursera"</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">&#125;</span>
-                            <span className="commas">, </span>
-                          </li>
-
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="innerBracket">&#93;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="bracket">&#125;</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </Typography>
-                  </Box>
-                </Fade>
-              </Modal>
+              </Modal> */}
             </div>
           </div>
         </div>
@@ -1129,3 +657,658 @@ export default About;
 // Certificate: GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS
 // Date: 2022-11-08
 // Certification Body: Coursera
+
+//  <Modal
+// open={open2}
+// onClose={handleClose2}
+// aria-labelledby="modal-modal-title"
+// aria-describedby="modal-modal-description"
+// >
+// <Fade in={open2}>
+//   <Box sx={style} id="aboutModal">
+//     <Button
+//       onClick={handleClose2}
+//       sx={{ position: "absolute", top: 10, right: 1 }}
+//     >
+//       <CloseIcon />
+//     </Button>
+//     <Typography
+//       id="modal-modal-title"
+//       variant="h6"
+//       component="h2"
+//     >
+//       <div className="time-line">
+//         <ul class="my-list">
+//           <li class="line-number">
+//             <span className="bracket">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">..</span>
+//             <span className="variable">"skills" </span>
+//             <span className="semicolons">: </span>
+//             <span className="innerBracket">&#91;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "Programming Languages"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+//             <span className="dataValue">
+//               "Java"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "C++"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "C#"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">"PHP"</span>
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">"Web Development"</span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+//             <span className="dataValue">
+//               "HTML"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "CSS"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "JavaScript"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "jQuery"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "AJAX"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "React"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "WordPress"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "Drupal"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "Vue"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "Bootstrap"<span className="commas">, </span>
+//             </span>
+
+//             <span className="dataValue">"Bootstrap"</span>
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">"Design"</span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+//             <span className="dataValue">
+//               "Adobe Photoshop"
+//               <span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "Adobe Illustrator"
+//               <span className="commas">, </span>
+//             </span>
+
+//             <span className="dataValue">"Dreamweaver"</span>
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "Data Analysis/Data Management"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+
+//             <span className="dataValue">
+//               "SQL"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">
+//               "Excel"<span className="commas">, </span>
+//             </span>
+//             <span className="dataValue">"MySQL"</span>
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">"Servers"</span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+//             <span className="dataValue">
+//               "AWS"<span className="commas">, </span>
+//             </span>
+
+//             <span className="dataValue">"WHM"</span>
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "Robotics Process Automation"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+//             <span className="dataValue">"UIPath"</span>
+
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"category" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "Microsoft Suites"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"list" </span>
+//             <span className="semicolons">: </span>
+//             <span className="bracket">&#91;</span>
+//             <span className="dataValue">
+//               "SharePoint"<span className="commas">, </span>
+//             </span>
+
+//             <span className="dataValue">"PowerBI"</span>
+//             <span className="bracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">..</span>
+//             <span className="innerBracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="bracket">&#125;</span>
+//           </li>
+//         </ul>
+//       </div>
+//     </Typography>
+//   </Box>
+// </Fade>
+// </Modal>
+
+// <Modal
+// open={open3}
+// onClose={handleClose3}
+// aria-labelledby="modal-modal-title"
+// aria-describedby="modal-modal-description"
+// >
+// <Fade in={open3}>
+//   <Box sx={style} id="aboutModal">
+//     <Button
+//       onClick={handleClose3}
+//       sx={{ position: "absolute", top: 0, right: 0 }}
+//     >
+//       <CloseIcon />
+//     </Button>
+//     <Typography
+//       id="modal-modal-title"
+//       variant="h6"
+//       component="h2"
+//     >
+//       <div className="time-line">
+//         <ul class="my-list">
+//           <li class="line-number">
+//             <span className="bracket">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">..</span>
+//             <span className="variable">"trainings" </span>
+//             <span className="semicolons">: </span>
+//             <span className="innerBracket">&#91;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "BASIC ANGULAR TRAINING (24 HOURS)"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"location" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">
+//               "11th Floor, Rockwell Business Center, Pasig City"
+//             </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "MOBILE ANDROID APP (16 HOURS)"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"location" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">
+//               "11th Floor, Rockwell Business Center, Pasig City"
+//             </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "POWERBI TRAINING"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"location" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">
+//               "4th Floor, Lopez Building, Meralco, Ortigas,
+//               Pasig City"
+//             </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "FULL INTRODUCTION DRUPAL 8"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"location" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"Online - Udemy"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"location" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"Online - Udemy"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "SHAREPOINT 2013 COMPLETE TRAINING"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"location" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"Online - Udemy"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">..</span>
+//             <span className="innerBracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="bracket">&#125;</span>
+//           </li>
+//         </ul>
+//       </div>
+//     </Typography>
+//   </Box>
+// </Fade>
+// </Modal>
+
+// <Modal
+// open={open4}
+// onClose={handleClose4}
+// aria-labelledby="modal-modal-title"
+// aria-describedby="modal-modal-description"
+// >
+// <Fade in={open4}>
+//   <Box sx={style} id="aboutModal">
+//     <Button
+//       onClick={handleClose4}
+//       sx={{ position: "absolute", top: 0, right: 0 }}
+//     >
+//       <CloseIcon />
+//     </Button>
+//     <Typography
+//       id="modal-modal-title"
+//       variant="h6"
+//       component="h2"
+//     >
+//       <div className="time-line">
+//         <ul class="my-list">
+//           <li class="line-number">
+//             <span className="bracket">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">..</span>
+//             <span className="variable">"certificates" </span>
+//             <span className="semicolons">: </span>
+//             <span className="innerBracket">&#91;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"date" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"2021-03-23"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">
+//               "certificationBody"{" "}
+//             </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">"CertiProf"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "CYBER SECURITY FOUNDATION - CSFPC**"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"date" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"2021-03-23"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">
+//               "certificationBody"{" "}
+//             </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"CertiProf"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "PROJECT MANAGEMENT FUNDAMENTALS"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"date" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"2021-09-19"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">
+//               "certificationBody"{" "}
+//             </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"MSTCONNECT"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#123;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"title" </span>
+//             <span className="semicolons">: </span>
+//             <span className="dataValue">
+//               "GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS"
+//             </span>
+//             <span className="commas">, </span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">"date" </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"2022-11-08"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">........</span>
+//             <span className="variable">
+//               "certificationBody"{" "}
+//             </span>
+//             <span className="semicolons">: </span>
+
+//             <span className="dataValue">"Coursera"</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="dot">....</span>
+//             <span className="variable">&#125;</span>
+//             <span className="commas">, </span>
+//           </li>
+
+//           <li class="line-number">
+//             <span className="dot">..</span>
+//             <span className="innerBracket">&#93;</span>
+//           </li>
+//           <li class="line-number">
+//             <span className="bracket">&#125;</span>
+//           </li>
+//         </ul>
+//       </div>
+//     </Typography>
+//   </Box>
+// </Fade>
+// </Modal>
