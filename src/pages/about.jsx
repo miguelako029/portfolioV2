@@ -156,7 +156,7 @@ const About = () => {
       sx={{
         background: backgroundColor,
         color: fontColor,
-        minHeight: "80vh",
+        minHeight: "60vh",
         // display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -165,7 +165,7 @@ const About = () => {
         transition: "background-color 0.7s ease",
       }}
     >
-      <div className="pageSection" id="about">
+      <div className="aboutSection" id="about">
         <div className="heroContainer">
           <div className="labelContainer">
             <div class="about-grid-container">
