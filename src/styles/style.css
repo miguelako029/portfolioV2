@@ -49,11 +49,11 @@ h1 {
   font-size: 70pt;
   font-family: "Work Sans", sans-serif;
   line-height: 0.5;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero .firstName {
-  font-size: 7vw;
+  font-size: 5vw;
   line-height: 9vh;
   text-align: left;
   margin-left: 35px;
@@ -70,10 +70,12 @@ h1 {
 }
 
 .hero .hero-desc {
-  font-size: 1.7vw;
-  font-weight: 100;
-  margin-top: 3.5vh;
-  margin-bottom: 20px;
+  font-size: 1.5vw;
+  font-family: "Work Sans", sans-serif;
+  margin-top: 4.5vh;
+  margin-bottom: 1vh;
+  font-weight: 400;
+  word-spacing: 1px;
 }
 
 .hero .btnContainer {
@@ -252,15 +254,8 @@ h1 {
   padding-bottom: 100px;
 }
 
-.exp-h1 {
-  font-size: 70pt;
-  font-weight: 300;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
 .layout {
-  width: 80vw;
+  width: 90vw;
 
   display: flex;
   gap: 5px;
@@ -568,7 +563,7 @@ ul .ui-bullet {
   }
 
   .exp-h1 {
-    font-size: 150pt;
+    font-size: 30pt;
   }
 
   .port-h1 {
@@ -835,8 +830,6 @@ ul .ui-bullet {
   }
 }
 
-/* MODAL */
-
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* Add your CSS rules for extra small devices (landscape) here */
 
@@ -856,7 +849,7 @@ ul .ui-bullet {
     line-height: 8vh;
     text-align: left;
     margin-left: 30px;
-    font-weight: 300;
+    font-weight: 100;
     /* font-family: "Work Sans", sans-serif; */
   }
 
