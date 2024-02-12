@@ -158,8 +158,6 @@ const About = () => {
     overflow: "auto",
     position: "absolute",
 
-    transform: "translate(-50%, -50%)",
-
     borderRadius: "15px",
     backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
     willChange: "backdrop-filter",
@@ -318,6 +316,21 @@ const About = () => {
                       variant="h6"
                       component="h2"
                     >
+                      <div style={{ display: "flex", marginTop: "10px" }}>
+                        <div
+                          style={{
+                            border: "1px solid black",
+                            width: "30%",
+                          }}
+                        >
+                          test 1
+                        </div>
+                        <div
+                          style={{ width: "70%", border: "1px solid black" }}
+                        >
+                          {/* Content for right 70% */}test 1
+                        </div>
+                      </div>
                       <div>
                         <h2>Personal Information:</h2>
                         <ul>
@@ -481,7 +494,16 @@ const About = () => {
                       </div>
                     </Typography>
 
-                    <AppBar position="static">
+                    <AppBar
+                      position="static"
+                      className="modalTab"
+                      sx={{
+                        // background: "none",
+                        color: fontColor,
+                        // boxShadow: "none",
+                        // borderBottom: "1px solid #000",
+                      }}
+                    >
                       <Tabs
                         value={value}
                         onChange={handleChange}
@@ -495,6 +517,7 @@ const About = () => {
                         <Tab label="Item Three" {...a11yProps(2)} />
                       </Tabs>
                     </AppBar>
+
                     <SwipeableViews
                       axis={theme.direction === "rtl" ? "x-reverse" : "x"}
                       index={value}
@@ -513,125 +536,6 @@ const About = () => {
                   </Box>
                 </Fade>
               </Modal>
-
-              {/* <Modal
-                open={open1}
-                onClose={handleClose1}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
-                <Fade in={open1}>
-                  <Box sx={style} id="aboutModal">
-                    <Button
-                      onClick={handleClose1}
-                      sx={{ position: "absolute", top: 10, right: 1 }}
-                    >
-                      <CloseIcon />
-                    </Button>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
-                      <div className="time-line">
-                        <ul class="my-list">
-                          <li class="line-number">
-                            <span className="bracket">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"name" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Miguel Lorenzo T. Milañez"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"age" </span>
-                            <span className="semicolons">: </span>
-                            <span className="number">25</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"birthDate" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"09-29-1997"</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"city" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"San Juan City"</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"contactNo" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "09989397900/09190601544"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"emailAddress" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "miguellmilanez@gmail.com"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">..</span>
-                            <span className="variable">"education" </span>
-                            <span className="semicolons">: </span>
-
-                            <span className="innerBracket">&#123;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">"school" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Polytechnic University of the Philippines - San
-                              Juan City"
-                            </span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">"degree" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">"Bachelor's"</span>
-                            <span className="commas">, </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-                            <span className="variable">"major" </span>
-                            <span className="semicolons">: </span>
-                            <span className="dataValue">
-                              "Information Technology"
-                            </span>
-                          </li>
-                          <li class="line-number">
-                            <span className="dot">....</span>
-
-                            <span className="innerBracket">&#125;</span>
-                          </li>
-                          <li class="line-number">
-                            <span className="bracket">&#125;</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </Typography>
-                  </Box>
-                </Fade>
-              </Modal> */}
             </div>
           </div>
         </div>

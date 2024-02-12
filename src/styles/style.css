@@ -18,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow: auto;
 }
 
 h1 {
@@ -169,8 +170,28 @@ h1 {
 .modal1 {
   width: 90%;
   height: 90%;
-  top: 50%;
-  left: 50%;
+  top: 5%;
+  left: 5%;
+  position: absolute;
+  /* background-color: white; */
+  overflow: auto; /* Enable scrolling within the modal */
+}
+
+.modalTab {
+  background: none;
+  box-shadow: none;
+  border-bottom: 1px solid #000;
+}
+
+.layout {
+  width: 100%;
+
+  display: flex;
+  gap: 16px;
+}
+
+.grow1 {
+  flex-grow: 1;
 }
 
 #aboutModal::-webkit-scrollbar-track {
