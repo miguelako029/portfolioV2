@@ -18,8 +18,16 @@ import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
+import SwipeableViews from "react-swipeable-views";
+
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
 import image1 from "../assets/images/MePhoto.png";
 
@@ -94,6 +102,17 @@ const About = () => {
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
 
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
+
   const handleOpen1 = () => {
     setOpen1(true);
   };
@@ -138,16 +157,47 @@ const About = () => {
     padding: "10px",
     overflow: "auto",
     position: "absolute",
-    top: "50%",
-    left: "50%",
+
     transform: "translate(-50%, -50%)",
-    width: "80%",
-    height: "80%",
+
     borderRadius: "15px",
     backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
     willChange: "backdrop-filter",
     // overflow: "hidden",
   };
+
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+
+  function a11yProps(index) {
+    return {
+      id: `full-width-tab-${index}`,
+      "aria-controls": `full-width-tabpanel-${index}`,
+    };
+  }
 
   return (
     <Box
@@ -156,7 +206,7 @@ const About = () => {
       sx={{
         background: backgroundColor,
         color: fontColor,
-        minHeight: "60vh",
+        minHeight: "70vh",
         // display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -256,7 +306,7 @@ const About = () => {
                 aria-describedby="modal-modal-description"
               >
                 <Fade in={open1}>
-                  <Box sx={style} id="aboutModal">
+                  <Box sx={style} id="aboutModal" className="modal1">
                     <Button
                       onClick={handleClose1}
                       sx={{ position: "absolute", top: 10, right: 1 }}
@@ -430,6 +480,36 @@ const About = () => {
                         </ul>
                       </div>
                     </Typography>
+
+                    <AppBar position="static">
+                      <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        indicatorColor="secondary"
+                        textColor="inherit"
+                        variant="fullWidth"
+                        aria-label="full width tabs example"
+                      >
+                        <Tab label="Item One" {...a11yProps(0)} />
+                        <Tab label="Item Two" {...a11yProps(1)} />
+                        <Tab label="Item Three" {...a11yProps(2)} />
+                      </Tabs>
+                    </AppBar>
+                    <SwipeableViews
+                      axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+                      index={value}
+                      onChangeIndex={handleChangeIndex}
+                    >
+                      <TabPanel value={value} index={0} dir={theme.direction}>
+                        Item One
+                      </TabPanel>
+                      <TabPanel value={value} index={1} dir={theme.direction}>
+                        Item Two
+                      </TabPanel>
+                      <TabPanel value={value} index={2} dir={theme.direction}>
+                        Item Three
+                      </TabPanel>
+                    </SwipeableViews>
                   </Box>
                 </Fade>
               </Modal>
