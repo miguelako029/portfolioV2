@@ -6,6 +6,9 @@ import { useColorMode } from "../assets/script/DarkModeContext"; // Update the p
 import "../styles/style.css";
 
 import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
 
 import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
@@ -158,11 +161,40 @@ const About = () => {
     overflow: "auto",
     position: "absolute",
 
-    borderRadius: "15px",
+    // borderRadius: "15px",
     backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
     willChange: "backdrop-filter",
     // overflow: "hidden",
   };
+
+  const bull = (
+    <Box
+      component="span"
+      sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+    >
+      •
+    </Box>
+  );
+
+  const card = (
+    <React.Fragment>
+      <CardContent>
+        <img src={image1} width="30%" alt="Image 1" />
+
+        <Typography variant="h5" component="div">
+          Miguel Lorenzo T. Milanez
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          Software Engineer
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+    </React.Fragment>
+  );
 
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -316,223 +348,240 @@ const About = () => {
                       variant="h6"
                       component="h2"
                     >
-                      <div style={{ display: "flex", marginTop: "10px" }}>
-                        <div
-                          style={{
-                            border: "1px solid black",
-                            width: "30%",
-                          }}
-                        >
-                          test 1
+                      <div style={{ display: "flex", padding: "30px" }}>
+                        <div className="personalInfo">
+                          <div>
+                            <Card variant="outlined">{card}</Card>
+
+                            <Card variant="outlined">{card}</Card>
+                          </div>
                         </div>
-                        <div
-                          style={{ width: "70%", border: "1px solid black" }}
-                        >
-                          {/* Content for right 70% */}test 1
+
+                        <div className="otherDetails">
+                          <AppBar
+                            position="static"
+                            className="modalTab"
+                            sx={{
+                              // background: "none",
+                              color: fontColor,
+                              // boxShadow: "none",
+                              // borderBottom: "1px solid #000",
+                            }}
+                          >
+                            <Tabs
+                              value={value}
+                              onChange={handleChange}
+                              indicatorColor="secondary"
+                              textColor="inherit"
+                              variant="fullWidth"
+                              aria-label="full width tabs example"
+                            >
+                              <Tab
+                                label="Personal Information"
+                                {...a11yProps(0)}
+                              />
+                              <Tab label="Skills" {...a11yProps(1)} />
+                              <Tab label="Trainings" {...a11yProps(2)} />
+                              <Tab label="Certificates" {...a11yProps(3)} />
+                            </Tabs>
+                          </AppBar>
+
+                          <SwipeableViews
+                            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+                            index={value}
+                            onChangeIndex={handleChangeIndex}
+                          >
+                            <TabPanel
+                              value={value}
+                              index={0}
+                              dir={theme.direction}
+                            >
+                              <div>
+                                <h2>Personal Information:</h2>
+                                <ul>
+                                  <li>Name: Miguel Lorenzo T. Milañez</li>
+                                  <li>Age: 25</li>
+                                  <li>Birth Date: 09-29-1997</li>
+                                  <li>City: San Juan City</li>
+                                </ul>
+                                <h2>Contact Information:</h2>
+                                <ul>
+                                  <li>Contact No: 09989397900/09190601544</li>
+                                  <li>
+                                    Email Address: miguellmilanez@gmail.com
+                                  </li>
+                                </ul>
+
+                                <h2>Education Information:</h2>
+                                <ul>
+                                  <li>
+                                    School: Polytechnic University of the
+                                    Philippines - San Juan City
+                                  </li>
+                                  <li>Degree: Bachelor's</li>
+                                  <li>Major: Information Technology</li>
+                                </ul>
+                              </div>
+                            </TabPanel>
+                            <TabPanel
+                              value={value}
+                              index={1}
+                              dir={theme.direction}
+                            >
+                              <div>
+                                <h2>Skills:</h2>
+                                <ul>
+                                  <li>
+                                    Category: Programming Languages
+                                    <ul>
+                                      <li>Java</li>
+                                      <li>C++</li>
+                                      <li>C#</li>
+                                      <li>PHP</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Category: Web Development
+                                    <ul>
+                                      <li>HTML</li>
+                                      <li>CSS</li>
+                                      <li>JavaScript</li>
+                                      <li>jQuery</li>
+                                      <li>AJAX</li>
+                                      <li>React</li>
+                                      <li>WordPress</li>
+                                      <li>Drupal</li>
+                                      <li>Vue</li>
+                                      <li>Bootstrap</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Category: Design
+                                    <ul>
+                                      <li>Adobe Photoshop</li>
+                                      <li>Adobe Illustrator</li>
+                                      <li>Dreamweaver</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Category: Data Analysis/Data Management
+                                    <ul>
+                                      <li>SQL</li>
+                                      <li>Excel</li>
+                                      <li>MySQL</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Category: Servers
+                                    <ul>
+                                      <li>AWS</li>
+                                      <li>WHM</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Category: Robotics Process Automation
+                                    <ul>
+                                      <li>UIPath</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Category: Microsoft Suites
+                                    <ul>
+                                      <li>SharePoint</li>
+                                      <li>PowerBI</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                            </TabPanel>
+                            <TabPanel
+                              value={value}
+                              index={2}
+                              dir={theme.direction}
+                            >
+                              <div>
+                                <h2>Training:</h2>
+                                <ul>
+                                  <li>
+                                    BASIC ANGULAR TRAINING (24 HOURS)
+                                    <br />
+                                    Location: 11th Floor, Rockwell Business
+                                    Center, Pasig City
+                                  </li>
+                                  <li>
+                                    MOBILE ANDROID APP (16 HOURS)
+                                    <br />
+                                    Location: 11th Floor, Rockwell Business
+                                    Center, Pasig City
+                                  </li>
+                                  <li>
+                                    POWERBI TRAINING
+                                    <br />
+                                    Location: 4th Floor, Lopez Building,
+                                    Meralco, Ortigas, Pasig City
+                                  </li>
+                                  <li>
+                                    FULL INTRODUCTION DRUPAL 8<br />
+                                    Location: Online - Udemy
+                                  </li>
+                                  <li>
+                                    COMPLETE SERVICENOW SYSTEM ADMINISTRATOR
+                                    COURSE
+                                    <br />
+                                    Location: Online - Udemy
+                                  </li>
+                                  <li>
+                                    SHAREPOINT 2013 COMPLETE TRAINING
+                                    <br />
+                                    Location: Online - Udemy
+                                  </li>
+                                </ul>
+                              </div>
+                            </TabPanel>
+                            <TabPanel
+                              value={value}
+                              index={3}
+                              dir={theme.direction}
+                            >
+                              {" "}
+                              <div>
+                                <h2>Certificates:</h2>
+                                <ul>
+                                  <li>
+                                    SCRUM FOUNDATION PROFESSIONAL CERTIFICATE
+                                    <br />
+                                    Date: 2021-03-23
+                                    <br />
+                                    Certification Body: CertiProf
+                                  </li>
+                                  <li>
+                                    CYBER SECURITY FOUNDATION - CSFPC**
+                                    <br />
+                                    Date: 2021-03-23
+                                    <br />
+                                    Certification Body: CertiProf
+                                  </li>
+                                  <li>
+                                    PROJECT MANAGEMENT FUNDAMENTALS
+                                    <br />
+                                    Date: 2021-09-19
+                                    <br />
+                                    Certification Body: MSTCONNECT
+                                  </li>
+                                  <li>
+                                    GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS
+                                    <br />
+                                    Date: 2022-11-08
+                                    <br />
+                                    Certification Body: Coursera
+                                  </li>
+                                </ul>
+                              </div>
+                            </TabPanel>
+                          </SwipeableViews>
                         </div>
-                      </div>
-                      <div>
-                        <h2>Personal Information:</h2>
-                        <ul>
-                          <li>Name: Miguel Lorenzo T. Milañez</li>
-                          <li>Age: 25</li>
-                          <li>Birth Date: 09-29-1997</li>
-                          <li>City: San Juan City</li>
-                        </ul>
-                        <h2>Contact Information:</h2>
-                        <ul>
-                          <li>Contact No: 09989397900/09190601544</li>
-                          <li>Email Address: miguellmilanez@gmail.com</li>
-                        </ul>
-
-                        <h2>Education Information:</h2>
-                        <ul>
-                          <li>
-                            School: Polytechnic University of the Philippines -
-                            San Juan City
-                          </li>
-                          <li>Degree: Bachelor's</li>
-                          <li>Major: Information Technology</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h2>Skills:</h2>
-                        <ul>
-                          <li>
-                            Category: Programming Languages
-                            <ul>
-                              <li>Java</li>
-                              <li>C++</li>
-                              <li>C#</li>
-                              <li>PHP</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Category: Web Development
-                            <ul>
-                              <li>HTML</li>
-                              <li>CSS</li>
-                              <li>JavaScript</li>
-                              <li>jQuery</li>
-                              <li>AJAX</li>
-                              <li>React</li>
-                              <li>WordPress</li>
-                              <li>Drupal</li>
-                              <li>Vue</li>
-                              <li>Bootstrap</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Category: Design
-                            <ul>
-                              <li>Adobe Photoshop</li>
-                              <li>Adobe Illustrator</li>
-                              <li>Dreamweaver</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Category: Data Analysis/Data Management
-                            <ul>
-                              <li>SQL</li>
-                              <li>Excel</li>
-                              <li>MySQL</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Category: Servers
-                            <ul>
-                              <li>AWS</li>
-                              <li>WHM</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Category: Robotics Process Automation
-                            <ul>
-                              <li>UIPath</li>
-                            </ul>
-                          </li>
-                          <li>
-                            Category: Microsoft Suites
-                            <ul>
-                              <li>SharePoint</li>
-                              <li>PowerBI</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h2>Training:</h2>
-                        <ul>
-                          <li>
-                            BASIC ANGULAR TRAINING (24 HOURS)
-                            <br />
-                            Location: 11th Floor, Rockwell Business Center,
-                            Pasig City
-                          </li>
-                          <li>
-                            MOBILE ANDROID APP (16 HOURS)
-                            <br />
-                            Location: 11th Floor, Rockwell Business Center,
-                            Pasig City
-                          </li>
-                          <li>
-                            POWERBI TRAINING
-                            <br />
-                            Location: 4th Floor, Lopez Building, Meralco,
-                            Ortigas, Pasig City
-                          </li>
-                          <li>
-                            FULL INTRODUCTION DRUPAL 8<br />
-                            Location: Online - Udemy
-                          </li>
-                          <li>
-                            COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE
-                            <br />
-                            Location: Online - Udemy
-                          </li>
-                          <li>
-                            SHAREPOINT 2013 COMPLETE TRAINING
-                            <br />
-                            Location: Online - Udemy
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h2>Certificates:</h2>
-                        <ul>
-                          <li>
-                            SCRUM FOUNDATION PROFESSIONAL CERTIFICATE
-                            <br />
-                            Date: 2021-03-23
-                            <br />
-                            Certification Body: CertiProf
-                          </li>
-                          <li>
-                            CYBER SECURITY FOUNDATION - CSFPC**
-                            <br />
-                            Date: 2021-03-23
-                            <br />
-                            Certification Body: CertiProf
-                          </li>
-                          <li>
-                            PROJECT MANAGEMENT FUNDAMENTALS
-                            <br />
-                            Date: 2021-09-19
-                            <br />
-                            Certification Body: MSTCONNECT
-                          </li>
-                          <li>
-                            GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS
-                            <br />
-                            Date: 2022-11-08
-                            <br />
-                            Certification Body: Coursera
-                          </li>
-                        </ul>
                       </div>
                     </Typography>
-
-                    <AppBar
-                      position="static"
-                      className="modalTab"
-                      sx={{
-                        // background: "none",
-                        color: fontColor,
-                        // boxShadow: "none",
-                        // borderBottom: "1px solid #000",
-                      }}
-                    >
-                      <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        indicatorColor="secondary"
-                        textColor="inherit"
-                        variant="fullWidth"
-                        aria-label="full width tabs example"
-                      >
-                        <Tab label="Item One" {...a11yProps(0)} />
-                        <Tab label="Item Two" {...a11yProps(1)} />
-                        <Tab label="Item Three" {...a11yProps(2)} />
-                      </Tabs>
-                    </AppBar>
-
-                    <SwipeableViews
-                      axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-                      index={value}
-                      onChangeIndex={handleChangeIndex}
-                    >
-                      <TabPanel value={value} index={0} dir={theme.direction}>
-                        Item One
-                      </TabPanel>
-                      <TabPanel value={value} index={1} dir={theme.direction}>
-                        Item Two
-                      </TabPanel>
-                      <TabPanel value={value} index={2} dir={theme.direction}>
-                        Item Three
-                      </TabPanel>
-                    </SwipeableViews>
                   </Box>
                 </Fade>
               </Modal>
