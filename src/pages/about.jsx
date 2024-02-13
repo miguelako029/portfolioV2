@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
+import Chip from "@mui/material/Chip";
 
 import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
@@ -167,15 +168,6 @@ const About = () => {
     // overflow: "hidden",
   };
 
-  const bull = (
-    <Box
-      component="span"
-      sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-    >
-      •
-    </Box>
-  );
-
   const card = (
     <React.Fragment>
       <CardContent>
@@ -191,6 +183,57 @@ const About = () => {
           well meaning and kindly.
           <br />
           {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+    </React.Fragment>
+  );
+
+  const cardSkills = (
+    <React.Fragment>
+      <CardContent>
+        <Typography
+          variant="h6"
+          component="div"
+          // sx={{ textAlign: "left", fontSize: 15, paddingLeft: 5 }}
+          className="skillCard"
+        >
+          Skills
+        </Typography>
+        <Typography variant="h5" component="div" className="progLang">
+          Programming Language
+          <div>
+            <Chip label="Java" variant="outlined" />
+            <Chip label="C++" variant="outlined" />
+            <Chip label="C#" variant="outlined" />
+            <Chip label="PHP" variant="outlined" />
+          </div>
+        </Typography>
+        <Typography variant="h5" component="div" className="progLang">
+          Programming Language
+          <div>
+            <Chip label="Java" variant="outlined" />
+            <Chip label="C++" variant="outlined" />
+            <Chip label="C#" variant="outlined" />
+            <Chip label="PHP" variant="outlined" />
+          </div>
+        </Typography>
+        <Typography variant="h5" component="div" className="progLang">
+          Programming Language
+          <div>
+            <Chip label="Java" variant="outlined" />
+            <Chip label="C++" variant="outlined" />
+            <Chip label="C#" variant="outlined" />
+            <Chip label="PHP" variant="outlined" />
+          </div>
+        </Typography>
+        <Typography variant="h5" component="div" className="progLang">
+          Programming Language
+          <div>
+            <Chip label="Java" variant="outlined" />
+            <Chip label="C++" variant="outlined" />
+            <Chip label="C#" variant="outlined" />
+            <Chip label="PHP" variant="outlined" />
+          </div>
         </Typography>
       </CardContent>
     </React.Fragment>
@@ -353,7 +396,7 @@ const About = () => {
                           <div>
                             <Card variant="outlined">{card}</Card>
 
-                            <Card variant="outlined">{card}</Card>
+                            <Card variant="outlined">{cardSkills}</Card>
                           </div>
                         </div>
 

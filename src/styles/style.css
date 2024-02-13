@@ -188,6 +188,18 @@ h1 {
   text-align: center; /* Center text inside the element */
 }
 
+.skillCard {
+  text-align: left;
+  font-size: 30vw;
+  padding-left: 10px;
+}
+.progLang {
+  text-align: left;
+  font-size: 30vw;
+  padding-left: 10px;
+  justify-content: left;
+}
+
 .otherDetails {
   width: 70%;
   /* border: 1px solid black; */
