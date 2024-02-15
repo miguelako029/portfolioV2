@@ -369,7 +369,7 @@ const About = () => {
                           <div>
                             <div className="meImage">
                               {" "}
-                              <img src={image1} width="30%" alt="Image 1" />
+                              <img src={image1} width="90%" alt="Image 1" />
                             </div>
 
                             {/* <Card variant="outlined">{cardSkills}</Card> */}
