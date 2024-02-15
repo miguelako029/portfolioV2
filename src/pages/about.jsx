@@ -158,12 +158,12 @@ const About = () => {
   }, [open2]);
 
   const style = {
-    padding: "10px",
+    // padding: "10px",
     overflow: "auto",
     position: "absolute",
 
     // borderRadius: "15px",
-    backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
+    // backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
     willChange: "backdrop-filter",
     // overflow: "hidden",
   };
@@ -171,7 +171,7 @@ const About = () => {
   const card = (
     <React.Fragment>
       <CardContent>
-        <img src={image1} width="30%" alt="Image 1" />
+        {/* <img src={image1} width="30%" alt="Image 1" /> */}
 
         <Typography variant="h5" component="div">
           Miguel Lorenzo T. Milanez
@@ -188,55 +188,61 @@ const About = () => {
     </React.Fragment>
   );
 
+  const SkillsSection = ({ title, skills }) => (
+    <div className="progLang">
+      {title}
+      <div>
+        {skills.map((skill, index) => (
+          <Chip
+            key={index}
+            label={skill}
+            variant="outlined"
+            sx={{ marginLeft: 0.3, marginBottom: 0.5, fontWeight: 100 }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+
   const cardSkills = (
-    <React.Fragment>
-      <CardContent>
-        <Typography
-          variant="h6"
-          component="div"
-          // sx={{ textAlign: "left", fontSize: 15, paddingLeft: 5 }}
-          className="skillCard"
-        >
-          Skills
-        </Typography>
-        <Typography variant="h5" component="div" className="progLang">
-          Programming Language
-          <div>
-            <Chip label="Java" variant="outlined" />
-            <Chip label="C++" variant="outlined" />
-            <Chip label="C#" variant="outlined" />
-            <Chip label="PHP" variant="outlined" />
-          </div>
-        </Typography>
-        <Typography variant="h5" component="div" className="progLang">
-          Programming Language
-          <div>
-            <Chip label="Java" variant="outlined" />
-            <Chip label="C++" variant="outlined" />
-            <Chip label="C#" variant="outlined" />
-            <Chip label="PHP" variant="outlined" />
-          </div>
-        </Typography>
-        <Typography variant="h5" component="div" className="progLang">
-          Programming Language
-          <div>
-            <Chip label="Java" variant="outlined" />
-            <Chip label="C++" variant="outlined" />
-            <Chip label="C#" variant="outlined" />
-            <Chip label="PHP" variant="outlined" />
-          </div>
-        </Typography>
-        <Typography variant="h5" component="div" className="progLang">
-          Programming Language
-          <div>
-            <Chip label="Java" variant="outlined" />
-            <Chip label="C++" variant="outlined" />
-            <Chip label="C#" variant="outlined" />
-            <Chip label="PHP" variant="outlined" />
-          </div>
-        </Typography>
-      </CardContent>
-    </React.Fragment>
+    <CardContent>
+      <div className="skillCard">Skills</div>
+
+      <SkillsSection
+        title="Programming Language"
+        skills={["Java", "C++", "C#", "PHP"]}
+      />
+
+      <SkillsSection
+        title="Web Development"
+        skills={[
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery",
+          "AJAX",
+          "React",
+          "WordPress",
+          "Drupal",
+          "Vue",
+          "Bootstrap",
+        ]}
+      />
+
+      <SkillsSection
+        title="Design"
+        skills={["Adobe Photoshop", "Adobe Illustrator", "Dreamweaver"]}
+      />
+
+      <SkillsSection title="Servers" skills={["AWS", "WHM"]} />
+
+      <SkillsSection title="Robotics Process Automation" skills={["UIPath"]} />
+
+      <SkillsSection
+        title="Microsoft Suites"
+        skills={["SharePoint", "PowerBI"]}
+      />
+    </CardContent>
   );
 
   function TabPanel(props) {
@@ -334,39 +340,6 @@ const About = () => {
                       >
                         Read More <ArrowRightAltIcon />
                       </Button>
-                      {/* <Button
-                        className="button"
-                        sx={{
-                          background: backgroundColor,
-                          color: fontColor,
-                          transition: "background-color 0.7s ease",
-                        }}
-                        onClick={handleOpen2}
-                      >
-                        My Skills
-                      </Button>
-                      <Button
-                        className="button"
-                        sx={{
-                          background: backgroundColor,
-                          color: fontColor,
-                          transition: "background-color 0.7s ease",
-                        }}
-                        onClick={handleOpen3}
-                      >
-                        Completed Trainings
-                      </Button>
-                      <Button
-                        className="button"
-                        sx={{
-                          background: backgroundColor,
-                          color: fontColor,
-                          transition: "background-color 0.7s ease",
-                        }}
-                        onClick={handleOpen4}
-                      >
-                        My Certificates
-                      </Button> */}
                     </div>
                   </animated.div>
                 </div>
@@ -391,12 +364,12 @@ const About = () => {
                       variant="h6"
                       component="h2"
                     >
-                      <div style={{ display: "flex", padding: "30px" }}>
+                      <div style={{ display: "flex" }}>
                         <div className="personalInfo">
                           <div>
-                            <Card variant="outlined">{card}</Card>
+                            {/* <Card variant="outlined">{card}</Card> */}
 
-                            <Card variant="outlined">{cardSkills}</Card>
+                            {/* <Card variant="outlined">{cardSkills}</Card> */}
                           </div>
                         </div>
 
@@ -423,9 +396,9 @@ const About = () => {
                                 label="Personal Information"
                                 {...a11yProps(0)}
                               />
-                              <Tab label="Skills" {...a11yProps(1)} />
-                              <Tab label="Trainings" {...a11yProps(2)} />
-                              <Tab label="Certificates" {...a11yProps(3)} />
+
+                              <Tab label="Trainings" {...a11yProps(1)} />
+                              <Tab label="Certificates" {...a11yProps(2)} />
                             </Tabs>
                           </AppBar>
 
@@ -439,6 +412,9 @@ const About = () => {
                               index={0}
                               dir={theme.direction}
                             >
+                              <Card variant="outlined">{card}</Card>
+
+                              <Card variant="outlined">{cardSkills}</Card>
                               <div>
                                 <h2>Personal Information:</h2>
                                 <ul>
@@ -466,80 +442,10 @@ const About = () => {
                                 </ul>
                               </div>
                             </TabPanel>
+
                             <TabPanel
                               value={value}
                               index={1}
-                              dir={theme.direction}
-                            >
-                              <div>
-                                <h2>Skills:</h2>
-                                <ul>
-                                  <li>
-                                    Category: Programming Languages
-                                    <ul>
-                                      <li>Java</li>
-                                      <li>C++</li>
-                                      <li>C#</li>
-                                      <li>PHP</li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    Category: Web Development
-                                    <ul>
-                                      <li>HTML</li>
-                                      <li>CSS</li>
-                                      <li>JavaScript</li>
-                                      <li>jQuery</li>
-                                      <li>AJAX</li>
-                                      <li>React</li>
-                                      <li>WordPress</li>
-                                      <li>Drupal</li>
-                                      <li>Vue</li>
-                                      <li>Bootstrap</li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    Category: Design
-                                    <ul>
-                                      <li>Adobe Photoshop</li>
-                                      <li>Adobe Illustrator</li>
-                                      <li>Dreamweaver</li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    Category: Data Analysis/Data Management
-                                    <ul>
-                                      <li>SQL</li>
-                                      <li>Excel</li>
-                                      <li>MySQL</li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    Category: Servers
-                                    <ul>
-                                      <li>AWS</li>
-                                      <li>WHM</li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    Category: Robotics Process Automation
-                                    <ul>
-                                      <li>UIPath</li>
-                                    </ul>
-                                  </li>
-                                  <li>
-                                    Category: Microsoft Suites
-                                    <ul>
-                                      <li>SharePoint</li>
-                                      <li>PowerBI</li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </div>
-                            </TabPanel>
-                            <TabPanel
-                              value={value}
-                              index={2}
                               dir={theme.direction}
                             >
                               <div>
@@ -583,7 +489,7 @@ const About = () => {
                             </TabPanel>
                             <TabPanel
                               value={value}
-                              index={3}
+                              index={2}
                               dir={theme.direction}
                             >
                               {" "}
