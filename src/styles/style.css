@@ -179,19 +179,17 @@ h1 {
 }
 
 .personalInfo {
-  /* border: 1px solid black; */
   width: 40%;
   height: 100vh;
-  /* margin: 5px auto;
-  padding: 10px; */
-  /* display: flex; Add flex display */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  text-align: center; /* Center text inside the element */
-
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: center;
   background-image: url("../assets/images/deck.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-  background-size: cover; /* Adjusts the size of the background image to cover the entire element */
+  background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  /* align-self: flex-end; */
 }
 
 .skillCard {

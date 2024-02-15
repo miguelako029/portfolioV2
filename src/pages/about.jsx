@@ -367,7 +367,10 @@ const About = () => {
                       <div style={{ display: "flex" }}>
                         <div className="personalInfo">
                           <div>
-                            {/* <Card variant="outlined">{card}</Card> */}
+                            <div className="meImage">
+                              {" "}
+                              <img src={image1} width="30%" alt="Image 1" />
+                            </div>
 
                             {/* <Card variant="outlined">{cardSkills}</Card> */}
                           </div>
