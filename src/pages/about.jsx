@@ -10,6 +10,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Chip from "@mui/material/Chip";
+import CardMedia from "@mui/material/CardMedia";
 
 import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
@@ -34,6 +35,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
 import image1 from "../assets/images/MePhoto.png";
+import indra from "../assets/images/indra.png";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -420,6 +422,141 @@ const About = () => {
                             >
                               <div>
                                 <h2>Training:</h2>
+                                <div className="wrapper">
+                                  <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                      component="img"
+                                      height="140"
+                                      image={indra}
+                                      sx={{ background: "000" }}
+                                      alt="green iguana"
+                                    />
+                                    <CardContent>
+                                      <Typography
+                                        gutterBottom
+                                        variant="h5"
+                                        component="div"
+                                      >
+                                        BASIC ANGULAR TRAINING (24 HOURS)
+                                      </Typography>
+                                      <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                      >
+                                        Location: 11th Floor, Rockwell Business
+                                        Center, Pasig City
+                                      </Typography>
+                                    </CardContent>
+                                  </Card>
+                                  <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                      component="img"
+                                      height="140"
+                                      image={indra}
+                                      sx={{ background: "000" }}
+                                      alt="green iguana"
+                                    />
+                                    <CardContent>
+                                      <Typography
+                                        gutterBottom
+                                        variant="h5"
+                                        component="div"
+                                      >
+                                        Lizard
+                                      </Typography>
+                                      <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                      >
+                                        Lizards are a widespread group of
+                                        squamate reptiles, with over 6,000
+                                        species, ranging across all continents
+                                        except Antarctica
+                                      </Typography>
+                                    </CardContent>
+                                  </Card>
+                                  <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                      component="img"
+                                      height="140"
+                                      image={indra}
+                                      sx={{ background: "000" }}
+                                      alt="green iguana"
+                                    />
+                                    <CardContent>
+                                      <Typography
+                                        gutterBottom
+                                        variant="h5"
+                                        component="div"
+                                      >
+                                        Lizard
+                                      </Typography>
+                                      <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                      >
+                                        Lizards are a widespread group of
+                                        squamate reptiles, with over 6,000
+                                        species, ranging across all continents
+                                        except Antarctica
+                                      </Typography>
+                                    </CardContent>
+                                  </Card>
+                                  <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                      component="img"
+                                      height="140"
+                                      image={indra}
+                                      sx={{ background: "000" }}
+                                      alt="green iguana"
+                                    />
+                                    <CardContent>
+                                      <Typography
+                                        gutterBottom
+                                        variant="h5"
+                                        component="div"
+                                      >
+                                        Lizard
+                                      </Typography>
+                                      <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                      >
+                                        Lizards are a widespread group of
+                                        squamate reptiles, with over 6,000
+                                        species, ranging across all continents
+                                        except Antarctica
+                                      </Typography>
+                                    </CardContent>
+                                  </Card>
+                                  <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                      component="img"
+                                      height="140"
+                                      image={indra}
+                                      sx={{ background: "000" }}
+                                      alt="green iguana"
+                                    />
+                                    <CardContent>
+                                      <Typography
+                                        gutterBottom
+                                        variant="h5"
+                                        component="div"
+                                      >
+                                        Lizard
+                                      </Typography>
+                                      <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                      >
+                                        Lizards are a widespread group of
+                                        squamate reptiles, with over 6,000
+                                        species, ranging across all continents
+                                        except Antarctica
+                                      </Typography>
+                                    </CardContent>
+                                  </Card>
+                                </div>
                                 <ul>
                                   <li>
                                     BASIC ANGULAR TRAINING (24 HOURS)
