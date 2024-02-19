@@ -16,7 +16,7 @@ import { purple } from "@mui/material/colors";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
@@ -43,11 +43,14 @@ const Fade = React.forwardRef(function Fade(props, ref) {
     onEnter,
     onExited,
     ownerState,
+    duration, // New prop for duration time
     ...other
   } = props;
+
   const style = useSpring({
     from: { opacity: 0 },
     to: { opacity: open ? 1 : 0 },
+    config: { duration: 70 }, // Specify duration time
     onStart: () => {
       if (open && onEnter) {
         onEnter(null, true);
@@ -61,11 +64,7 @@ const Fade = React.forwardRef(function Fade(props, ref) {
   });
 
   return (
-    <animated.div
-      ref={ref}
-      style={{ ...style, opacity: open ? 1 : 0 }}
-      {...other}
-    >
+    <animated.div ref={ref} style={style} {...other}>
       {React.cloneElement(children, { onClick })}
     </animated.div>
   );
@@ -78,6 +77,11 @@ Fade.propTypes = {
   onEnter: PropTypes.func,
   onExited: PropTypes.func,
   ownerState: PropTypes.any,
+  duration: PropTypes.number, // PropType for duration time
+};
+
+Fade.defaultProps = {
+  duration: 300, // Default duration time (in milliseconds)
 };
 
 const About = () => {
@@ -166,26 +170,33 @@ const About = () => {
     // backgroundColor: mode === "dark" ? "#1b1b1b" : "#e9e9e9",
     willChange: "backdrop-filter",
     // overflow: "hidden",
+    // p: 4,
   };
 
   const card = (
-    <React.Fragment>
-      <CardContent>
-        {/* <img src={image1} width="30%" alt="Image 1" /> */}
-
-        <Typography variant="h5" component="div">
-          Miguel Lorenzo T. Milanez
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Software Engineer
-        </Typography>
+    <div className="column-container">
+      <CardContent className="column">
         <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          <strong>Age:</strong> 25 <br />
+          <strong>Birth Date:</strong> September 29. 1997 <br />
+          <strong>City:</strong> San Juan City
         </Typography>
       </CardContent>
-    </React.Fragment>
+      <CardContent className="column">
+        <Typography variant="body2">
+          <strong>Contact No:</strong> 09989397900/09190601544 <br />
+          <strong>Email Address:</strong> miguellmilanez@gmail.com
+        </Typography>
+      </CardContent>
+      <CardContent className="column">
+        <Typography variant="body2">
+          <strong>School:</strong> Polytechnic University of the Philippines -
+          San Juan City <br />
+          <strong>Degree:</strong> Bachelor Degree <br />
+          <strong>Major:</strong> Information Technology
+        </Typography>
+      </CardContent>
+    </div>
   );
 
   const SkillsSection = ({ title, skills }) => (
@@ -196,7 +207,7 @@ const About = () => {
           <Chip
             key={index}
             label={skill}
-            variant="outlined"
+            // variant="outlined"
             sx={{ marginLeft: 0.3, marginBottom: 0.5, fontWeight: 100 }}
           />
         ))}
@@ -206,12 +217,9 @@ const About = () => {
 
   const cardSkills = (
     <CardContent>
-      <div className="skillCard">Skills</div>
-
-      <SkillsSection
-        title="Programming Language"
-        skills={["Java", "C++", "C#", "PHP"]}
-      />
+      <div className="skillCard">
+        <strong>Skills</strong>
+      </div>
 
       <SkillsSection
         title="Web Development"
@@ -230,18 +238,22 @@ const About = () => {
       />
 
       <SkillsSection
+        title="Programming Language"
+        skills={["Java", "C++", "C#", "PHP"]}
+      />
+
+      <SkillsSection
         title="Design"
         skills={["Adobe Photoshop", "Adobe Illustrator", "Dreamweaver"]}
       />
 
       <SkillsSection title="Servers" skills={["AWS", "WHM"]} />
-
-      <SkillsSection title="Robotics Process Automation" skills={["UIPath"]} />
-
       <SkillsSection
         title="Microsoft Suites"
         skills={["SharePoint", "PowerBI"]}
       />
+
+      <SkillsSection title="Robotics Process Automation" skills={["UIPath"]} />
     </CardContent>
   );
 
@@ -369,7 +381,7 @@ const About = () => {
                           <div>
                             <div className="meImage">
                               {" "}
-                              <img src={image1} width="90%" alt="Image 1" />
+                              {/* <img src={image1} width="90%" alt="Image 1" /> */}
                             </div>
 
                             {/* <Card variant="outlined">{cardSkills}</Card> */}
@@ -377,34 +389,6 @@ const About = () => {
                         </div>
 
                         <div className="otherDetails">
-                          <AppBar
-                            position="static"
-                            className="modalTab"
-                            sx={{
-                              // background: "none",
-                              color: fontColor,
-                              // boxShadow: "none",
-                              // borderBottom: "1px solid #000",
-                            }}
-                          >
-                            <Tabs
-                              value={value}
-                              onChange={handleChange}
-                              indicatorColor="secondary"
-                              textColor="inherit"
-                              variant="fullWidth"
-                              aria-label="full width tabs example"
-                            >
-                              <Tab
-                                label="Personal Information"
-                                {...a11yProps(0)}
-                              />
-
-                              <Tab label="Trainings" {...a11yProps(1)} />
-                              <Tab label="Certificates" {...a11yProps(2)} />
-                            </Tabs>
-                          </AppBar>
-
                           <SwipeableViews
                             axis={theme.direction === "rtl" ? "x-reverse" : "x"}
                             index={value}
@@ -415,35 +399,18 @@ const About = () => {
                               index={0}
                               dir={theme.direction}
                             >
-                              <Card variant="outlined">{card}</Card>
+                              <Typography variant="h4" component="div">
+                                Miguel Lorenzo T. Milanez
+                              </Typography>
+                              <Typography
+                                sx={{ mb: 1.5 }}
+                                color="text.secondary"
+                              >
+                                Software Engineer
+                              </Typography>
+                              <div>{card}</div>
 
-                              <Card variant="outlined">{cardSkills}</Card>
-                              <div>
-                                <h2>Personal Information:</h2>
-                                <ul>
-                                  <li>Name: Miguel Lorenzo T. Milañez</li>
-                                  <li>Age: 25</li>
-                                  <li>Birth Date: 09-29-1997</li>
-                                  <li>City: San Juan City</li>
-                                </ul>
-                                <h2>Contact Information:</h2>
-                                <ul>
-                                  <li>Contact No: 09989397900/09190601544</li>
-                                  <li>
-                                    Email Address: miguellmilanez@gmail.com
-                                  </li>
-                                </ul>
-
-                                <h2>Education Information:</h2>
-                                <ul>
-                                  <li>
-                                    School: Polytechnic University of the
-                                    Philippines - San Juan City
-                                  </li>
-                                  <li>Degree: Bachelor's</li>
-                                  <li>Major: Information Technology</li>
-                                </ul>
-                              </div>
+                              <div>{cardSkills}</div>
                             </TabPanel>
 
                             <TabPanel
@@ -531,6 +498,30 @@ const About = () => {
                               </div>
                             </TabPanel>
                           </SwipeableViews>
+                          <AppBar position="static" className="modalTab">
+                            <Tabs
+                              value={value}
+                              onChange={handleChange}
+                              indicatorColor="secondary"
+                              textColor="inherit"
+                              variant="fullWidth"
+                              aria-label="full width tabs example"
+                              sx={{
+                                // background: backgroundColor,
+                                color: mode === "dark" ? "#000" : "#000",
+
+                                // boxShadow: "none",
+                                // borderBottom: "1px solid #000",
+                              }}
+                            >
+                              <Tab
+                                label="Personal Information"
+                                {...a11yProps(0)}
+                              />
+                              <Tab label="Trainings" {...a11yProps(1)} />
+                              <Tab label="Certificates" {...a11yProps(2)} />
+                            </Tabs>
+                          </AppBar>
                         </div>
                       </div>
                     </Typography>
