@@ -237,7 +237,7 @@ h1 {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(11.25rem, 180%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20.25rem, 100%), 2fr));
   grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
 }
 

@@ -421,7 +421,7 @@ const About = () => {
                               dir={theme.direction}
                             >
                               <div>
-                                <h2>Training:</h2>
+                                {/* <h2>Training:</h2> */}
                                 <div className="wrapper">
                                   <Card sx={{ maxWidth: 345 }}>
                                     <CardMedia
@@ -462,16 +462,14 @@ const About = () => {
                                         variant="h5"
                                         component="div"
                                       >
-                                        Lizard
+                                        MOBILE ANDROID APP (16 HOURS)
                                       </Typography>
                                       <Typography
                                         variant="body2"
                                         color="text.secondary"
                                       >
-                                        Lizards are a widespread group of
-                                        squamate reptiles, with over 6,000
-                                        species, ranging across all continents
-                                        except Antarctica
+                                        Location: 11th Floor, Rockwell Business
+                                        Center, Pasig City
                                       </Typography>
                                     </CardContent>
                                   </Card>
@@ -489,16 +487,14 @@ const About = () => {
                                         variant="h5"
                                         component="div"
                                       >
-                                        Lizard
+                                        POWERBI TRAINING
                                       </Typography>
                                       <Typography
                                         variant="body2"
                                         color="text.secondary"
                                       >
-                                        Lizards are a widespread group of
-                                        squamate reptiles, with over 6,000
-                                        species, ranging across all continents
-                                        except Antarctica
+                                        Location: 4th Floor, Lopez Building,
+                                        Meralco, Ortigas, Pasig City
                                       </Typography>
                                     </CardContent>
                                   </Card>
@@ -516,16 +512,13 @@ const About = () => {
                                         variant="h5"
                                         component="div"
                                       >
-                                        Lizard
+                                        FULL INTRODUCTION DRUPAL 8
                                       </Typography>
                                       <Typography
                                         variant="body2"
                                         color="text.secondary"
                                       >
-                                        Lizards are a widespread group of
-                                        squamate reptiles, with over 6,000
-                                        species, ranging across all continents
-                                        except Antarctica
+                                        Location: Online - Udemy
                                       </Typography>
                                     </CardContent>
                                   </Card>
@@ -543,55 +536,42 @@ const About = () => {
                                         variant="h5"
                                         component="div"
                                       >
-                                        Lizard
+                                        COMPLETE SERVICENOW SYSTEM ADMINISTRATOR
+                                        COURSE
                                       </Typography>
                                       <Typography
                                         variant="body2"
                                         color="text.secondary"
                                       >
-                                        Lizards are a widespread group of
-                                        squamate reptiles, with over 6,000
-                                        species, ranging across all continents
-                                        except Antarctica
+                                        Location: Online - Udemy
+                                      </Typography>
+                                    </CardContent>
+                                  </Card>
+                                  <Card sx={{ maxWidth: 345 }}>
+                                    <CardMedia
+                                      component="img"
+                                      height="140"
+                                      image={indra}
+                                      sx={{ background: "000" }}
+                                      alt="green iguana"
+                                    />
+                                    <CardContent>
+                                      <Typography
+                                        gutterBottom
+                                        variant="h5"
+                                        component="div"
+                                      >
+                                        SHAREPOINT 2013 COMPLETE TRAINING
+                                      </Typography>
+                                      <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                      >
+                                        Location: Online - Udemy
                                       </Typography>
                                     </CardContent>
                                   </Card>
                                 </div>
-                                <ul>
-                                  <li>
-                                    BASIC ANGULAR TRAINING (24 HOURS)
-                                    <br />
-                                    Location: 11th Floor, Rockwell Business
-                                    Center, Pasig City
-                                  </li>
-                                  <li>
-                                    MOBILE ANDROID APP (16 HOURS)
-                                    <br />
-                                    Location: 11th Floor, Rockwell Business
-                                    Center, Pasig City
-                                  </li>
-                                  <li>
-                                    POWERBI TRAINING
-                                    <br />
-                                    Location: 4th Floor, Lopez Building,
-                                    Meralco, Ortigas, Pasig City
-                                  </li>
-                                  <li>
-                                    FULL INTRODUCTION DRUPAL 8<br />
-                                    Location: Online - Udemy
-                                  </li>
-                                  <li>
-                                    COMPLETE SERVICENOW SYSTEM ADMINISTRATOR
-                                    COURSE
-                                    <br />
-                                    Location: Online - Udemy
-                                  </li>
-                                  <li>
-                                    SHAREPOINT 2013 COMPLETE TRAINING
-                                    <br />
-                                    Location: Online - Udemy
-                                  </li>
-                                </ul>
                               </div>
                             </TabPanel>
                             <TabPanel
