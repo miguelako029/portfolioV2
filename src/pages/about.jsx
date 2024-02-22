@@ -474,7 +474,9 @@ const About = () => {
                               value={value}
                               index={0}
                               dir={theme.direction}
+                              className="fixed-panel"
                             >
+                              <div className="tab-content"></div>
                               <Typography variant="h4" component="div">
                                 Miguel Lorenzo T. Milanez
                               </Typography>
@@ -493,104 +495,107 @@ const About = () => {
                               value={value}
                               index={1}
                               dir={theme.direction}
+                              className="fixed-panel"
                             >
-                              <div className="wrapper">
-                                {trainings.map((training, index) => (
-                                  <Card key={index} sx={{ maxWidth: 345 }}>
-                                    <CardMedia
-                                      component="img"
-                                      height="140"
-                                      image={training.image} // Assuming indra is defined elsewhere
-                                      sx={{ background: "000" }}
-                                      alt="green iguana"
-                                    />
-                                    <CardContent>
-                                      <Typography
-                                        gutterBottom
-                                        variant="h7"
-                                        component="div"
-                                      >
-                                        {training.title.length > 24
-                                          ? `${training.title.substring(
-                                              0,
-                                              24
-                                            )}...`
-                                          : training.title}
-                                      </Typography>
-                                      <Typography
-                                        variant="body2"
-                                        color="text.secondary"
-                                      >
-                                        Location: {training.location}
-                                      </Typography>
-                                      <Button
-                                        variant="outlined"
-                                        onClick={training.modal}
-                                        sx={{ marginTop: 5 }}
-                                      >
-                                        View Image
-                                      </Button>
-                                    </CardContent>
-                                  </Card>
-                                ))}
+                              <div className="tab-content">
+                                <div className="wrapper">
+                                  {trainings.map((training, index) => (
+                                    <Card key={index} sx={{ maxWidth: 345 }}>
+                                      <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image={training.image} // Assuming indra is defined elsewhere
+                                        sx={{ background: "000" }}
+                                        alt="green iguana"
+                                      />
+                                      <CardContent>
+                                        <Typography
+                                          gutterBottom
+                                          variant="h7"
+                                          component="div"
+                                        >
+                                          {training.title.length > 25
+                                            ? `${training.title.substring(
+                                                0,
+                                                25
+                                              )}...`
+                                            : training.title}
+                                        </Typography>
+                                        <Typography
+                                          variant="body2"
+                                          color="text.secondary"
+                                        >
+                                          Location: {training.location}
+                                        </Typography>
+                                        <Button
+                                          variant="outlined"
+                                          onClick={training.modal}
+                                          sx={{ marginTop: 5 }}
+                                        >
+                                          View Image
+                                        </Button>
+                                      </CardContent>
+                                    </Card>
+                                  ))}
 
-                                <Modal
-                                  open={openModal}
-                                  onClose={handleCloseNoImage}
-                                  aria-labelledby="modal-modal-title"
-                                  aria-describedby="modal-modal-description"
-                                >
-                                  <Box className="trainingImage">
-                                    <img
-                                      src={noImage}
-                                      alt="Training"
-                                      className="trainingImage"
-                                    />
-                                  </Box>
-                                </Modal>
+                                  <Modal
+                                    open={openModal}
+                                    onClose={handleCloseNoImage}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={noImage}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
 
-                                <Modal
-                                  open={openModal1}
-                                  onClose={handleCloseDrupal}
-                                  aria-labelledby="modal-modal-title"
-                                  aria-describedby="modal-modal-description"
-                                >
-                                  <Box className="trainingImage">
-                                    <img
-                                      src={drupalImage}
-                                      alt="Training"
-                                      className="trainingImage"
-                                    />
-                                  </Box>
-                                </Modal>
-                                <Modal
-                                  open={openModal2}
-                                  onClose={handleCloseServiceNow}
-                                  aria-labelledby="modal-modal-title"
-                                  aria-describedby="modal-modal-description"
-                                >
-                                  <Box className="trainingImage">
-                                    <img
-                                      src={serviceNow}
-                                      alt="Training"
-                                      className="trainingImage"
-                                    />
-                                  </Box>
-                                </Modal>
-                                <Modal
-                                  open={openModal3}
-                                  onClose={handleCloseSharepoint}
-                                  aria-labelledby="modal-modal-title"
-                                  aria-describedby="modal-modal-description"
-                                >
-                                  <Box className="trainingImage">
-                                    <img
-                                      src={sharepoint}
-                                      alt="Training"
-                                      className="trainingImage"
-                                    />
-                                  </Box>
-                                </Modal>
+                                  <Modal
+                                    open={openModal1}
+                                    onClose={handleCloseDrupal}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={drupalImage}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+                                  <Modal
+                                    open={openModal2}
+                                    onClose={handleCloseServiceNow}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={serviceNow}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+                                  <Modal
+                                    open={openModal3}
+                                    onClose={handleCloseSharepoint}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={sharepoint}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+                                </div>
                               </div>
                             </TabPanel>
                             <TabPanel
