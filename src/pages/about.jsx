@@ -353,6 +353,8 @@ const About = () => {
       title: "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE",
       date: "2021-03-23",
       certificationBody: "CertiProf",
+      // image: scrumImage,
+      // modal: handleOpenScrum
     },
     {
       title: "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE",
