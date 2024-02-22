@@ -36,6 +36,9 @@ import Tab from "@mui/material/Tab";
 
 import image1 from "../assets/images/MePhoto.png";
 import indra from "../assets/images/indra.png";
+import drupalImage from "../assets/images/udemy_Drupal.png";
+import serviceNow from "../assets/images/udemy_ServiceNow.png";
+import sharepoint from "../assets/images/udemy_Sharepoint.png";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -112,6 +115,16 @@ const About = () => {
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
 
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -129,30 +142,6 @@ const About = () => {
 
   const handleClose1 = () => {
     setOpen1(false);
-  };
-
-  const handleOpen2 = () => {
-    setOpen2(true);
-    document.body.classList.add("modal-overlay-hidden");
-  };
-
-  const handleClose2 = () => {
-    setOpen2(false);
-    document.body.classList.remove("modal-overlay-hidden");
-  };
-  const handleOpen3 = () => {
-    setOpen3(true);
-  };
-
-  const handleClose3 = () => {
-    setOpen3(false);
-  };
-  const handleOpen4 = () => {
-    setOpen4(true);
-  };
-
-  const handleClose4 = () => {
-    setOpen4(false);
   };
 
   useEffect(() => {
@@ -296,26 +285,32 @@ const About = () => {
     {
       title: "BASIC ANGULAR TRAINING (24 HOURS)",
       location: "11th Floor, Rockwell Business Center, Pasig City",
+      image: indra,
     },
     {
       title: "MOBILE ANDROID APP (16 HOURS)",
       location: "11th Floor, Rockwell Business Center, Pasig City",
+      image: indra,
     },
     {
       title: "POWERBI TRAINING",
       location: "4th Floor, Lopez Building, Meralco, Ortigas, Pasig City",
+      image: indra,
     },
     {
       title: "FULL INTRODUCTION DRUPAL 8",
       location: "Online - Udemy",
+      image: drupalImage,
     },
     {
       title: "COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE",
       location: "Online - Udemy",
+      image: serviceNow,
     },
     {
       title: "SHAREPOINT 2013 COMPLETE TRAINING",
       location: "Online - Udemy",
+      image: sharepoint,
     },
   ];
 
@@ -471,7 +466,7 @@ const About = () => {
                                     <CardMedia
                                       component="img"
                                       height="140"
-                                      image={indra} // Assuming indra is defined elsewhere
+                                      image={training.image} // Assuming indra is defined elsewhere
                                       sx={{ background: "000" }}
                                       alt="green iguana"
                                     />
@@ -481,7 +476,12 @@ const About = () => {
                                         variant="h5"
                                         component="div"
                                       >
-                                        {training.title}
+                                        {training.title.length > 15
+                                          ? `${training.title.substring(
+                                              0,
+                                              15
+                                            )}...`
+                                          : training.title}
                                       </Typography>
                                       <Typography
                                         variant="body2"
@@ -489,9 +489,30 @@ const About = () => {
                                       >
                                         Location: {training.location}
                                       </Typography>
+                                      <Button
+                                        variant="outlined"
+                                        onClick={handleOpenModal}
+                                        sx={{ marginTop: 5 }}
+                                      >
+                                        View Image
+                                      </Button>
                                     </CardContent>
                                   </Card>
                                 ))}
+
+                                <Modal
+                                  open={openModal}
+                                  onClose={handleCloseModal}
+                                  aria-labelledby="modal-modal-title"
+                                  aria-describedby="modal-modal-description"
+                                >
+                                  <div>
+                                    <Button onClick={handleCloseModal}>
+                                      Close
+                                    </Button>
+                                    <img src={drupalImage} alt="Training" />
+                                  </div>
+                                </Modal>
                               </div>
                             </TabPanel>
                             <TabPanel
