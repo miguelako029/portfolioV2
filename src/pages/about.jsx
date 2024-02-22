@@ -445,6 +445,7 @@ const About = () => {
                 onClose={handleClose1}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+               
               >
                 <Fade in={open1}>
                   <Box sx={style} id="aboutModal" className="modal1">

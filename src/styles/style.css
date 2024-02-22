@@ -55,7 +55,7 @@ h1 {
 
 .hero .firstName {
   font-size: 7vw;
-  animation: decreaseFontSize 2s forwards;
+  animation: decreaseFontSize 1s forwards;
   line-height: 7vh;
   text-align: left;
   margin-left: 35px;
@@ -65,7 +65,7 @@ h1 {
 
 @keyframes decreaseFontSize {
   0% {
-    font-size: 7vw;
+    font-size: 6vw;
     opacity: 0;
   }
   100% {
@@ -90,13 +90,13 @@ h1 {
   font-weight: 400;
   word-spacing: 1px;
   opacity: 0; /* Start with opacity 0 to hide the text */
-  animation: slideInWords 1.5s 1.5s forwards; /* Animation with delay of 2s */
+  animation: slideInWords 1s 1s forwards; /* Animation with delay of 2s */
 }
 
 @keyframes slideInWords {
   0% {
     opacity: 0; /* Start with opacity 0 */
-    transform: translateX(-50%); /* Start off-screen to the left */
+    transform: translateX(-10%); /* Start off-screen to the left */
   }
   100% {
     opacity: 1; /* Fully opaque at the end of the animation */
@@ -253,6 +253,7 @@ h1 {
   position: relative;
   height: 90%; /* Adjust height as needed */
   overflow: auto;
+  margin-top: 10px;
 }
 
 .tab-content {
