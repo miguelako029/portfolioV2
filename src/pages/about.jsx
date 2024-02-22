@@ -39,6 +39,7 @@ import indra from "../assets/images/indra.png";
 import drupalImage from "../assets/images/udemy_Drupal.png";
 import serviceNow from "../assets/images/udemy_ServiceNow.png";
 import sharepoint from "../assets/images/udemy_Sharepoint.png";
+import noImage from "../assets/images/noImage.jpg";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -116,13 +117,40 @@ const About = () => {
   const [open4, setOpen4] = useState(false);
 
   const [openModal, setOpenModal] = useState(false);
+  const [openModal1, setOpenModal1] = useState(false);
+  const [openModal2, setOpenModal2] = useState(false);
+  const [openModal3, setOpenModal3] = useState(false);
 
-  const handleOpenModal = () => {
+  const handleOpenNoImage = () => {
     setOpenModal(true);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseNoImage = () => {
     setOpenModal(false);
+  };
+
+  const handleOpenDrupal = () => {
+    setOpenModal1(true);
+  };
+
+  const handleCloseDrupal = () => {
+    setOpenModal1(false);
+  };
+
+  const handleOpenServiceNow = () => {
+    setOpenModal2(true);
+  };
+
+  const handleCloseServiceNow = () => {
+    setOpenModal2(false);
+  };
+
+  const handleOpenSharepoint = () => {
+    setOpenModal3(true);
+  };
+
+  const handleCloseSharepoint = () => {
+    setOpenModal3(false);
   };
 
   const theme = useTheme();
@@ -286,31 +314,37 @@ const About = () => {
       title: "BASIC ANGULAR TRAINING (24 HOURS)",
       location: "11th Floor, Rockwell Business Center, Pasig City",
       image: indra,
+      modal: handleOpenNoImage,
     },
     {
       title: "MOBILE ANDROID APP (16 HOURS)",
       location: "11th Floor, Rockwell Business Center, Pasig City",
       image: indra,
+      modal: handleOpenNoImage,
     },
     {
       title: "POWERBI TRAINING",
       location: "4th Floor, Lopez Building, Meralco, Ortigas, Pasig City",
       image: indra,
+      modal: handleOpenNoImage,
     },
     {
       title: "FULL INTRODUCTION DRUPAL 8",
       location: "Online - Udemy",
       image: drupalImage,
+      modal: handleOpenDrupal,
     },
     {
       title: "COMPLETE SERVICENOW SYSTEM ADMINISTRATOR COURSE",
       location: "Online - Udemy",
       image: serviceNow,
+      modal: handleOpenServiceNow,
     },
     {
       title: "SHAREPOINT 2013 COMPLETE TRAINING",
       location: "Online - Udemy",
       image: sharepoint,
+      modal: handleOpenSharepoint,
     },
   ];
 
@@ -473,13 +507,13 @@ const About = () => {
                                     <CardContent>
                                       <Typography
                                         gutterBottom
-                                        variant="h5"
+                                        variant="h7"
                                         component="div"
                                       >
-                                        {training.title.length > 15
+                                        {training.title.length > 24
                                           ? `${training.title.substring(
                                               0,
-                                              15
+                                              24
                                             )}...`
                                           : training.title}
                                       </Typography>
@@ -491,7 +525,7 @@ const About = () => {
                                       </Typography>
                                       <Button
                                         variant="outlined"
-                                        onClick={handleOpenModal}
+                                        onClick={training.modal}
                                         sx={{ marginTop: 5 }}
                                       >
                                         View Image
@@ -502,16 +536,60 @@ const About = () => {
 
                                 <Modal
                                   open={openModal}
-                                  onClose={handleCloseModal}
+                                  onClose={handleCloseNoImage}
                                   aria-labelledby="modal-modal-title"
                                   aria-describedby="modal-modal-description"
                                 >
-                                  <div>
-                                    <Button onClick={handleCloseModal}>
-                                      Close
-                                    </Button>
-                                    <img src={drupalImage} alt="Training" />
-                                  </div>
+                                  <Box className="trainingImage">
+                                    <img
+                                      src={noImage}
+                                      alt="Training"
+                                      className="trainingImage"
+                                    />
+                                  </Box>
+                                </Modal>
+
+                                <Modal
+                                  open={openModal1}
+                                  onClose={handleCloseDrupal}
+                                  aria-labelledby="modal-modal-title"
+                                  aria-describedby="modal-modal-description"
+                                >
+                                  <Box className="trainingImage">
+                                    <img
+                                      src={drupalImage}
+                                      alt="Training"
+                                      className="trainingImage"
+                                    />
+                                  </Box>
+                                </Modal>
+                                <Modal
+                                  open={openModal2}
+                                  onClose={handleCloseServiceNow}
+                                  aria-labelledby="modal-modal-title"
+                                  aria-describedby="modal-modal-description"
+                                >
+                                  <Box className="trainingImage">
+                                    <img
+                                      src={serviceNow}
+                                      alt="Training"
+                                      className="trainingImage"
+                                    />
+                                  </Box>
+                                </Modal>
+                                <Modal
+                                  open={openModal3}
+                                  onClose={handleCloseSharepoint}
+                                  aria-labelledby="modal-modal-title"
+                                  aria-describedby="modal-modal-description"
+                                >
+                                  <Box className="trainingImage">
+                                    <img
+                                      src={sharepoint}
+                                      alt="Training"
+                                      className="trainingImage"
+                                    />
+                                  </Box>
                                 </Modal>
                               </div>
                             </TabPanel>
