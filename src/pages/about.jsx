@@ -232,7 +232,7 @@ const About = () => {
   };
 
   const card = (
-    <div className="wrapperInfo">
+    <div className="wrapper">
       <CardContent>
         <Typography variant="body2">
           <strong>Age:</strong> 25 <br />
@@ -435,356 +435,339 @@ const About = () => {
       }}
     >
       <div className="aboutSection" id="about">
-        <div className="heroContainer">
-          <div className="labelContainer">
-            <div class="about-grid-container">
-              <div class="profileImage">
-                <div ref={ref}>
-                  <animated.div style={fadeInUp}>
-                    <img src={image1} width="60%" alt="Image 1" />
-                  </animated.div>
+        {/* <div class="about-grid-container"> */}
+        <div className="wrapperAbout">
+          <div class="profileImage" width="60%">
+            <div ref={ref}>
+              <animated.div style={fadeInUp}>
+                <img src={image1} width="50%" alt="Image 1" />
+              </animated.div>
+            </div>
+          </div>
+          <div class="aboutDescription" width="40%">
+            <div ref={ref}>
+              <animated.div style={fadeInUp}>
+                <h1>Miguel Lorenzo Milañez</h1>
+              </animated.div>
+            </div>
+
+            <div ref={ref}>
+              <animated.div style={fadeInUp}>
+                <p>
+                  Experienced Frontend Developer with a demonstrated history of
+                  working in the information technology and services industry.
+                  Skilled in Redmine, PHP, JavaScript, CMS, Microsoft
+                  SharePoint, RPA(UiPath) and Project Management.
+                </p>
+                <div
+                  className="btnGroup"
+                  sx={{
+                    background: backgroundColor,
+                    color: fontColor,
+                    transition: "background-color 0.7s ease",
+                  }}
+                >
+                  <Button
+                    className="button"
+                    sx={{
+                      background: backgroundColor,
+                      color: fontColor,
+                      transition: "background-color 0.7s ease",
+                    }}
+                    onClick={handleOpen1}
+                  >
+                    Read More <ArrowRightAltIcon />
+                  </Button>
                 </div>
-              </div>
-
-              <div class="aboutDescription">
-                <div ref={ref}>
-                  <animated.div style={fadeInUp}>
-                    <h1>Miguel Lorenzo Milañez</h1>
-                  </animated.div>
-                </div>
-
-                <div ref={ref}>
-                  <animated.div style={fadeInUp}>
-                    <p>
-                      Experienced Frontend Developer with a demonstrated history
-                      of working in the information technology and services
-                      industry. Skilled in Redmine, PHP, JavaScript, CMS,
-                      Microsoft SharePoint, RPA(UiPath) and Project Management.
-                    </p>
-                    <div
-                      className="btnGroup"
-                      sx={{
-                        background: backgroundColor,
-                        color: fontColor,
-                        transition: "background-color 0.7s ease",
-                      }}
-                    >
-                      <Button
-                        className="button"
-                        sx={{
-                          background: backgroundColor,
-                          color: fontColor,
-                          transition: "background-color 0.7s ease",
-                        }}
-                        onClick={handleOpen1}
-                      >
-                        Read More <ArrowRightAltIcon />
-                      </Button>
-                    </div>
-                  </animated.div>
-                </div>
-              </div>
-
-              <Modal
-                open={open1}
-                onClose={handleClose1}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-              >
-                <Fade in={open1}>
-                  <Box sx={style} id="aboutModal" className="modal1">
-                    <Button
-                      onClick={handleClose1}
-                      sx={{ position: "absolute", top: 10, right: 1 }}
-                    >
-                      <CloseIcon />
-                    </Button>
-                    <Typography
-                      id="modal-modal-title"
-                      variant="h6"
-                      component="h2"
-                    >
-                      <div style={{ display: "flex" }}>
-                        <div className="personalInfo">
-                          <div>
-                            <div className="meImage"></div>
-                          </div>
-                        </div>
-
-                        <div className="otherDetails">
-                          <SwipeableViews
-                            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-                            index={value}
-                            onChangeIndex={handleChangeIndex}
-                          >
-                            <TabPanel
-                              value={value}
-                              index={0}
-                              dir={theme.direction}
-                              className="fixed-panel"
-                            >
-                              <div className="tab-content"></div>
-                              <Typography variant="h4" component="div">
-                                Miguel Lorenzo T. Milanez
-                              </Typography>
-                              <Typography
-                                sx={{ mb: 1.5 }}
-                                color="text.secondary"
-                              >
-                                Software Engineer
-                              </Typography>
-                              <div>{card}</div>
-
-                              <div>{cardSkills}</div>
-                            </TabPanel>
-
-                            <TabPanel
-                              value={value}
-                              index={1}
-                              dir={theme.direction}
-                              className="fixed-panel"
-                            >
-                              <div className="tab-content">
-                                <div className="wrapper">
-                                  {trainings.map((training, index) => (
-                                    <Card key={index} sx={{ maxWidth: 345 }}>
-                                      <CardMedia
-                                        component="img"
-                                        height="140"
-                                        image={training.image} // Assuming indra is defined elsewhere
-                                        sx={{ background: "000" }}
-                                        alt="green iguana"
-                                      />
-                                      <CardContent>
-                                        <Typography
-                                          gutterBottom
-                                          variant="h7"
-                                          component="div"
-                                        >
-                                          {training.title.length > 25
-                                            ? `${training.title.substring(
-                                                0,
-                                                25
-                                              )}...`
-                                            : training.title}
-                                        </Typography>
-                                        <Typography
-                                          variant="body2"
-                                          color="text.secondary"
-                                        >
-                                          Location: {training.location}
-                                        </Typography>
-                                        <Button
-                                          variant="outlined"
-                                          onClick={training.modal}
-                                          sx={{ marginTop: 5 }}
-                                        >
-                                          View Image
-                                        </Button>
-                                      </CardContent>
-                                    </Card>
-                                  ))}
-
-                                  <Modal
-                                    open={openModal}
-                                    onClose={handleCloseNoImage}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={noImage}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-
-                                  <Modal
-                                    open={openModal1}
-                                    onClose={handleCloseDrupal}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={drupalImage}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-                                  <Modal
-                                    open={openModal2}
-                                    onClose={handleCloseServiceNow}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={serviceNow}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-                                  <Modal
-                                    open={openModal3}
-                                    onClose={handleCloseSharepoint}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={sharepoint}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-                                </div>
-                              </div>
-                            </TabPanel>
-                            <TabPanel
-                              value={value}
-                              index={2}
-                              dir={theme.direction}
-                              className="fixed-panel"
-                            >
-                              <div className="tab-content">
-                                <div className="wrapper">
-                                  {certification.map((certification, index) => (
-                                    <Card key={index} sx={{ maxWidth: 345 }}>
-                                      <CardMedia
-                                        component="img"
-                                        height="140"
-                                        image={certification.image} // Assuming indra is defined elsewhere
-                                        sx={{ background: "000" }}
-                                        alt="green iguana"
-                                      />
-                                      <CardContent>
-                                        <Typography
-                                          gutterBottom
-                                          variant="h7"
-                                          component="div"
-                                        >
-                                          {certification.title.length > 25
-                                            ? `${certification.title.substring(
-                                                0,
-                                                25
-                                              )}...`
-                                            : certification.title}
-                                        </Typography>
-                                        <Typography
-                                          variant="body2"
-                                          color="text.secondary"
-                                        >
-                                          Location: {certification.location}
-                                        </Typography>
-                                        <Button
-                                          variant="outlined"
-                                          onClick={certification.modal}
-                                          sx={{ marginTop: 5 }}
-                                        >
-                                          View Image
-                                        </Button>
-                                      </CardContent>
-                                    </Card>
-                                  ))}
-                                  <Modal
-                                    open={openModal4}
-                                    onClose={handleCloseScrum}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={scrumImage}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-
-                                  <Modal
-                                    open={openModal5}
-                                    onClose={handleCloseCyber}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={cyberSec}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-                                  <Modal
-                                    open={openModal6}
-                                    onClose={handleClosePmf}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={pmf}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-                                  <Modal
-                                    open={openModal7}
-                                    onClose={handleCloseGoogle}
-                                    aria-labelledby="modal-modal-title"
-                                    aria-describedby="modal-modal-description"
-                                  >
-                                    <Box className="trainingImage">
-                                      <img
-                                        src={googleTech}
-                                        alt="Training"
-                                        className="trainingImage"
-                                      />
-                                    </Box>
-                                  </Modal>
-                                </div>
-                              </div>
-                            </TabPanel>
-                          </SwipeableViews>
-                          <AppBar position="static" className="modalTab">
-                            <Tabs
-                              value={value}
-                              onChange={handleChange}
-                              indicatorColor="secondary"
-                              textColor="inherit"
-                              variant="fullWidth"
-                              aria-label="full width tabs example"
-                              sx={{
-                                // background: backgroundColor,
-                                color: mode === "dark" ? "#000" : "#000",
-
-                                // boxShadow: "none",
-                                // borderBottom: "1px solid #000",
-                              }}
-                            >
-                              <Tab
-                                label="Personal Information"
-                                {...a11yProps(0)}
-                              />
-                              <Tab label="Trainings" {...a11yProps(1)} />
-                              <Tab label="Certificates" {...a11yProps(2)} />
-                            </Tabs>
-                          </AppBar>
-                        </div>
-                      </div>
-                    </Typography>
-                  </Box>
-                </Fade>
-              </Modal>
+              </animated.div>
             </div>
           </div>
         </div>
+
+        <Modal
+          open={open1}
+          onClose={handleClose1}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Fade in={open1}>
+            <Box sx={style} id="aboutModal" className="modal1">
+              <Button
+                onClick={handleClose1}
+                sx={{ position: "absolute", top: 10, right: 1 }}
+              >
+                <CloseIcon />
+              </Button>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                <div style={{ display: "flex" }}>
+                  <div className="personalInfo">
+                    <div>
+                      <div className="meImage"></div>
+                    </div>
+                  </div>
+
+                  <div className="otherDetails">
+                    <SwipeableViews
+                      axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+                      index={value}
+                      onChangeIndex={handleChangeIndex}
+                    >
+                      <TabPanel
+                        value={value}
+                        index={0}
+                        dir={theme.direction}
+                        className="fixed-panel"
+                      >
+                        <div className="tab-content"></div>
+                        <Typography variant="h4" component="div">
+                          Miguel Lorenzo T. Milanez
+                        </Typography>
+                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                          Software Engineer
+                        </Typography>
+                        <div>{card}</div>
+
+                        <div>{cardSkills}</div>
+                      </TabPanel>
+
+                      <TabPanel
+                        value={value}
+                        index={1}
+                        dir={theme.direction}
+                        className="fixed-panel"
+                      >
+                        <div className="tab-content">
+                          <div className="wrapper">
+                            {trainings.map((training, index) => (
+                              <Card key={index} sx={{ maxWidth: 345 }}>
+                                <CardMedia
+                                  component="img"
+                                  height="140"
+                                  image={training.image} // Assuming indra is defined elsewhere
+                                  sx={{ background: "000" }}
+                                  alt="green iguana"
+                                />
+                                <CardContent>
+                                  <Typography
+                                    gutterBottom
+                                    variant="h7"
+                                    component="div"
+                                  >
+                                    {training.title.length > 25
+                                      ? `${training.title.substring(0, 25)}...`
+                                      : training.title}
+                                  </Typography>
+                                  <Typography
+                                    variant="body2"
+                                    color="text.secondary"
+                                  >
+                                    Location: {training.location}
+                                  </Typography>
+                                  <Button
+                                    variant="outlined"
+                                    onClick={training.modal}
+                                    sx={{ marginTop: 5 }}
+                                  >
+                                    View Image
+                                  </Button>
+                                </CardContent>
+                              </Card>
+                            ))}
+
+                            <Modal
+                              open={openModal}
+                              onClose={handleCloseNoImage}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={noImage}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+
+                            <Modal
+                              open={openModal1}
+                              onClose={handleCloseDrupal}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={drupalImage}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+                            <Modal
+                              open={openModal2}
+                              onClose={handleCloseServiceNow}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={serviceNow}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+                            <Modal
+                              open={openModal3}
+                              onClose={handleCloseSharepoint}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={sharepoint}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+                          </div>
+                        </div>
+                      </TabPanel>
+                      <TabPanel
+                        value={value}
+                        index={2}
+                        dir={theme.direction}
+                        className="fixed-panel"
+                      >
+                        <div className="tab-content">
+                          <div className="wrapper">
+                            {certification.map((certification, index) => (
+                              <Card key={index} sx={{ maxWidth: 345 }}>
+                                <CardMedia
+                                  component="img"
+                                  height="140"
+                                  image={certification.image} // Assuming indra is defined elsewhere
+                                  sx={{ background: "000" }}
+                                  alt="green iguana"
+                                />
+                                <CardContent>
+                                  <Typography
+                                    gutterBottom
+                                    variant="h7"
+                                    component="div"
+                                  >
+                                    {certification.title.length > 25
+                                      ? `${certification.title.substring(
+                                          0,
+                                          25
+                                        )}...`
+                                      : certification.title}
+                                  </Typography>
+                                  <Typography
+                                    variant="body2"
+                                    color="text.secondary"
+                                  >
+                                    Location: {certification.location}
+                                  </Typography>
+                                  <Button
+                                    variant="outlined"
+                                    onClick={certification.modal}
+                                    sx={{ marginTop: 5 }}
+                                  >
+                                    View Image
+                                  </Button>
+                                </CardContent>
+                              </Card>
+                            ))}
+                            <Modal
+                              open={openModal4}
+                              onClose={handleCloseScrum}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={scrumImage}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+
+                            <Modal
+                              open={openModal5}
+                              onClose={handleCloseCyber}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={cyberSec}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+                            <Modal
+                              open={openModal6}
+                              onClose={handleClosePmf}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={pmf}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+                            <Modal
+                              open={openModal7}
+                              onClose={handleCloseGoogle}
+                              aria-labelledby="modal-modal-title"
+                              aria-describedby="modal-modal-description"
+                            >
+                              <Box className="trainingImage">
+                                <img
+                                  src={googleTech}
+                                  alt="Training"
+                                  className="trainingImage"
+                                />
+                              </Box>
+                            </Modal>
+                          </div>
+                        </div>
+                      </TabPanel>
+                    </SwipeableViews>
+                    <AppBar position="static" className="modalTab">
+                      <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        indicatorColor="secondary"
+                        textColor="inherit"
+                        variant="fullWidth"
+                        aria-label="full width tabs example"
+                        sx={{
+                          // background: backgroundColor,
+                          color: mode === "dark" ? "#000" : "#000",
+
+                          // boxShadow: "none",
+                          // borderBottom: "1px solid #000",
+                        }}
+                      >
+                        <Tab label="Personal Information" {...a11yProps(0)} />
+                        <Tab label="Trainings" {...a11yProps(1)} />
+                        <Tab label="Certificates" {...a11yProps(2)} />
+                      </Tabs>
+                    </AppBar>
+                  </div>
+                </div>
+              </Typography>
+            </Box>
+          </Fade>
+        </Modal>
       </div>
     </Box>
   );
