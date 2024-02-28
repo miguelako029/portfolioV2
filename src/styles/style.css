@@ -55,7 +55,7 @@ h1 {
 
 .hero .firstName {
   font-size: 7vw;
-  animation: decreaseFontSize 1s forwards;
+  animation: fadeUp 1s forwards;
   line-height: 7vh;
   text-align: left;
   margin-left: 35px;
@@ -63,13 +63,30 @@ h1 {
   /* font-family: "Work Sans", sans-serif; */
 }
 
-@keyframes decreaseFontSize {
+.hero .btnContainer {
+  animation: slideInWords 1s forwards; /* Keep the initial animation */
+  animation-delay: 2s; /* Add a delay of 2 seconds */
+  opacity: 0;
+}
+
+.hero .btnContainer .btnStyle {
+  font-size: 1vw;
+  padding: 0px 20px;
+  text-align: center;
+
+  color: rgb(0, 0, 0);
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes fadeUp {
   0% {
-    font-size: 6vw;
+    transform: translateY(-10%);
     opacity: 0;
   }
   100% {
-    font-size: 5vw; /* Final font size */
+    transform: translateY(-10%);
     opacity: 1;
   }
 }
@@ -101,20 +118,6 @@ h1 {
   100% {
     opacity: 1; /* Fully opaque at the end of the animation */
     transform: translateX(0); /* Move to original position */
-  }
-}
-
-.hero .btnContainer {
-  .btnStyle {
-    font-size: 1vw;
-    padding: 0px 20px;
-
-    text-align: center;
-    /* background-color: #1872d300;
-    color: rgb(0, 0, 0); */
-    /* border: 1px solid; */
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 

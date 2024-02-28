@@ -40,6 +40,10 @@ import drupalImage from "../assets/images/udemy_Drupal.png";
 import serviceNow from "../assets/images/udemy_ServiceNow.png";
 import sharepoint from "../assets/images/udemy_Sharepoint.png";
 import noImage from "../assets/images/noImage.jpg";
+import scrumImage from "../assets/images/scrum.png";
+import cyberSec from "../assets/images/cyberSec.png";
+import pmf from "../assets/images/pmf.png";
+import googleTech from "../assets/images/google.png";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -120,6 +124,10 @@ const About = () => {
   const [openModal1, setOpenModal1] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
   const [openModal3, setOpenModal3] = useState(false);
+  const [openModal4, setOpenModal4] = useState(false);
+  const [openModal5, setOpenModal5] = useState(false);
+  const [openModal6, setOpenModal6] = useState(false);
+  const [openModal7, setOpenModal7] = useState(false);
 
   const handleOpenNoImage = () => {
     setOpenModal(true);
@@ -151,6 +159,37 @@ const About = () => {
 
   const handleCloseSharepoint = () => {
     setOpenModal3(false);
+  };
+  const handleOpenScrum = () => {
+    setOpenModal4(true);
+  };
+
+  const handleCloseScrum = () => {
+    setOpenModal4(false);
+  };
+
+  const handleOpenCyber = () => {
+    setOpenModal5(true);
+  };
+
+  const handleCloseCyber = () => {
+    setOpenModal5(false);
+  };
+
+  const handleOpenPmf = () => {
+    setOpenModal6(true);
+  };
+
+  const handleClosePmf = () => {
+    setOpenModal6(false);
+  };
+
+  const handleOpenGoogle = () => {
+    setOpenModal7(true);
+  };
+
+  const handleCloseGoogle = () => {
+    setOpenModal7(false);
   };
 
   const theme = useTheme();
@@ -348,28 +387,34 @@ const About = () => {
     },
   ];
 
-  const certifications = [
+  const certification = [
     {
       title: "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE",
       date: "2021-03-23",
       certificationBody: "CertiProf",
-      // image: scrumImage,
-      // modal: handleOpenScrum
+      image: scrumImage,
+      modal: handleOpenScrum,
     },
     {
-      title: "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE",
+      title: "CYBER SECURITY FOUNDATION - CSFPC**",
       date: "2021-03-23",
       certificationBody: "CertiProf",
+      image: cyberSec,
+      modal: handleOpenCyber,
     },
     {
-      title: "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE",
-      date: "2021-03-23",
-      certificationBody: "CertiProf",
+      title: "PROJECT MANAGEMENT FUNDAMENTALS",
+      date: "2021-09-19",
+      certificationBody: "MSTCONNECT",
+      image: pmf,
+      modal: handleOpenPmf,
     },
     {
-      title: "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE",
-      date: "2021-03-23",
-      certificationBody: "CertiProf",
+      title: "GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS",
+      date: "2022-11-08",
+      certificationBody: "Coursera",
+      image: googleTech,
+      modal: handleOpenGoogle,
     },
   ];
 
@@ -445,7 +490,6 @@ const About = () => {
                 onClose={handleClose1}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
-               
               >
                 <Fade in={open1}>
                   <Box sx={style} id="aboutModal" className="modal1">
@@ -605,41 +649,106 @@ const About = () => {
                               value={value}
                               index={2}
                               dir={theme.direction}
+                              className="fixed-panel"
                             >
-                              <div className="wrapper">
-                                {certifications.map((certification, index) => (
-                                  <Card key={index} sx={{ maxWidth: 345 }}>
-                                    <CardMedia
-                                      component="img"
-                                      height="140"
-                                      image={indra} // Assuming indra is defined elsewhere
-                                      sx={{ background: "000" }}
-                                      alt="green iguana"
-                                    />
-                                    <CardContent>
-                                      <Typography
-                                        gutterBottom
-                                        variant="h5"
-                                        component="div"
-                                      >
-                                        {certification.title}
-                                      </Typography>
-                                      <Typography
-                                        variant="body2"
-                                        color="text.secondary"
-                                      >
-                                        Date: {certification.date}
-                                      </Typography>
-                                      <Typography
-                                        variant="body2"
-                                        color="text.secondary"
-                                      >
-                                        Certification Body:{" "}
-                                        {certification.certificationBody}
-                                      </Typography>
-                                    </CardContent>
-                                  </Card>
-                                ))}
+                              <div className="tab-content">
+                                <div className="wrapper">
+                                  {certification.map((certification, index) => (
+                                    <Card key={index} sx={{ maxWidth: 345 }}>
+                                      <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image={certification.image} // Assuming indra is defined elsewhere
+                                        sx={{ background: "000" }}
+                                        alt="green iguana"
+                                      />
+                                      <CardContent>
+                                        <Typography
+                                          gutterBottom
+                                          variant="h7"
+                                          component="div"
+                                        >
+                                          {certification.title.length > 25
+                                            ? `${certification.title.substring(
+                                                0,
+                                                25
+                                              )}...`
+                                            : certification.title}
+                                        </Typography>
+                                        <Typography
+                                          variant="body2"
+                                          color="text.secondary"
+                                        >
+                                          Location: {certification.location}
+                                        </Typography>
+                                        <Button
+                                          variant="outlined"
+                                          onClick={certification.modal}
+                                          sx={{ marginTop: 5 }}
+                                        >
+                                          View Image
+                                        </Button>
+                                      </CardContent>
+                                    </Card>
+                                  ))}
+                                  <Modal
+                                    open={openModal4}
+                                    onClose={handleCloseScrum}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={scrumImage}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+
+                                  <Modal
+                                    open={openModal5}
+                                    onClose={handleCloseCyber}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={cyberSec}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+                                  <Modal
+                                    open={openModal6}
+                                    onClose={handleClosePmf}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={pmf}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+                                  <Modal
+                                    open={openModal7}
+                                    onClose={handleCloseGoogle}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                  >
+                                    <Box className="trainingImage">
+                                      <img
+                                        src={googleTech}
+                                        alt="Training"
+                                        className="trainingImage"
+                                      />
+                                    </Box>
+                                  </Modal>
+                                </div>
                               </div>
                             </TabPanel>
                           </SwipeableViews>
