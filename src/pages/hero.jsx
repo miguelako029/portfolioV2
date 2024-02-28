@@ -67,57 +67,57 @@ const Hero = () => {
       }}
     >
       <div ref={ref}>
-        <animated.div style={fadeInUp}>
-          <div className="hero">
-            <h1 className="firstName">
-              Hey! I'm <span>Miguel!</span>
-            </h1>
-            {/* <h1>MILANEZ</h1> */}
-            <p className="hero-desc">
-              Software Engineer - Web Developer - Front-End Developer
-            </p>
-            <div className="btnContainer">
-              <Button
-                style={{
-                  ...buttonStyle,
-                  ...(mode === "dark" ? darkModeButtonStyle : {}),
-                }}
+        {/* <animated.div style={fadeInUp}> */}
+        <div className="hero">
+          <h1 className="firstName">
+            Hey! I'm <span>Miguel!</span>
+          </h1>
+          {/* <h1>MILANEZ</h1> */}
+          <p className="hero-desc">
+            Software Engineer - Web Developer - Front-End Developer
+          </p>
+          <div className="btnContainer">
+            <Button
+              style={{
+                ...buttonStyle,
+                ...(mode === "dark" ? darkModeButtonStyle : {}),
+              }}
+            >
+              <Link
+                to="contact"
+                className="btnStyle"
+                smooth={true}
+                offset={200}
+                duration={1000}
               >
-                <Link
-                  to="contact"
-                  className="btnStyle"
-                  smooth={true}
-                  offset={200}
-                  duration={1000}
-                >
-                  <span className="btnText">Let's Connect</span>
-                </Link>
-              </Button>
+                <span className="btnText">Let's Connect</span>
+              </Link>
+            </Button>
 
-              <Button
-                style={{
-                  ...buttonStyle,
-                  ...(mode === "dark" ? darkModeButtonStyle : {}),
+            <Button
+              style={{
+                ...buttonStyle,
+                ...(mode === "dark" ? darkModeButtonStyle : {}),
+              }}
+            >
+              <Link
+                className="btnStyle"
+                smooth={true}
+                offset={200}
+                duration={1000}
+                onClick={() => {
+                  window.open(
+                    "https://drive.google.com/file/d/1JBd50x5L0Zb5J21iHemOoU0qqCnaELn6/view?usp=sharing",
+                    "_blank"
+                  );
                 }}
               >
-                <Link
-                  className="btnStyle"
-                  smooth={true}
-                  offset={200}
-                  duration={1000}
-                  onClick={() => {
-                    window.open(
-                      "https://drive.google.com/file/d/1JBd50x5L0Zb5J21iHemOoU0qqCnaELn6/view?usp=sharing",
-                      "_blank"
-                    );
-                  }}
-                >
-                  <span className="btnText">My Resume</span>
-                </Link>
-              </Button>
-            </div>
+                <span className="btnText">My Resume</span>
+              </Link>
+            </Button>
           </div>
-        </animated.div>
+        </div>
+        {/* </animated.div> */}
       </div>
     </Box>
   );
