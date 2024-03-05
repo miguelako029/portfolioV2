@@ -29,13 +29,13 @@ body {
 } */
 
 .heroSection {
-  height: 90vh; /* Adjusted height */
+  height: 95vh; /* Adjusted height */
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .hero .firstName {
@@ -66,7 +66,7 @@ body {
   font-size: 1.4vw;
   /* font-family: "Work Sans", sans-serif; */
   font-weight: 100;
-  margin-top: -10px;
+  margin-top: -13px;
   opacity: 0; /* Start with opacity 0 to hide the text */
   animation: slideInWords 1s 1s forwards; /* Animation with delay of 2s */
 }
@@ -75,14 +75,13 @@ body {
   animation: slideInWords 1s forwards; /* Keep the initial animation */
   animation-delay: 2s; /* Add a delay of 2 seconds */
   opacity: 0;
+  margin-top: 30px;
 }
 
 .hero .btnContainer .btnStyle {
   font-size: 1vw;
   padding: 0px 20px;
   text-align: center;
-
-  color: rgb(0, 0, 0);
 
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -95,8 +94,8 @@ body {
   display: block;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .aboutDescription h1 {
