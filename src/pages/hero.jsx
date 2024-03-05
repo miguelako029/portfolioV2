@@ -34,21 +34,6 @@ const Hero = () => {
     triggerOnce: true, // Only trigger once when it enters the viewport
   });
 
-  // Define the animation properties
-  const fadeInUp = useSpring({
-    from: {
-      opacity: 0,
-      transform: "translateY(50px)",
-    },
-    to: {
-      opacity: inView ? 1 : 0, // Animate opacity when in view
-      transform: inView ? "translateY(0)" : "translateY(30px)", // Animate translateY when in view
-    },
-    config: {
-      duration: 1000,
-    },
-  });
-
   return (
     <Box
       className="heroSection"

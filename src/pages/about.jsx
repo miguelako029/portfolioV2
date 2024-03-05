@@ -385,6 +385,13 @@ const About = () => {
       image: sharepoint,
       modal: handleOpenSharepoint,
     },
+    {
+      title: "PROJECT MANAGEMENT FUNDAMENTALS",
+
+      location: "Online - MSTCONNECT",
+      image: pmf,
+      modal: handleOpenPmf,
+    },
   ];
 
   const certification = [
@@ -402,13 +409,7 @@ const About = () => {
       image: cyberSec,
       modal: handleOpenCyber,
     },
-    {
-      title: "PROJECT MANAGEMENT FUNDAMENTALS",
-      date: "2021-09-19",
-      certificationBody: "MSTCONNECT",
-      image: pmf,
-      modal: handleOpenPmf,
-    },
+
     {
       title: "GOOGLE - TECHNICAL SUPPORT FUNDAMENTALS",
       date: "2022-11-08",
