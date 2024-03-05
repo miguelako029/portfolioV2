@@ -438,14 +438,14 @@ const About = () => {
       <div className="aboutSection" id="about">
         {/* <div class="about-grid-container"> */}
         <div className="wrapperAbout">
-          <div class="profileImage" width="60%">
+          <div class="profileImage">
             <div ref={ref}>
               <animated.div style={fadeInUp}>
                 <img src={image1} width="50%" alt="Image 1" />
               </animated.div>
             </div>
           </div>
-          <div class="aboutDescription" width="40%">
+          <div class="aboutDescription">
             <div ref={ref}>
               <animated.div style={fadeInUp}>
                 <h1>Miguel Lorenzo Milañez</h1>
