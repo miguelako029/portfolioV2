@@ -110,7 +110,8 @@ const About = () => {
       transform: inView ? "translateY(0)" : "translateY(30px)", // Animate translateY when in view
     },
     config: {
-      duration: 1000,
+      duration: 500,
+      delay: 500,
     },
   });
   const { mode, backgroundColor, fontColor } = useColorMode();
@@ -439,33 +440,43 @@ const About = () => {
         {/* <div class="about-grid-container"> */}
         {/* <div className="wrapperAbout"> */}
         <div class="aboutMe">
-          <h1>Miguel Lorenzo Milañez</h1>
+          <div ref={ref}>
+            <animated.div style={fadeInUp}>
+              <h1>Miguel Lorenzo Milañez</h1>
+            </animated.div>
 
-          <p className="aboutDetails">
-            Experienced Frontend Developer with a demonstrated history of
-            working in the information technology and services industry. Skilled
-            in Redmine, PHP, JavaScript, CMS, Microsoft SharePoint, RPA(UiPath)
-            and Project Management.
-          </p>
-          <div
-            className="btnGroup"
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              transition: "background-color 0.7s ease",
-            }}
-          >
-            <Button
-              className="button"
-              sx={{
-                background: backgroundColor,
-                color: fontColor,
-                transition: "background-color 0.7s ease",
-              }}
-              onClick={handleOpen1}
-            >
-              Read More <ArrowRightAltIcon />
-            </Button>
+            <animated.div style={fadeInUp}>
+              <p className="aboutDetails">
+                Experienced Frontend Developer with a demonstrated history of
+                working in the information technology and services industry.
+                Skilled in Redmine, PHP, JavaScript, CMS, Microsoft SharePoint,
+                RPA(UiPath) and Project Management.
+              </p>
+            </animated.div>
+            <div ref={ref}>
+              <animated.div style={fadeInUp}>
+                <div
+                  className="btnGroup"
+                  sx={{
+                    background: backgroundColor,
+                    color: fontColor,
+                    transition: "background-color 0.7s ease",
+                  }}
+                >
+                  <Button
+                    className="button"
+                    sx={{
+                      background: backgroundColor,
+                      color: fontColor,
+                      transition: "background-color 0.7s ease",
+                    }}
+                    onClick={handleOpen1}
+                  >
+                    Read More <ArrowRightAltIcon />
+                  </Button>
+                </div>
+              </animated.div>
+            </div>
           </div>
         </div>
         {/* </div> */}
