@@ -90,7 +90,7 @@ body {
 
 .wrapperAbout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(50.25rem, 100%), 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100.25rem, 100%), 2fr));
   grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
 }
 
@@ -101,42 +101,28 @@ body {
 }
 
 .aboutSection {
-  height: 100vh; /* Adjusted height */
+  height: 0vh; /* Adjusted height */
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: block;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.aboutDescription h1 {
-  font-size: 30px;
-  word-spacing: 5pt;
-  margin-bottom: 10pt;
+.aboutMe {
+  width: 100%;
   font-weight: 100;
-  background: linear-gradient(
-    135deg,
-    #0f9ef1,
-    #7303c0,
-    #ec38bc,
-    #f88bd9
-  ); /* Nebula-like colors */
-  -webkit-background-clip: text; /* Webkit browsers */
-  -webkit-text-fill-color: transparent; /* Webkit browsers */
-  background-clip: text; /* Standard syntax */
-  color: transparent;
-}
-
-.aboutDescription {
-  font-weight: 100;
-  text-align: left;
-
+  text-align: center;
   justify-content: center;
-  font-size: 35px;
+  font-size: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+
   align-content: center;
-  margin-right: 70px;
+
   /* margin-left: -50px; */
   .btnGroup {
     /* display: grid; */
@@ -159,6 +145,31 @@ body {
   .button:hover {
     background-color: #999999;
   }
+}
+
+.aboutMe h1 {
+  font-size: 40px;
+  word-spacing: 5pt;
+  margin-bottom: 10pt;
+  font-weight: 100;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+  animation: fadeUp 1s forwards;
+  opacity: 0;
+}
+
+.aboutDetails {
+  animation: fadeUp 1s 1s forwards;
+  opacity: 0;
 }
 
 /* MODAL */
@@ -642,7 +653,7 @@ ul .ui-bullet {
 
 @keyframes fadeUp {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(50%);
     opacity: 0;
   }
   100% {

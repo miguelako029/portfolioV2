@@ -437,53 +437,42 @@ const About = () => {
     >
       <div className="aboutSection" id="about">
         {/* <div class="about-grid-container"> */}
-        <div className="wrapperAbout">
-          <div class="profileImage">
-            <div ref={ref}>
-              <animated.div style={fadeInUp}>
-                <img src={image1} width="50%" alt="Image 1" />
-              </animated.div>
-            </div>
-          </div>
-          <div class="aboutDescription">
-            <div ref={ref}>
-              <animated.div style={fadeInUp}>
-                <h1>Miguel Lorenzo Milañez</h1>
-              </animated.div>
-            </div>
+        {/* <div className="wrapperAbout"> */}
+        <div class="aboutMe">
+          <h1>Miguel Lorenzo Milañez</h1>
 
-            <div ref={ref}>
-              <animated.div style={fadeInUp}>
-                <p>
-                  Experienced Frontend Developer with a demonstrated history of
-                  working in the information technology and services industry.
-                  Skilled in Redmine, PHP, JavaScript, CMS, Microsoft
-                  SharePoint, RPA(UiPath) and Project Management.
-                </p>
-                <div
-                  className="btnGroup"
-                  sx={{
-                    background: backgroundColor,
-                    color: fontColor,
-                    transition: "background-color 0.7s ease",
-                  }}
-                >
-                  <Button
-                    className="button"
-                    sx={{
-                      background: backgroundColor,
-                      color: fontColor,
-                      transition: "background-color 0.7s ease",
-                    }}
-                    onClick={handleOpen1}
-                  >
-                    Read More <ArrowRightAltIcon />
-                  </Button>
-                </div>
-              </animated.div>
-            </div>
+          <p className="aboutDetails">
+            Experienced Frontend Developer with a demonstrated history of
+            working in the information technology and services industry. Skilled
+            in Redmine, PHP, JavaScript, CMS, Microsoft SharePoint, RPA(UiPath)
+            and Project Management.
+          </p>
+          <div
+            className="btnGroup"
+            sx={{
+              background: backgroundColor,
+              color: fontColor,
+              transition: "background-color 0.7s ease",
+            }}
+          >
+            <Button
+              className="button"
+              sx={{
+                background: backgroundColor,
+                color: fontColor,
+                transition: "background-color 0.7s ease",
+              }}
+              onClick={handleOpen1}
+            >
+              Read More <ArrowRightAltIcon />
+            </Button>
           </div>
         </div>
+        {/* </div> */}
+        {/* <div class="profileImage">
+            <img src={image1} width="50%" alt="Image 1" />
+          </div> */}
+        {/* </div> */}
 
         <Modal
           open={open1}
