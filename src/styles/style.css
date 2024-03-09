@@ -108,8 +108,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .aboutMe {
@@ -148,7 +148,7 @@ body {
 }
 
 .aboutMe h1 {
-  font-size: 40px;
+  font-size: 60px;
   word-spacing: 5pt;
   margin-bottom: 10pt;
   font-weight: 100;
@@ -170,6 +170,7 @@ body {
 .aboutDetails {
   animation: fadeUp 1s 1s forwards;
   opacity: 0;
+  font-size: 18pt;
 }
 
 /* MODAL */

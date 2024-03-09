@@ -427,7 +427,7 @@ const About = () => {
       sx={{
         background: backgroundColor,
         color: fontColor,
-        minHeight: "70vh",
+        minHeight: "75vh",
         // display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -447,10 +447,11 @@ const About = () => {
 
             <animated.div style={fadeInUp}>
               <p className="aboutDetails">
-                Experienced Frontend Developer with a demonstrated history of
-                working in the information technology and services industry.
-                Skilled in Redmine, PHP, JavaScript, CMS, Microsoft SharePoint,
-                RPA(UiPath) and Project Management.
+                Welcome to my personal website! I'm Miguel Lorenzo T. Milañez, a
+                passionate Software Engineer with a focus on web development and
+                a knack for problem-solving. I'm passionate about crafting
+                engaging web experiences and solving complex problems through
+                innovative solutions. Feel free to explore my profile.
               </p>
             </animated.div>
             <div ref={ref}>
