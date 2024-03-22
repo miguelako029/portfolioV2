@@ -59,7 +59,7 @@ const Hero = () => {
           </h1>
           {/* <h1>MILANEZ</h1> */}
           <p className="hero-desc">
-            Software Engineer &#9679; Web Developer &#9679; Front-End Developer
+            Software Engineer - Web Developer - Front-End Developer
           </p>
           <div className="btnContainer">
             <Button
