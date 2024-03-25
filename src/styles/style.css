@@ -101,19 +101,21 @@ body {
 }
 
 .aboutSection {
-  height: 0vh; /* Adjusted height */
+  height: 90vh; /* Adjusted height */
+
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 40px;
+
   padding-bottom: 20px;
+  /* border: solid 1px #0f9ef1; */
 }
 
 .aboutMe {
-  width: 100%;
+  width: 65%;
   font-weight: 100;
   text-align: center;
   justify-content: center;
@@ -171,6 +173,11 @@ body {
   animation: fadeUp 1s 1s forwards;
   opacity: 0;
   font-size: 18pt;
+  font-weight: 100;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
 }
 
 /* MODAL */

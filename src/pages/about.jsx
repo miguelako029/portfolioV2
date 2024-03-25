@@ -91,7 +91,8 @@ Fade.propTypes = {
 };
 
 Fade.defaultProps = {
-  duration: 300, // Default duration time (in milliseconds)
+  duration: 1300, // Default duration time (in milliseconds)
+  delay: 2000,
 };
 
 const About = () => {
@@ -107,11 +108,10 @@ const About = () => {
     },
     to: {
       opacity: inView ? 1 : 0, // Animate opacity when in view
-      transform: inView ? "translateY(0)" : "translateY(30px)", // Animate translateY when in view
+      transform: inView ? "translateY(0)" : "translateY(100px)", // Animate translateY when in view
     },
     config: {
-      duration: 500,
-      delay: 500,
+      durations: 15000,
     },
   });
   const { mode, backgroundColor, fontColor } = useColorMode();
@@ -443,9 +443,6 @@ const About = () => {
           <div ref={ref}>
             <animated.div style={fadeInUp}>
               <h1>Miguel Lorenzo Milañez</h1>
-            </animated.div>
-
-            <animated.div style={fadeInUp}>
               <p className="aboutDetails">
                 Welcome to my personal website! I'm Miguel Lorenzo T. Milañez, a
                 passionate Software Engineer with a focus on web development and
@@ -454,6 +451,8 @@ const About = () => {
                 innovative solutions. Feel free to explore my profile.
               </p>
             </animated.div>
+
+            <animated.div style={fadeInUp}></animated.div>
             <div ref={ref}>
               <animated.div style={fadeInUp}>
                 <div
