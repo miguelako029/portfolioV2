@@ -224,6 +224,7 @@ body {
   grid-template-rows: 1fr 1.7fr 0.3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
+
   grid-template-areas:
     "Image Content Content"
     "Image Content Content"
@@ -250,7 +251,7 @@ body {
   grid-area: Content;
   /* background-color: #999999; */
   overflow-y: auto;
-  max-height: 650px;
+  max-height: 700px;
   padding-top: 50px;
 }
 
