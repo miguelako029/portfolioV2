@@ -443,6 +443,9 @@ const About = () => {
           <div ref={ref}>
             <animated.div style={fadeInUp}>
               <h1>Miguel Lorenzo Milañez</h1>
+            </animated.div>
+
+            <animated.div style={fadeInUp}>
               <p className="aboutDetails">
                 Welcome to my personal website! I'm Miguel Lorenzo T. Milañez, a
                 passionate Software Engineer with a focus on web development and
@@ -451,8 +454,6 @@ const About = () => {
                 innovative solutions. Feel free to explore my profile.
               </p>
             </animated.div>
-
-            <animated.div style={fadeInUp}></animated.div>
             <div ref={ref}>
               <animated.div style={fadeInUp}>
                 <div
