@@ -389,7 +389,6 @@ const About = () => {
     },
     {
       title: "PROJECT MANAGEMENT FUNDAMENTALS",
-
       location: "Online - MSTCONNECT",
       image: pmf,
       modal: handleOpenPmf,
@@ -523,10 +522,14 @@ const About = () => {
                       className="fixed-panel"
                     >
                       <div className="tab-content"></div>
-                      <Typography variant="h4" component="div">
+                      <Typography variant="h4" component="div" id="modalName">
                         Miguel Lorenzo T. Milanez
                       </Typography>
-                      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                      <Typography
+                        sx={{ mb: 1.5 }}
+                        color="text.secondary"
+                        id="modalLabel"
+                      >
                         Software Engineer
                       </Typography>
                       <div>{card}</div>
@@ -586,7 +589,7 @@ const About = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={noImage}
                                 alt="Training"
@@ -601,7 +604,7 @@ const About = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={drupalImage}
                                 alt="Training"
@@ -615,7 +618,7 @@ const About = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={serviceNow}
                                 alt="Training"
@@ -629,9 +632,23 @@ const About = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={sharepoint}
+                                alt="Training"
+                                className="trainingImage"
+                              />
+                            </Box>
+                          </Modal>
+                          <Modal
+                            open={openModal6}
+                            onClose={handleClosePmf}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                          >
+                            <Box>
+                              <img
+                                src={pmf}
                                 alt="Training"
                                 className="trainingImage"
                               />
@@ -693,7 +710,7 @@ const About = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={scrumImage}
                                 alt="Training"
@@ -708,7 +725,7 @@ const About = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={cyberSec}
                                 alt="Training"
@@ -716,27 +733,14 @@ const About = () => {
                               />
                             </Box>
                           </Modal>
-                          <Modal
-                            open={openModal6}
-                            onClose={handleClosePmf}
-                            aria-labelledby="modal-modal-title"
-                            aria-describedby="modal-modal-description"
-                          >
-                            <Box className="trainingImage">
-                              <img
-                                src={pmf}
-                                alt="Training"
-                                className="trainingImage"
-                              />
-                            </Box>
-                          </Modal>
+
                           <Modal
                             open={openModal7}
                             onClose={handleCloseGoogle}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                           >
-                            <Box className="trainingImage">
+                            <Box>
                               <img
                                 src={googleTech}
                                 alt="Training"

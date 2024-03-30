@@ -484,7 +484,7 @@ ul .ui-bullet {
 }
 
 /* Extra Small Devices (Phones) */
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   /* Add your CSS rules for extra small devices (portrait) here */
 
   .heroSection {
@@ -540,58 +540,84 @@ ul .ui-bullet {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
+  .wrapperAbout {
+    grid-template-columns: 1fr; /* Adjust grid layout */
+  }
+
+  .profileImage {
+    width: 80%; /* Adjust width */
+    margin: 0 auto; /* Center align */
+  }
+
   .aboutSection {
-    height: 70vh; /* Adjusted height */
-
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    display: relative;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    padding-bottom: 20px;
-    /* border: solid 1px #0f9ef1; */
+    height: auto; /* Adjust height to content */
   }
 
   .aboutMe {
-    font-weight: 100;
-    text-align: center;
-    justify-content: center;
-
-    align-content: center;
-
-    /* margin-left: -50px; */
-    .btnGroup {
-      /* display: grid; */
-      /* grid-template-columns: repeat(auto-fit, minmax(50px, 16fr)); */
-      grid-gap: 1rem;
-      /* max-width: 600px; */
-      margin-top: 25px;
-    }
-
-    .button {
-      text-align: center;
-      /* background-color: #1872d300;
-    color: rgb(0, 0, 0); */
-      border: 1px solid;
-      cursor: pointer;
-      font-weight: 300;
-      font-size: 6pt;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      padding: 8px;
-    }
-
-    .button:hover {
-      background-color: #999999;
-    }
+    font-size: 20px; /* Adjust font size */
+    width: 90%; /* Adjust width */
+    margin: 0 auto; /* Center align */
   }
 
   .aboutMe h1 {
-    font-size: 24px;
-    line-height: 25px;
-    word-spacing: 1pt;
-    font-weight: 400;
+    font-size: 40px; /* Adjust font size */
+    line-height: 35pt;
+    margin-bottom: 30px;
+  }
+
+  .aboutDescription {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .modal1 {
+    width: 85%;
+    height: 83%;
+    top: 0;
+    left: 0;
+    border-radius: 0; /* Remove border-radius */
+    position: fixed;
+    background-color: rgb(
+      243,
+      243,
+      243
+    ); /* Assuming white background for the modal */
+    /* Enable scrolling if content exceeds modal height */
+    overflow: auto;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr; /* Adjust grid layout */
+  }
+
+  .trainingImage {
+    width: 75%; /* Adjust width */
+    left: 5%;
+    top: 15%;
+    transform: translate(0%, 50%);
+  }
+
+  .container {
+    display: grid;
+
+    grid-template-columns: 1fr; /* Adjust grid layout */
+    grid-template-rows: 80vh 10vh; /* Content takes 90% of the screen height, Tabs take 10% */
+  }
+
+  .Content {
+    grid-area: Content;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .Tabs {
+    grid-area: Tabs;
+
+    position: relative;
+    width: 100%;
+    font-size: 12pt;
+  }
+  #modalName {
     background: linear-gradient(
       135deg,
       #0f9ef1,
@@ -603,86 +629,10 @@ ul .ui-bullet {
     -webkit-text-fill-color: transparent; /* Webkit browsers */
     background-clip: text; /* Standard syntax */
     color: transparent;
-    animation: fadeUp 1s forwards;
-    opacity: 0;
-    margin-bottom: 25px;
-  }
-
-  .aboutDescription {
-    animation: fadeUp 1s 1s forwards;
-    opacity: 0;
-
-    font-weight: 100;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    justify-items: center;
-
-    font-size: 10pt;
-  }
-
-  /* MODAL */
-  .modal1 {
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    /* position: absolute; */
-    border-radius: 10px;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20.25rem, 100%), 2fr));
-    grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
-  }
-
-  .trainingImage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    background-color: white; /* Assuming 'background.paper' refers to a white background */
-    /* border: 2px solid #000; */
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
-    padding: 16px; /* Assuming 'p: 4' refers to a padding of 4 * 4px = 16px */
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1.7fr 0.3fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-
-    grid-template-areas:
-      " Content Content"
-      " Content Content"
-      " Tabs Tabs";
-  }
-
-  .Content {
-    grid-area: Content;
-    /* background-color: #999999; */
-    overflow-y: auto;
-
-    max-height: 800px;
-    padding-top: 50px;
-  }
-
-  .Tabs {
-    grid-area: Tabs;
-    background-color: #ffffff;
-    position: absolute;
-    bottom: 0px; /* Adjust as needed */
-    width: 100%;
-    font-size: 1pt;
-    right: 0;
   }
 }
 
-@media (min-width: 321px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {
   /* Add your CSS rules for extra small devices (landscape) here */
 
   .heroSection {
