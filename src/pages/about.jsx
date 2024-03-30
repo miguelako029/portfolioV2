@@ -15,6 +15,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import CloseIcon from "@mui/icons-material/Close";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { useSpring, animated, config } from "react-spring";
@@ -570,8 +571,10 @@ const About = () => {
                                   variant="outlined"
                                   onClick={training.modal}
                                   sx={{ marginTop: 5 }}
+                                  startIcon={<VisibilityIcon />}
                                 >
-                                  View Image
+                                  {" "}
+                                  View
                                 </Button>
                               </CardContent>
                             </Card>
@@ -677,8 +680,9 @@ const About = () => {
                                   variant="outlined"
                                   onClick={certification.modal}
                                   sx={{ marginTop: 5 }}
+                                  startIcon={<VisibilityIcon />}
                                 >
-                                  View Image
+                                  View
                                 </Button>
                               </CardContent>
                             </Card>
@@ -755,7 +759,7 @@ const About = () => {
                     sx={{
                       // background: backgroundColor,
                       color: mode === "dark" ? "#000" : "#000",
-
+                      fontSize: 1,
                       // boxShadow: "none",
                       // borderBottom: "1px solid #000",
                     }}
