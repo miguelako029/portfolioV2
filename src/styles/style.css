@@ -4,20 +4,19 @@
 * {
   margin: 0;
   padding: 0;
-
+  /* Recommended to include box-sizing globally */
   font-family: "Gantari", sans-serif;
-  /* font-weight: 300; */
-  /* box-sizing: border-box;  */
+  /* font-weight: 300; */ /* You may uncomment this line if needed */
 }
 
 html {
-  position: relative;
+  /* Since position:relative doesn't seem necessary, you can remove it */
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
 }
 
@@ -183,7 +182,7 @@ body {
   height: 90%;
   top: 5%;
   left: 5%;
-  /* position: absolute; */
+
   border-radius: 10px;
 
   background-color: white;
