@@ -96,7 +96,7 @@ body {
 }
 
 .aboutSection {
-  height: 60vh; /* Adjusted height */
+  height: 100vh; /* Adjusted height */
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -313,6 +313,7 @@ body {
       margin: 15px;
       padding: 40px;
     }
+    npm
 
     /* Circled Number */
     .circled-number {

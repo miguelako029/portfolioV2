@@ -11,6 +11,7 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Chip from "@mui/material/Chip";
 import CardMedia from "@mui/material/CardMedia";
+import { Link } from "react-scroll";
 
 import { styled } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
@@ -45,6 +46,8 @@ import scrumImage from "../assets/images/scrum.png";
 import cyberSec from "../assets/images/cyberSec.png";
 import pmf from "../assets/images/pmf.png";
 import googleTech from "../assets/images/google.png";
+
+// const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -96,7 +99,10 @@ Fade.defaultProps = {
   delay: 2000,
 };
 
+// Dark mode specific button styles
+
 const About = () => {
+  const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once when it enters the viewport
   });
@@ -115,7 +121,6 @@ const About = () => {
       durations: 15000,
     },
   });
-  const { mode, backgroundColor, fontColor } = useColorMode();
 
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
@@ -231,6 +236,24 @@ const About = () => {
     willChange: "backdrop-filter",
     // overflow: "hidden",
     // p: 4,
+  };
+
+  const darkModeButtonStyle = {
+    backgroundColor: "#000",
+    color: "#FFF",
+    border: "1px solid #FFF",
+    margin: "5px",
+    // Add other dark mode specific styles here
+  };
+
+  const buttonStyle = {
+    background: backgroundColor,
+    color: fontColor,
+    textDecoration: "none",
+    border: "1px solid #000",
+    transition: "background-color 0.7s ease",
+    margin: "5px",
+    // Add other common styles here
   };
 
   const card = (
@@ -441,7 +464,103 @@ const About = () => {
         {/* <div className="wrapperAbout"> */}
         <div class="aboutMe">
           <div ref={ref}>
-            <animated.div style={fadeInUp}>
+            <div className="hero">
+              <h1 className="firstName">
+                Hey! I'm <span>Miguel!</span>
+              </h1>
+              {/* <h1>MILANEZ</h1> */}
+              <p className="hero-desc">
+                Software Engineer - Web Developer - Front-End Developer
+                <animated.div style={fadeInUp}>
+                  <p className="aboutDescription">
+                    Welcome to my personal website! I'm Miguel Lorenzo T.
+                    Milañez, a passionate Software Engineer with a focus on web
+                    development and a knack for problem-solving. I'm passionate
+                    about crafting engaging web experiences and solving complex
+                    problems through innovative solutions. Feel free to explore
+                    my profile.
+                  </p>
+                </animated.div>
+              </p>
+              <div className="btnContainer">
+                <Button
+                  style={{
+                    ...buttonStyle,
+                    ...(mode === "dark" ? darkModeButtonStyle : {}),
+                  }}
+                >
+                  <Link
+                    to="contact"
+                    className="btnStyle"
+                    smooth={true}
+                    offset={200}
+                    duration={1000}
+                  >
+                    <span className="btnText">Let's Connect</span>
+                  </Link>
+                </Button>
+
+                {/* <Button
+                  style={{
+                    ...buttonStyle,
+                    ...(mode === "dark" ? darkModeButtonStyle : {}),
+                  }}
+                >
+                  <Link
+                    className="btnStyle"
+                    smooth={true}
+                    offset={200}
+                    duration={1000}
+                    onClick={() => {
+                      window.open(
+                        "https://drive.google.com/file/d/1JBd50x5L0Zb5J21iHemOoU0qqCnaELn6/view?usp=sharing",
+                        "_blank"
+                      );
+                    }}
+                  >
+                    <span className="btnText">My Resume</span>
+                  </Link>
+                </Button> */}
+
+                <Button
+                  sx={{
+                    background: backgroundColor,
+                    color: fontColor,
+                    transition: "background-color 0.7s ease",
+                  }}
+                  to="contact"
+                  className="button"
+                  smooth={true}
+                  offset={200}
+                  duration={1000}
+                >
+                  <Link
+                    to="contact"
+                    // className="btnStyle"
+                    smooth={true}
+                    offset={200}
+                    duration={1000}
+                  >
+                    <span className="btnText">
+                      Let's Connect <ArrowRightAltIcon />
+                    </span>
+                  </Link>
+                </Button>
+
+                <Button
+                  className="button"
+                  sx={{
+                    background: backgroundColor,
+                    color: fontColor,
+                    transition: "background-color 0.7s ease",
+                  }}
+                  onClick={handleOpen1}
+                >
+                  Read More <ArrowRightAltIcon />
+                </Button>
+              </div>
+            </div>
+            {/* <animated.div style={fadeInUp}>
               <h1>Miguel Lorenzo Milañez</h1>
               <p className="aboutDescription">
                 Welcome to my personal website! I'm Miguel Lorenzo T. Milañez, a
@@ -450,10 +569,10 @@ const About = () => {
                 engaging web experiences and solving complex problems through
                 innovative solutions. Feel free to explore my profile.
               </p>
-            </animated.div>
+            </animated.div> */}
 
             <animated.div style={fadeInUp}></animated.div>
-            <div ref={ref}>
+            {/* <div ref={ref}>
               <animated.div style={fadeInUp}>
                 <div
                   className="btnGroup"
@@ -476,7 +595,7 @@ const About = () => {
                   </Button>
                 </div>
               </animated.div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* </div> */}
