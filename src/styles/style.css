@@ -96,7 +96,7 @@ body {
 }
 
 .aboutSection {
-  height: 100vh; /* Adjusted height */
+  height: 85vh; /* Adjusted height */
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -111,12 +111,13 @@ body {
 
 .aboutMe {
   font-weight: 100;
-  text-align: center;
-  justify-content: center;
+  text-align: left;
+  justify-content: left;
   font-size: 30px;
 
-  width: 75%;
-  align-content: center;
+  width: 90%;
+  align-content: left;
+  color: #242424;
 
   /* margin-left: -50px; */
   .btnGroup {
@@ -125,6 +126,12 @@ body {
     grid-gap: 1rem;
     /* max-width: 600px; */
     margin-top: 25px;
+  }
+
+  .transition {
+    font-size: 6vw;
+    color: #242424;
+    font-weight: 200;
   }
 
   .button {
@@ -144,7 +151,7 @@ body {
 }
 
 .aboutMe h1 {
-  font-size: 60px;
+  font-size: 6vw;
   word-spacing: 5pt;
   font-weight: 300;
   background: linear-gradient(
@@ -160,7 +167,7 @@ body {
   color: transparent;
   animation: fadeUp 1s forwards;
   opacity: 0;
-  margin-bottom: 20px;
+  margin-bottom: -40px;
 }
 
 .aboutDescription {
@@ -499,7 +506,7 @@ ul .ui-bullet {
   }
 
   .hero .firstName {
-    font-size: 46px;
+    font-size: 7vw;
     animation: slideInWords 1s forwards;
     text-align: center;
     line-height: 1;

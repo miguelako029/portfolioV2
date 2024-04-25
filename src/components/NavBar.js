@@ -54,6 +54,9 @@ export default function HideAppBar(props) {
     fontWeight: 100,
     padding: "10px",
     transition: "background-color 0.3s ease",
+    fontSize: "2vw",
+    fontWeight: 200,
+
     "&:hover": {
       backgroundColor: "#f5f5f5",
     },
@@ -70,6 +73,9 @@ export default function HideAppBar(props) {
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
               justifyContent: "space-between", // Place items at each end
+              padding: "30px",
+              alignItems: "center",
+              justifyItems: "center",
             }}
           >
             <Box
