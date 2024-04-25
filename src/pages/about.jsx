@@ -587,7 +587,7 @@ const About = () => {
                 style={{ cursor: "pointer" }}
               >
                 <span className="btnText">
-                  Let's Connect <ArrowRightAltIcon />
+                  Know Me! <ArrowRightAltIcon />
                 </span>
               </Link>
             </div>

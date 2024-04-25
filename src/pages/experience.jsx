@@ -130,13 +130,10 @@ const Experience = () => {
       id="experience"
       sx={{
         background: backgroundColor,
-        minHeight: "50vh",
+
         color: fontColor,
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        flexDirection: "column",
+
         transition: "background-color 0.7s ease",
       }}
     >
@@ -145,7 +142,7 @@ const Experience = () => {
           <div className="pageSection">
             <div className="expContainer">
               <div className="labelContainer">
-                <h1 className="exp-h1">I worked with them!</h1>
+                <h1 className="sectionHeader">Experience</h1>
               </div>
               <section class="layout">
                 <div class="cardBox">

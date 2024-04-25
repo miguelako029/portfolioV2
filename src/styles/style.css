@@ -20,6 +20,27 @@ body {
   overflow-y: auto;
 }
 
+.menulogo {
+  width: 150px;
+  margin-right: 50px;
+}
+
+.sectionHeader {
+  font-size: 6vw;
+  font-weight: 200;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+}
+
 .heroSection {
   height: 95vh; /* Adjusted height */
   scroll-snap-align: start;
@@ -297,6 +318,16 @@ body {
   height: 70%;
 }
 
+.expContainer {
+  height: 30vh; /* Adjusted height */
+
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-left: 100px;
+}
+
 .portfolioContainer {
   padding-top: 200px;
   padding-bottom: 100px;
@@ -320,7 +351,6 @@ body {
       margin: 15px;
       padding: 40px;
     }
-    npm
 
     /* Circled Number */
     .circled-number {

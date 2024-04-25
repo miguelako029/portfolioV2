@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 
 import { useColorMode } from "../assets/script/DarkModeContext";
+import menulogo from "../assets/images/menulogo.png";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -66,16 +67,24 @@ export default function HideAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
+        <AppBar
+          sx={{
+            backgroundColor: "transparent",
+            boxShadow: "none",
+            justifyContent: "center",
+          }}
+        >
           <Toolbar
             sx={{
               background: mode === "dark" ? "#000000" : "#FFF",
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
               justifyContent: "space-between", // Place items at each end
-              padding: "30px",
-              alignItems: "center",
+              alignItems: "flex-start",
               justifyItems: "center",
+              verticalAlign: "center",
+
+              padding: "20px",
             }}
           >
             <Box
@@ -85,29 +94,13 @@ export default function HideAppBar(props) {
               }}
             >
               <Link
-                to="hero"
+                to="about" // Replace "about" with the ID of the element you want to scroll to
                 spy={true}
                 smooth={true}
                 offset={-200}
                 duration={500}
-                className="menu-item"
-                href="/hero"
-                style={linkStyles}
               >
-                Home
-              </Link>
-
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-                className="menu-item"
-                href="/about"
-                style={linkStyles}
-              >
-                About
+                <img src={menulogo} alt="Logo" className="menulogo" />
               </Link>
 
               <Link
@@ -166,6 +159,7 @@ export default function HideAppBar(props) {
               </IconButton>
             </Box>
           </Toolbar>
+          ;
         </AppBar>
       </HideOnScroll>
       <Toolbar />
