@@ -19,6 +19,15 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+// import Typography from '@mui/material/Typography';
+// import Box from '@mui/material/Box';
+
 // import { CloseIcon, Excel } from "@mui/icons-material";
 
 import {
@@ -124,6 +133,50 @@ const Experience = () => {
     },
   });
 
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+
+  function a11yProps(index) {
+    return {
+      id: `full-width-tab-${index}`,
+      "aria-controls": `full-width-tabpanel-${index}`,
+    };
+  }
+
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
+
   return (
     <Box
       className="pageSection"
@@ -138,7 +191,57 @@ const Experience = () => {
       }}
     >
       <div ref={ref}>
-        <animated.div style={fadeInUp}>
+        <Box sx={{ display: "flex", height: "100%" }}>
+          <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={value}
+            onChange={handleChange}
+            aria-label="Vertical tabs"
+          >
+            <Tab
+              label={
+                <div className="circleContainer">
+                  <span className="tabContent">1</span>
+                </div>
+              }
+              {...a11yProps(0)}
+            />
+            <Tab
+              label={
+                <div className="circleContainer">
+                  <span className="tabContent">2</span>
+                </div>
+              }
+              {...a11yProps(1)}
+            />
+            <Tab
+              label={
+                <div className="circleContainer">
+                  <span className="tabContent">3</span>
+                </div>
+              }
+              {...a11yProps(2)}
+            />
+          </Tabs>
+          <SwipeableViews
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+            index={value}
+            onChangeIndex={handleChangeIndex}
+            style={{ flexGrow: 1 }}
+          >
+            <TabPanel value={value} index={0} dir={theme.direction}>
+              1
+            </TabPanel>
+            <TabPanel value={value} index={1} dir={theme.direction}>
+              Item Two
+            </TabPanel>
+            <TabPanel value={value} index={2} dir={theme.direction}>
+              Item Three
+            </TabPanel>
+          </SwipeableViews>
+        </Box>
+        {/* <animated.div style={fadeInUp}>
           <div className="pageSection">
             <div className="expContainer">
               <div className="labelContainer">
@@ -214,7 +317,7 @@ const Experience = () => {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              {/* <Fade in={open1}> */}
+              
               <Box sx={style} id="aboutModal">
                 <Button
                   onClick={handleCloseRacamiModal}
@@ -264,7 +367,7 @@ const Experience = () => {
                   </div>
                 </div>
               </Box>
-              {/* </Fade> */}
+            
             </Modal>
 
             <Modal
@@ -273,7 +376,7 @@ const Experience = () => {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              {/* <Fade in={open1}> */}
+              
               <Box sx={style} id="aboutModal">
                 <Button
                   onClick={handleCloseStrategistModal}
@@ -365,7 +468,7 @@ const Experience = () => {
                   </div>
                 </div>
               </Box>
-              {/* </Fade> */}
+            
             </Modal>
 
             <Modal
@@ -374,7 +477,7 @@ const Experience = () => {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              {/* <Fade in={open1}> */}
+              
               <Box sx={style} id="aboutModal">
                 <Button
                   onClick={handleCloseIndraModal}
@@ -449,8 +552,8 @@ const Experience = () => {
                         <li>
                           Expanding technical and technological knowledge
                           proactively.
-                        </li> */}
-                        {/* <li>Becoming familiar with the work environment.</li> */}
+                        </li> 
+                         <li>Becoming familiar with the work environment.</li> 
                         <li>
                           Identifying and proposing improvements to work
                           methods.
@@ -459,10 +562,10 @@ const Experience = () => {
                           Maintaining rigor in work, including data and
                           documentation.
                         </li>
-                        {/* <li>
+                        <li>
                           Demonstrating an interest in understanding work
                           processes and expected outcomes.
-                        </li> */}
+                        </li> 
                       </ul>
                     </div>
                     <span className="position1">Technology used:</span>
@@ -539,10 +642,10 @@ const Experience = () => {
                   </div>
                 </div>
               </Box>
-              {/* </Fade> */}
+          
             </Modal>
           </div>
-        </animated.div>
+        </animated.div> */}
       </div>
     </Box>
   );

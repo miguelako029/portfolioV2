@@ -94,7 +94,7 @@ export default function HideAppBar(props) {
               }}
             >
               <Link
-                to="about" // Replace "about" with the ID of the element you want to scroll to
+                to="Hero" // Replace "about" with the ID of the element you want to scroll to
                 spy={true}
                 smooth={true}
                 offset={-200}

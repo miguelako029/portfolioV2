@@ -43,8 +43,8 @@ function App() {
     <ColorModeProvider>
       <ThemeProvider theme={theme}>
         <NavBar />
-        {/* <Hero /> */}
-        <About />
+        <Hero />
+        {/* <About /> */}
         <Experience />
         <Portfolio />
         <Contact />
