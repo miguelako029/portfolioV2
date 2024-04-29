@@ -42,6 +42,7 @@ body {
 }
 
 .heroSection {
+  /* width: 80vw; */
   height: 95vh; /* Adjusted height */
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -52,15 +53,15 @@ body {
 }
 
 .hero .firstName {
-  font-size: 7vw;
+  font-size: 6.5vw;
   animation: slideInWords 1s forwards;
   text-align: center;
-  font-weight: 300;
+
   font-family: "Gantari", sans-serif;
 }
 
 .hero .firstName span {
-  font-size: 7vw;
+  font-size: 6.5vw;
   text-align: center;
   font-weight: 200;
 
@@ -320,7 +321,7 @@ body {
 
 .expContainer {
   height: 30vh; /* Adjusted height */
-
+  width: 90vw;
   /* display: flex; */
   align-items: center;
   justify-content: center;

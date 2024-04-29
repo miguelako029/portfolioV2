@@ -475,7 +475,7 @@ const About = () => {
         transition: "background-color 0.7s ease",
       }}
     >
-      <div className="aboutSection" id="about">
+      <div className="heroSection" id="about">
         {/* <div class="about-grid-container"> */}
         {/* <div className="wrapperAbout"> */}
         <div class="aboutMe">

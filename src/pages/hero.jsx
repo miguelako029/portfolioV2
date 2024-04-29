@@ -475,7 +475,7 @@ const About = () => {
         transition: "background-color 0.7s ease",
       }}
     >
-      <div className="aboutSection" id="about">
+      <div className="heroSection" id="about">
         {/* <div class="about-grid-container"> */}
         {/* <div className="wrapperAbout"> */}
         <div class="aboutMe">
@@ -496,7 +496,7 @@ const About = () => {
 
             <p className="transition">
               <span>I'm</span>
-              <span style={{ fontWeight: 400 }}> Miguel</span>
+              <span style={{ fontWeight: 500 }}> Miguel</span>
               <span> a</span>
               <TextTransition
                 className="transition"
@@ -674,16 +674,22 @@ const About = () => {
                     className="fixed-panel"
                   >
                     <div className="tab-content"></div>
-                    <Typography variant="h4" component="div" id="modalName">
+                    <Typography variant="h2" component="div" id="modalName">
                       Miguel Lorenzo T. Milanez
                     </Typography>
-                    <Typography
-                      sx={{ mb: 1.5 }}
-                      color="text.secondary"
-                      id="modalLabel"
-                    >
+                    <Typography variant="h4" sx={{ marginBottom: "20px" }}>
                       Software Engineer
                     </Typography>
+
+                    <Typography sx={{ marginBottom: "20px" }}>
+                      Welcome to my personal website! I'm Miguel Lorenzo T.
+                      Milañez, a passionate Software Engineer with a focus on
+                      web development and a knack for problem-solving. I'm
+                      passionate about crafting engaging web experiences and
+                      solving complex problems through innovative solutions.
+                      Feel free to explore my profile.
+                    </Typography>
+
                     <div>{card}</div>
 
                     <div>{cardSkills}</div>
@@ -696,6 +702,9 @@ const About = () => {
                     className="fixed-panel"
                   >
                     <div className="tab-content">
+                      <Typography variant="h2" component="div" id="modalName">
+                        Trainings{" "}
+                      </Typography>
                       <div className="wrapper">
                         {trainings.map((training, index) => (
                           <Card key={index} sx={{ maxWidth: 345 }}>
@@ -816,6 +825,9 @@ const About = () => {
                     className="fixed-panel"
                   >
                     <div className="tab-content">
+                      <Typography variant="h2" component="div" id="modalName">
+                        Certificates{" "}
+                      </Typography>
                       <div className="wrapper">
                         {certification.map((certification, index) => (
                           <Card key={index} sx={{ maxWidth: 345 }}>
