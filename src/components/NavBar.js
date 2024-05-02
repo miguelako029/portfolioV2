@@ -159,7 +159,6 @@ export default function HideAppBar(props) {
               </IconButton>
             </Box>
           </Toolbar>
-          ;
         </AppBar>
       </HideOnScroll>
       <Toolbar />

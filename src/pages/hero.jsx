@@ -97,8 +97,8 @@ Fade.propTypes = {
 };
 
 Fade.defaultProps = {
-  duration: 1300, // Default duration time (in milliseconds)
-  delay: 2000,
+  duration: 1000, // Default duration time (in milliseconds)
+  delay: 1500,
 };
 
 // Dark mode specific button styles
@@ -120,7 +120,7 @@ const About = () => {
       transform: inView ? "translateY(0)" : "translateY(100px)", // Animate translateY when in view
     },
     config: {
-      durations: 15000,
+      durations: 200,
     },
   });
 
@@ -482,27 +482,15 @@ const About = () => {
           <div ref={ref}>
             <h1>Hello!</h1>
 
-            {/* <section className="inline">
-              Create
-              <TextTransition
-                springConfig={presets.gentle}
-                style={{ margin: "0 4px" }}
-                inline
-              >
-                {TEXTS[TEXTS.length]}
-              </TextTransition>
-              React Applications.
-            </section> */}
-
             <p className="transition">
-              <span>I'm</span>
-              <span style={{ fontWeight: 500 }}> Miguel</span>
-              <span> a</span>
+              <span style={{ color: fontColor }}>I'm</span>
+              <span style={{ fontWeight: 500, color: fontColor }}> Miguel</span>
+              <span style={{ color: fontColor }}> a</span>
               <TextTransition
                 className="transition"
                 springConfig={presets.default}
                 inline
-                style={{ margin: "0 20px" }}
+                style={{ margin: "0 20px", color: fontColor }}
               >
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>

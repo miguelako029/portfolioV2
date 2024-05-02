@@ -43,13 +43,13 @@ body {
 
 .heroSection {
   /* width: 80vw; */
-  height: 95vh; /* Adjusted height */
+  height: 85vh; /* Adjusted height */
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: -30px;
 }
 
 .hero .firstName {
@@ -320,7 +320,7 @@ body {
 }
 
 .expContainer {
-  height: 30vh; /* Adjusted height */
+  height: 100vh; /* Adjusted height */
   width: 90vw;
   /* display: flex; */
   align-items: center;
@@ -329,8 +329,24 @@ body {
   padding-left: 100px;
 }
 
-.experienceTab {
-  font-size: 300pt;
+.expContainer h1 {
+  font-size: 6vw;
+  word-spacing: 5pt;
+  font-weight: 300;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+  animation: fadeUp 1s forwards;
+  opacity: 0;
+  margin-bottom: -40px;
 }
 
 .customTab {
@@ -340,7 +356,7 @@ body {
 }
 
 .tabContent {
-  font-size: 20pt; /* Font size */
+  font-size: 12pt; /* Font size */
 }
 
 /* Style for the circle container */
@@ -438,26 +454,27 @@ body {
   grid-gap: 1rem;
   justify-content: center;
   align-items: center;
+  background-color: #fffcfc;
+
+  /* overflow: hidden; */
 
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: auto; */
 
   z-index: 1;
 }
 
 /* Modal Content */
 
-/* .modal-container {
-} */
-
 .modal-right {
   font-weight: 100;
   text-align: left;
-  padding: 80px;
+  /* padding: 80px; */
   justify-content: center;
   align-content: center;
+  /* height: 500px; */
   /* margin-right: 70px; */
 }
 
@@ -552,7 +569,7 @@ ul .ui-bullet {
   /* Add your CSS rules for extra small devices (portrait) here */
 
   .heroSection {
-    height: 100vh;
+    height: 80vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
