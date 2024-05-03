@@ -256,8 +256,10 @@ const Experience = () => {
             >
               <TabPanel value={value} index={0} dir={theme.direction}>
                 <div className="modal-container">
-                  <div class="modal-right">
+                  <div>
                     <img src={RacamiV2} className="modal-image" />
+                  </div>
+                  <div class="modal-right">
                     <div class="modal-title" sx={{ color: fontModal }}>
                       RACAMI LCC (TAGUIG CITY, NCR) <br />
                       <span class="position1">
