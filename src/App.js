@@ -45,7 +45,7 @@ function App() {
         <NavBar />
         <Hero />
         {/* <About /> */}
-        <Experience />
+        {/* <Experience /> */}
         <Portfolio />
         <Contact />
         <ScrollToTop

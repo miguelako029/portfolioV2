@@ -15,6 +15,7 @@ import Indra from "../assets/images/indra.png";
 import IndraV2 from "../assets/images/indra500.png";
 
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
@@ -193,27 +194,28 @@ const Experience = () => {
       <div className="expContainer">
         <div ref={ref}>
           <Box
-          // sx={{
-          //   display: "flex",
-          //   height: "100%",
-          //   justifyContent: "center",
-          //   alignItems: "center", // Align items vertically center
-          // }}
+            sx={{
+              display: "flex",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center", // Align items vertically center
+            }}
           >
-            <h1>Experience</h1>
             <Tabs
-              orientation="horizontal"
+              orientation="vertical"
               variant="scrollable"
               value={value}
               onChange={handleChange}
               aria-label="Vertical tabs"
-              centered
+              // centered
               // sx={{ color: fontColor }}
             >
               <Tab
                 label={
                   // <div className="circleContainer" sx={{ color: fontColor }}>
-                  <span className="tabContent">2017 - 2018</span>
+                  <span className="tabContent">
+                    2017 - 2018 <ArrowRightAltIcon />
+                  </span>
                   // </div>
                 }
                 {...a11yProps(0)}
@@ -225,13 +227,14 @@ const Experience = () => {
                 label={
                   // <div className="circleContainer" sx={{ color: fontColor }}>
                   <span className="tabContent" sx={{ color: fontColor }}>
-                    2018 - 2019
+                    2018 - 2019 <ArrowRightAltIcon />
                   </span>
                   // </div>
                 }
                 {...a11yProps(1)}
                 sx={{
-                  color: fontColor, // Set the font color using the sx prop of the Tab component
+                  color: fontColor,
+                  fontWeight: 400,
                 }}
               />
               <Tab
@@ -256,14 +259,11 @@ const Experience = () => {
             >
               <TabPanel value={value} index={0} dir={theme.direction}>
                 <div className="modal-container">
-                  <div>
-                    <img src={RacamiV2} className="modal-image" />
-                  </div>
                   <div class="modal-right">
                     <div class="modal-title" sx={{ color: fontModal }}>
-                      RACAMI LCC (TAGUIG CITY, NCR) <br />
+                      RACAMI LCC (TAGUIG CITY, NCR)
                       <span class="position1">
-                        SOFTWARE QUALITY ASSURANCE ANALYST{" "}
+                        SOFTWARE QUALITY ASSURANCE ANALYST
                       </span>
                     </div>
                     <div class="modal-classification">
@@ -283,6 +283,9 @@ const Experience = () => {
                         </li>
                       </ul>
                     </div>
+                    {/* <div>
+                    <img src={RacamiV2} className="modal-image" />
+                  </div> */}
                     <span class="position1">Technology used:</span>
                     <div class="modal-icons">
                       <Tooltip title="Microsoft Excel" placement="top">
@@ -296,9 +299,9 @@ const Experience = () => {
               </TabPanel>
               <TabPanel value={value} index={1} dir={theme.direction}>
                 <div className="modal-container">
-                  <div>
+                  {/* <div>
                     <img src={StrategistV2} className="modal-image" />
-                  </div>
+                  </div> */}
                   <div class="modal-right">
                     <div className="modal-title" sx={{ color: fontModal }}>
                       88SITES / STRATEGIST.PH (PASIG CITY, NCR) <br />
@@ -377,9 +380,9 @@ const Experience = () => {
               </TabPanel>
               <TabPanel value={value} index={2} dir={theme.direction}>
                 <div className="modal-container">
-                  <div>
+                  {/* <div>
                     <img src={IndraV2} className="modal-image" />
-                  </div>
+                  </div> */}
                   <div class="modal-right">
                     <div className="modal-title" sx={{ color: fontModal }}>
                       INDRA PHILIPPINES, INC. - MERALCO (PASIG CITY, NCR) <br />

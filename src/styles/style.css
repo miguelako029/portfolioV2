@@ -223,6 +223,12 @@ body {
   grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
 }
 
+.wrapper-div {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #8a8a8a;
+}
+
 .trainingImage {
   position: absolute;
   top: 50%;
@@ -330,7 +336,7 @@ body {
 }
 
 .expContainer h1 {
-  font-size: 6vw;
+  font-size: 2vw;
   word-spacing: 5pt;
   font-weight: 300;
   background: linear-gradient(
@@ -346,7 +352,7 @@ body {
   color: transparent;
   animation: fadeUp 1s forwards;
   opacity: 0;
-  margin-bottom: -40px;
+  /* margin-bottom: -40px; */
 }
 
 .customTab {
@@ -357,6 +363,8 @@ body {
 
 .tabContent {
   font-size: 12pt; /* Font size */
+  font-weight: 200;
+  text-align: left;
 }
 
 /* Style for the circle container */
@@ -449,12 +457,13 @@ body {
 }
 
 .modal-container {
-  display: grid;
-  grid-template-columns: 50% 50%; /* 30% for .profileImage, 70% for .aboutDescription */
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%;  */
+  display: flex;
   grid-gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  background-color: #fffcfc;
+  justify-content: left;
+  align-items: left;
+  /* background-color: #fffcfc; */
 
   /* overflow: hidden; */
 
@@ -487,15 +496,15 @@ body {
 
 /* Title */
 .modal-title {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  margin-left: -20px;
+  font-size: 2.5vw;
+  font-weight: 200;
+  /* margin-bottom: 8px; */
+  /* margin-left: -20px; */
 }
 .position1 {
-  font-size: 15pt;
-  font-weight: 400; /* To make the position text bold */
-  margin-bottom: 8px;
+  font-size: 2vw;
+  font-weight: 100; /* To make the position text bold */
+  /* margin-bottom: 8px; */
 }
 
 /* Description */

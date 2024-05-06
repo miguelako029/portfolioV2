@@ -262,24 +262,50 @@ const About = () => {
   const card = (
     <div className="wrapper">
       <CardContent>
-        <Typography variant="body2">
-          <strong>Age:</strong> 25 <br />
-          <strong>Birth Date:</strong> September 29. 1997 <br />
-          <strong>City:</strong> San Juan City
+        <Typography className="body2">
+          <div className="wrapper-div">
+            <h3>Details</h3>
+          </div>
+          <div className="wrapper-div">
+            <strong>Age:</strong> 25 <br />
+            <strong>Birth Date:</strong> September 29. 1997 <br />
+            <strong>City:</strong> San Juan City <br />
+          </div>
+          <div className="wrapper-div">
+            <strong>Contact No:</strong> 09989397900/09190601544 <br />
+            <strong>Email Address:</strong> miguellmilanez@gmail.com <br />
+          </div>
+          <div className="wrapper-div">
+            <strong>School:</strong> Polytechnic University of the Philippines -
+            San Juan City <br />
+            <strong>Degree:</strong> Bachelor Degree <br />
+            <strong>Major:</strong> Information Technology
+          </div>
         </Typography>
       </CardContent>
       <CardContent>
-        <Typography variant="body2">
-          <strong>Contact No:</strong> 09989397900/09190601544 <br />
-          <strong>Email Address:</strong> miguellmilanez@gmail.com
-        </Typography>
-      </CardContent>
-      <CardContent>
-        <Typography variant="body2">
-          <strong>School:</strong> Polytechnic University of the Philippines -
-          San Juan City <br />
-          <strong>Degree:</strong> Bachelor Degree <br />
-          <strong>Major:</strong> Information Technology
+        <Typography className="body2">
+          <div className="wrapper-div">
+            <h3>Experience</h3>
+          </div>
+          <div className="wrapper-div">
+            <strong>RACAMI LCC (TAGUIG CITY, NCR)</strong>
+            <br />
+            <span> SOFTWARE QUALITY ASSURANCE ANALYST</span> <br />
+            <span> 2017 - 2018 </span> <br />
+          </div>
+          <div className="wrapper-div">
+            <strong>RACAMI LCC (TAGUIG CITY, NCR)</strong>
+            <br />
+            <span> SOFTWARE QUALITY ASSURANCE ANALYST</span> <br />
+            <span> 2017 - 2018 </span> <br />
+          </div>
+          <div className="wrapper-div">
+            <strong>RACAMI LCC (TAGUIG CITY, NCR)</strong>
+            <br />
+            <span> SOFTWARE QUALITY ASSURANCE ANALYST</span> <br />
+            <span> 2017 - 2018 </span> <br />
+          </div>
         </Typography>
       </CardContent>
     </div>
