@@ -93,17 +93,30 @@ export default function HideAppBar(props) {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              <Link
-                to="Hero" // Replace "about" with the ID of the element you want to scroll to
-                spy={true}
-                smooth={true}
-                offset={-200}
-                duration={500}
-              >
-                <img src={menulogo} alt="Logo" className="menulogo" />
+              <Link>
+                <img
+                  src={menulogo}
+                  alt="Logo"
+                  // className="menulogo"
+                  style={{ height: "30px", marginRight: "10px" }}
+                />
               </Link>
 
               <Link
+                to="hero"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className="menu-item"
+                href="/hero"
+                style={linkStyles}
+                onClick={handleDrawerClose}
+              >
+                Know Me
+              </Link>
+
+              {/* <Link
                 to="experience"
                 spy={true}
                 smooth={true}
@@ -114,7 +127,7 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 Experience
-              </Link>
+              </Link> */}
               <Link
                 to="portfolio"
                 spy={true}
@@ -125,9 +138,9 @@ export default function HideAppBar(props) {
                 href="/portfolio"
                 style={linkStyles}
               >
-                Works
+                My Works
               </Link>
-              <Link
+              {/* <Link
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -138,7 +151,7 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 Contact
-              </Link>
+              </Link> */}
             </Box>
 
             <Box

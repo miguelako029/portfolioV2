@@ -103,7 +103,7 @@ Fade.defaultProps = {
 
 // Dark mode specific button styles
 
-const About = () => {
+const Hero = () => {
   const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once when it enters the viewport
@@ -289,16 +289,16 @@ const About = () => {
             <h3>Experience</h3>
           </div>
           <div className="wrapper-div">
-            <strong>RACAMI LCC (TAGUIG CITY, NCR)</strong>
+            <strong>INDRA PHILIPPINES, INC. (PASIG CITY)</strong>
             <br />
-            <span> SOFTWARE QUALITY ASSURANCE ANALYST</span> <br />
-            <span> 2017 - 2018 </span> <br />
+            <span> SYSTEM ENGINEER</span> <br />
+            <span> 2019 - CURRENT </span> <br />
           </div>
           <div className="wrapper-div">
-            <strong>RACAMI LCC (TAGUIG CITY, NCR)</strong>
+            <strong>STRATEGIST.PH (PASIG CITY, NCR)</strong>
             <br />
-            <span> SOFTWARE QUALITY ASSURANCE ANALYST</span> <br />
-            <span> 2017 - 2018 </span> <br />
+            <span> WEB DEVELOPER</span> <br />
+            <span> 2018 - 2019 </span> <br />
           </div>
           <div className="wrapper-div">
             <strong>RACAMI LCC (TAGUIG CITY, NCR)</strong>
@@ -320,7 +320,12 @@ const About = () => {
             key={index}
             label={skill}
             // variant="outlined"
-            sx={{ marginLeft: 0.3, marginBottom: 0.5, fontWeight: 100 }}
+            sx={{
+              padding: "5px",
+              marginLeft: 1,
+              marginBottom: 1,
+              fontWeight: 600,
+            }}
           />
         ))}
       </div>
@@ -488,7 +493,7 @@ const About = () => {
   return (
     <Box
       className="pageSection"
-      id="about"
+      id="hero"
       sx={{
         background: backgroundColor,
         color: fontColor,
@@ -501,7 +506,7 @@ const About = () => {
         transition: "background-color 0.7s ease",
       }}
     >
-      <div className="heroSection" id="about">
+      <div className="heroSection" id="hero">
         {/* <div class="about-grid-container"> */}
         {/* <div className="wrapperAbout"> */}
         <div class="aboutMe">
@@ -541,52 +546,13 @@ const About = () => {
                 </animated.div> 
               </p>*/}
             <div className="btnContainer">
-              {/* <Button
-                style={{
-                  ...buttonStyle,
-                  ...(mode === "dark" ? darkModeButtonStyle : {}),
-                }}
-              >
-                <Link
-                  to="contact"
-                  className="btnStyle"
-                  smooth={true}
-                  offset={200}
-                  duration={1000}
-                >
-                  <span className="btnText">Let's Connect</span>
-                </Link>
-              </Button> */}
-
-              {/* <Button
-                  style={{
-                    ...buttonStyle,
-                    ...(mode === "dark" ? darkModeButtonStyle : {}),
-                  }}
-                >
-                  <Link
-                    className="btnStyle"
-                    smooth={true}
-                    offset={200}
-                    duration={1000}
-                    onClick={() => {
-                      window.open(
-                        "https://drive.google.com/file/d/1JBd50x5L0Zb5J21iHemOoU0qqCnaELn6/view?usp=sharing",
-                        "_blank"
-                      );
-                    }}
-                  >
-                    <span className="btnText">My Resume</span>
-                  </Link>
-                </Button> */}
-
               <Link
                 to="contact"
-                // className="btnStyle"
+                className="btnStyle"
                 smooth={true}
                 offset={200}
                 duration={1000}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", marginRight: "50px" }}
               >
                 <span className="btnText">
                   Let's Connect <ArrowRightAltIcon />
@@ -595,7 +561,7 @@ const About = () => {
 
               <Link
                 onClick={handleOpen1}
-                // className="btnStyle"
+                className="btnStyle"
                 smooth={true}
                 offset={200}
                 duration={1000}
@@ -956,4 +922,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Hero;
