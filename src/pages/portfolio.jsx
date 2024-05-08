@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import { useColorMode } from "../assets/script/DarkModeContext"; // Update the path
 import "../styles/style.css";
 import ImageGallery from "../components/imageGallery";
+import myWorks from "../components/projectGallery/portfolio";
 // import image from "../assets/images/logo192.png";
 
 import { useSpring, animated } from "react-spring";
@@ -56,8 +57,9 @@ const Portfolio = () => {
             <div ref={ref}>
               <animated.div style={fadeInUp}>
                 <h1 className="port-h1">Portfolio</h1>
+                <myWorks />
 
-                <ImageGallery />
+                {/* <ImageGallery /> */}
               </animated.div>
             </div>
           </div>

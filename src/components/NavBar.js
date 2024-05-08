@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 
 import { useColorMode } from "../assets/script/DarkModeContext";
+import menulogo from "../assets/images/menulogo.png";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -54,6 +55,9 @@ export default function HideAppBar(props) {
     fontWeight: 100,
     padding: "10px",
     transition: "background-color 0.3s ease",
+    fontSize: "1.5vw",
+    fontWeight: 200,
+
     "&:hover": {
       backgroundColor: "#f5f5f5",
     },
@@ -63,13 +67,24 @@ export default function HideAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
+        <AppBar
+          sx={{
+            backgroundColor: "transparent",
+            boxShadow: "none",
+            justifyContent: "center",
+          }}
+        >
           <Toolbar
             sx={{
               background: mode === "dark" ? "#000000" : "#FFF",
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
               justifyContent: "space-between", // Place items at each end
+              alignItems: "flex-start",
+              justifyItems: "center",
+              verticalAlign: "center",
+
+              padding: "20px",
             }}
           >
             <Box
@@ -78,33 +93,33 @@ export default function HideAppBar(props) {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              <Link
-                to="hero"
-                spy={true}
-                smooth={true}
-                offset={-200}
-                duration={500}
-                className="menu-item"
-                href="/hero"
-                style={linkStyles}
-              >
-                Home
+              <Link>
+                <img
+                  src={menulogo}
+                  alt="Logo"
+                  // className="menulogo"
+                  style={{
+                    height: "30px",
+                    marginRight: "10px",
+                  }}
+                />
               </Link>
 
               <Link
-                to="about"
+                to="hero"
                 spy={true}
                 smooth={true}
                 offset={-100}
                 duration={500}
                 className="menu-item"
-                href="/about"
+                href="/hero"
                 style={linkStyles}
+                onClick={handleDrawerClose}
               >
                 About
               </Link>
 
-              <Link
+              {/* <Link
                 to="experience"
                 spy={true}
                 smooth={true}
@@ -115,7 +130,7 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 Experience
-              </Link>
+              </Link> */}
               <Link
                 to="portfolio"
                 spy={true}
@@ -126,9 +141,9 @@ export default function HideAppBar(props) {
                 href="/portfolio"
                 style={linkStyles}
               >
-                Works
+                My Works
               </Link>
-              <Link
+              {/* <Link
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -139,7 +154,7 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 Contact
-              </Link>
+              </Link> */}
             </Box>
 
             <Box

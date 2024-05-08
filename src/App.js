@@ -44,8 +44,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <NavBar />
         <Hero />
-        <About />
-        <Experience />
+
+        {/* <About /> */}
+        {/* <Experience /> */}
+
         <Portfolio />
         <Contact />
         <ScrollToTop

@@ -15,9 +15,19 @@ import Indra from "../assets/images/indra.png";
 import IndraV2 from "../assets/images/indra500.png";
 
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
+
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+// import Typography from '@mui/material/Typography';
+// import Box from '@mui/material/Box';
 
 // import { CloseIcon, Excel } from "@mui/icons-material";
 
@@ -124,119 +134,136 @@ const Experience = () => {
     },
   });
 
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+
+  function a11yProps(index) {
+    return {
+      id: `full-width-tab-${index}`,
+      "aria-controls": `full-width-tabpanel-${index}`,
+    };
+  }
+
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
+
   return (
     <Box
       className="pageSection"
       id="experience"
       sx={{
         background: backgroundColor,
-        minHeight: "50vh",
-        color: fontColor,
+
+        // color: fontColor,
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        flexDirection: "column",
+
         transition: "background-color 0.7s ease",
       }}
     >
-      <div ref={ref}>
-        <animated.div style={fadeInUp}>
-          <div className="pageSection">
-            <div className="expContainer">
-              <div className="labelContainer">
-                <h1 className="exp-h1">I worked with them!</h1>
-              </div>
-              <section class="layout">
-                <div class="cardBox">
-                  <div
-                    class="card"
-                    sx={{ background: backgroundColor, color: fontColor }}
-                  >
-                    <div class="circled-number">1</div>
-                    <div class="years">2017 - 2018</div>
-                    <img class="card-image" src={Racami} alt="Card Image" />
-                    <Button
-                      className="read-more"
-                      sx={{
-                        background: backgroundColor,
-                        color: fontColor,
-                        border: BorderColor,
-                        transition: "background-color 0.7s ease",
-                      }}
-                      onClick={handleOpenRacami}
-                    >
-                      Read More
-                    </Button>
-                  </div>
-                </div>
-                <div class="cardBox">
-                  <div class="card">
-                    <div class="circled-number">2</div>
-                    <div class="years">2018 - 2019</div>
-                    <img class="card-image" src={Strategist} alt="Card Image" />
-                    <Button
-                      className="read-more"
-                      sx={{
-                        background: backgroundColor,
-                        color: fontColor,
-                        border: BorderColor,
-                        transition: "background-color 0.7s ease",
-                      }}
-                      onClick={handleOpenStrategist}
-                    >
-                      Read More
-                    </Button>
-                  </div>
-                </div>
-                <div class="cardBox">
-                  <div class="card">
-                    <div class="circled-number">3</div>
-                    <div class="years">2019 - Present</div>
-                    <img class="card-image" src={Indra} alt="Card Image" />
-                    <Button
-                      className="read-more"
-                      sx={{
-                        background: backgroundColor,
-                        color: fontColor,
-                        border: BorderColor,
-                        transition: "background-color 0.7s ease",
-                      }}
-                      onClick={handleOpenIndra}
-                    >
-                      Read More
-                    </Button>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <Modal
-              open={openRacami}
-              onClose={handleCloseRacamiModal}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
+      <div className="expContainer">
+        <div ref={ref}>
+          <Box
+            sx={{
+              display: "flex",
+              height: "100%",
+              justifyContent: "center",
+              alignItems: "center", // Align items vertically center
+            }}
+          >
+            <Tabs
+              orientation="vertical"
+              variant="scrollable"
+              value={value}
+              onChange={handleChange}
+              aria-label="Vertical tabs"
+              // centered
+              // sx={{ color: fontColor }}
             >
-              {/* <Fade in={open1}> */}
-              <Box sx={style} id="aboutModal">
-                <Button
-                  onClick={handleCloseRacamiModal}
-                  sx={{ position: "absolute", top: 10, right: 1 }}
-                >
-                  <CloseIcon />
-                </Button>
-                <div
-                  className="modal-container"
-                  sx={{ backgroundColor: backgroundColorModal }}
-                >
-                  <div>
-                    <img src={RacamiV2} className="modal-image" />
-                  </div>
+              <Tab
+                label={
+                  // <div className="circleContainer" sx={{ color: fontColor }}>
+                  <span className="tabContent">
+                    2017 - 2018 <ArrowRightAltIcon />
+                  </span>
+                  // </div>
+                }
+                {...a11yProps(0)}
+                sx={{
+                  color: fontColor, // Set the font color using the sx prop of the Tab component
+                }}
+              />
+              <Tab
+                label={
+                  // <div className="circleContainer" sx={{ color: fontColor }}>
+                  <span className="tabContent" sx={{ color: fontColor }}>
+                    2018 - 2019 <ArrowRightAltIcon />
+                  </span>
+                  // </div>
+                }
+                {...a11yProps(1)}
+                sx={{
+                  color: fontColor,
+                  fontWeight: 400,
+                }}
+              />
+              <Tab
+                label={
+                  // <div className="circleContainer" sx={{ color: fontColor }}>
+                  <span className="tabContent" sx={{ color: fontColor }}>
+                    2019 - Present
+                  </span>
+                  // </div>
+                }
+                {...a11yProps(2)}
+                sx={{
+                  color: fontColor, // Set the font color using the sx prop of the Tab component
+                }}
+              />
+            </Tabs>
+            <SwipeableViews
+              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              index={value}
+              onChangeIndex={handleChangeIndex}
+              style={{ flexGrow: 1 }}
+            >
+              <TabPanel value={value} index={0} dir={theme.direction}>
+                <div className="modal-container">
                   <div class="modal-right">
                     <div class="modal-title" sx={{ color: fontModal }}>
-                      RACAMI LCC (TAGUIG CITY, NCR) <br />
+                      RACAMI LCC (TAGUIG CITY, NCR)
                       <span class="position1">
-                        SOFTWARE QUALITY ASSURANCE ANALYST{" "}
+                        SOFTWARE QUALITY ASSURANCE ANALYST
                       </span>
                     </div>
                     <div class="modal-classification">
@@ -256,6 +283,9 @@ const Experience = () => {
                         </li>
                       </ul>
                     </div>
+                    {/* <div>
+                    <img src={RacamiV2} className="modal-image" />
+                  </div> */}
                     <span class="position1">Technology used:</span>
                     <div class="modal-icons">
                       <Tooltip title="Microsoft Excel" placement="top">
@@ -266,32 +296,12 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </Box>
-              {/* </Fade> */}
-            </Modal>
-
-            <Modal
-              open={openStrategist}
-              onClose={handleCloseStrategistModal}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              {/* <Fade in={open1}> */}
-              <Box sx={style} id="aboutModal">
-                <Button
-                  onClick={handleCloseStrategistModal}
-                  sx={{ position: "absolute", top: 10, right: 1 }}
-                >
-                  <CloseIcon />
-                </Button>
-
-                <div
-                  className="modal-container"
-                  sx={{ backgroundColor: backgroundColorModal }}
-                >
-                  <div>
+              </TabPanel>
+              <TabPanel value={value} index={1} dir={theme.direction}>
+                <div className="modal-container">
+                  {/* <div>
                     <img src={StrategistV2} className="modal-image" />
-                  </div>
+                  </div> */}
                   <div class="modal-right">
                     <div className="modal-title" sx={{ color: fontModal }}>
                       88SITES / STRATEGIST.PH (PASIG CITY, NCR) <br />
@@ -367,32 +377,12 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </Box>
-              {/* </Fade> */}
-            </Modal>
-
-            <Modal
-              open={openIndra}
-              onClose={handleCloseIndraModal}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              {/* <Fade in={open1}> */}
-              <Box sx={style} id="aboutModal">
-                <Button
-                  onClick={handleCloseIndraModal}
-                  sx={{ position: "absolute", top: 10, right: 1 }}
-                >
-                  <CloseIcon />
-                </Button>
-
-                <div
-                  class="modal-container"
-                  sx={{ backgroundColor: backgroundColorModal }}
-                >
-                  <div>
+              </TabPanel>
+              <TabPanel value={value} index={2} dir={theme.direction}>
+                <div className="modal-container">
+                  {/* <div>
                     <img src={IndraV2} className="modal-image" />
-                  </div>
+                  </div> */}
                   <div class="modal-right">
                     <div className="modal-title" sx={{ color: fontModal }}>
                       INDRA PHILIPPINES, INC. - MERALCO (PASIG CITY, NCR) <br />
@@ -448,12 +438,12 @@ const Experience = () => {
                           Seeking input or decisions from the manager when
                           necessary.
                         </li>
-                        {/* <li>Meeting established deadlines for tasks.</li>
+                        <li>Meeting established deadlines for tasks.</li>
                         <li>
                           Expanding technical and technological knowledge
                           proactively.
-                        </li> */}
-                        {/* <li>Becoming familiar with the work environment.</li> */}
+                        </li>
+                        <li>Becoming familiar with the work environment.</li>
                         <li>
                           Identifying and proposing improvements to work
                           methods.
@@ -462,10 +452,10 @@ const Experience = () => {
                           Maintaining rigor in work, including data and
                           documentation.
                         </li>
-                        {/* <li>
+                        <li>
                           Demonstrating an interest in understanding work
                           processes and expected outcomes.
-                        </li> */}
+                        </li>
                       </ul>
                     </div>
                     <span className="position1">Technology used:</span>
@@ -541,11 +531,10 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-              </Box>
-              {/* </Fade> */}
-            </Modal>
-          </div>
-        </animated.div>
+              </TabPanel>
+            </SwipeableViews>
+          </Box>
+        </div>
       </div>
     </Box>
   );

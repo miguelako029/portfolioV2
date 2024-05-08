@@ -20,26 +20,64 @@ body {
   overflow-y: auto;
 }
 
+.menulogo {
+  width: 150px;
+  padding-top: 20px;
+
+  margin-right: 30px;
+  &:hover {
+    background-color: #8dd3fc;
+    transition: background-color 0.5s ease, color 0.3s ease;
+    padding: 5px;
+    transition: padding 0.3s ease;
+  }
+}
+.menu-item {
+  width: 100px;
+  margin-right: 20px;
+  &:hover {
+    background-color: #8dd3fc;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+}
+
+.sectionHeader {
+  font-size: 6vw;
+  font-weight: 200;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+}
+
 .heroSection {
-  height: 95vh; /* Adjusted height */
+  /* width: 80vw; */
+  height: 85vh; /* Adjusted height */
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: -30px;
 }
 
 .hero .firstName {
-  font-size: 7vw;
+  font-size: 6.5vw;
   animation: slideInWords 1s forwards;
   text-align: center;
-  font-weight: 300;
+
   font-family: "Gantari", sans-serif;
 }
 
 .hero .firstName span {
-  font-size: 7vw;
+  font-size: 6.5vw;
   text-align: center;
   font-weight: 200;
 
@@ -72,13 +110,19 @@ body {
   margin-top: 30px;
 }
 
-.hero .btnContainer .btnStyle {
-  font-size: 1vw;
-  padding: 0px 20px;
+.btnContainer .btnStyle {
+  font-size: 2vw;
+  /* padding: 0px 20px; */
   text-align: center;
 
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #8dd3fc;
+    transition: background-color 0.5s ease, color 0.3s ease;
+    padding: 5px;
+    transition: padding 0.3s ease;
+  }
 }
 
 /**************About*************************/
@@ -96,7 +140,7 @@ body {
 }
 
 .aboutSection {
-  height: 100vh; /* Adjusted height */
+  height: 85vh; /* Adjusted height */
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -111,12 +155,13 @@ body {
 
 .aboutMe {
   font-weight: 100;
-  text-align: center;
-  justify-content: center;
-  font-size: 30px;
+  text-align: left;
+  justify-content: left;
+  font-size: 20px;
 
-  width: 75%;
-  align-content: center;
+  width: 90%;
+  align-content: left;
+  color: #242424;
 
   /* margin-left: -50px; */
   .btnGroup {
@@ -125,6 +170,13 @@ body {
     grid-gap: 1rem;
     /* max-width: 600px; */
     margin-top: 25px;
+  }
+
+  .transition {
+    font-size: 5vw;
+    color: #242424;
+    font-weight: 200;
+    font-stretch: extra-expanded;
   }
 
   .button {
@@ -144,7 +196,7 @@ body {
 }
 
 .aboutMe h1 {
-  font-size: 60px;
+  font-size: 4vw;
   word-spacing: 5pt;
   font-weight: 300;
   background: linear-gradient(
@@ -160,7 +212,7 @@ body {
   color: transparent;
   animation: fadeUp 1s forwards;
   opacity: 0;
-  margin-bottom: 20px;
+  margin-bottom: -40px;
 }
 
 .aboutDescription {
@@ -192,6 +244,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(20.25rem, 100%), 2fr));
   grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
+}
+
+.wrapper-div {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #8a8a8a;
 }
 
 .trainingImage {
@@ -239,8 +297,9 @@ body {
   grid-area: Content;
   /* background-color: #999999; */
   overflow-y: auto;
-  max-height: 700px;
+  max-height: 70vh;
   padding-top: 50px;
+  padding-right: 100px;
 }
 
 .Tabs {
@@ -290,6 +349,60 @@ body {
   height: 70%;
 }
 
+.expContainer {
+  height: 100vh; /* Adjusted height */
+  width: 90vw;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-left: 100px;
+}
+
+.expContainer h1 {
+  font-size: 2vw;
+  word-spacing: 5pt;
+  font-weight: 300;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+  animation: fadeUp 1s forwards;
+  opacity: 0;
+  /* margin-bottom: -40px; */
+}
+
+.customTab {
+  background-color: #1b1b1b; /* Background color */
+  color: #fff; /* Font color */
+  font-size: 1000px;
+}
+
+.tabContent {
+  font-size: 12pt; /* Font size */
+  font-weight: 200;
+  text-align: left;
+}
+
+/* Style for the circle container */
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Diameter of the circle */
+  height: 60px; /* Diameter of the circle */
+  border-radius: 50%; /* Make it a circle */
+
+  border: 3px solid;
+}
+
 .portfolioContainer {
   padding-top: 200px;
   padding-bottom: 100px;
@@ -313,7 +426,6 @@ body {
       margin: 15px;
       padding: 40px;
     }
-    npm
 
     /* Circled Number */
     .circled-number {
@@ -369,49 +481,54 @@ body {
 }
 
 .modal-container {
-  display: grid;
-  grid-template-columns: 30% 50%; /* 30% for .profileImage, 70% for .aboutDescription */
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%;  */
+  display: flex;
   grid-gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  /* background-color: #fffcfc; */
+
+  /* overflow: hidden; */
 
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: auto; */
 
   z-index: 1;
 }
 
 /* Modal Content */
 
-/* .modal-container {
-} */
-
 .modal-right {
   font-weight: 100;
   text-align: left;
-  padding: 80px;
+  /* padding: 80px; */
   justify-content: center;
   align-content: center;
+  /* height: 500px; */
   /* margin-right: 70px; */
 }
 
 .modal-image {
   position: relative;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 /* Title */
 .modal-title {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  margin-left: -20px;
+  font-size: 2.5vw;
+  font-weight: 200;
+  /* margin-bottom: 8px; */
+  /* margin-left: -20px; */
 }
 .position1 {
-  font-size: 15pt;
-  font-weight: 400; /* To make the position text bold */
-  margin-bottom: 8px;
+  font-size: 2vw;
+  font-weight: 100; /* To make the position text bold */
+  /* margin-bottom: 8px; */
 }
 
 /* Description */
@@ -488,7 +605,7 @@ ul .ui-bullet {
   /* Add your CSS rules for extra small devices (portrait) here */
 
   .heroSection {
-    height: 100vh;
+    height: 80vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
@@ -499,7 +616,7 @@ ul .ui-bullet {
   }
 
   .hero .firstName {
-    font-size: 46px;
+    font-size: 7vw;
     animation: slideInWords 1s forwards;
     text-align: center;
     line-height: 1;
@@ -534,7 +651,7 @@ ul .ui-bullet {
 
   .hero .btnContainer .btnStyle {
     width: 150px;
-    font-size: 10px;
+    font-size: 10vw;
     /* color: rgb(0, 0, 0); */
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
