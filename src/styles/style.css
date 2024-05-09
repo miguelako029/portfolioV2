@@ -120,8 +120,8 @@ body {
   &:hover {
     background-color: #8dd3fc;
     transition: background-color 0.5s ease, color 0.3s ease;
-    padding: 5px;
-    transition: padding 0.3s ease;
+    /* padding: 5px;
+    transition: padding 0.3s ease; */
   }
 }
 
@@ -403,9 +403,35 @@ body {
   border: 3px solid;
 }
 
+/******************** PortfolioPage **************/
+
 .portfolioContainer {
-  padding-top: 200px;
-  padding-bottom: 100px;
+  background-color: #0f9ef1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  .containers {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+  }
+
+  .content {
+    flex-grow: 1;
+    background-color: #dff2fd;
+    height: 70vh;
+  }
+
+  .tabContainer {
+    align-self: flex-end; /* Adjusted */
+    background-color: transparent;
+    width: 30vw;
+    box-shadow: none;
+  }
 }
 
 .layout {
