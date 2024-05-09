@@ -406,7 +406,7 @@ body {
 /******************** PortfolioPage **************/
 
 .portfolioContainer {
-  background-color: #0f9ef1;
+  /* background-color: #0f9ef1; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -421,9 +421,13 @@ body {
   }
 
   .content {
-    flex-grow: 1;
-    background-color: #dff2fd;
+    /* flex-grow: 1; */
+    background-color: #0dc955;
     height: 70vh;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    align-content: center;
   }
 
   .tabContainer {
@@ -439,9 +443,18 @@ body {
   display: flex;
   height: auto;
   text-align: left;
-  align-content: center;
-  justify-content: center;
-  vertical-align: center;
+
+  justify-content: left;
+
+  align-items: center;
+}
+
+.siteImage {
+  background-color: #0f9ef1;
+  align-items: left;
+  align-content: left;
+  justify-content: left;
+  text-align: left;
 }
 
 /* modal */
