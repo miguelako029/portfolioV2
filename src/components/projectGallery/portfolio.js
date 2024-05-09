@@ -61,12 +61,18 @@ export default function FullWidthTabs() {
       <Box className="containers">
         <Box className="content">
           <SwipeableViews
-            axis={"rtl" ? "x-reverse" : "x"}
+            axis={"x"}
             index={value}
             onChangeIndex={handleChangeIndex}
           >
             <PortfolioTabPanel value={value} index={0}>
-              Item One
+              <div className="wrapper">
+                <div className="workDetails">
+                  <div>test</div>
+                  <div>test</div>
+                </div>
+                <div className="siteImage">test</div>
+              </div>
             </PortfolioTabPanel>
             <PortfolioTabPanel value={value} index={1}>
               Item Two

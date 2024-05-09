@@ -434,77 +434,17 @@ body {
   }
 }
 
-.layout {
-  width: 90vw;
-
+.workDetails {
+  background-color: #7303c0;
   display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  .cardBox {
-    flex-grow: 1;
-
-    .card {
-      height: auto;
-      position: relative;
-      /* width: 300px; */
-      border: 1.5px solid;
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-      margin: 15px;
-      padding: 40px;
-    }
-
-    /* Circled Number */
-    .circled-number {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 40px;
-      height: 40px;
-
-      border: 1.5px solid;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      font-size: 15px;
-      font-family: "Work Sans", sans-serif;
-      font-weight: 400;
-    }
-
-    /* Years at the Right Upper Corner */
-    .years {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-family: "Work Sans", sans-serif;
-      font-weight: 400;
-    }
-
-    /* Image */
-
-    .card-image {
-      height: 100px;
-      width: 300px;
-      object-fit: cover;
-      display: flex;
-      margin: 30px 10px 50px 70px;
-    }
-
-    /* "Learn More" Button */
-    .read-more {
-      position: absolute;
-      margin-top: 300px;
-      bottom: 10px;
-      right: 10px;
-      text-decoration: none;
-      border: 1.5px solid;
-
-      display: flex;
-    }
-    .read-more:hover {
-      background-color: #999999;
-    }
-  }
+  height: auto;
+  text-align: left;
+  align-content: center;
+  justify-content: center;
+  vertical-align: center;
 }
+
+/* modal */
 
 .modal-container {
   /* display: grid; */
