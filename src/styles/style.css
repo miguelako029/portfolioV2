@@ -427,9 +427,9 @@ body {
   }
 
   .tabContainer {
-    align-self: flex-end; /* Adjusted */
+    align-self: center; /* Adjusted */
     background-color: transparent;
-    width: 30vw;
+    width: 50vw;
     box-shadow: none;
   }
 }
