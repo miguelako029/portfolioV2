@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 
 import { useColorMode } from "../assets/script/DarkModeContext";
-import menulogo from "../assets/images/menulogo.png";
+import menulogo from "../assets/images/logo.png";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -72,6 +72,8 @@ export default function HideAppBar(props) {
             backgroundColor: "transparent",
             boxShadow: "none",
             justifyContent: "center",
+            alignContent: "center",
+            verticalAlign: "center",
           }}
         >
           <Toolbar
@@ -79,32 +81,27 @@ export default function HideAppBar(props) {
               background: mode === "dark" ? "#000000" : "#FFF",
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
-              justifyContent: "space-between", // Place items at each end
-              alignItems: "flex-start",
-              justifyItems: "center",
-              verticalAlign: "center",
-
+              justifyContent: "center", // Place items at each end
+              alignItems: "center", // Center items vertically
               padding: "20px",
+              height: "30",
             }}
           >
+            <img
+              src={menulogo}
+              alt="Logo"
+              // className="menulogo"
+              style={{
+                height: "100px",
+                marginRight: "10px",
+              }}
+            />
             <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: "none", sm: "block" },
+                display: { xs: "none", sm: "flex" },
               }}
             >
-              <Link>
-                <img
-                  src={menulogo}
-                  alt="Logo"
-                  // className="menulogo"
-                  style={{
-                    height: "30px",
-                    marginRight: "10px",
-                  }}
-                />
-              </Link>
-
               <Link
                 to="hero"
                 spy={true}
@@ -140,6 +137,7 @@ export default function HideAppBar(props) {
                 className="menu-item"
                 href="/portfolio"
                 style={linkStyles}
+                sx={{ width: 40 }}
               >
                 My Works
               </Link>
