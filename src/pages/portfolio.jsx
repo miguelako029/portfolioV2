@@ -20,6 +20,7 @@ const PortfolioPage = () => {
 
   return (
     <Box
+      id="portfolio"
       sx={{
         background: backgroundColor,
         color: fontColor,
