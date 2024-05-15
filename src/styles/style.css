@@ -440,10 +440,23 @@ body {
 }
 
 .projectDetails {
-  background-color: #7303c0;
+  /* background-color: #7303c0; */
   display: flex;
   flex-direction: column;
   text-align: left;
+  align-content: center;
+  justify-content: center;
+
+  .projectTitle {
+    font-size: 2.5vw;
+    font-weight: 300;
+  }
+  .projectDesc {
+    font-size: 1.2vw;
+  }
+  .projectButton {
+    /* width: 25%; */
+  }
 }
 
 .siteImage {
