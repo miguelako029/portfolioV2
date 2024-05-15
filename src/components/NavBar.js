@@ -55,8 +55,8 @@ export default function HideAppBar(props) {
     fontWeight: 100,
     padding: "10px",
     transition: "background-color 0.3s ease",
-    fontSize: "1.5vw",
-    fontWeight: 200,
+    fontSize: "1.3vw",
+    fontWeight: 100,
 
     "&:hover": {
       backgroundColor: "#f5f5f5",
@@ -93,7 +93,8 @@ export default function HideAppBar(props) {
               // className="menulogo"
               style={{
                 height: "100px",
-                marginRight: "10px",
+                marginRight: "70px",
+                marginTop: "30px",
               }}
             />
             <Box
@@ -137,7 +138,6 @@ export default function HideAppBar(props) {
                 className="menu-item"
                 href="/portfolio"
                 style={linkStyles}
-                sx={{ width: 40 }}
               >
                 My Works
               </Link>

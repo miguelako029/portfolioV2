@@ -22,9 +22,10 @@ body {
 
 .menulogo {
   width: 150px;
-  padding-top: 20px;
+  margin-top: 30px;
+  /* padding-top: 50px; */
 
-  margin-right: 30px;
+  margin-right: 50px;
   &:hover {
     background-color: #8dd3fc;
     transition: background-color 0.5s ease, color 0.3s ease;
@@ -33,7 +34,7 @@ body {
   }
 }
 .menu-item {
-  width: 100px;
+  font-weight: 100;
   margin-right: 20px;
   &:hover {
     background-color: #8dd3fc;
@@ -438,15 +439,11 @@ body {
   }
 }
 
-.workDetails {
+.projectDetails {
   background-color: #7303c0;
   display: flex;
-  height: auto;
+  flex-direction: column;
   text-align: left;
-
-  justify-content: left;
-
-  align-items: center;
 }
 
 .siteImage {

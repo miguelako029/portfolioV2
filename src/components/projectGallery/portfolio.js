@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import demoImage from "../../assets/images/testImage.jpg";
+import { Button } from "react-scroll";
 
 function PortfolioTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -69,18 +70,10 @@ export default function FullWidthTabs() {
           >
             <PortfolioTabPanel value={value} index={0}>
               <div className="wrapper">
-                <div className="workDetails">
-                  <div>
-                    tesfdafadfasdfasfkajsfjashfdilasfknaskdfnt
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                    <p>adsfjabsdfjasdkfjsanfksn</p>
-                  </div>
+                <div className="projectDetails">
+                  <div>Project name</div>
+                  <div>Description</div>
+                  <button>View Project</button>
                 </div>
                 <div className="siteImage">
                   <img src={demoImage} width={"100%"} />
