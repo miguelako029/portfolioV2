@@ -508,7 +508,7 @@ const Hero = () => {
 
             <p className="transition">
               <span style={{ color: fontColor }}>I'm</span>
-              <span style={{ fontWeight: 500, color: fontColor }}> Miguel</span>
+              <span style={{ fontWeight: 100, color: fontColor }}> Miguel</span>
               <span style={{ color: fontColor }}> a</span>
               <TextTransition
                 className="transition"
