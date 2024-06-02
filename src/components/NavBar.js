@@ -83,20 +83,10 @@ export default function HideAppBar(props) {
               display: "flex", // Use flex layout
               justifyContent: "center", // Place items at each end
               alignItems: "center", // Center items vertically
-              padding: "20px",
+              padding: "0px",
               height: "30",
             }}
           >
-            <img
-              src={menulogo}
-              alt="Logo"
-              // className="menulogo"
-              style={{
-                height: "100px",
-                marginRight: "70px",
-                marginTop: "30px",
-              }}
-            />
             <Box
               sx={{
                 flexGrow: 1,
@@ -109,12 +99,19 @@ export default function HideAppBar(props) {
                 smooth={true}
                 offset={-100}
                 duration={500}
-                className="menu-item"
+                // className="menu-item"
                 href="/hero"
                 style={linkStyles}
                 onClick={handleDrawerClose}
               >
-                About
+                <img
+                  src={menulogo}
+                  style={{
+                    height: "90px",
+                    marginLeft: "50px",
+                    marginTop: "30px",
+                  }}
+                />
               </Link>
 
               {/* <Link
@@ -129,7 +126,7 @@ export default function HideAppBar(props) {
               >
                 Experience
               </Link> */}
-              <Link
+              {/* <Link
                 to="portfolio"
                 spy={true}
                 smooth={true}
@@ -140,7 +137,7 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 My Works
-              </Link>
+              </Link> */}
               {/* <Link
                 to="contact"
                 spy={true}

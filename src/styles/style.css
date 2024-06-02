@@ -23,9 +23,9 @@ body {
 
 .menulogo {
   width: 150px;
-  margin-top: 30px;
+  margin-top: 0px;
   /* padding-top: 50px; */
-
+  cursor: pointer;
   margin-right: 50px;
   &:hover {
     background-color: #8dd3fc;
