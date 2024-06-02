@@ -51,7 +51,7 @@ export default function HideAppBar(props) {
 
   const linkStyles = {
     textDecoration: "none",
-    color: mode === "dark" ? "#ffffff" : "#000000",
+    color: mode === "dark" ? "#f1f2ed" : "#253238",
     fontWeight: 100,
     padding: "10px",
     transition: "background-color 0.3s ease",
@@ -78,13 +78,14 @@ export default function HideAppBar(props) {
         >
           <Toolbar
             sx={{
-              background: mode === "dark" ? "#000000" : "#FFF",
+              background: mode === "dark" ? "#253238" : "#f1f2ed",
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
               justifyContent: "center", // Place items at each end
               alignItems: "center", // Center items vertically
               padding: "0px",
               height: "30",
+              width: "auto",
             }}
           >
             <Box

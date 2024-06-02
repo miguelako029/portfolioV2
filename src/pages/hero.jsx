@@ -235,9 +235,9 @@ const Hero = () => {
   };
 
   const darkModeButtonStyle = {
-    backgroundColor: "#000",
-    color: "#FFF",
-    border: "1px solid #FFF",
+    backgroundColor: "#253238",
+    color: "#f1f2ed",
+    border: "1px solid #f1f2ed",
     margin: "5px",
     // Add other dark mode specific styles here
   };
@@ -246,7 +246,7 @@ const Hero = () => {
     background: backgroundColor,
     color: fontColor,
     textDecoration: "none",
-    border: "1px solid #000",
+    border: "1px solid #253238",
     transition: "background-color 0.7s ease",
     margin: "5px",
     // Add other common styles here
@@ -882,10 +882,10 @@ const Hero = () => {
                   variant="fullWidth"
                   sx={{
                     // background: backgroundColor,
-                    color: mode === "dark" ? "#000" : "#000",
+                    color: mode === "dark" ? "#253238" : "#253238",
                     fontSize: 1,
                     // boxShadow: "none",
-                    // borderBottom: "1px solid #000",
+                    // borderBottom: "1px solid #253238",
                   }}
                 >
                   <Tab label="Personal Information" {...a11yProps(0)} />

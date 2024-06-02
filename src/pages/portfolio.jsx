@@ -31,7 +31,7 @@ const PortfolioPage = () => {
     >
       <div className="portfolioContainer">
         <div ref={ref}>
-          <h1 className="port-h1">Portfolio</h1>
+          {/* <h1 className="port-h1">Portfolio</h1> */}
           <Portfolio />
 
           {/* <ImageGallery /> */}

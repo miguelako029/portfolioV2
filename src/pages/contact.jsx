@@ -35,14 +35,14 @@ const Contact = () => {
     },
     "& .MuiOutlinedInput-input": {
       color: fontColor,
-      background: mode === "dark" ? "#333" : "#fff", // Change background color based on mode
+      background: mode === "dark" ? "#333" : "#f1f2ed", // Change background color based on mode
     },
     "& .MuiInputLabel-root": {
       color: fontColor,
     },
     "&:hover": {
       "& .MuiOutlinedInput-input": {
-        borderColor: mode === "light" ? "#fff" : "fff", // Change border color on hover
+        borderColor: mode === "light" ? "#f1f2ed" : "fff", // Change border color on hover
       },
     },
   };
