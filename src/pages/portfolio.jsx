@@ -17,6 +17,14 @@ const PortfolioPage = () => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once when it enters the viewport
   });
+  const fadeInUp = useSpring({
+    from: { opacity: 0, transform: "translateY(50px)" },
+    to: {
+      opacity: inView ? 1 : 0,
+      transform: inView ? "translateY(0)" : "translateY(30px)",
+    },
+    config: { duration: 1000 },
+  });
 
   return (
     <Box
@@ -29,14 +37,13 @@ const PortfolioPage = () => {
         // width: "80vw",
       }}
     >
-      <div className="portfolioContainer">
-        <div ref={ref}>
-          {/* <h1 className="port-h1">Portfolio</h1> */}
-          <Portfolio />
-
-          {/* <ImageGallery /> */}
+      <animated.div style={fadeInUp}>
+        <div className="portfolioContainer">
+          <div ref={ref}>
+            <Portfolio />
+          </div>
         </div>
-      </div>
+      </animated.div>
     </Box>
   );
 };

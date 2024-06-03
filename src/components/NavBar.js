@@ -53,7 +53,7 @@ export default function HideAppBar(props) {
     textDecoration: "none",
     color: mode === "dark" ? "#f1f2ed" : "#253238",
     fontWeight: 100,
-    padding: "10px",
+    padding: "0px",
     transition: "background-color 0.3s ease",
     fontSize: "1.3vw",
     fontWeight: 100,
@@ -84,7 +84,7 @@ export default function HideAppBar(props) {
               justifyContent: "center", // Place items at each end
               alignItems: "center", // Center items vertically
               padding: "0px",
-              height: "30",
+              height: "20",
               width: "auto",
             }}
           >
@@ -109,8 +109,8 @@ export default function HideAppBar(props) {
                   src={menulogo}
                   style={{
                     height: "90px",
-                    marginLeft: "50px",
-                    marginTop: "30px",
+                    marginLeft: "20px",
+                    marginTop: "10px",
                   }}
                 />
               </Link>

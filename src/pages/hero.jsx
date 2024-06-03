@@ -552,49 +552,9 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          {/* <animated.div style={fadeInUp}>
-              <h1>Miguel Lorenzo Milañez</h1>
-              <p className="aboutDescription">
-                Welcome to my personal website! I'm Miguel Lorenzo T. Milañez, a
-                passionate Software Engineer with a focus on web development and
-                a knack for problem-solving. I'm passionate about crafting
-                engaging web experiences and solving complex problems through
-                innovative solutions. Feel free to explore my profile.
-              </p>
-            </animated.div> */}
-
           <animated.div style={fadeInUp}></animated.div>
-          {/* <div ref={ref}>
-              <animated.div style={fadeInUp}>
-                <div
-                  className="btnGroup"
-                  sx={{
-                    background: backgroundColor,
-                    color: fontColor,
-                    transition: "background-color 0.7s ease",
-                  }}
-                >
-                  <Button
-                    className="button"
-                    sx={{
-                      background: backgroundColor,
-                      color: fontColor,
-                      transition: "background-color 0.7s ease",
-                    }}
-                    onClick={handleOpen1}
-                  >
-                    Read More <ArrowRightAltIcon />
-                  </Button>
-                </div>
-              </animated.div>
-            </div> */}
         </div>
       </div>
-      {/* </div> */}
-      {/* <div class="profileImage">
-            <img src={image1} width="50%" alt="Image 1" />
-          </div> */}
-      {/* </div> */}
 
       <Modal
         open={open1}

@@ -1,0 +1,34 @@
+[
+  {
+    "title": "VITAL",
+    "description": "Vital 1 Purified Water provides clean, refreshing hydration that highlight the importance of pure water for a healthy lifestyle. The website offers detailed information about the company. Developed using WordPress, Elementor for visually appealing and responsive design, and JavaScript. My contributions included designing and developing the site, implementing custom JavaScript features, integrating contact and order forms, and ensuring SEO-friendly content.",
+    "image": "vitalOne",
+    "alt": "Vital One",
+    "buttonText": "View Project",
+    "link": "https://vital1.com.ph/"
+  },
+  {
+    "title": "CAMP ALLEN",
+    "description": "Camp Allen Resort offers a serene and picturesque getaway, providing a perfect escape into nature with modern amenities and activities for all ages. The website showcases the resort's stunning accommodations, recreational activities, and event facilities. Built using WordPress for its adaptability, Elementor for a visually engaging and responsive design, and JavaScript. My contributions involved designing and developing the site, creating custom JavaScript interactions, integrating booking and contact forms, and ensuring SEO-friendly content.",
+    "image": "campAllen",
+    "alt": "Camp Allen Resort",
+    "buttonText": "View Project",
+    "link": "https://web.archive.org/web/20190627224039/http://campallen.ph/"
+  },
+  {
+    "title": "HARANA.PH",
+    "description": "Harana.PH is the first professional serenade and surprise service in the Philippines. This platform offers personalized serenades for proposals, weddings, parties, graduations, birthdays, events, and anniversaries. Developed using WordPress, Elementor, and JavaScript, the site features a modern design, responsive layout, interactive booking forms, and optimized performance. My contributions included designing and developing the site, creating custom JavaScript features, integrating forms, and ensuring SEO-friendly content.",
+    "image": "harana",
+    "alt": "Harana.PH",
+    "buttonText": "View Project",
+    "link": "https://harana.ph/"
+  },
+  {
+    "title": "HOTJOBS PH",
+    "description": "HotJobs is a comprehensive job searching portal designed to connect job seekers with employers efficiently. The platform features a wide range of job listings, resume submission, and job application tools. Developed using WordPress, Elementor, and JavaScript for enhanced interactivity, the site also leverages specialized plugins for job postings. My contributions included designing and developing the site, implementing custom JavaScript for dynamic features, integrating job posting plugins, and ensuring SEO-friendly content.",
+    "image": "hotJobs",
+    "alt": "HotJobs PH",
+    "buttonText": "View Project",
+    "link": "https://web.archive.org/web/20190316135414/https://www.hotjobsphilippines.com/jobs"
+  }
+]

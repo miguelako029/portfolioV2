@@ -1,0 +1,36 @@
+{
+  "title": "Let's Connect!",
+  "socialLinks": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/miguel.milanez.9/",
+      "icon": "Facebook"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/MiguellMilanez",
+      "icon": "Twitter"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/mmmiggyyy/",
+      "icon": "Instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/miguel-lorenzo-mila%C3%B1ez-706482144/",
+      "icon": "LinkedIn"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/miguelako029#",
+      "icon": "GitHub"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:miguellmilanez@gmail.com",
+      "icon": "Email",
+      "tooltip": "miguellmilanez@gmail.com"
+    }
+  ]
+}

@@ -1,0 +1,879 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Duru+Sans&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  /* Recommended to include box-sizing globally */
+  /* font-family: "Gantari", sans-serif; */
+  /* font-weight: 300; */ /* You may uncomment this line if needed */
+}
+
+html {
+  /* Since position:relative doesn't seem necessary, you can remove it */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.menulogo {
+  width: 150px;
+  margin-top: 0px;
+  /* padding-top: 50px; */
+  cursor: pointer;
+  margin-right: 50px;
+  &:hover {
+    background-color: #8dd3fc;
+    transition: background-color 0.5s ease, color 0.3s ease;
+    padding: 5px;
+    transition: padding 0.3s ease;
+  }
+}
+.menu-item {
+  /* font-family: "Prompt", sans-serif; */
+  font-weight: 100;
+  font-style: normal;
+  margin-right: 20px;
+  &:hover {
+    background-color: #8dd3fc;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+}
+
+.sectionHeader {
+  font-size: 6vw;
+  font-weight: 200;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+}
+
+.heroSection {
+  /* width: 80vw; */
+  height: 85vh; /* Adjusted height */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -30px;
+}
+
+.hero .firstName {
+  font-size: 6.5vw;
+  animation: slideInWords 1s forwards;
+  text-align: center;
+
+  /* font-family: "Gantari", sans-serif; */
+}
+
+.hero .firstName span {
+  font-size: 6.5vw;
+  text-align: center;
+  font-weight: 200;
+
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent; /* Fallback color in case gradient is unsupported */
+}
+
+.hero .hero-desc {
+  font-size: 1.4vw;
+  /* font-family: "Work Sans"; */
+  font-weight: 300;
+  margin-top: -13px;
+  opacity: 0; /* Start with opacity 0 to hide the text */
+  animation: slideInWords 1s 1s forwards; /* Animation with delay of 2s */
+}
+
+.hero .btnContainer {
+  animation: slideInWords 1s forwards; /* Keep the initial animation */
+  animation-delay: 2s; /* Add a delay of 2 seconds */
+  opacity: 0;
+  margin-top: 30px;
+}
+
+.btnContainer .btnStyle {
+  font-family: Prompt;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2vw;
+  /* padding: 0px 20px; */
+  text-align: center;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #8dd3fc;
+    transition: background-color 0.5s ease, color 0.3s ease;
+    /* padding: 5px;
+    transition: padding 0.3s ease; */
+  }
+}
+
+/**************About*************************/
+
+.wrapperAbout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100.25rem, 100%), 2fr));
+  grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
+}
+
+.profileImage {
+  width: 45vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutSection {
+  height: 85vh; /* Adjusted height */
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding-bottom: 20px;
+  /* border: solid 1px #0f9ef1; */
+}
+
+.aboutMe {
+  font-weight: 100;
+  text-align: left;
+  justify-content: left;
+  font-size: 20px;
+
+  width: 90%;
+  align-content: left;
+  color: #242424;
+
+  /* margin-left: -50px; */
+  .btnGroup {
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(50px, 16fr)); */
+    grid-gap: 1rem;
+    /* max-width: 600px; */
+    margin-top: 25px;
+  }
+
+  .transition {
+    font-size: 5vw;
+    color: #242424;
+    font-weight: 100;
+    font-stretch: extra-expanded;
+  }
+
+  .button {
+    padding: 10px 20px;
+    text-align: center;
+    /* background-color: #1872d300;
+    color: rgb(0, 0, 0); */
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #999999;
+  }
+}
+
+.aboutMe h1 {
+  font-size: 4vw;
+  word-spacing: 5pt;
+  font-weight: 300;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+  animation: fadeUp 1s forwards;
+  opacity: 0;
+  margin-bottom: -40px;
+}
+
+.aboutDescription {
+  animation: fadeUp 1s 1s forwards;
+  opacity: 0;
+
+  font-weight: 100;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+
+  font-size: 28pt;
+}
+
+/* MODAL */
+.modal1 {
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+
+  border-radius: 10px;
+
+  background-color: white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(20.25rem, 100%), 2fr));
+  grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
+}
+
+.wrapper-div {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #8a8a8a;
+}
+
+.trainingImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  background-color: white; /* Assuming 'background.paper' refers to a white background */
+  /* border: 2px solid #253238; */
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
+  padding: 16px; /* Assuming 'p: 4' refers to a padding of 4 * 4px = 16px */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.7fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+
+  grid-template-areas:
+    "Image Content Content"
+    "Image Content Content"
+    "Image Tabs Tabs";
+}
+
+.Image {
+  grid-area: Image;
+  /* background-color: #0f9ef1; */
+  width: 100%;
+  height: 90vh;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: center;
+  background-image: url("../assets/images/ModalPic.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  animation: slideInWords 2s forwards;
+}
+
+.Content {
+  grid-area: Content;
+  /* background-color: #999999; */
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-top: 50px;
+  padding-right: 100px;
+}
+
+.Tabs {
+  grid-area: Tabs;
+  /* background-color: #f1f2ed; */
+
+  position: absolute;
+  bottom: 0px; /* Adjust as needed */
+  width: 65%;
+  right: 0;
+}
+
+#aboutModal::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #dadada;
+}
+
+#aboutModal::-webkit-scrollbar {
+  width: 12px;
+  background-color: #cacaca;
+  border-radius: 10px;
+}
+
+#aboutModal::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #575757;
+}
+
+.time-line {
+  margin: 40px 30px 30px 70px;
+}
+
+.my-list {
+  list-style: none;
+  counter-reset: listItem;
+  line-height: 1.2;
+  padding: 10px;
+  border-left: 1px solid hsl(0, 0%, 61%);
+  /* color: rgba(1, 3, 24, 0.6); */
+}
+
+#experience {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  height: 70%;
+}
+
+.expContainer {
+  height: 100vh; /* Adjusted height */
+  width: 90vw;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-left: 100px;
+}
+
+.expContainer h1 {
+  font-size: 2vw;
+  word-spacing: 5pt;
+  font-weight: 300;
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent;
+  animation: fadeUp 1s forwards;
+  opacity: 0;
+  /* margin-bottom: -40px; */
+}
+
+.customTab {
+  background-color: #1b1b1b; /* Background color */
+  color: #f1f2ed; /* Font color */
+  font-size: 1000px;
+}
+
+.tabContent {
+  font-size: 12pt; /* Font size */
+  font-weight: 200;
+  text-align: left;
+}
+
+/* Style for the circle container */
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Diameter of the circle */
+  height: 60px; /* Diameter of the circle */
+  border-radius: 50%; /* Make it a circle */
+
+  border: 3px solid;
+}
+
+/******************** PortfolioPage **************/
+
+.portfolioContainer {
+  /* background-color: #0f9ef1; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  .containers {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90vw;
+    overflow-x: 0;
+  }
+
+  .content {
+    /* flex-grow: 1; */
+    /* background-color: #0dc955; */
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    align-content: center;
+  }
+
+  .tabContainer {
+    align-self: center; /* Adjusted */
+    background-color: transparent;
+    width: 50vw;
+    box-shadow: none;
+  }
+}
+
+.ProjWrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
+}
+
+.projectDetails {
+  /* background-color: #7303c0; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-content: center;
+  justify-content: center;
+
+  padding: 70px;
+  .projectTitle {
+    font-size: 2.5vw;
+    font-weight: 300;
+  }
+  .projectDesc {
+    font-size: 1vw;
+    font-weight: 100;
+  }
+  .projectButton {
+    /* width: 25%; */
+  }
+}
+
+.siteImage {
+  /* background-color: #0f9ef1; */
+  align-items: left;
+  align-content: left;
+  justify-content: left;
+  text-align: left;
+}
+
+/* modal */
+
+.modal-container {
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%;  */
+  display: flex;
+  grid-gap: 1rem;
+  justify-content: left;
+  align-items: left;
+  /* background-color: #f1f2edcfc; */
+
+  /* overflow: hidden; */
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: auto; */
+
+  z-index: 1;
+}
+
+/* Modal Content */
+
+.modal-right {
+  font-weight: 100;
+  text-align: left;
+  /* padding: 80px; */
+  justify-content: center;
+  align-content: center;
+  /* height: 500px; */
+  /* margin-right: 70px; */
+}
+
+.modal-image {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Title */
+.modal-title {
+  font-size: 2.5vw;
+  font-weight: 200;
+  /* margin-bottom: 8px; */
+  /* margin-left: -20px; */
+}
+.position1 {
+  font-size: 2vw;
+  font-weight: 100; /* To make the position text bold */
+  /* margin-bottom: 8px; */
+}
+
+/* Description */
+.modal-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Classification Bullet Points */
+.modal-classification {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Icon Container */
+.modal-icons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Icon Styling (Adjust as needed) */
+.modal-icon {
+  font-size: 24px;
+
+  margin: 0 10px;
+  cursor: pointer;
+  /* color: rgba(233, 233, 233, 0.75) */
+}
+
+ul .ui-bullet {
+  list-style-type: circle;
+  padding-left: 120px;
+}
+
+.send {
+  padding: 10px 20px;
+  text-align: center;
+  /* background-color: #1872d300;
+  color: rgb(0, 0, 0); */
+  border: 1px solid;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.send:hover {
+  background-color: #999999;
+}
+
+.iconList {
+  font-size: 50pt;
+}
+
+#contactIcon {
+  font-size: 55px;
+  margin: 0px 5px;
+
+  padding-bottom: 10px;
+}
+
+.contactContainer {
+  height: 100%;
+  padding-top: 350px;
+  padding-bottom: 100px;
+}
+
+.modal-overlay-hidden {
+  overflow: hidden;
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 375px) {
+  /* Add your CSS rules for extra small devices (portrait) here */
+
+  .heroSection {
+    height: 80vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Set position to relative */
+  }
+
+  .hero .firstName {
+    font-size: 7vw;
+    animation: slideInWords 1s forwards;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .hero .firstName span {
+    font-size: 46px;
+    text-align: center;
+  }
+
+  .hero .hero-desc {
+    font-size: 18px;
+    /* font-family: "Work Sans", sans-serif; */
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    /* margin-bottom: 1vh; */
+    font-weight: 300;
+    /* word-spacing: 1px; */
+    opacity: 0; /* Start with opacity 0 to hide the text */
+    animation: slideInWords 1s 1s forwards; /* Animation with delay of 2s */
+  }
+
+  .hero .btnContainer {
+    animation: slideInWords 1s forwards; /* Keep the initial animation */
+    animation-delay: 2s; /* Add a delay of 2 seconds */
+    opacity: 0;
+
+    display: inline;
+    text-align: center;
+  }
+
+  .hero .btnContainer .btnStyle {
+    width: 150px;
+    font-size: 10vw;
+    /* color: rgb(0, 0, 0); */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .wrapperAbout {
+    grid-template-columns: 1fr; /* Adjust grid layout */
+  }
+
+  .profileImage {
+    width: 80%; /* Adjust width */
+    margin: 0 auto; /* Center align */
+  }
+
+  .aboutSection {
+    height: auto; /* Adjust height to content */
+  }
+
+  .aboutMe {
+    font-size: 20px; /* Adjust font size */
+    width: 90%; /* Adjust width */
+    margin: 0 auto; /* Center align */
+  }
+
+  .aboutMe h1 {
+    font-size: 40px; /* Adjust font size */
+    line-height: 35pt;
+    margin-bottom: 30px;
+  }
+
+  .aboutDescription {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .modal1 {
+    width: 85%;
+    height: 83%;
+    top: 0;
+    left: 0;
+    border-radius: 0; /* Remove border-radius */
+    position: fixed;
+    background-color: rgb(
+      243,
+      243,
+      243
+    ); /* Assuming white background for the modal */
+    /* Enable scrolling if content exceeds modal height */
+    overflow: auto;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr; /* Adjust grid layout */
+  }
+
+  .trainingImage {
+    width: 75%; /* Adjust width */
+    left: 5%;
+    top: 15%;
+    transform: translate(0%, 50%);
+  }
+
+  .container {
+    display: grid;
+
+    grid-template-columns: 1fr; /* Adjust grid layout */
+    grid-template-rows: 80vh 10vh; /* Content takes 90% of the screen height, Tabs take 10% */
+  }
+
+  .Content {
+    grid-area: Content;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .Tabs {
+    grid-area: Tabs;
+
+    position: relative;
+    width: 100%;
+    font-size: 12pt;
+  }
+  #modalName {
+    background: linear-gradient(
+      135deg,
+      #0f9ef1,
+      #7303c0,
+      #ec38bc,
+      #f88bd9
+    ); /* Nebula-like colors */
+    -webkit-background-clip: text; /* Webkit browsers */
+    -webkit-text-fill-color: transparent; /* Webkit browsers */
+    background-clip: text; /* Standard syntax */
+    color: transparent;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+  /* Add your CSS rules for extra small devices (landscape) here */
+
+  .heroSection {
+    height: 90vh;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .hero .firstName {
+    font-size: 50px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .hero .firstName span {
+    font-size: 50px;
+    text-align: center;
+  }
+  .hero .hero-desc {
+    font-size: 15px;
+    /* padding: 0px 20px 0px 30px; */
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .hero .btnContainer {
+    .btnStyle {
+      font-size: 12px;
+      padding: 0px 10px;
+      text-align: center;
+      /* background-color: #1872d300;
+    color: rgb(0, 0, 0); */
+      /* border: 1px solid; */
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero .firstName {
+    font-size: 12vw;
+  }
+
+  .hero .firstName span {
+    font-size: 12vw;
+  }
+  .hero .hero-desc {
+    font-size: 2.3vw;
+
+    margin-top: -5px;
+
+    margin-bottom: 10px;
+  }
+  .hero .btnContainer {
+    .btnStyle {
+      font-size: 1.5vw;
+      padding: 0px 10px;
+      text-align: center;
+      /* background-color: #1872d300;
+    color: rgb(0, 0, 0); */
+      /* border: 1px solid; */
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero .firstName {
+    font-size: 10vw;
+  }
+
+  .hero .firstName span {
+    font-size: 10vw;
+  }
+  .hero .hero-desc {
+    font-size: 2vw;
+
+    margin-top: -5px;
+
+    margin-bottom: 10px;
+  }
+  .hero .btnContainer {
+    .btnStyle {
+      font-size: 1.3vw;
+      padding: 0px 10px;
+      text-align: center;
+      /* background-color: #1872d300;
+    color: rgb(0, 0, 0); */
+      /* border: 1px solid; */
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+  
+} */
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInWords {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(-10%); /* Start off-screen to the left */
+  }
+  100% {
+    opacity: 1; /* Fully opaque at the end of the animation */
+    transform: translateX(0); /* Move to original position */
+  }
+}
