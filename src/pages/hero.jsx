@@ -40,7 +40,8 @@ import drupalImage from "../assets/images/udemy_Drupal.png";
 import serviceNow from "../assets/images/udemy_ServiceNow.png";
 import sharepoint from "../assets/images/udemy_Sharepoint.png";
 
-import TextTransition, { presets } from "react-text-transition";
+// import TextTransition, { presets } from "react-text-transition";
+import { TypeAnimation } from "react-type-animation";
 
 // const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
 
@@ -471,7 +472,7 @@ const Hero = () => {
   ];
 
   //word transition
-  const TEXTS = [" Software Engineer", " Web Developer", " Frontend Developer"];
+  const TEXTS = [" software engineer", " web developer", " frontend developer"];
 
   const [index, setIndex] = React.useState(0);
 
@@ -502,22 +503,49 @@ const Hero = () => {
       <div className="heroSection" id="hero">
         {/* <div class="about-grid-container"> */}
         {/* <div className="wrapperAbout"> */}
-        <div class="aboutMe">
+        <div class="heroContent">
           <div ref={ref}>
-            <h1>Hello!</h1>
+            <p>
+              <span className="greet" style={{ color: fontColor }}>
+                Hi! I'm
+              </span>
+            </p>
 
-            <p className="transition">
-              <span style={{ color: fontColor }}>I'm</span>
-              <span style={{ fontWeight: 100, color: fontColor }}> Miguel</span>
-              <span style={{ color: fontColor }}> a</span>
-              <TextTransition
-                className="transition"
-                springConfig={presets.default}
-                inline
-                style={{ margin: "0 20px", color: fontColor }}
+            <p className="myName">
+              <span
+                classname="firstname"
+                style={{ color: fontColor, fontWeight: 300 }}
               >
-                {TEXTS[index % TEXTS.length]}
-              </TextTransition>
+                {" "}
+                Miguel Milañez
+              </span>
+            </p>
+
+            <p className="transition" style={{ color: fontColor }}>
+              a
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  " Software Engineer",
+                  1000, // wait 1s before replacing "Mice" with "Hamsters"
+                  " Web Developer",
+                  1000,
+                  " Frontend Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                // style={{ fontSize: "2em", display: "inline-block" }}
+                repeat={Infinity}
+              />
+              {/* <TypeAnimation
+                  className="transition"
+                  springConfig={presets.default}
+                  inline
+                  style={{ margin: "0 20px", color: fontColor }}
+                >
+                  {TEXTS[index % TEXTS.length]}
+                </TypeAnimation> */}
             </p>
 
             <div className="btnContainer">

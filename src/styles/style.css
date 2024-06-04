@@ -49,7 +49,7 @@ body {
 
 .heroSection {
   /* width: 80vw; */
-  height: 85vh; /* Adjusted height */
+  height: 95vh; /* Adjusted height */
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
@@ -57,19 +57,38 @@ body {
   justify-content: center;
   padding-bottom: 130px;
 }
+.heroContent {
+  font-weight: 100;
+  text-align: left;
+  justify-content: left;
+  font-size: 20px;
 
-.hero .firstName {
-  font-size: 6.5vw;
-  animation: slideInWords 1s forwards;
-  text-align: center;
+  width: 90%;
+  align-content: left;
+  color: #242424;
 
-  /* font-family: "Gantari", sans-serif; */
+  /* margin-left: -50px; */
+  .btnGroup {
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(50px, 16fr)); */
+    grid-gap: 1rem;
+    /* max-width: 600px; */
+    margin-top: 25px;
+  }
 }
 
-.hero .firstName span {
-  font-size: 6.5vw;
-  text-align: center;
+.heroContent .greet {
+  font-size: 3.5vw;
+
   font-weight: 200;
+  font-family: Prompt;
+}
+
+.heroContent .myName {
+  font-size: 7.5vw;
+  text-align: left;
+  font-weight: 200;
+  line-height: 1.1;
 
   background: linear-gradient(
     135deg,
@@ -82,6 +101,14 @@ body {
   -webkit-text-fill-color: transparent; /* Webkit browsers */
   background-clip: text; /* Standard syntax */
   color: transparent; /* Fallback color in case gradient is unsupported */
+}
+
+.transition {
+  font-size: 3.5vw;
+  /* color: #242424; */
+  font-weight: 200;
+  font-family: Prompt;
+  margin-bottom: 50px;
 }
 
 .hero .hero-desc {
@@ -118,82 +145,7 @@ body {
   }
 }
 
-/**************About*************************/
-
-.aboutMe {
-  font-weight: 100;
-  text-align: left;
-  justify-content: left;
-  font-size: 20px;
-
-  width: 90%;
-  align-content: left;
-  color: #242424;
-
-  /* margin-left: -50px; */
-  .btnGroup {
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(50px, 16fr)); */
-    grid-gap: 1rem;
-    /* max-width: 600px; */
-    margin-top: 25px;
-  }
-
-  .transition {
-    font-size: 5vw;
-    color: #242424;
-    font-weight: 100;
-    font-stretch: extra-expanded;
-  }
-
-  .button {
-    padding: 10px 20px;
-    text-align: center;
-    /* background-color: #1872d300;
-    color: rgb(0, 0, 0); */
-    border: 1px solid;
-    cursor: pointer;
-    font-weight: 300;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .button:hover {
-    background-color: #999999;
-  }
-}
-
-.aboutMe h1 {
-  font-size: 4vw;
-  word-spacing: 5pt;
-  font-weight: 300;
-  background: linear-gradient(
-    135deg,
-    #0f9ef1,
-    #7303c0,
-    #ec38bc,
-    #f88bd9
-  ); /* Nebula-like colors */
-  -webkit-background-clip: text; /* Webkit browsers */
-  -webkit-text-fill-color: transparent; /* Webkit browsers */
-  background-clip: text; /* Standard syntax */
-  color: transparent;
-  animation: fadeUp 1s forwards;
-  opacity: 0;
-  margin-bottom: -40px;
-}
-
-.aboutDescription {
-  animation: fadeUp 1s 1s forwards;
-  opacity: 0;
-
-  font-weight: 100;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  justify-items: center;
-
-  font-size: 28pt;
-}
+/**************KNOW ME!*************************/
 
 /* MODAL */
 .modal1 {
@@ -209,7 +161,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(20.25rem, 100%), 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(15.25rem, 100%), 2fr));
   grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
 }
 
@@ -217,6 +169,26 @@ body {
   padding-bottom: 15px;
   padding-top: 15px;
   border-bottom: 1px solid #8a8a8a;
+}
+
+#modalName {
+  font-size: 2.5vw;
+  text-align: left;
+  font-weight: 200;
+  line-height: 1.1;
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #0f9ef1,
+    #7303c0,
+    #ec38bc,
+    #f88bd9
+  ); /* Nebula-like colors */
+  -webkit-background-clip: text; /* Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Webkit browsers */
+  background-clip: text; /* Standard syntax */
+  color: transparent; /* Fallback color in case gradient is unsupported */
 }
 
 .trainingImage {

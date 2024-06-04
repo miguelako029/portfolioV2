@@ -110,7 +110,7 @@ export default function HideAppBar(props) {
                   style={{
                     height: "90px",
                     marginLeft: "20px",
-                    marginTop: "10px",
+                    marginTop: "20px",
                   }}
                 />
               </Link>
