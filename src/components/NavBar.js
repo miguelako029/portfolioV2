@@ -51,7 +51,7 @@ export default function HideAppBar(props) {
 
   const linkStyles = {
     textDecoration: "none",
-    color: mode === "dark" ? "#f1f2ed" : "#253238",
+    color: mode === "dark" ? "#eff0ee" : "#253238",
     fontWeight: 100,
     padding: "0px",
     transition: "background-color 0.3s ease",
@@ -78,14 +78,12 @@ export default function HideAppBar(props) {
         >
           <Toolbar
             sx={{
-              background: mode === "dark" ? "#253238" : "#f1f2ed",
+              background: mode === "dark" ? "#253238" : "#eff0ee",
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
-              justifyContent: "center", // Place items at each end
-              alignItems: "center", // Center items vertically
-              padding: "0px",
+
+              padding: "20px",  
               height: "20",
-              width: "auto",
             }}
           >
             <Box
@@ -182,7 +180,6 @@ export default function HideAppBar(props) {
         onClose={handleDrawerClose}
         PaperProps={{
           sx: {
-            width: "300px",
             backgroundColor: backgroundColorMenu,
           },
         }}

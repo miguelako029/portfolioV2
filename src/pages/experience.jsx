@@ -108,7 +108,7 @@ const Experience = () => {
 
     backgroundColor:
       mode === "dark" ? "rgba(34, 37, 42, 0.75)" : "rgba(233, 233, 233, 0.75)",
-    color: mode === "dark" ? "#f1f2ed" : "#333",
+    color: mode === "dark" ? "#eff0ee" : "#333",
     willChange: "backdrop-filter",
 
     backdropFilter: "blur(16px) saturate(180%)",

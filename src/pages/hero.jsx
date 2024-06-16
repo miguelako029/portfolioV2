@@ -237,8 +237,8 @@ const Hero = () => {
 
   const darkModeButtonStyle = {
     backgroundColor: "#253238",
-    color: "#f1f2ed",
-    border: "1px solid #f1f2ed",
+    color: "#eff0ee",
+    border: "1px solid #eff0ee",
     margin: "5px",
     // Add other dark mode specific styles here
   };
@@ -557,7 +557,7 @@ const Hero = () => {
                 duration={1000}
                 style={{
                   cursor: "pointer",
-                  marginRight: "50px",
+
                   color: fontColor,
                 }}
               >

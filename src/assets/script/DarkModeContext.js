@@ -13,13 +13,13 @@ export const ColorModeProvider = ({ children }) => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
 
-  const backgroundColor = mode === "dark" ? "#253238" : "#f1f2ed";
-  const fontColor = mode === "dark" ? "#f1f2ed" : "#253238";
+  const backgroundColor = mode === "dark" ? "#253238" : "#eff0ee";
+  const fontColor = mode === "dark" ? "#eff0ee" : "#253238";
   const fontHero = mode === "dark" ? "#e6e6e6" : "#373535";
-  const backgroundColorModal = mode === "dark" ? "#f1f2ed" : "#253238";
+  const backgroundColorModal = mode === "dark" ? "#eff0ee" : "#253238";
   const fontModal = mode === "dark" ? "#0780e2" : "#0780e2";
-  const BorderColor = mode === "dark" ? "#f1f2ed" : "#253238";
-  const backgroundColorMenu = mode === "dark" ? "#1a1a1a" : "#f1f2ed";
+  const BorderColor = mode === "dark" ? "#eff0ee" : "#253238";
+  const backgroundColorMenu = mode === "dark" ? "#1a1a1a" : "#eff0ee";
 
   const contextValue = useMemo(
     () => ({

@@ -116,7 +116,7 @@ export default function FullWidthTabs() {
                   <div className="projectDesc">{project.description}</div>
                   <div className="projectButton">
                     <Button
-                      sx={{ color: fontColor, background: backgroundColor }}
+                      sx={{ color: fontColor }}
                       href={project.link}
                       target="_blank"
                     >

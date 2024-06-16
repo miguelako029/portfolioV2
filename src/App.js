@@ -8,6 +8,7 @@ import Contact from "./pages/contact";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { ColorModeProvider } from "./assets/script/DarkModeContext"; // Update the path\
 import ScrollToTop from "react-scroll-to-top";
+// import { useColorMode } from "./assets/script/DarkModeContext";
 
 function App() {
   const theme = createTheme({
@@ -39,6 +40,8 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // const { mode, backgroundColor, fontColor, BorderColor } = useColorMode();
+
   return (
     <ColorModeProvider>
       <ThemeProvider theme={theme}>
@@ -53,7 +56,7 @@ function App() {
         <ScrollToTop
           smooth
           to="Home"
-          style={{ zIndex: "100", bottom: 60, right: 10 }}
+          style={{ zIndex: "100", bottom: 70, right: 30 }}
         />
       </ThemeProvider>
     </ColorModeProvider>

@@ -311,7 +311,7 @@ body {
 
 .Tabs {
   grid-area: Tabs;
-  /* background-color: #f1f2ed; */
+  /* background-color: #eff0ee; */
 
   position: absolute;
   bottom: 0px; /* Adjust as needed */
@@ -388,7 +388,7 @@ body {
 
 .customTab {
   background-color: #1b1b1b; /* Background color */
-  color: #f1f2ed; /* Font color */
+  color: #eff0ee; /* Font color */
   font-size: 1000px;
 }
 
@@ -491,7 +491,7 @@ body {
   grid-gap: 1rem;
   justify-content: left;
   align-items: left;
-  /* background-color: #f1f2edcfc; */
+  /* background-color: #eff0eecfc; */
 
   /* overflow: hidden; */
 
