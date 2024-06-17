@@ -258,7 +258,7 @@ body {
   text-align: center;
   flex-direction: column;
 
-  .containers {
+  .container {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -424,15 +424,30 @@ body {
   }
 
   .container {
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1.1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-
-    grid-template-areas:
-      " Content Content"
-      " Tabs Tabs";
+    .meImage {
+      opacity: 0;
+    }
+    .tab-content {
+      font-family: Prompt;
+      font-weight: 200;
+    }
+    #modalName {
+      font-size: 20pt;
+      font-weight: 400;
+      font-family: Prompt;
+    }
+    .job {
+      font-size: 15pt;
+      font-weight: 200;
+      font-family: Prompt;
+      margin-bottom: 10px;
+    }
   }
 
   .Content {
