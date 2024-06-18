@@ -575,7 +575,7 @@ const Hero = () => {
                 style={{ cursor: "pointer", color: fontColor }}
               >
                 <span className="btnText">
-                  Know Me! <ArrowRightAltIcon />
+                  Know Me <ArrowRightAltIcon />
                 </span>
               </Link>
             </div>
