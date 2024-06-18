@@ -370,7 +370,8 @@ body {
 }
 
 /* Mobile devices (portrait) */
-@media (max-width: 390px) {
+
+@media (min-width: 380px) and (max-width: 480px) {
   /***Nav Bar***/
   .menu-itemMobile {
     margin-left: 20px;
@@ -392,27 +393,28 @@ body {
   /***HERO***/
 
   .heroSection {
-    padding-bottom: 0px;
+    padding-bottom: 70px;
   }
 
   .heroContent {
-    padding: 80px 12px 12px 12px;
+    padding: 30px 12px 12px 12px;
 
     .greet {
-      font-size: 50pt;
+      font-size: 30pt;
       line-height: 1;
+      font-weight: 200;
     }
     .myName {
       font-size: 70pt;
     }
     .transition {
-      font-size: 27pt;
+      font-size: 20pt;
     }
 
     .btnContainer {
       .btnStyle {
-        font-size: 20pt;
-        margin-right: 20px;
+        font-size: 15pt;
+        margin-right: 12px;
       }
     }
   }
