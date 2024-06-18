@@ -260,7 +260,7 @@ const About = () => {
     <div className="wrapper">
       <CardContent>
         <Typography variant="body2">
-          <strong>Age:</strong> 25 <br />
+          <strong>Age:</strong> 26 <br />
           <strong>Birth Date:</strong> September 29. 1997 <br />
           <strong>City:</strong> San Juan City
         </Typography>
