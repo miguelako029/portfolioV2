@@ -626,22 +626,767 @@ body {
 
 /* Tablets (portrait) */
 @media (min-width: 481px) and (max-width: 768px) {
-  /* Your styles for tablets (portrait) go here */
+  .menu-itemMobile {
+    margin-left: 20px;
+    font-size: 30pt;
+    font-family: Prompt;
+    font-weight: 300;
+    animation: slideInWords 1s 1s 1s forwards;
+  }
+  .menu-itemMobile:active {
+    border-bottom: 3px solid #0f9ef1;
+  }
+
+  .darkmodeMobile {
+    font-size: 15pt;
+    font-family: Prompt;
+    font-weight: 200;
+  }
+
+  /***HERO***/
+
+  .heroSection {
+    padding-bottom: 0px;
+  }
+
+  .heroContent {
+    padding: 80px 12px 12px 12px;
+
+    .greet {
+      font-size: 50pt;
+      line-height: 1;
+    }
+    .myName {
+      font-size: 70pt;
+    }
+    .transition {
+      font-size: 27pt;
+    }
+
+    .btnContainer {
+      .btnStyle {
+        font-size: 20pt;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  /*****Modal*****/
+
+  /* MODAL */
+
+  #modalName {
+    font-size: 2.5vw;
+    text-align: left;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+      135deg,
+      #0f9ef1,
+      #7303c0,
+      #ec38bc,
+      #f88bd9
+    ); /* Nebula-like colors */
+    -webkit-background-clip: text; /* Webkit browsers */
+    -webkit-text-fill-color: transparent; /* Webkit browsers */
+    background-clip: text; /* Standard syntax */
+    color: transparent; /* Fallback color in case gradient is unsupported */
+  }
+
+  .trainingImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: white; /* Assuming 'background.paper' refers to a white background */
+    /* border: 2px solid #253238; */
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
+    padding: 16px; /* Assuming 'p: 4' refers to a padding of 4 * 4px = 16px */
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 0fr;
+    grid-template-rows: 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    .meImage {
+      display: none;
+    }
+    .tab-content {
+      font-family: Prompt;
+      font-weight: 200;
+    }
+    #modalName {
+      font-size: 20pt;
+      font-weight: 400;
+      font-family: Prompt;
+    }
+    .job {
+      font-size: 15pt;
+      font-weight: 200;
+      font-family: Prompt;
+      margin-bottom: 10px;
+    }
+  }
+
+  .Content {
+    /* grid-area: Content; */
+    /* background-color: #999999; */
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-top: 50px;
+    padding-right: 20px;
+  }
+
+  .Tabs {
+    grid-area: Tabs;
+
+    width: 100%;
+    right: 0;
+  }
+
+  /********Projects**********/
+
+  .portfolioContainer {
+    /* background-color: #0f9ef1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: -100px;
+
+    .containers {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 95vw;
+      overflow-x: 0;
+
+      .content {
+        /* flex-grow: 1; */
+        /* background-color: #0dc955; */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        align-content: center;
+
+        .tabContainer {
+          align-self: center; /* Adjusted */
+          background-color: transparent;
+          width: 100%;
+          box-shadow: none;
+
+          margin-right: auto;
+          margin-bottom: 30px;
+          .tabButtons {
+            font-size: 9pt;
+          }
+        }
+        .tabContainer h1 {
+          display: block;
+          font-family: Prompt;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .ProjWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.1fr;
+    gap: 0px;
+    grid-auto-flow: row;
+  }
+
+  .projectDetails {
+    /* background-color: #7303c0; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-content: center;
+    justify-content: center;
+
+    padding: 0px;
+    .projectTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Centers the content vertically */
+      font-size: 30pt;
+      font-weight: 200;
+      font-family: Prompt;
+    }
+
+    .projectDesc {
+      font-size: 10pt;
+      font-family: Prompt;
+      font-weight: 200;
+      margin-bottom: 10px;
+    }
+    .projectButton .btnText {
+      /* width: 25%; */
+      font-size: 15pt;
+      font-family: Prompt;
+      font-weight: 200;
+      font-style: normal;
+      opacity: 0;
+      display: none;
+
+      /* padding: 0px 20px; */
+      text-align: center;
+      cursor: pointer;
+
+      &:active {
+        background-color: #8dd3fc;
+        transition: background-color 0.5s ease, color 0.3s ease;
+      }
+    }
+  }
+
+  .siteImage {
+    /* background-color: #0f9ef1; */
+
+    text-align: left;
+    .btnTextMobile {
+      font-family: Prompt;
+      font-weight: 200;
+      display: block;
+      font-size: 12pt;
+      margin-right: 15px;
+      align-self: center;
+    }
+  }
+
+  /*****Contact*****/
+
+  .contactContainer {
+    height: 100%;
+    padding: 100px 100px 100px 100px;
+  }
+
+  .conTitle {
+    font-size: 45pt;
+  }
+  #contactIcon {
+    font-size: 30pt;
+  }
 }
 
 /* Tablets (landscape) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Your styles for tablets (landscape) go here */
+  .menu-itemMobile {
+    margin-left: 20px;
+    font-size: 30pt;
+    font-family: Prompt;
+    font-weight: 300;
+    animation: slideInWords 1s 1s 1s forwards;
+  }
+  .menu-itemMobile:active {
+    border-bottom: 3px solid #0f9ef1;
+  }
+
+  .darkmodeMobile {
+    font-size: 15pt;
+    font-family: Prompt;
+    font-weight: 200;
+  }
+
+  /***HERO***/
+
+  .heroSection {
+    padding-bottom: 0px;
+  }
+
+  .heroContent {
+    padding: 80px 12px 12px 12px;
+
+    .greet {
+      font-size: 50pt;
+      line-height: 1;
+    }
+    .myName {
+      font-size: 70pt;
+    }
+    .transition {
+      font-size: 27pt;
+    }
+
+    .btnContainer {
+      .btnStyle {
+        font-size: 20pt;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  /*****Modal*****/
+
+  /* MODAL */
+
+  #modalName {
+    font-size: 2.5vw;
+    text-align: left;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+      135deg,
+      #0f9ef1,
+      #7303c0,
+      #ec38bc,
+      #f88bd9
+    ); /* Nebula-like colors */
+    -webkit-background-clip: text; /* Webkit browsers */
+    -webkit-text-fill-color: transparent; /* Webkit browsers */
+    background-clip: text; /* Standard syntax */
+    color: transparent; /* Fallback color in case gradient is unsupported */
+  }
+
+  .trainingImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: white; /* Assuming 'background.paper' refers to a white background */
+    /* border: 2px solid #253238; */
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
+    padding: 16px; /* Assuming 'p: 4' refers to a padding of 4 * 4px = 16px */
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 0fr;
+    grid-template-rows: 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    .meImage {
+      display: none;
+    }
+    .tab-content {
+      font-family: Prompt;
+      font-weight: 200;
+    }
+    #modalName {
+      font-size: 20pt;
+      font-weight: 400;
+      font-family: Prompt;
+    }
+    .job {
+      font-size: 15pt;
+      font-weight: 200;
+      font-family: Prompt;
+      margin-bottom: 10px;
+    }
+  }
+
+  .Content {
+    /* grid-area: Content; */
+    /* background-color: #999999; */
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-top: 50px;
+    padding-right: 20px;
+  }
+
+  .Tabs {
+    grid-area: Tabs;
+
+    width: 100%;
+    right: 0;
+  }
+
+  /********Projects**********/
+
+  .portfolioContainer {
+    /* background-color: #0f9ef1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: -100px;
+    padding-left: 30px;
+
+    .containers {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 95vw;
+
+      .content {
+        /* flex-grow: 1; */
+        /* background-color: #0dc955; */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        align-content: center;
+
+        .tabContainer {
+          align-self: left; /* Adjusted */
+          background-color: transparent;
+          width: 80%;
+          box-shadow: none;
+
+          margin-right: auto;
+          margin-bottom: 20px;
+          .tabButtons {
+            font-size: 9pt;
+          }
+        }
+        .tabContainer h1 {
+          text-align: left;
+          display: none;
+          font-family: Prompt;
+          font-weight: 300;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .ProjWrapper {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
+  }
+
+  .projectDetails {
+    /* background-color: #7303c0; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-content: center;
+    justify-content: center;
+
+    padding: 0px;
+    .projectTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Centers the content vertically */
+      font-size: 30pt;
+      font-weight: 200;
+      font-family: Prompt;
+    }
+
+    .projectDesc {
+      font-size: 10pt;
+      font-family: Prompt;
+      font-weight: 200;
+      margin-bottom: 10px;
+    }
+    .projectButton .btnText {
+      /* width: 25%; */
+      font-size: 15pt;
+      font-family: Prompt;
+      font-weight: 200;
+      font-style: normal;
+
+      display: block;
+
+      /* padding: 0px 20px; */
+      text-align: center;
+      cursor: pointer;
+
+      &:active {
+        background-color: #8dd3fc;
+        transition: background-color 0.5s ease, color 0.3s ease;
+      }
+    }
+  }
+
+  .siteImage {
+    /* background-color: #0f9ef1; */
+    margin-top: 20px;
+    width: 63vw;
+    text-align: left;
+    .btnTextMobile {
+      font-family: Prompt;
+      font-weight: 200;
+      display: block;
+      font-size: 12pt;
+      margin-right: 15px;
+      align-self: center;
+      display: none;
+    }
+  }
+
+  /*****Contact*****/
+
+  .contactContainer {
+    height: 100%;
+    padding: 100px 100px 100px 100px;
+  }
+
+  .conTitle {
+    font-size: 45pt;
+  }
+  #contactIcon {
+    font-size: 30pt;
+  }
 }
 
-/* Desktops */
 @media (min-width: 1025px) and (max-width: 1200px) {
-  /* Your styles for desktops go here */
-}
+  .menu-itemMobile {
+    margin-left: 20px;
+    font-size: 30pt;
+    font-family: Prompt;
+    font-weight: 300;
+    animation: slideInWords 1s 1s 1s forwards;
+  }
+  .menu-itemMobile:active {
+    border-bottom: 3px solid #0f9ef1;
+  }
 
-/* Large desktops */
-@media (min-width: 1201px) {
-  /* Your styles for large desktops go here */
+  .darkmodeMobile {
+    font-size: 15pt;
+    font-family: Prompt;
+    font-weight: 200;
+  }
+
+  /***HERO***/
+
+  .heroSection {
+    padding-bottom: 0px;
+  }
+
+  .heroContent {
+    padding: 80px 12px 12px 12px;
+
+    .greet {
+      font-size: 50pt;
+      line-height: 1;
+    }
+    .myName {
+      font-size: 70pt;
+    }
+    .transition {
+      font-size: 27pt;
+    }
+
+    .btnContainer {
+      .btnStyle {
+        font-size: 20pt;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  /*****Modal*****/
+
+  /* MODAL */
+
+  #modalName {
+    font-size: 2.5vw;
+    text-align: left;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+      135deg,
+      #0f9ef1,
+      #7303c0,
+      #ec38bc,
+      #f88bd9
+    ); /* Nebula-like colors */
+    -webkit-background-clip: text; /* Webkit browsers */
+    -webkit-text-fill-color: transparent; /* Webkit browsers */
+    background-clip: text; /* Standard syntax */
+    color: transparent; /* Fallback color in case gradient is unsupported */
+  }
+
+  .trainingImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: white; /* Assuming 'background.paper' refers to a white background */
+    /* border: 2px solid #253238; */
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
+    padding: 16px; /* Assuming 'p: 4' refers to a padding of 4 * 4px = 16px */
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 0fr;
+    grid-template-rows: 1.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    .meImage {
+      display: none;
+    }
+    .tab-content {
+      font-family: Prompt;
+      font-weight: 200;
+    }
+    #modalName {
+      font-size: 20pt;
+      font-weight: 400;
+      font-family: Prompt;
+    }
+    .job {
+      font-size: 15pt;
+      font-weight: 200;
+      font-family: Prompt;
+      margin-bottom: 10px;
+    }
+  }
+
+  .Content {
+    /* grid-area: Content; */
+    /* background-color: #999999; */
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-top: 50px;
+    padding-right: 20px;
+  }
+
+  .Tabs {
+    grid-area: Tabs;
+
+    width: 100%;
+    right: 0;
+  }
+
+  /********Projects**********/
+
+  .portfolioContainer {
+    /* background-color: #0f9ef1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: -100px;
+    padding-left: 30px;
+
+    .containers {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 95vw;
+
+      .content {
+        /* flex-grow: 1; */
+        /* background-color: #0dc955; */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        vertical-align: center;
+        align-content: center;
+
+        .tabContainer {
+          align-self: left; /* Adjusted */
+          background-color: transparent;
+          width: 80%;
+          box-shadow: none;
+
+          margin-right: auto;
+          margin-bottom: 20px;
+          .tabButtons {
+            font-size: 9pt;
+          }
+        }
+        .tabContainer h1 {
+          text-align: left;
+          display: none;
+          font-family: Prompt;
+          font-weight: 300;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .ProjWrapper {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
+  }
+
+  .projectDetails {
+    /* background-color: #7303c0; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-content: center;
+    justify-content: center;
+
+    padding: 0px;
+    .projectTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Centers the content vertically */
+      font-size: 30pt;
+      font-weight: 200;
+      font-family: Prompt;
+    }
+
+    .projectDesc {
+      font-size: 10pt;
+      font-family: Prompt;
+      font-weight: 200;
+      margin-bottom: 10px;
+    }
+    .projectButton .btnText {
+      /* width: 25%; */
+      font-size: 15pt;
+      font-family: Prompt;
+      font-weight: 200;
+      font-style: normal;
+
+      display: block;
+
+      /* padding: 0px 20px; */
+      text-align: center;
+      cursor: pointer;
+
+      &:active {
+        background-color: #8dd3fc;
+        transition: background-color 0.5s ease, color 0.3s ease;
+      }
+    }
+  }
+
+  .siteImage {
+    /* background-color: #0f9ef1; */
+    margin-top: 20px;
+    width: 63vw;
+    text-align: left;
+    .btnTextMobile {
+      font-family: Prompt;
+      font-weight: 200;
+      display: block;
+      font-size: 12pt;
+      margin-right: 15px;
+      align-self: center;
+      display: none;
+    }
+  }
+
+  /*****Contact*****/
+
+  .contactContainer {
+    height: 100%;
+    padding: 100px 100px 100px 100px;
+  }
+
+  .conTitle {
+    font-size: 45pt;
+  }
+  #contactIcon {
+    font-size: 30pt;
+  }
 }
 
 @keyframes fadeUp {
