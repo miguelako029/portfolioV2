@@ -12,6 +12,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
 import projects from "../data/projects.json";
 import hotJobs from "../../assets/images/web1.png";
@@ -73,8 +74,9 @@ export default function FullWidthTabs() {
         <AppBar
           position="static"
           className="tabContainer"
-          sx={{ color: fontColor, marginLeft: "auto", marginBottom: "30px" }} // Utilize fontColor here
+          sx={{ color: fontColor }} // Utilize fontColor here
         >
+          <h1 className="projectsH1">Projects</h1>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -91,6 +93,7 @@ export default function FullWidthTabs() {
           >
             {projects.map((project, index) => (
               <Tab
+                className="tabButtons"
                 label={project.title}
                 {...a11yProps(index)}
                 key={index}
@@ -113,6 +116,7 @@ export default function FullWidthTabs() {
               <div className="ProjWrapper">
                 <div className="projectDetails">
                   <div className="projectTitle">{project.title}</div>
+
                   <div className="projectDesc">{project.description}</div>
                   <div className="projectButton">
                     <Button
@@ -132,6 +136,15 @@ export default function FullWidthTabs() {
                     alt={project.alt}
                     width={"100%"}
                   />
+                  <Button
+                    sx={{ color: fontColor }}
+                    href={project.link}
+                    target="_blank"
+                  >
+                    <span className="btnTextMobile">
+                      {project.buttonText} <ArrowRightAltIcon />
+                    </span>
+                  </Button>
                 </div>
               </div>
             </PortfolioTabPanel>

@@ -82,7 +82,7 @@ export default function HideAppBar(props) {
               transition: "background-color 0.7s ease",
               display: "flex", // Use flex layout
 
-              padding: "20px",  
+              padding: "20px",
               height: "20",
             }}
           >
@@ -181,8 +181,11 @@ export default function HideAppBar(props) {
         PaperProps={{
           sx: {
             backgroundColor: backgroundColorMenu,
+            width: 300,
+            fontSize: "30px",
           },
         }}
+        className="drawerMobile"
       >
         {/* Add a Close button */}
         <IconButton
@@ -215,42 +218,13 @@ export default function HideAppBar(props) {
               Home
             </Link>
           </ListItem>
-          <ListItem sx={{ justifyContent: "center" }}>
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              className="menu-item"
-              href="/about"
-              style={linkStyles}
-              onClick={handleDrawerClose}
-            >
-              About
-            </Link>
-          </ListItem>
-          <ListItem sx={{ justifyContent: "center" }}>
-            <Link
-              to="experience"
-              spy={true}
-              smooth={true}
-              offset={30}
-              duration={500}
-              className="menu-item"
-              href="/experience"
-              style={linkStyles}
-              onClick={handleDrawerClose}
-            >
-              Experience
-            </Link>
-          </ListItem>
+
           <ListItem sx={{ justifyContent: "center" }}>
             <Link
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={20}
+              offset={-80}
               duration={500}
               className="menu-item"
               href="/portfolio"

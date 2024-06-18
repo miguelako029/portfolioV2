@@ -58,7 +58,8 @@ const Contact = () => {
     >
       <Container
         maxWidth="md"
-        style={{ textAlign: "center", marginTop: "50px" }}
+        style={{ textAlign: "center" }}
+        className="contactContainer"
       >
         <div ref={ref}>
           <animated.div style={fadeInUp}>
