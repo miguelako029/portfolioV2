@@ -372,6 +372,22 @@ body {
 /* Mobile devices (portrait) */
 @media (max-width: 480px) {
   /***Nav Bar***/
+  .menu-itemMobile {
+    margin-left: 20px;
+    font-size: 30pt;
+    font-family: Prompt;
+    font-weight: 300;
+    animation: slideInWords 1s 1s 1s forwards;
+  }
+  .menu-itemMobile:active {
+    border-bottom: 3px solid #0f9ef1;
+  }
+
+  .darkmodeMobile {
+    font-size: 15pt;
+    font-family: Prompt;
+    font-weight: 200;
+  }
 
   /***HERO***/
 

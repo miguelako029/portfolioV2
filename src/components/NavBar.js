@@ -55,7 +55,7 @@ export default function HideAppBar(props) {
     fontWeight: 100,
     padding: "0px",
     transition: "background-color 0.3s ease",
-    fontSize: "1.3vw",
+
     fontWeight: 100,
 
     "&:hover": {
@@ -182,7 +182,6 @@ export default function HideAppBar(props) {
           sx: {
             backgroundColor: backgroundColorMenu,
             width: 300,
-            fontSize: "30px",
           },
         }}
         className="drawerMobile"
@@ -201,16 +200,17 @@ export default function HideAppBar(props) {
             flexDirection: "column",
             justifyContent: "space-between",
             height: "100%",
+            paddingTop: "100px",
           }}
         >
-          <ListItem sx={{ justifyContent: "center" }}>
+          <ListItem sx={{ justifyContent: "left" }}>
             <Link
               to="hero"
               spy={true}
               smooth={true}
               offset={-200}
               duration={500}
-              className="menu-item"
+              className="menu-itemMobile"
               href="/hero"
               style={linkStyles}
               onClick={handleDrawerClose}
@@ -219,14 +219,14 @@ export default function HideAppBar(props) {
             </Link>
           </ListItem>
 
-          <ListItem sx={{ justifyContent: "center" }}>
+          <ListItem sx={{ justifyContent: "left" }}>
             <Link
               to="portfolio"
               spy={true}
               smooth={true}
               offset={-80}
               duration={500}
-              className="menu-item"
+              className="menu-itemMobile"
               href="/portfolio"
               style={linkStyles}
               onClick={handleDrawerClose}
@@ -234,14 +234,14 @@ export default function HideAppBar(props) {
               Works
             </Link>
           </ListItem>
-          <ListItem sx={{ justifyContent: "center" }}>
+          <ListItem sx={{ justifyContent: "left" }}>
             <Link
               to="contact"
               spy={true}
               smooth={true}
               offset={100}
               duration={500}
-              className="menu-item"
+              className="menu-itemMobile"
               href="/contact"
               style={linkStyles}
               onClick={handleDrawerClose}
@@ -266,20 +266,21 @@ export default function HideAppBar(props) {
           >
             <IconButton
               onClick={toggleColorMode}
-              sx={{ marginLeft: "auto", color: fontColor, fontSize: 10 }}
+              sx={{ marginLeft: "auto", color: fontColor }}
+              className="darkmodeMobile"
             >
               {mode === "dark" ? (
                 <>
                   <Brightness7Icon />
-                  <span style={{ marginLeft: "5px", color: fontColor }}>
-                    Dark Mode: On
+                  <span style={{ color: fontColor, marginLeft: 5 }}>
+                    Dark: On
                   </span>
                 </>
               ) : (
                 <>
                   <Brightness4Icon />
-                  <span style={{ marginLeft: "5px", color: fontColor }}>
-                    Dark Mode: Off
+                  <span style={{ color: fontColor, marginLeft: 5 }}>
+                    Dark: Off
                   </span>
                 </>
               )}
