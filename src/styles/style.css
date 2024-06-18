@@ -370,7 +370,7 @@ body {
 }
 
 /* Mobile devices (portrait) */
-@media (max-width: 480px) {
+@media (max-width: 390px) {
   /***Nav Bar***/
   .menu-itemMobile {
     margin-left: 20px;
@@ -625,7 +625,7 @@ body {
 }
 
 /* Tablets (portrait) */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 391px) and (max-width: 768px) {
   .menu-itemMobile {
     margin-left: 20px;
     font-size: 30pt;
