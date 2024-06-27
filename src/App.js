@@ -45,9 +45,8 @@ function App() {
   return (
     <ColorModeProvider>
       <ThemeProvider theme={theme}>
-        <NavBar />
         <Hero />
-
+        <NavBar />
         {/* <About /> */}
         {/* <Experience /> */}
 

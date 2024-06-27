@@ -68,31 +68,27 @@ export default function HideAppBar(props) {
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar
+          className="navAppBar"
           sx={{
-            backgroundColor: "transparent",
-            boxShadow: "none",
-            justifyContent: "center",
-            alignContent: "center",
-            verticalAlign: "center",
+            background:
+              mode === "dark"
+                ? "rgba(255, 255, 255, 0.31)"
+                : "rgba(255, 255, 255, 0.31)",
+            left: "40",
+            borderRadius: "50px",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            backdropFilter: "blur(12.2px)",
+            WebkitBackdropFilter: "blur(12.2px)",
           }}
         >
-          <Toolbar
-            sx={{
-              background: mode === "dark" ? "#253238" : "#eff0ee",
-              transition: "background-color 0.7s ease",
-              display: "flex", // Use flex layout
-
-              padding: "20px",
-              height: "20",
-            }}
-          >
+          <Toolbar>
             <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: "none", sm: "flex" },
+                // display: { xs: "none", sm: "flex" },
               }}
             >
-              <Link
+              {/* <Link
                 to="hero"
                 spy={true}
                 smooth={true}
@@ -111,9 +107,21 @@ export default function HideAppBar(props) {
                     marginTop: "20px",
                   }}
                 />
+              </Link> */}
+              <Link
+                to="experience"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className="menu-item"
+                href="/experience"
+                style={linkStyles}
+              >
+                Know Me
               </Link>
 
-              {/* <Link
+              <Link
                 to="experience"
                 spy={true}
                 smooth={true}
@@ -124,8 +132,8 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 Experience
-              </Link> */}
-              {/* <Link
+              </Link>
+              <Link
                 to="portfolio"
                 spy={true}
                 smooth={true}
@@ -136,7 +144,7 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 My Works
-              </Link> */}
+              </Link>
               {/* <Link
                 to="contact"
                 spy={true}
@@ -150,15 +158,13 @@ export default function HideAppBar(props) {
                 Contact
               </Link> */}
             </Box>
-
-            <Box
+            {/* <Box
               sx={{ display: { xs: "block", sm: "none", color: fontColor } }}
             >
               <IconButton onClick={handleDrawerOpen} color="inherit">
                 <MenuIcon />
               </IconButton>
-            </Box>
-
+            </Box> */}
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <IconButton onClick={toggleColorMode} color="inherit">
                 {mode === "dark" ? (
