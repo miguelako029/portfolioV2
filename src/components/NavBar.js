@@ -66,7 +66,7 @@ export default function HideAppBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <HideOnScroll {...props}>
+      <HideOnScroll {...props} className="test">
         <AppBar
           className="navAppBar"
           sx={{
@@ -74,7 +74,7 @@ export default function HideAppBar(props) {
               mode === "dark"
                 ? "rgba(255, 255, 255, 0.31)"
                 : "rgba(255, 255, 255, 0.31)",
-            left: "40",
+            // left: "40",
             borderRadius: "50px",
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
             backdropFilter: "blur(12.2px)",
@@ -88,56 +88,24 @@ export default function HideAppBar(props) {
                 // display: { xs: "none", sm: "flex" },
               }}
             >
-              {/* <Link
+              <Link
                 to="hero"
                 spy={true}
                 smooth={true}
-                offset={-100}
-                duration={500}
-                // className="menu-item"
-                href="/hero"
-                style={linkStyles}
-                onClick={handleDrawerClose}
-              >
-                <img
-                  src={menulogo}
-                  style={{
-                    height: "90px",
-                    marginLeft: "20px",
-                    marginTop: "20px",
-                  }}
-                />
-              </Link> */}
-              <Link
-                to="experience"
-                spy={true}
-                smooth={true}
-                offset={-100}
+                offset={-200}
                 duration={500}
                 className="menu-item"
-                href="/experience"
+                href="/hero"
                 style={linkStyles}
               >
                 Know Me
               </Link>
 
               <Link
-                to="experience"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-                className="menu-item"
-                href="/experience"
-                style={linkStyles}
-              >
-                Experience
-              </Link>
-              <Link
                 to="portfolio"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-150}
                 duration={500}
                 className="menu-item"
                 href="/portfolio"
@@ -145,7 +113,7 @@ export default function HideAppBar(props) {
               >
                 My Works
               </Link>
-              {/* <Link
+              <Link
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -156,15 +124,19 @@ export default function HideAppBar(props) {
                 style={linkStyles}
               >
                 Contact
-              </Link> */}
+              </Link>
             </Box>
-            {/* <Box
+            <Box
               sx={{ display: { xs: "block", sm: "none", color: fontColor } }}
             >
-              <IconButton onClick={handleDrawerOpen} color="inherit">
-                <MenuIcon />
+              <IconButton onClick={toggleColorMode} color="inherit">
+                {mode === "dark" ? (
+                  <Brightness7Icon style={{ color: "white" }} />
+                ) : (
+                  <Brightness4Icon style={{ color: "black" }} />
+                )}
               </IconButton>
-            </Box> */}
+            </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <IconButton onClick={toggleColorMode} color="inherit">
                 {mode === "dark" ? (
@@ -179,121 +151,6 @@ export default function HideAppBar(props) {
       </HideOnScroll>
       <Toolbar />
       <Container></Container>
-
-      <Drawer
-        anchor="left"
-        open={drawerOpen}
-        onClose={handleDrawerClose}
-        PaperProps={{
-          sx: {
-            backgroundColor: backgroundColorMenu,
-            width: 300,
-          },
-        }}
-        className="drawerMobile"
-      >
-        {/* Add a Close button */}
-        <IconButton
-          sx={{ marginLeft: "auto", color: fontColor }}
-          onClick={handleDrawerClose}
-          color="inherit"
-        >
-          <CloseIcon />
-        </IconButton>
-        <List
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            height: "100%",
-            paddingTop: "100px",
-          }}
-        >
-          <ListItem sx={{ justifyContent: "left" }}>
-            <Link
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={-200}
-              duration={500}
-              className="menu-itemMobile"
-              href="/hero"
-              style={linkStyles}
-              onClick={handleDrawerClose}
-            >
-              Home
-            </Link>
-          </ListItem>
-
-          <ListItem sx={{ justifyContent: "left" }}>
-            <Link
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-              className="menu-itemMobile"
-              href="/portfolio"
-              style={linkStyles}
-              onClick={handleDrawerClose}
-            >
-              Works
-            </Link>
-          </ListItem>
-          <ListItem sx={{ justifyContent: "left" }}>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={100}
-              duration={500}
-              className="menu-itemMobile"
-              href="/contact"
-              style={linkStyles}
-              onClick={handleDrawerClose}
-            >
-              Contact
-            </Link>
-          </ListItem>
-          <List
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              height: "100%",
-            }}
-          ></List>
-
-          <ListItem
-            sx={{
-              alignSelf: "flex-end",
-              marginBottom: "10px", // Add margin to separate it from the bottom edge
-            }}
-          >
-            <IconButton
-              onClick={toggleColorMode}
-              sx={{ marginLeft: "auto", color: fontColor }}
-              className="darkmodeMobile"
-            >
-              {mode === "dark" ? (
-                <>
-                  <Brightness7Icon />
-                  <span style={{ color: fontColor, marginLeft: 5 }}>
-                    Dark: On
-                  </span>
-                </>
-              ) : (
-                <>
-                  <Brightness4Icon />
-                  <span style={{ color: fontColor, marginLeft: 5 }}>
-                    Dark: Off
-                  </span>
-                </>
-              )}
-            </IconButton>
-          </ListItem>
-        </List>
-      </Drawer>
     </React.Fragment>
   );
 }

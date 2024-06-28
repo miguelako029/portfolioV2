@@ -15,23 +15,12 @@ body {
   /* overflow-x: hidden; Prevent horizontal scrolling */
 }
 
-.css-hyum1k-MuiToolbar-root {
-  min-height: 0px;
-}
-
 .navAppBar {
   max-width: 40vw;
   display: flex;
-  justify-items: center;
+  justify-content: center; /* Center the items inside the nav bar */
   margin-top: 50px;
   margin-right: 550px;
-}
-
-.navToolBar {
-  /* width: 30%; */
-  /* display: flex; */
-
-  align-item: center;
 }
 
 .menulogo {
@@ -61,12 +50,16 @@ body {
 /******************** Hero **************/
 
 .heroSection {
-  height: 100vh; /* Adjusted height */
+  height: 1000px; /* Set a fixed height */
+  min-height: 1000px; /* Ensure the height doesn't go below 100px */
+  max-height: 1000px; /* Ensure the height doesn't go above 100px */
+  position: block;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* padding-top: 300px; */
   /* padding-bottom: 100px; */
 }
 .heroContent {
@@ -90,10 +83,11 @@ body {
 }
 
 .heroContent .greet {
-  font-size: 3.5vw;
-
+  font-size: 3vw;
+  margin-left: 10px;
   font-weight: 200;
   font-family: Prompt;
+  line-height: 0.5;
 }
 
 .heroContent .myName {
@@ -116,11 +110,12 @@ body {
 }
 
 .transition {
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   /* color: #242424; */
   font-weight: 200;
   font-family: Prompt;
   margin-bottom: 50px;
+  margin-left: 10px;
 }
 
 .hero .hero-desc {
@@ -136,7 +131,6 @@ body {
   animation: slideInWords 1s forwards; /* Keep the initial animation */
   animation-delay: 2s; /* Add a delay of 2 seconds */
   display: none;
-  margin-top: 30px;
 }
 
 .btnContainer .btnStyle {
@@ -148,7 +142,10 @@ body {
   text-align: center;
   margin-right: 50px;
   cursor: pointer;
-
+  margin-left: 10px;
+  margin-top: -50px;
+  background: #0f9ef1;
+  padding: 10px;
   &:hover {
     background-color: #8dd3fc;
     transition: background-color 0.5s ease, color 0.3s ease;
@@ -266,6 +263,8 @@ body {
 /******************** PortfolioPage **************/
 
 .portfolioContainer {
+  margin-top: -70px;
+  padding: 30px;
   /* background-color: #0f9ef1; */
   display: flex;
   align-items: center;
@@ -387,12 +386,20 @@ body {
 /* Mobile devices (portrait) */
 
 @media (min-width: 380px) and (max-width: 480px) {
+  .navAppBar {
+    max-width: 90vw;
+    display: flex;
+    justify-items: center;
+    margin-top: 50px;
+    margin-right: 20px;
+  }
+
   /***Nav Bar***/
-  .menu-itemMobile {
-    margin-left: 20px;
-    font-size: 30pt;
-    font-family: Prompt;
-    font-weight: 300;
+  .menu-item {
+    margin-left: 5px;
+    font-size: 10pt;
+    /* font-family: Prompt; */
+    font-weight: 700;
     animation: slideInWords 1s 1s 1s forwards;
   }
   .menu-itemMobile:active {

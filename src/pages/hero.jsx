@@ -522,7 +522,6 @@ const Hero = () => {
             </p>
 
             <p className="transition" style={{ color: fontColor }}>
-              a
               <TypeAnimation
                 sequence={[
                   // Same substring at the start will only be typed out once, initially
@@ -535,17 +534,8 @@ const Hero = () => {
                 ]}
                 wrapper="span"
                 speed={50}
-                // style={{ fontSize: "2em", display: "inline-block" }}
                 repeat={Infinity}
               />
-              {/* <TypeAnimation
-                  className="transition"
-                  springConfig={presets.default}
-                  inline
-                  style={{ margin: "0 20px", color: fontColor }}
-                >
-                  {TEXTS[index % TEXTS.length]}
-                </TypeAnimation> */}
             </p>
 
             <div className="btnContainer">
@@ -561,9 +551,7 @@ const Hero = () => {
                   color: fontColor,
                 }}
               >
-                <span className="btnText">
-                  Let's Connect <ArrowRightAltIcon />
-                </span>
+                <span className="btnText">Let's Connect</span>
               </Link>
 
               <Link
@@ -574,9 +562,7 @@ const Hero = () => {
                 duration={1000}
                 style={{ cursor: "pointer", color: fontColor }}
               >
-                <span className="btnText">
-                  Know Me <ArrowRightAltIcon />
-                </span>
+                <span className="btnText">Know Me</span>
               </Link>
             </div>
           </div>
