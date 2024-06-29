@@ -79,7 +79,7 @@ const ImageGallery = () => {
     type: "slide",
     perPage: perPage, // Use the dynamic perPage value
     focus: "right",
-    gap: "12px",
+    gap: "0px",
     pagination: false,
   };
 
@@ -119,58 +119,9 @@ const ImageGallery = () => {
         className="btnContainer animated animatedFadeInUp fadeInUp"
         sx={{ marginBottom: "100px" }}
       >
-        <div>
-          <Button
-            // className="btnStyle"
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              border: "1.5px solid",
-              margin: "0px 5px 30px 5px",
-            }}
-            onClick={() => handleCategoryChange("all")}
-          >
-            All
-          </Button>
-          <Button
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              border: "1.5px solid",
-              margin: "0px 5px 30px 5px",
-            }}
-            className="btnStyle"
-            onClick={() => handleCategoryChange("web")}
-          >
-            Web
-          </Button>
-          <Button
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              border: "1.5px solid",
-              margin: "0px 5px 30px 5px",
-            }}
-            className="btnStyle"
-            onClick={() => handleCategoryChange("logo")}
-          >
-            Logo
-          </Button>
-          <Button
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              border: "1.5px solid",
-              margin: "0px 5px 30px 5px",
-            }}
-            className="btnStyle"
-            onClick={() => handleCategoryChange("photoshop")}
-          >
-            Photoshop
-          </Button>
-        </div>
+        <div>test</div>
       </div>
-      <div style={{ maxWidth: "80vw", overflowX: "hidden" }}>
+      <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
         <div style={{ maxWidth: "100%", padding: "0px 10px" }}>
           <Splide options={splideOptions} ref={splideRef}>
             {filteredImages.map((image, index) => (
@@ -178,15 +129,23 @@ const ImageGallery = () => {
                 <img
                   src={image.url}
                   alt={image.category}
-                  width={"90%"}
+                  width={"70%"}
                   className="imgSplide"
                 />
-                <a target="_blank" href={image.link} className="overlay">
-                  <div className="overlayContent">
-                    <div className="text">{image.text}</div>
-                    <OpenInNewIcon sx={{ fontSize: 40 }} />
-                  </div>
-                </a>
+                <a
+                  target="_blank"
+                  // className="overlay"
+                  href={image.link}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    display: "block",
+                    zIndex: 1,
+                  }}
+                ></a>
               </SplideSlide>
             ))}
           </Splide>

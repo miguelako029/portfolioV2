@@ -548,7 +548,8 @@ const Hero = () => {
                 style={{
                   cursor: "pointer",
 
-                  color: fontColor,
+                  background: mode === "dark" ? "#FFF" : "#253238",
+                  color: mode === "dark" ? "#253238" : "#FFF",
                 }}
               >
                 <span className="btnText">Let's Connect</span>
@@ -560,7 +561,12 @@ const Hero = () => {
                 smooth={true}
                 offset={200}
                 duration={1000}
-                style={{ cursor: "pointer", color: fontColor }}
+                style={{
+                  cursor: "pointer",
+
+                  background: mode === "dark" ? "#FFF" : "#253238",
+                  color: mode === "dark" ? "#253238" : "#FFF",
+                }}
               >
                 <span className="btnText">Know Me</span>
               </Link>

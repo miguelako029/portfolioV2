@@ -1,3 +1,7 @@
+.imgSplide {
+  border-radius: 30px;
+}
+
 .btn-Arrow {
   position: absolute;
   margin-top: 300px;
@@ -14,11 +18,12 @@
 
 /* ImageGallery.css */
 .splide__slide img {
-  transition: opacity 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .splide__slide img:hover {
-  opacity: 0.7; /* Adjust the opacity value as needed */
+  /* opacity: 0.7; Adjust the opacity value as needed */
+  width: 95%;
 }
 
 .splide__arrow {
@@ -27,18 +32,18 @@
 
 /* Define the fixed width and hide overflow for the splide container */
 .splide {
-  width: calc((100% / 5) * 5); /* Adjust the width based on the perPage value */
+  width: calc((100% / 3) * 3); /* Adjust the width based on the perPage value */
   overflow: hidden;
 }
 
 /* Set the fixed width for each slide */
 .splide__slide {
-  width: calc(100% / 5); /* Adjust the width based on the perPage value */
-  flex: 0 0 calc(96% / 5); /* Adjust the flex property */
+  width: calc(100% / 3); /* Adjust the width based on the perPage value */
+  flex: 0 0 calc(100% / 3); /* Adjust the flex property */
 }
 
 /* Hide the extra slides beyond the specified perPage */
-.splide__slide:nth-child(n + 5) {
+.splide__slide:nth-child(n + 3) {
   /* display: none; */
 }
 
@@ -69,12 +74,7 @@
   }
 }
 
-.imgSplide {
-  border: 1.5px solid;
-  padding: 10px;
-}
-
-.overlay {
+/* .overlay {
   position: absolute;
   top: 10px;
   left: 25px;
@@ -89,11 +89,11 @@
   justify-content: center;
   text-decoration: none;
   color: #eff0ee;
-  /* padding: 20px; */
-  border-radius: 5px;
-}
 
-.overlay:hover {
+  border-radius: 5px;
+} */
+
+/* .overlay:hover {
   opacity: 1;
 }
 
@@ -107,4 +107,4 @@
   color: #f8f8f8;
   padding: 20px;
   background-color: #141414;
-}
+} */

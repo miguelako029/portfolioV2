@@ -78,12 +78,11 @@ body {
     /* grid-template-columns: repeat(auto-fit, minmax(50px, 16fr)); */
     grid-gap: 1rem;
     /* max-width: 600px; */
-    margin-top: 25px;
   }
 }
 
 .heroContent .greet {
-  font-size: 3vw;
+  font-size: 4vw;
   margin-left: 10px;
   font-weight: 200;
   font-family: Prompt;
@@ -91,26 +90,27 @@ body {
 }
 
 .heroContent .myName {
-  font-size: 7.5vw;
+  font-size: 11vw;
   text-align: left;
   font-weight: 200;
   line-height: 1.1;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     #0f9ef1,
     #7303c0,
     #ec38bc,
     #f88bd9
-  ); /* Nebula-like colors */
-  -webkit-background-clip: text; /* Webkit browsers */
-  -webkit-text-fill-color: transparent; /* Webkit browsers */
-  background-clip: text; /* Standard syntax */
-  color: transparent; /* Fallback color in case gradient is unsupported */
+  );  */
+  /*   
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent; */
 }
 
 .transition {
-  font-size: 2.5vw;
+  font-size: 4vw;
   /* color: #242424; */
   font-weight: 200;
   font-family: Prompt;
@@ -137,15 +137,17 @@ body {
   font-family: Prompt;
   font-weight: 200;
   font-style: normal;
-  font-size: 2vw;
+  font-size: 1.2vw;
   /* padding: 0px 20px; */
   text-align: center;
-  margin-right: 50px;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 50px;
   cursor: pointer;
   margin-left: 10px;
   margin-top: -50px;
-  background: #0f9ef1;
-  padding: 10px;
+  /* background: #0f9ef1; */
+
   &:hover {
     background-color: #8dd3fc;
     transition: background-color 0.5s ease, color 0.3s ease;

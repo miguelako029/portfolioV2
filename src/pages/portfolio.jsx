@@ -40,7 +40,7 @@ const PortfolioPage = () => {
       <animated.div style={fadeInUp}>
         <div className="portfolioContainer">
           <div ref={ref}>
-            <Portfolio />
+            <ImageGallery />
           </div>
         </div>
       </animated.div>
