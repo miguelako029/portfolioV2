@@ -76,11 +76,12 @@ const ImageGallery = () => {
   }, [images]);
 
   const splideOptions = {
-    type: "slide",
-    perPage: perPage, // Use the dynamic perPage value
-    focus: "right",
+    type: "loop",
+    perPage: 4,
+    perMove: 1,
     gap: "0px",
     pagination: false,
+    arrows: true,
   };
 
   const handleScroll = (direction) => {
@@ -116,36 +117,38 @@ const ImageGallery = () => {
   return (
     <>
       <div
-        className="btnContainer animated animatedFadeInUp fadeInUp"
+        className="btnContainer animated animatedFadeInUp fadeInUp ExpContent"
         sx={{ marginBottom: "100px" }}
       >
-        <div>test</div>
-      </div>
-      <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
-        <div style={{ maxWidth: "100%", padding: "0px 10px" }}>
+        <div className="pageTitle">test</div>
+
+        {/* <div style={{ maxWidth: "100vw", overflowX: "hidden" }}> */}
+        <div>
           <Splide options={splideOptions} ref={splideRef}>
             {filteredImages.map((image, index) => (
               <SplideSlide key={index}>
-                <img
-                  src={image.url}
-                  alt={image.category}
-                  width={"70%"}
-                  className="imgSplide"
-                />
-                <a
-                  target="_blank"
-                  // className="overlay"
-                  href={image.link}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    display: "block",
-                    zIndex: 1,
-                  }}
-                ></a>
+                <div style={{ position: "relative", width: "100%" }}>
+                  <img
+                    src={image.url}
+                    alt={image.category}
+                    width={"90%"}
+                    height={"50%"}
+                    className="imgSplide"
+                  />
+                  <a
+                    target="_blank"
+                    href={image.link}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      display: "block",
+                      zIndex: 1,
+                    }}
+                  ></a>
+                </div>
               </SplideSlide>
             ))}
           </Splide>
@@ -175,6 +178,7 @@ const ImageGallery = () => {
           </Button>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 };
