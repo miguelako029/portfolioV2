@@ -117,22 +117,22 @@ const ImageGallery = () => {
   return (
     <>
       <div
-        className="btnContainer animated animatedFadeInUp fadeInUp ExpContent"
+        className=" animated animatedFadeInUp fadeInUp ExpContent"
         sx={{ marginBottom: "100px" }}
       >
-        <div className="pageTitle">test</div>
+        <div className="pageTitle">My Works</div>
 
         {/* <div style={{ maxWidth: "100vw", overflowX: "hidden" }}> */}
-        <div>
+        <div className="splides">
           <Splide options={splideOptions} ref={splideRef}>
             {filteredImages.map((image, index) => (
               <SplideSlide key={index}>
-                <div style={{ position: "relative", width: "100%" }}>
+                <div style={{ width: "100%" }}>
                   <img
                     src={image.url}
                     alt={image.category}
-                    width={"90%"}
-                    height={"50%"}
+                    width={"95%"}
+                    height={"30%"}
                     className="imgSplide"
                   />
                   <a
@@ -152,30 +152,31 @@ const ImageGallery = () => {
               </SplideSlide>
             ))}
           </Splide>
-        </div>
-        <div style={{ textAlign: "right", marginTop: "16px" }}>
-          <Button
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              border: "1.5px solid",
-              transition: "background-color 0.7s ease",
-            }}
-            onClick={() => handleScroll("left")}
-          >
-            <WestIcon />
-          </Button>{" "}
-          <Button
-            sx={{
-              background: backgroundColor,
-              color: fontColor,
-              border: "1.5px solid",
-              transition: "background-color 0.7s ease",
-            }}
-            onClick={() => handleScroll("right")}
-          >
-            <EastIcon />
-          </Button>
+
+          <div className="scrollerArrow">
+            <Button
+              sx={{
+                background: backgroundColor,
+                color: fontColor,
+                border: "1.5px solid",
+                transition: "background-color 0.7s ease",
+              }}
+              onClick={() => handleScroll("left")}
+            >
+              <WestIcon />
+            </Button>{" "}
+            <Button
+              sx={{
+                background: backgroundColor,
+                color: fontColor,
+                border: "1.5px solid",
+                transition: "background-color 0.7s ease",
+              }}
+              onClick={() => handleScroll("right")}
+            >
+              <EastIcon />
+            </Button>
+          </div>
         </div>
       </div>
       {/* </div> */}

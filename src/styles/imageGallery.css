@@ -1,7 +1,6 @@
 .ExpContent {
-  max-width: 100%;
-  padding: 0px 10px;
-  padding-left: 100px;
+  max-width: 95%;
+  padding-left: 50px;
 }
 
 .pageTitle {
@@ -10,18 +9,24 @@
   /* color: #242424; */
   font-weight: 200;
   font-family: Prompt;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   margin-left: 10px;
 }
 .imgSplide {
   border-radius: 30px;
 }
 
+.scrollerArrow {
+  position: absolute;
+  right: 320px;
+  margin-top: 10px;
+}
+
 .btn-Arrow {
   position: absolute;
   margin-top: 300px;
   bottom: 10px;
-  right: 10px;
+  right: 30px;
   text-decoration: none;
   border: 1.5px solid;
   display: flex;
@@ -56,16 +61,46 @@
 }
 
 /* Add media queries to adjust perPage value for different screen sizes */
-@media screen and (max-width: 768px) {
-  .splide__slide {
-    width: 33.33%; /* Adjust to 3 slides per page */
-    flex: 0 0 33.33%;
-  }
-}
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 380px) and (max-width: 480px) {
+  .ExpContent {
+    max-width: 100%;
+    padding-left: 0px;
+  }
+
+  .splides {
+    margin-left: 30px;
+  }
+
+  .pageTitle {
+    text-align: left;
+    font-size: 12vw;
+    /* color: #242424; */
+    font-weight: 200;
+    font-family: Prompt;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+  .imgSplide {
+    border-radius: 30px;
+  }
+
+  .scrollerArrow {
+    margin-top: 10px;
+  }
+
   .splide__slide {
-    width: 100%; /* Adjust to 1 slide per page */
+    width: 100%; /* Adjust to 3 slides per page */
     flex: 0 0 100%;
   }
 }
+
+/* @media screen and (max-width: 768px) {
+} */
+
+/* @media only screen and (max-width: 600px) {
+  .splide__slide {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+} */

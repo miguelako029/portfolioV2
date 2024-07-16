@@ -417,7 +417,9 @@ body {
   /***HERO***/
 
   .heroSection {
-    padding-bottom: 70px;
+    height: 800px;
+    min-height: 100%;
+    max-height: 100%;
   }
 
   .heroContent {
@@ -429,7 +431,7 @@ body {
       font-weight: 200;
     }
     .myName {
-      font-size: 70pt;
+      font-size: 60pt;
     }
     .transition {
       font-size: 20pt;
@@ -437,8 +439,8 @@ body {
 
     .btnContainer {
       .btnStyle {
-        font-size: 15pt;
-        margin-right: 12px;
+        font-size: 10pt;
+        margin-right: 5px;
       }
     }
   }
@@ -525,114 +527,14 @@ body {
 
   .portfolioContainer {
     /* background-color: #0f9ef1; */
+    padding-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding-top: -100px;
-
-    .containers {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 95vw;
-      overflow-x: 0;
-
-      .content {
-        /* flex-grow: 1; */
-        /* background-color: #0dc955; */
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        vertical-align: center;
-        align-content: center;
-
-        .tabContainer {
-          align-self: center; /* Adjusted */
-          background-color: transparent;
-          width: 100%;
-          box-shadow: none;
-
-          margin-right: auto;
-          margin-bottom: 30px;
-          .tabButtons {
-            font-size: 9pt;
-          }
-        }
-        .tabContainer h1 {
-          display: block;
-          font-family: Prompt;
-          font-weight: 300;
-        }
-      }
-    }
-  }
-
-  .ProjWrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.1fr;
-    gap: 0px;
-    grid-auto-flow: row;
-  }
-
-  .projectDetails {
-    /* background-color: #7303c0; */
-    display: flex;
-    flex-direction: column;
     text-align: left;
-    align-content: center;
-    justify-content: center;
-
-    padding: 0px;
-    .projectTitle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* Centers the content vertically */
-      font-size: 30pt;
-      font-weight: 200;
-      font-family: Prompt;
-    }
-
-    .projectDesc {
-      font-size: 10pt;
-      font-family: Prompt;
-      font-weight: 200;
-      margin-bottom: 10px;
-    }
-    .projectButton .btnText {
-      /* width: 25%; */
-      font-size: 15pt;
-      font-family: Prompt;
-      font-weight: 200;
-      font-style: normal;
-      opacity: 0;
-      display: none;
-
-      /* padding: 0px 20px; */
-      text-align: center;
-      cursor: pointer;
-
-      &:active {
-        background-color: #8dd3fc;
-        transition: background-color 0.5s ease, color 0.3s ease;
-      }
-    }
-  }
-
-  .siteImage {
-    /* background-color: #0f9ef1; */
-
-    text-align: left;
-    .btnTextMobile {
-      font-family: Prompt;
-      font-weight: 200;
-      display: block;
-      font-size: 12pt;
-      margin-right: 15px;
-      align-self: center;
-    }
+    flex-direction: column;
+    /* padding-top: -100px; */
+    padding: 0%;
   }
 
   /*****Contact*****/
@@ -643,10 +545,10 @@ body {
   }
 
   .conTitle {
-    font-size: 45pt;
+    font-size: 12vw;
   }
   #contactIcon {
-    font-size: 30pt;
+    font-size: 25pt;
   }
 }
 
