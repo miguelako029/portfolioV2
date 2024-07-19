@@ -527,7 +527,7 @@ body {
 
   .portfolioContainer {
     /* background-color: #0f9ef1; */
-
+    padding-left: 10px;
     padding-top: -100px;
     display: flex;
     align-items: center;
@@ -535,7 +535,7 @@ body {
     text-align: left;
     flex-direction: column;
     /* padding-top: -100px; */
-    padding: 0%;
+    padding-right: 30px;
   }
 
   /*****Contact*****/
@@ -703,6 +703,7 @@ body {
     flex-direction: column;
     /* padding-top: -100px; */
     padding: 10px;
+    padding-right: 30px;
   }
 
   /*****Contact*****/
