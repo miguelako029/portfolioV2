@@ -9,10 +9,10 @@ import EastIcon from "@mui/icons-material/East";
 import "../styles/imageGallery.css";
 
 // Import your images
-import image1 from "../assets/images/harana.jpg";
-import image2 from "../assets/images/campAllen.jpg";
-import image3 from "../assets/images/vital1.jpg";
-import image4 from "../assets/images/hotJobs.jpg";
+import image1 from "../assets/images/haranaV2.jpg";
+import image2 from "../assets/images/campAllenV2.jpg";
+import image3 from "../assets/images/vital1V2.jpg";
+import image4 from "../assets/images/hotJobsV2.jpg";
 import image5 from "../assets/images/batterDelish.jpg";
 import image6 from "../assets/images/soEggcited.jpg";
 import image7 from "../assets/images/ateMars.jpg";
