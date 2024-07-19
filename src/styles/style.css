@@ -141,7 +141,7 @@ body {
   /* padding: 0px 20px; */
   text-align: center;
   margin-right: 10px;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   border-radius: 50px;
   cursor: pointer;
   margin-left: 10px;
@@ -474,7 +474,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 100%;
     background-color: white; /* Assuming 'background.paper' refers to a white background */
     /* border: 2px solid #253238; */
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
@@ -527,6 +527,7 @@ body {
 
   .portfolioContainer {
     /* background-color: #0f9ef1; */
+
     padding-top: -100px;
     display: flex;
     align-items: center;
@@ -554,11 +555,20 @@ body {
 
 /* Tablets (portrait) */
 @media (min-width: 481px) and (max-width: 768px) {
-  .menu-itemMobile {
-    margin-left: 20px;
-    font-size: 30pt;
-    font-family: Prompt;
-    font-weight: 300;
+  .navAppBar {
+    max-width: 90vw;
+    display: flex;
+    justify-items: center;
+    margin-top: 50px;
+    margin-right: 5vw;
+  }
+
+  /***Nav Bar***/
+  .menu-item {
+    margin-left: 5px;
+    font-size: 10pt;
+    /* font-family: Prompt; */
+    font-weight: 700;
     animation: slideInWords 1s 1s 1s forwards;
   }
   .menu-itemMobile:active {
@@ -574,27 +584,30 @@ body {
   /***HERO***/
 
   .heroSection {
-    padding-bottom: 0px;
+    height: 800px;
+    min-height: 100%;
+    max-height: 100%;
   }
 
   .heroContent {
-    padding: 80px 12px 12px 12px;
+    padding: 30px 12px 12px 12px;
 
     .greet {
-      font-size: 50pt;
+      font-size: 40pt;
       line-height: 1;
+      font-weight: 200;
     }
     .myName {
       font-size: 70pt;
     }
     .transition {
-      font-size: 27pt;
+      font-size: 30pt;
     }
 
     .btnContainer {
       .btnStyle {
-        font-size: 20pt;
-        margin-right: 20px;
+        font-size: 10pt;
+        margin-right: 5px;
       }
     }
   }
@@ -628,7 +641,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 100%;
     background-color: white; /* Assuming 'background.paper' refers to a white background */
     /* border: 2px solid #253238; */
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
@@ -665,7 +678,7 @@ body {
     /* grid-area: Content; */
     /* background-color: #999999; */
     overflow-y: auto;
-    max-height: 70vh;
+    max-height: 80vh;
     padding-top: 50px;
     padding-right: 20px;
   }
@@ -681,114 +694,15 @@ body {
 
   .portfolioContainer {
     /* background-color: #0f9ef1; */
+
+    padding-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding-top: -100px;
-
-    .containers {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 95vw;
-      overflow-x: 0;
-
-      .content {
-        /* flex-grow: 1; */
-        /* background-color: #0dc955; */
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        vertical-align: center;
-        align-content: center;
-
-        .tabContainer {
-          align-self: center; /* Adjusted */
-          background-color: transparent;
-          width: 100%;
-          box-shadow: none;
-
-          margin-right: auto;
-          margin-bottom: 30px;
-          .tabButtons {
-            font-size: 9pt;
-          }
-        }
-        .tabContainer h1 {
-          display: block;
-          font-family: Prompt;
-          font-weight: 300;
-        }
-      }
-    }
-  }
-
-  .ProjWrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.1fr;
-    gap: 0px;
-    grid-auto-flow: row;
-  }
-
-  .projectDetails {
-    /* background-color: #7303c0; */
-    display: flex;
-    flex-direction: column;
     text-align: left;
-    align-content: center;
-    justify-content: center;
-
-    padding: 0px;
-    .projectTitle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* Centers the content vertically */
-      font-size: 30pt;
-      font-weight: 200;
-      font-family: Prompt;
-    }
-
-    .projectDesc {
-      font-size: 10pt;
-      font-family: Prompt;
-      font-weight: 200;
-      margin-bottom: 10px;
-    }
-    .projectButton .btnText {
-      /* width: 25%; */
-      font-size: 15pt;
-      font-family: Prompt;
-      font-weight: 200;
-      font-style: normal;
-      opacity: 0;
-      display: none;
-
-      /* padding: 0px 20px; */
-      text-align: center;
-      cursor: pointer;
-
-      &:active {
-        background-color: #8dd3fc;
-        transition: background-color 0.5s ease, color 0.3s ease;
-      }
-    }
-  }
-
-  .siteImage {
-    /* background-color: #0f9ef1; */
-
-    text-align: left;
-    .btnTextMobile {
-      font-family: Prompt;
-      font-weight: 200;
-      display: block;
-      font-size: 12pt;
-      margin-right: 15px;
-      align-self: center;
-    }
+    flex-direction: column;
+    /* padding-top: -100px; */
+    padding: 0%;
   }
 
   /*****Contact*****/
@@ -799,20 +713,29 @@ body {
   }
 
   .conTitle {
-    font-size: 45pt;
+    font-size: 12vw;
   }
   #contactIcon {
-    font-size: 30pt;
+    font-size: 25pt;
   }
 }
 
 /* Tablets (landscape) */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .menu-itemMobile {
-    margin-left: 20px;
-    font-size: 30pt;
-    font-family: Prompt;
-    font-weight: 300;
+  .navAppBar {
+    max-width: 90vw;
+    display: flex;
+    justify-items: center;
+    margin-top: 50px;
+    margin-right: 5vw;
+  }
+
+  /***Nav Bar***/
+  .menu-item {
+    margin-left: 5px;
+    font-size: 15pt;
+    /* font-family: Prompt; */
+    font-weight: 700;
     animation: slideInWords 1s 1s 1s forwards;
   }
   .menu-itemMobile:active {
@@ -828,27 +751,30 @@ body {
   /***HERO***/
 
   .heroSection {
-    padding-bottom: 0px;
+    height: 800px;
+    min-height: 100%;
+    max-height: 100%;
   }
 
   .heroContent {
-    padding: 80px 12px 12px 12px;
+    padding: 30px 12px 12px 12px;
 
     .greet {
-      font-size: 50pt;
+      font-size: 40pt;
       line-height: 1;
+      font-weight: 200;
     }
     .myName {
       font-size: 70pt;
     }
     .transition {
-      font-size: 27pt;
+      font-size: 30pt;
     }
 
     .btnContainer {
       .btnStyle {
-        font-size: 20pt;
-        margin-right: 20px;
+        font-size: 10pt;
+        margin-right: 5px;
       }
     }
   }
@@ -882,7 +808,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 100%;
     background-color: white; /* Assuming 'background.paper' refers to a white background */
     /* border: 2px solid #253238; */
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
@@ -935,116 +861,14 @@ body {
 
   .portfolioContainer {
     /* background-color: #0f9ef1; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding-top: -100px;
-    padding-left: 30px;
-
-    .containers {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 95vw;
-
-      .content {
-        /* flex-grow: 1; */
-        /* background-color: #0dc955; */
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        vertical-align: center;
-        align-content: center;
-
-        .tabContainer {
-          align-self: left; /* Adjusted */
-          background-color: transparent;
-          width: 80%;
-          box-shadow: none;
-
-          margin-right: auto;
-          margin-bottom: 20px;
-          .tabButtons {
-            font-size: 9pt;
-          }
-        }
-        .tabContainer h1 {
-          text-align: left;
-          display: none;
-          font-family: Prompt;
-          font-weight: 300;
-          margin-bottom: 20px;
-        }
-      }
-    }
-  }
-
-  .ProjWrapper {
-    display: grid;
-    grid-template-columns: 30% 60%;
-    grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
-  }
-
-  .projectDetails {
-    /* background-color: #7303c0; */
-    display: flex;
-    flex-direction: column;
     text-align: left;
-    align-content: center;
-    justify-content: center;
-
-    padding: 0px;
-    .projectTitle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* Centers the content vertically */
-      font-size: 30pt;
-      font-weight: 200;
-      font-family: Prompt;
-    }
-
-    .projectDesc {
-      font-size: 10pt;
-      font-family: Prompt;
-      font-weight: 200;
-      margin-bottom: 10px;
-    }
-    .projectButton .btnText {
-      /* width: 25%; */
-      font-size: 15pt;
-      font-family: Prompt;
-      font-weight: 200;
-      font-style: normal;
-
-      display: block;
-
-      /* padding: 0px 20px; */
-      text-align: center;
-      cursor: pointer;
-
-      &:active {
-        background-color: #8dd3fc;
-        transition: background-color 0.5s ease, color 0.3s ease;
-      }
-    }
-  }
-
-  .siteImage {
-    /* background-color: #0f9ef1; */
-    margin-top: 20px;
-    width: 63vw;
-    text-align: left;
-    .btnTextMobile {
-      font-family: Prompt;
-      font-weight: 200;
-      display: block;
-      font-size: 12pt;
-      margin-right: 15px;
-      align-self: center;
-      display: none;
-    }
+    flex-direction: column;
   }
 
   /*****Contact*****/
@@ -1055,19 +879,28 @@ body {
   }
 
   .conTitle {
-    font-size: 45pt;
+    font-size: 12vw;
   }
   #contactIcon {
-    font-size: 30pt;
+    font-size: 25pt;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .menu-itemMobile {
-    margin-left: 20px;
-    font-size: 30pt;
-    font-family: Prompt;
-    font-weight: 300;
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .navAppBar {
+    max-width: 90vw;
+    display: flex;
+    justify-items: center;
+    margin-top: 50px;
+    margin-right: 5vw;
+  }
+
+  /***Nav Bar***/
+  .menu-item {
+    margin-left: 5px;
+    font-size: 15pt;
+    /* font-family: Prompt; */
+    font-weight: 700;
     animation: slideInWords 1s 1s 1s forwards;
   }
   .menu-itemMobile:active {
@@ -1083,27 +916,30 @@ body {
   /***HERO***/
 
   .heroSection {
-    padding-bottom: 0px;
+    height: 800px;
+    min-height: 100%;
+    max-height: 100%;
   }
 
   .heroContent {
-    padding: 80px 12px 12px 12px;
+    padding: 30px 12px 12px 12px;
 
     .greet {
-      font-size: 50pt;
+      font-size: 70pt;
       line-height: 1;
+      font-weight: 200;
     }
     .myName {
-      font-size: 70pt;
+      font-size: 100pt;
     }
     .transition {
-      font-size: 27pt;
+      font-size: 40pt;
     }
 
     .btnContainer {
       .btnStyle {
         font-size: 20pt;
-        margin-right: 20px;
+        margin-right: 5px;
       }
     }
   }
@@ -1137,7 +973,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto;
+    width: 100%;
     background-color: white; /* Assuming 'background.paper' refers to a white background */
     /* border: 2px solid #253238; */
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); /* Assuming 'boxShadow: 24' refers to a box-shadow with 24px blur */
@@ -1190,116 +1026,14 @@ body {
 
   .portfolioContainer {
     /* background-color: #0f9ef1; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    padding-top: -100px;
-    padding-left: 30px;
-
-    .containers {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 95vw;
-
-      .content {
-        /* flex-grow: 1; */
-        /* background-color: #0dc955; */
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        vertical-align: center;
-        align-content: center;
-
-        .tabContainer {
-          align-self: left; /* Adjusted */
-          background-color: transparent;
-          width: 80%;
-          box-shadow: none;
-
-          margin-right: auto;
-          margin-bottom: 20px;
-          .tabButtons {
-            font-size: 9pt;
-          }
-        }
-        .tabContainer h1 {
-          text-align: left;
-          display: none;
-          font-family: Prompt;
-          font-weight: 300;
-          margin-bottom: 20px;
-        }
-      }
-    }
-  }
-
-  .ProjWrapper {
-    display: grid;
-    grid-template-columns: 30% 60%;
-    grid-gap: 1rem; /* Assuming you meant "rem" as the unit */
-  }
-
-  .projectDetails {
-    /* background-color: #7303c0; */
-    display: flex;
-    flex-direction: column;
     text-align: left;
-    align-content: center;
-    justify-content: center;
-
-    padding: 0px;
-    .projectTitle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; /* Centers the content vertically */
-      font-size: 30pt;
-      font-weight: 200;
-      font-family: Prompt;
-    }
-
-    .projectDesc {
-      font-size: 10pt;
-      font-family: Prompt;
-      font-weight: 200;
-      margin-bottom: 10px;
-    }
-    .projectButton .btnText {
-      /* width: 25%; */
-      font-size: 15pt;
-      font-family: Prompt;
-      font-weight: 200;
-      font-style: normal;
-
-      display: block;
-
-      /* padding: 0px 20px; */
-      text-align: center;
-      cursor: pointer;
-
-      &:active {
-        background-color: #8dd3fc;
-        transition: background-color 0.5s ease, color 0.3s ease;
-      }
-    }
-  }
-
-  .siteImage {
-    /* background-color: #0f9ef1; */
-    margin-top: 20px;
-    width: 63vw;
-    text-align: left;
-    .btnTextMobile {
-      font-family: Prompt;
-      font-weight: 200;
-      display: block;
-      font-size: 12pt;
-      margin-right: 15px;
-      align-self: center;
-      display: none;
-    }
+    flex-direction: column;
   }
 
   /*****Contact*****/
@@ -1310,7 +1044,7 @@ body {
   }
 
   .conTitle {
-    font-size: 45pt;
+    font-size: 8vw;
   }
   #contactIcon {
     font-size: 30pt;

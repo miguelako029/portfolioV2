@@ -105,7 +105,7 @@ export default function HideAppBar(props) {
                 to="portfolio"
                 spy={true}
                 smooth={true}
-                offset={-150}
+                offset={-50}
                 duration={500}
                 className="menu-item"
                 href="/portfolio"

@@ -70,14 +70,10 @@ const ImageGallery = () => {
     setPerPage(uniqueCategories.length);
   }, [images]);
 
-  const splideOptions = {
+  var splideOptions = new Splide(".splide", {
     type: "loop",
-    perPage: 4,
-    perMove: 1,
-    gap: "0px",
-    pagination: false,
-    arrows: true,
-  };
+    drag: "free",
+  });
 
   const handleScroll = (direction) => {
     if (splideRef.current) {
@@ -127,7 +123,6 @@ const ImageGallery = () => {
                     src={image.url}
                     alt={image.category}
                     width={"95%"}
-                    height={"30%"}
                     className="imgSplide"
                   />
                   <a
@@ -147,13 +142,14 @@ const ImageGallery = () => {
               </SplideSlide>
             ))}
           </Splide>
-
           <div className="scrollerArrow">
             <Button
               sx={{
                 background: backgroundColor,
                 color: fontColor,
                 border: "1.5px solid",
+                borderRadius: "100px",
+                marginRight: "10px",
                 transition: "background-color 0.7s ease",
               }}
               onClick={() => handleScroll("left")}
@@ -165,6 +161,7 @@ const ImageGallery = () => {
                 background: backgroundColor,
                 color: fontColor,
                 border: "1.5px solid",
+                borderRadius: "100px",
                 transition: "background-color 0.7s ease",
               }}
               onClick={() => handleScroll("right")}
