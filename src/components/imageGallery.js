@@ -44,7 +44,7 @@ const images = [
   },
 
   { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
-  { url: image9, category: "photoshop", text: "DECKS" },
+  // { url: image9, category: "photoshop", text: "DECKS" },
   // { url: image1, category: "web", text: "JERSEY DESIGN" },
 ];
 
