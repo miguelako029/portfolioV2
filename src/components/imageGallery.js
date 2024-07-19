@@ -13,10 +13,8 @@ import image1 from "../assets/images/haranaV2.jpg";
 import image2 from "../assets/images/campAllenV2.jpg";
 import image3 from "../assets/images/vital1V2.jpg";
 import image4 from "../assets/images/hotJobsV2.jpg";
-import image5 from "../assets/images/batterDelish.jpg";
-import image6 from "../assets/images/soEggcited.jpg";
-import image7 from "../assets/images/ateMars.jpg";
-import image8 from "../assets/images/jersey.jpg";
+
+import image8 from "../assets/images/logos.jpg";
 import image9 from "../assets/images/deck.jpg";
 
 const images = [
@@ -45,9 +43,6 @@ const images = [
     text: "HOTJOBS PHILIPPINES",
   },
 
-  { url: image5, category: "logo", text: "BATTER DELISH" },
-  { url: image6, category: "logo", text: "SO EGGCITED" },
-  { url: image7, category: "logo", text: "ATE MARS DISWASHING LIQUID" },
   { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
   { url: image9, category: "photoshop", text: "DECKS" },
   // { url: image1, category: "web", text: "JERSEY DESIGN" },
