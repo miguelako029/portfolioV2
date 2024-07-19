@@ -260,6 +260,7 @@ body {
   bottom: 0px; /* Adjust as needed */
   width: 65%;
   right: 0;
+  font-size: 7vw;
 }
 
 /******************** PortfolioPage **************/
@@ -521,6 +522,9 @@ body {
 
     width: 100%;
     right: 0;
+    .tabLabel {
+      font-size: 7pt;
+    }
   }
 
   /********Projects**********/

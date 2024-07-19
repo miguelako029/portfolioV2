@@ -872,7 +872,7 @@ const Hero = () => {
                     // borderBottom: "1px solid #253238",
                   }}
                 >
-                  <Tab label="Personal Information" {...a11yProps(0)} />
+                  <Tab label="About Me" {...a11yProps(0)} />
                   <Tab label="Trainings" {...a11yProps(1)} />
                   <Tab label="Certificates" {...a11yProps(2)} />
                 </Tabs>
