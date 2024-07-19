@@ -13,9 +13,11 @@ import image1 from "../assets/images/haranaV2.jpg";
 import image2 from "../assets/images/campAllenV2.jpg";
 import image3 from "../assets/images/vital1V2.jpg";
 import image4 from "../assets/images/hotJobsV2.jpg";
-
+// import image5 from "../assets/images/batterDelish.jpg";
+// import image6 from "../assets/images/soEggcited.jpg";
+// import image7 from "../assets/images/ateMars.jpg";
 import image8 from "../assets/images/logos.jpg";
-import image9 from "../assets/images/deck.jpg";
+import image9 from "../assets/images/marketing.jpg";
 
 const images = [
   {
@@ -43,8 +45,11 @@ const images = [
     text: "HOTJOBS PHILIPPINES",
   },
 
+  // { url: image5, category: "logo", text: "BATTER DELISH" },
+  // { url: image6, category: "logo", text: "SO EGGCITED" },
+  // { url: image7, category: "logo", text: "ATE MARS DISWASHING LIQUID" },
   { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
-  // { url: image9, category: "photoshop", text: "DECKS" },
+  { url: image9, category: "photoshop", text: "DECKS" },
   // { url: image1, category: "web", text: "JERSEY DESIGN" },
 ];
 
@@ -70,10 +75,14 @@ const ImageGallery = () => {
     setPerPage(uniqueCategories.length);
   }, [images]);
 
-  var splideOptions = new Splide(".splide", {
+  const splideOptions = {
     type: "loop",
-    drag: "free",
-  });
+    perPage: 2,
+    perMove: 1,
+    gap: "0px",
+    // pagination: false,
+    // arrows: true,
+  };
 
   const handleScroll = (direction) => {
     if (splideRef.current) {
@@ -82,11 +91,11 @@ const ImageGallery = () => {
 
       if (direction === "left" && currentPosition > 0) {
         splide.go("-1");
-      } else if (direction === "right" && currentPosition < splide.length - 5) {
+      } else if (direction === "right" && currentPosition < splide.length - 1) {
         splide.go("+1");
       } else if (
         direction === "right" &&
-        currentPosition === splide.length - 5
+        currentPosition === splide.length - 1
       ) {
         // Display a message when the last image is reached
         console.log("Last image reached!");
@@ -123,6 +132,7 @@ const ImageGallery = () => {
                     src={image.url}
                     alt={image.category}
                     width={"95%"}
+                    height={"30%"}
                     className="imgSplide"
                   />
                   <a
@@ -142,14 +152,13 @@ const ImageGallery = () => {
               </SplideSlide>
             ))}
           </Splide>
+
           <div className="scrollerArrow">
             <Button
               sx={{
                 background: backgroundColor,
                 color: fontColor,
                 border: "1.5px solid",
-                borderRadius: "100px",
-                marginRight: "10px",
                 transition: "background-color 0.7s ease",
               }}
               onClick={() => handleScroll("left")}
@@ -161,7 +170,6 @@ const ImageGallery = () => {
                 background: backgroundColor,
                 color: fontColor,
                 border: "1.5px solid",
-                borderRadius: "100px",
                 transition: "background-color 0.7s ease",
               }}
               onClick={() => handleScroll("right")}
