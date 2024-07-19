@@ -159,6 +159,8 @@ const ImageGallery = () => {
                 background: backgroundColor,
                 color: fontColor,
                 border: "1.5px solid",
+                borderRadius: "30px",
+                marginRight: "10px",
                 transition: "background-color 0.7s ease",
               }}
               onClick={() => handleScroll("left")}
@@ -170,6 +172,7 @@ const ImageGallery = () => {
                 background: backgroundColor,
                 color: fontColor,
                 border: "1.5px solid",
+                borderRadius: "30px",
                 transition: "background-color 0.7s ease",
               }}
               onClick={() => handleScroll("right")}
