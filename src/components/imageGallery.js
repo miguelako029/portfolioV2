@@ -49,7 +49,12 @@ const images = [
   // { url: image6, category: "logo", text: "SO EGGCITED" },
   // { url: image7, category: "logo", text: "ATE MARS DISWASHING LIQUID" },
   { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
-  { url: image9, category: "photoshop", text: "DECKS" },
+  {
+    url: image9,
+    category: "photoshop",
+    link: "https://www.facebook.com/profile.php?id=61559000390679",
+    text: "DECKS",
+  },
   // { url: image1, category: "web", text: "JERSEY DESIGN" },
 ];
 
