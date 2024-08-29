@@ -30,7 +30,7 @@ const PortfolioPage = () => {
     <Box
       id="portfolio"
       sx={{
-        background: mode === "dark" ? "#eff0ee" : "#253238",
+        background: mode === "dark" ? "#fff" : "#253238",
         color: mode === "dark" ? "#253238" : "#eff0ee",
         minheight: "110vh",
         // display: "flex",

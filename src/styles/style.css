@@ -276,11 +276,12 @@ body {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  height: 150vh;
 
   .containers {
     display: flex;
     flex-direction: column;
-    height: 100%;
+
     width: 90vw;
     overflow-x: 0;
 
