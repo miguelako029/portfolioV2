@@ -24,7 +24,7 @@ const iconComponents = {
 };
 
 const Contact = () => {
-  const { mode, backgroundColor, fontColor, BorderColor } = useColorMode();
+  const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -45,10 +45,9 @@ const Contact = () => {
       id="contact"
       sx={{
         background: backgroundColor,
-        color: fontColor,
-        minHeight: "100vh",
-
-        display: "flex",
+        // color: fontColor,
+        minheight: "110vh",
+        // display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
@@ -57,13 +56,13 @@ const Contact = () => {
       }}
     >
       <Container
-        maxWidth="md"
         style={{ textAlign: "center" }}
         className="contactContainer"
+        sx={{ color: fontColor }}
       >
         <div ref={ref}>
           <animated.div style={fadeInUp}>
-            <label variant="h1" gutterBottom className="conTitle">
+            <label variant="h1" className="conTitle">
               {socialLinks.title}
             </label>
             <div style={{ paddingTop: "20px" }}>

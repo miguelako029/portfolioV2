@@ -30,11 +30,15 @@ const PortfolioPage = () => {
     <Box
       id="portfolio"
       sx={{
-        background: backgroundColor,
-        color: fontColor,
-
+        background: mode === "dark" ? "#eff0ee" : "#253238",
+        color: mode === "dark" ? "#253238" : "#eff0ee",
+        minheight: "110vh",
+        // display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        flexDirection: "column",
         transition: "background-color 0.7s ease",
-        // width: "80vw",
       }}
     >
       <animated.div style={fadeInUp}>
