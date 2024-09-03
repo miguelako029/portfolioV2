@@ -46,7 +46,7 @@ const Contact = () => {
       sx={{
         background: backgroundColor,
         // color: fontColor,
-        minheight: "110vh",
+        // minheight: "0vh",
         // display: "flex",
         alignItems: "center",
         justifyContent: "center",

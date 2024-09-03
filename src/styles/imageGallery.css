@@ -4,12 +4,12 @@
 }
 
 .pageTitle {
-  text-align: left;
+  text-align: center;
   font-size: 4vw;
   /* color: #242424; */
-  font-weight: 200;
+  font-weight: 400;
   font-family: Prompt;
-  margin-bottom: 20px;
+  margin-bottom: 130px;
   margin-left: 10px;
 }
 .imgSplide {
@@ -41,8 +41,8 @@
 
 /* Set the fixed width for each slide */
 .splide__slide {
-  width: 20%; /* Ensure each slide takes 25% of the container width */
-  flex: 0 0 20%; /* Adjust the flex property to take 25% */
+  width: 39%; /* Ensure each slide takes 25% of the container width */
+  flex: 0 0 30%; /* Adjust the flex property to take 25% */
 }
 
 /* Add media queries to adjust perPage value for different screen sizes */

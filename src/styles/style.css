@@ -91,7 +91,7 @@ body {
 }
 
 .heroContent .myName {
-  font-size: 14vw;
+  font-size: 11vw;
   text-align: center;
   font-weight: 600;
   line-height: 0.9;
@@ -112,7 +112,7 @@ body {
 }
 
 .transition {
-  font-size: 2vw;
+  font-size: 3.5vw;
   /* color: #242424; */
   font-weight: 200;
   font-family: Prompt;
@@ -368,7 +368,8 @@ body {
 /******************** CONTACT **************/
 
 .contactContainer {
-  height: 45vw;
+  position: absolute;
+  height: 100vh;
 
   font-weight: 100;
 
@@ -387,9 +388,9 @@ body {
   }
 }
 .conTitle {
-  font-size: 12vw;
+  font-size: 9vw;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 0.8;
   font-family: Prompt;
 }
