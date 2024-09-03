@@ -43,8 +43,6 @@ import sharepoint from "../assets/images/udemy_Sharepoint.png";
 // import TextTransition, { presets } from "react-text-transition";
 import { TypeAnimation } from "react-type-animation";
 
-// const { mode, backgroundColor, fontHero, fontColor } = useColorMode();
-
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
     children,
@@ -491,7 +489,7 @@ const Hero = () => {
       sx={{
         background: backgroundColor,
         color: fontColor,
-        minHeight: "75vh",
+        minheight: "110vh",
         // display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -505,19 +503,16 @@ const Hero = () => {
         {/* <div className="wrapperAbout"> */}
         <div class="heroContent">
           <div ref={ref}>
-            <p>
+            {/* <p>
               <span className="greet" style={{ color: fontColor }}>
                 Hi! I'm
               </span>
-            </p>
+            </p> */}
 
             <p className="myName">
-              <span
-                classname="firstname"
-                style={{ color: fontColor, fontWeight: 300 }}
-              >
+              <span classname="firstname" style={{ color: fontColor }}>
                 {" "}
-                Miguel Milañez
+                MIGUEL MILAÑEZ
               </span>
             </p>
 

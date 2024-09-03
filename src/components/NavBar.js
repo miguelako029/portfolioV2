@@ -51,7 +51,7 @@ export default function HideAppBar(props) {
 
   const linkStyles = {
     textDecoration: "none",
-    color: mode === "dark" ? "#eff0ee" : "#253238",
+    color: mode === "dark" ? "#000" : "#000",
     fontWeight: 100,
     padding: "0px",
     transition: "background-color 0.3s ease",
@@ -131,7 +131,7 @@ export default function HideAppBar(props) {
             >
               <IconButton onClick={toggleColorMode} color="inherit">
                 {mode === "dark" ? (
-                  <Brightness7Icon style={{ color: "white" }} />
+                  <Brightness7Icon style={{ color: "black" }} />
                 ) : (
                   <Brightness4Icon style={{ color: "black" }} />
                 )}
@@ -140,7 +140,7 @@ export default function HideAppBar(props) {
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <IconButton onClick={toggleColorMode} color="inherit">
                 {mode === "dark" ? (
-                  <Brightness7Icon style={{ color: "white" }} />
+                  <Brightness7Icon style={{ color: "black" }} />
                 ) : (
                   <Brightness4Icon style={{ color: "black" }} />
                 )}
