@@ -161,7 +161,7 @@ const ImageGallery = () => {
           <div className="scrollerArrow">
             <Button
               sx={{
-                background: backgroundColor,
+                background: mode === "dark" ? "#253238" : "#fff",
                 color: fontColor,
                 border: "1.5px solid",
                 borderRadius: "30px",

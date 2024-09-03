@@ -375,7 +375,7 @@ body {
 /******************** CONTACT **************/
 
 .contactContainer {
-  position: absolute;
+  /* position: absolute; */
   height: 100vh;
 
   font-weight: 100;
@@ -560,12 +560,12 @@ body {
   /*****Contact*****/
 
   .contactContainer {
-    height: 100%;
+    height: 100vh;
     padding: 100px 100px 100px 100px;
   }
 
   .conTitle {
-    font-size: 12vw;
+    font-size: 60pt;
   }
   #contactIcon {
     font-size: 25pt;
@@ -717,12 +717,12 @@ body {
   /*****Contact*****/
 
   .contactContainer {
-    height: 100%;
+    height: 100vh;
     padding: 100px 100px 100px 100px;
   }
 
   .conTitle {
-    font-size: 12vw;
+    font-size: 70pt;
   }
   #contactIcon {
     font-size: 25pt;
@@ -872,12 +872,12 @@ body {
   /*****Contact*****/
 
   .contactContainer {
-    height: 100%;
+    height: 100vh;
     padding: 100px 100px 100px 100px;
   }
 
   .conTitle {
-    font-size: 12vw;
+    font-size: 70pt;
   }
   #contactIcon {
     font-size: 25pt;
@@ -1025,12 +1025,12 @@ body {
   /*****Contact*****/
 
   .contactContainer {
-    height: 100%;
+    height: 100vh;
     padding: 100px 100px 100px 100px;
   }
 
   .conTitle {
-    font-size: 8vw;
+    font-size: 100pt;
   }
   #contactIcon {
     font-size: 30pt;

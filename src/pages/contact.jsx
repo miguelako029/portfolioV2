@@ -45,8 +45,8 @@ const Contact = () => {
       id="contact"
       sx={{
         background: backgroundColor,
-        // color: fontColor,
-        // minheight: "0vh",
+        color: fontColor,
+        minheight: "110vh",
         // display: "flex",
         alignItems: "center",
         justifyContent: "center",
