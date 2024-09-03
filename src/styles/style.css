@@ -519,12 +519,9 @@ body {
 
   .Tabs {
     grid-area: Tabs;
-
+    padding-top: 10px;
     width: 100%;
     right: 0;
-    .tabLabel {
-      font-size: 7pt;
-    }
   }
 
   /********Projects**********/
