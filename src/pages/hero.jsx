@@ -611,13 +611,7 @@ const Hero = () => {
                     <Typography variant="h2" component="div" id="modalName">
                       Miguel Lorenzo T. Milanez
                     </Typography>
-                    <Typography
-                      variant="h4"
-                      sx={{ marginBottom: "20px" }}
-                      className="job"
-                    >
-                      Software Engineer
-                    </Typography>
+                    <Typography id="job">Software Engineer</Typography>
 
                     <Typography sx={{ marginBottom: "20px" }}>
                       Welcome to my personal website! I'm Miguel Lorenzo T.

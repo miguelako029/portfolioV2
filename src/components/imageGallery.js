@@ -16,7 +16,7 @@ import image4 from "../assets/images/hotJobsSq.jpg";
 // import image5 from "../assets/images/batterDelish.jpg";
 // import image6 from "../assets/images/soEggcited.jpg";
 // import image7 from "../assets/images/ateMars.jpg";
-import image8 from "../assets/images/logos.jpg";
+import image8 from "../assets/images/LogoSq.gif";
 import image9 from "../assets/images/marketing.jpg";
 
 const images = [
@@ -48,7 +48,7 @@ const images = [
   // { url: image5, category: "logo", text: "BATTER DELISH" },
   // { url: image6, category: "logo", text: "SO EGGCITED" },
   // { url: image7, category: "logo", text: "ATE MARS DISWASHING LIQUID" },
-  // { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
+  { url: image8, category: "photoshop", text: "JERSEY DESIGN" },
   // {
   //   url: image9,
   //   category: "photoshop",
@@ -84,7 +84,7 @@ const ImageGallery = () => {
     type: "loop",
     perPage: 2,
     perMove: 1,
-    gap: "0px",
+    gap: "20px",
     // pagination: false,
     // arrows: true,
   };

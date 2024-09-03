@@ -187,21 +187,28 @@ body {
 #modalName {
   font-size: 2.5vw;
   text-align: left;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 20px;
-
-  background: linear-gradient(
+  margin-bottom: 0px;
+  font-family: Prompt;
+  /* background: linear-gradient(
     135deg,
     #0f9ef1,
     #7303c0,
     #ec38bc,
     #f88bd9
-  ); /* Nebula-like colors */
-  -webkit-background-clip: text; /* Webkit browsers */
-  -webkit-text-fill-color: transparent; /* Webkit browsers */
-  background-clip: text; /* Standard syntax */
-  color: transparent; /* Fallback color in case gradient is unsupported */
+  ); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent;  */
+}
+
+#job {
+  font-size: 15pt;
+  font-weight: 500;
+  font-family: Prompt;
+  margin-bottom: 30px;
 }
 
 .trainingImage {
@@ -473,21 +480,10 @@ body {
   #modalName {
     font-size: 2.5vw;
     text-align: left;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.1;
-    margin-bottom: 20px;
-
-    background: linear-gradient(
-      135deg,
-      #0f9ef1,
-      #7303c0,
-      #ec38bc,
-      #f88bd9
-    ); /* Nebula-like colors */
-    -webkit-background-clip: text; /* Webkit browsers */
-    -webkit-text-fill-color: transparent; /* Webkit browsers */
-    background-clip: text; /* Standard syntax */
-    color: transparent; /* Fallback color in case gradient is unsupported */
+    margin-bottom: 0px;
+    font-family: Prompt;
   }
 
   .trainingImage {
@@ -516,13 +512,15 @@ body {
       font-weight: 200;
     }
     #modalName {
-      font-size: 20pt;
+      font-size: 30pt;
       font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 0px;
       font-family: Prompt;
     }
-    .job {
-      font-size: 15pt;
-      font-weight: 200;
+    #job {
+      font-size: 20pt;
+      font-weight: 300;
       font-family: Prompt;
       margin-bottom: 10px;
     }
@@ -643,18 +641,6 @@ body {
     font-weight: 200;
     line-height: 1.1;
     margin-bottom: 20px;
-
-    background: linear-gradient(
-      135deg,
-      #0f9ef1,
-      #7303c0,
-      #ec38bc,
-      #f88bd9
-    ); /* Nebula-like colors */
-    -webkit-background-clip: text; /* Webkit browsers */
-    -webkit-text-fill-color: transparent; /* Webkit browsers */
-    background-clip: text; /* Standard syntax */
-    color: transparent; /* Fallback color in case gradient is unsupported */
   }
 
   .trainingImage {
@@ -683,13 +669,14 @@ body {
       font-weight: 200;
     }
     #modalName {
-      font-size: 20pt;
+      font-size: 30pt;
       font-weight: 400;
       font-family: Prompt;
+      margin-bottom: 0px;
     }
-    .job {
-      font-size: 15pt;
-      font-weight: 200;
+    #job {
+      font-size: 20pt;
+      font-weight: 300;
       font-family: Prompt;
       margin-bottom: 10px;
     }
@@ -811,18 +798,6 @@ body {
     font-weight: 200;
     line-height: 1.1;
     margin-bottom: 20px;
-
-    background: linear-gradient(
-      135deg,
-      #0f9ef1,
-      #7303c0,
-      #ec38bc,
-      #f88bd9
-    ); /* Nebula-like colors */
-    -webkit-background-clip: text; /* Webkit browsers */
-    -webkit-text-fill-color: transparent; /* Webkit browsers */
-    background-clip: text; /* Standard syntax */
-    color: transparent; /* Fallback color in case gradient is unsupported */
   }
 
   .trainingImage {
@@ -851,13 +826,14 @@ body {
       font-weight: 200;
     }
     #modalName {
-      font-size: 20pt;
+      font-size: 40pt;
       font-weight: 400;
       font-family: Prompt;
+      margin-bottom: 0px;
     }
-    .job {
-      font-size: 15pt;
-      font-weight: 200;
+    #job {
+      font-size: 20pt;
+      font-weight: 300;
       font-family: Prompt;
       margin-bottom: 10px;
     }
@@ -971,23 +947,11 @@ body {
   /* MODAL */
 
   #modalName {
-    font-size: 2.5vw;
+    font-size: 5vw;
     text-align: left;
     font-weight: 200;
     line-height: 1.1;
     margin-bottom: 20px;
-
-    background: linear-gradient(
-      135deg,
-      #0f9ef1,
-      #7303c0,
-      #ec38bc,
-      #f88bd9
-    ); /* Nebula-like colors */
-    -webkit-background-clip: text; /* Webkit browsers */
-    -webkit-text-fill-color: transparent; /* Webkit browsers */
-    background-clip: text; /* Standard syntax */
-    color: transparent; /* Fallback color in case gradient is unsupported */
   }
 
   .trainingImage {
@@ -1016,13 +980,14 @@ body {
       font-weight: 200;
     }
     #modalName {
-      font-size: 20pt;
+      font-size: 50pt;
       font-weight: 400;
       font-family: Prompt;
+      margin-bottom: 0px;
     }
-    .job {
-      font-size: 15pt;
-      font-weight: 200;
+    #job {
+      font-size: 25pt;
+      font-weight: 300;
       font-family: Prompt;
       margin-bottom: 10px;
     }
