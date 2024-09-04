@@ -81,10 +81,11 @@ const ImageGallery = () => {
   }, [images]);
 
   const splideOptions = {
-    type: "loop",
-    perPage: 2,
+    perPage: 1,
     perMove: 1,
     gap: "20px",
+    wheel: true,
+    direction: "ltr", // This sets the direction to left-to-right
     // pagination: false,
     // arrows: true,
   };

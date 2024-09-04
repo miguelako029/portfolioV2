@@ -28,7 +28,7 @@
 /* Define the fixed width and hide overflow for the splide container */
 .splide {
   width: 100%; /* Ensure the splide container takes full width */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .splide__arrow {
